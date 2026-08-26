@@ -2,12 +2,22 @@
 
 Official repository for **Agent4RE: A Self-refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking**.
 
-This repository provides two research artifacts:
-
+- **RE-E2E benchmark**: an end-to-end requirements engineering benchmark pairing project descriptions with human-written requirement specifications.
 - **Agent4RE**: a multi-agent system that transforms a short software project description into an IEEE-style Software Requirements Specification (SRS) through iterative elicitation, generation, and refinement.
-- **RE-E2E**: an end-to-end requirements engineering benchmark pairing project descriptions with human-written requirement specifications.
 
 ![Overview of Agent4RE](figures/agent_overview_latest.png)
+
+## RE-E2E benchmark
+
+RE-E2E evaluates the complete workflow from an initial project description to a finalized requirements specification, rather than an isolated RE task such as classification or extraction.
+
+| Directory | Contents |
+| --- | --- |
+| `data/project_summary_llm_processed/` | 30 project descriptions used as Agent4RE inputs |
+| `data/requirement_specifications_ieee_1998/` | 30 human-written SRS documents normalized to IEEE 830-1998 sections |
+| `data/requirement_specifications_ieee_2018/` | 20 human-written SRS documents normalized to IEEE 29148-2018 sections |
+
+Each SRS is stored as CSV with its section hierarchy and normalized textual content. Generated specifications, model responses, and evaluation outputs are intentionally excluded.
 
 ## Agent4RE
 
@@ -20,26 +30,6 @@ Agent4RE uses five specialized agents:
 - **Refactoring Agent** converts feedback into concrete specification revisions.
 
 The elicitation loop terminates autonomously and is capped at 10 rounds. The paper studies three operating modes: sequential generation without feedback, autonomous self-refinement, and refinement with structured human feedback. The runnable interface supports initial generation and feedback-driven refinement.
-
-## RE-E2E benchmark
-
-RE-E2E evaluates the complete workflow from an initial project description to a finalized requirements specification, rather than an isolated RE task such as classification or extraction.
-
-The repository contains:
-
-| Directory | Contents |
-| --- | --- |
-| `data/project_summary_llm_processed/` | 29 project descriptions used as Agent4RE inputs |
-| `data/requirement_specifications_ieee_1998/` | 29 human-written SRS documents normalized to IEEE 830-1998 sections |
-| `data/requirement_specifications_ieee_2018/` | 18 human-written SRS documents normalized to IEEE 29148-2018 sections |
-
-Each SRS is stored as CSV with its section hierarchy and normalized textual content. Generated specifications, model responses, and evaluation outputs are intentionally excluded.
-
-### Dataset sources
-
-> **TODO:** Add the original dataset source citations, URLs, and redistribution terms here.
-
-Additional dataset documentation is available in [`data/README.md`](data/README.md).
 
 ## Quick start
 
