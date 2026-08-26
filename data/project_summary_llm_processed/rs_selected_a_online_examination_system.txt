@@ -1,0 +1,37 @@
+**Title:** Online Examination System (OES) — Summary  
+
+**Overview:**  
+The Online Examination System (OES) is a secure, scalable digital platform designed to modernize standardized testing for a government organization. It replaces traditional paper-based exams, offering enhanced efficiency, reduced costs, and improved exam integrity. The system includes three main components: Admin Panel, Candidate Portal, and Proctoring Module, and is designed to support up to 100,000 concurrent users.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Replace paper-based exams with a secure, scalable digital platform.  
+  - Serve government organizations conducting large-scale standardized exams.  
+  - Ensure compliance with data protection laws (e.g., GDPR).  
+
+- **Top Features:**  
+  - **Admin Panel:** Exam creation, scheduling, result management, and question bank uploads.  
+  - **Candidate Portal:** Registration, exam scheduling, and online test-taking.  
+  - **Proctoring Module:** AI-powered facial recognition and cheating detection.  
+  - **Grading System:** Automated grading for objective questions and manual evaluation for subjective answers.  
+
+- **Non-Functional Requirements:**  
+  - Scalability to support up to 100,000 concurrent users.  
+  - Compatibility with desktops, laptops, tablets, and smartphones (with webcams and microphones).  
+  - Secure data storage using DBMS (e.g., MySQL, PostgreSQL) and encryption protocols (SSL/TLS).  
+  - Integration with third-party machine learning APIs and email/SMS notification services.  
+
+- **Design Constraints:**  
+  - Backend: Python; Frontend: ReactJS.  
+  - Use of pre-trained ML models for proctoring.  
+  - Adherence to open-source or properly licensed libraries.  
+
+**Risks and Unknowns:**  
+- Dependence on third-party machine learning APIs for proctoring accuracy.  
+- Reliance on stable internet connectivity for candidates (minimum 1 Mbps).  
+- Assumption that candidates have access to internet-enabled devices with webcams and microphones.  
+- Compliance with evolving government data protection laws.  
+- Potential challenges in scaling cloud infrastructure for peak loads.  
+
+**Timeline:**  
+Not specified.  

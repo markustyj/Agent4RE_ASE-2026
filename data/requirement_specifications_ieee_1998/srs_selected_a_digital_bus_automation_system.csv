@@ -1,0 +1,234 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"The purpose is to design an laptop based web-application intended to:
+Access basic student and staff information of The LNM Institute of Information Technology for authentication.
+Create personalized accounts for authenticated users.
+Reducing paperwork.
+Automate bus reservation and cancellation system.
+Digitize the above and also the payment system for the same"
+1. Introduction,1.2 Document Conventions,"The technical terms and conventions will be in italics.
+Some abbreviations have been used.
+SRS - Software Requirements Specification
+TBD - To Be Developed
+BMC - Bus Management Committee
+SS - Student Services (refers to entire LNMIIT family who wish to avail the bus services )
+The priority of a requirement is specified at the end of that requirement,
+where ‘nn’ is an integer in the range 00 (lowest priority) to 99 (highest priority)."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is created for:
+The software development team for their use in analyzing the requirements.
+The members of the BMC of the institute to review and suggest refinements if any.
+The IT department of the institute for their review and approval."
+1. Introduction,1.4 Product Scope,"The scope of the TBD Digital Bus Automation System is:
+To enable the viewers to securely access the software via the internet in order to make a booking, view the bus time table, cancel a booking and create a bill for all transactions.
+To automatically create monthly reports of services incurred by the users and store in the RDBMS database."
+1. Introduction,1.5 References,"The following references have been used to prepare this SRS:
+Twenty-one minutes of meeting between The LNMIIT SWE Course instructor and the developers’ team held from 9:41 AM to 10:02 AM on August 20th 2018.
+https://www.slideshare.net/darshan0303/online-final-report : Online Bus Pass System
+https://www.redbus.in/ : For design and layout references.
+Twenty-eight minutes of meeting between The LNMIIT SWE Course instructor and the client, with the developers’ team held from 5:40 PM to 06:08 PM on August 28 2018.
+Seventeen- minutes of meeting between The LNMIIT SWE Course instructor and the client, with the developers’ team held from 10:15 AM to 10:32 AM on October 24 2018."
+2. Overall Description,2.1 Product Perspective,"This project aims to automate, enhance and streamline the current manual bus system. The following diagram describes the high-level business process or design of the proposed Digital Bus Automation System:
+Figure 1: Data Flow Diagram Level Zero
+Figure 2: Data Flow Diagram Level One
+Figure 3: Data Flow Diagram Level Two
+Figure 4: Business Process Model"
+2. Overall Description,2.2 Product Functions,"The following are the key product features to be delivered by the product:
+Features pertaining to BMC members:
+Login to the portal using lnmiit domain id and other details(see Appendix A).
+Contact BMC Help Team for any help regarding registrations of BMC members.
+Update the database of BMC users.
+With the approval of the BMC president(Refer Appendix A) ​the following functions are permitted :
+Add, update, delete bus time table.
+Update bus details .i.e type of bus, number of seats, bus number etc.
+Update details of the bus drivers.
+Allow BMC to add extra buses or update existing bus routes and​ post a notification regarding the same on the public notification board.
+View booking details(refer Appendix A) like booking ID, date of reservation, trip date, user name etc. Also transaction details from the payment gateway, bus numbers etc.
+All features available to viewers as mentioned below.
+Features pertaining to the viewers:
+Allow users to view the updated time table and the associated details of the bus .i.e details of the bus driver, bus type etc.
+Login to the portal using lnmiit domain id and other details (refer Appendix A).
+Access to help and FAQ page for bookings and registrations.
+Allow users to select and book ​a limited number ​of seats(refer Business Rules) - selected seats while booking will appear green while booked seats will appear grey.
+Give ​selected​(refer System Features) users priority to choose from reserved seats.
+Allow users to pay for the ticket from their e-wallet. The money to the wallet can be added online via Debit card, Credit Card, Net Banking or Paytm using a payment gateway.
+Generate a booking ID for each booking which will be used to authenticate the user boarding the bus.
+Allow users to cancel their booking before a ​certain deadline​(refer Business Rules 5.5). The refund will be as per the cancellation policy(5.5).
+View bookings via booking ID.
+View their own personal notification board"
+2. Overall Description,2.3 User Classes and Characteristics,"This software package will be used by three categories of users:
+Admins/Members of the BMC​: These users will use the software to generate or modify the bus services provided, eligibility rules and process activities and flow.
+Students and Staff of the institute​: This comes under the head ​Student Services(SS). These users will use the software to find out about the services available at any given time and also avail them as per the business rules.
+BMC President: ​This user will use the software for managing the approvals for the changes made by the rest of the BMC."
+2. Overall Description,2.4 Operating Environment,"Technology used for the Development Stack:
+Back-end:
+Language: ​JavaScript
+Runtime: ​NodeJS version 8.11.4 LTS
+Database:
+RDBMS: ​MySQL community server version 8.0.12
+Front-end:
+Languages: ​HTML5, CSS3, Java"
+2. Overall Description,2.5 Design and Implementation Constraints,"The design time constraints are:
+More than 1,000 users should be able to concurrently access the bus automation system per day from all parts of the college."
+2. Overall Description,2.6 User Documentation,"This software package will come with On-line Help (web pages) for each of the two types of users (i.e. BMC team and SS) on how to use the facilities available for them.
+There will be an FAQ page(answered by the BMC), Query submission link, display of helpline numbers and also pages pertaining to the rules and policies of the product, cancellation policy etc. product, cancellation policy etc.
+The details of the (i) Analysis, (ii) Design and (iii) Test Cases of this software package will be delivered along with this software."
+2. Overall Description,2.7 Assumptions and Dependencies,There are no assumptions made.
+3. External Interface Requirements,3.1 User Interfaces,"Table 1
+Screen Name
+Description
+Home Screen
+First web page of the application
+Login
+BMC Login: to modify schedules,bus details,view transactions overall etc
+User Login:to book/cancel seats,update info etc
+Booking
+Select date, time, bus and seat to be booked
+Payment
+View bill, pay via e-wallet
+Cancellation
+An existing booking has to be cancelled as per the cancellation policy(5.5)"
+3. External Interface Requirements,3.2 Hardware Interfaces,"A keypad installed in the buses to verify the booking ID.
+A laptop for on the spot bookings of recent buses at the LNMIIT gate which will be manually operated."
+3. External Interface Requirements,3.3 Software Interfaces,"The software will have an interface with:
+The RDBMS server - ​MySQL ​community server version 8.0.12
+API for payment gateway.
+API for sending mails.
+API for student details.
+API for staff details.
+API for faculty details."
+3. External Interface Requirements,3.4 Communications Interfaces,"The software will be accessible via the internet communication channels.
+An interface is required to bring consistency in the users boarding the bus and the database recording the same i.e. the hardware scanner device and the database are to have an interface to record each user activity."
+4. System Features,4.1 System Feature 1,"4.1 .1 Description and Priority
+The TBD software package should facilitate the BMC to:
+Upload a new bus time table including its associated buses, routes and driver details with the approval of the BMC President.
+ii) Modify an existing bus time table and its associated details with the approval of the BMC President.
+iii) Activate a newly added bus time table OR reactivate a modified bus time table with effect from activation date and time;
+iv) Deactivate an existing bus time table with effect from a date and time.
+Recent Updates will be posted on the Notification panel on home screen.
+The priority of this requirement is 99 (without this facility, other requirements do not work).
+4.1.2 Stimulus/Response Sequences: ​Table 2
+No
+Stimulus from the user
+Response from the Software
+BMC logs-in using user-id and password (see Appendix-A for user-id and password rules) from the login tab on the web page.
+Software will validate the user-id(based on email id) and password; Software will display the ‘​BMC Initial Screen​’ by recognizing the user-id.
+BMC has the option to update the information of bus type, driver details, the information in the help section etc.
+The new entries will be validated as per the rules. Successful submission message will be displayed otherwise an error message.
+BMC chooses to ‘Add a Bus Time Table’ option.
+Software will validate the update; if not permitted, display an error message (see Appendix-A for the list of Situation-Error Message’).
+BMC will enter all the fields of the new time table.
+Software will validate all the fields of the new time table (see Appendix-A for all the validation rules); if there are any errors, the software will highlight the errors; else, the software will display a message that the new time table is successfully added and asks for the date-and-time of ‘Activation of the new Time Table’.
+If errors are displayed, the BMC will correct the errors and re-submit the new time table details; else, the BMC enters the date-and-time of ‘Activation of the new Time Table’.
+Successful submission leads the software to the BMC Initial Screen.
+BMC can also choose to either ‘Activate New Time Table’ OR ‘Deactivate an existing Time Table’ option.
+Software will validate whether the user is authorized to perform the chosen option or not and accordingly display either successful message after making the changes or an error message.
+BMC can mark fixed number of seats as “pre-booked” or “reserved” for a special category of users​, after getting the required approval(refer to 5.5). The BMC marked seats will be shown as reserved seats​ to the remaining users. The ones authorized to book the reserved seats will be validated through their login email-id being identified in the database of these special users.
+4.1.3 Functional Requirements
+As per the above Table 2."
+4. System Features,4.2 System Feature 2 (and so on),"2. 1 Description and Priority
+The TBD software package should facilitate the LNMIIT Bus Facility user to,
+View the Bus time table.
+ii) View the latest notifications regarding the buses on the site’s notification board.
+iii) Login using an authorised id of the college domain.
+iv) Add money to the online wallet.
+Make a ​valid ​booking(refer Business rules) as per the business rules.
+vi) Make the payment and view the bill.
+vii) View the status of the booking via booking ID whether it is confirmed or not.
+viii) Cancel a booking. Refund will be as per the cancellation policy.
+ix) View booking details i.e. bus number, bus driver, date and time of departure etc.
+The priority of this requirement is 90.
+4.2.2 Situation-Response Sequence: ​Table 3
+S.No
+Stimulus from user
+Response from the Software
+The User accesses the Bus Digital
+Management Software via internet.
+Software displays the Home Screen with
+options to login, view the bus schedule, the
+latest notifications and the help section.
+The User has to view the bus schedule or the latest notifications or the help section.
+Software displays the respective pages with the required details for each option accordingly.
+The User has to login. The user enters their user-id and password (see Appendix-A for user-id and password rules) from the login tab on the web page.
+The software validates the user-id and password and displays the home screen with additional options of making a booking and adding money to the wallet.
+The User chooses to add money to the wallet.
+Software will allow user to add money via a variety of payment modes : Debit card, Credit card, Net banking, Paytm. The user’s wallet money must be greater than the specific limit(refer to 5.5) to make a booking.
+The User chooses to make a booking.
+If the user’s wallet balance is greater than the required amount(refer 5.5), the software will ask the user to choose the date and time of the bus to booked.
+The User selects the required bus time and date.
+The software will display the layout of the bus and the availability of the seats(refer to 5.5). The users which come under ​special category(​refer 5.5​)​ will also have an option to book the unreserved seats in case they are booking for someone else.
+The user selects seats upto a maximum of six seat(s).
+In the layout of the bus, seat colour changes from white to green on selection and grey on confirmed booking.
+9
+The User will be waitlisted if the chosen bus is full.
+The user will enter the number of seats they need for a particular fully booked bus. If some booked seat is cancelled or reserved seat is left unbooked till a certain deadline before the bus(refer to 5.5) - the seats will be released and given to the waitlisted people according to the best fit(refer to 5.5).
+The user enters the details in the
+booking form.
+Software validates the fields; if there are
+any errors, software will display an error
+message else it will direct the user to the
+confirmation page. Also if number of seats
+is more than one, the user will have to
+submit the names and phone numbers of
+the other guests.
+11.
+The user pays for the trip to confirm
+the booking.
+Software allows user to confirm a booking
+only after payment.The price be deducted
+from the wallet as per the rules(refer to
+5.5), and an unique ‘QR code’ and booking
+ID will be generated and mailed to the
+login id to authorise the user’s(or users’ guest) entry in the bus.
+The user can also choose to find the
+status of a previously booked seat,
+based on the booking ID entered by
+the user.
+The software will generate the status of
+booked or waitlisted seats.
+The user can cancel a booking by entering the booking id.
+The system validates the booking ID and the cancellation occurs as per the cancellation policy(refer 5.5)."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"Reliability​ - The application should be reliable and it should generate all updated information in correct order.
+​Availability​ - Application should be available and working properly for 24x7."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,The software is intended to make a digital and paperless system. Hence for security reasons a daily report will be generated by the system and stored in the college database.
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"This software should:
+Authenticate every user that makes a booking. This is done by the help of another API
+When the user performs any actions, authorize him / her to perform the actions allowed for the user and display an error message if they try to login via BMC login portal.."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,Refer to 5.1.
+5. Other Nonfunctional Requirements,5.5 Business Rules,"The following business rules are to be followed:
+The user can pre book a bus ticket upto one day prior to the actual bus trip.
+Cancellation Policy:
+If a booking stands cancelled by the user 120 minutes prior to the concerned trip, the user will be worthy of refund of the total amount.
+If a cancellation occurs 60-120 minutes prior to the trip, the user will be entitled for half amount of refund.
+If a cancellation occurs in less than 60 minutes to the trip, no refund will be provided to the user.
+For the refund process, the user will enter the mode of refund.
+The ​selected seats ​refer to the 6 reserved seats for faculty and staff user category in each bus. These will be shown as booked for the other SS.
+If the ​selected seats​ are vacant 60 minutes prior to the trip or if the cancelled seats create a vacancy, a notification will be sent to all users in the waiting list of that particular trip. Rules for allocation waiting list users:
+If number of seats available >= waitlist number of first in list : Allocate
+If number of seats available < waitlist number of first user then allocate to the next user which satisfies the above clause.
+To board the bus, the user must type a booking id(created after a successful booking) on a keypad installed in the bus.
+A user can book a maximum of 6 tickets for round-trips during one transaction.
+Children with age >=5 years should be bought a separate ticket.
+Bus Schedule Updation Approval : The BMC President is entitled to approve/disapprove a bus schedule updation within 12 hours, after which the schedule stands correct and is activated as per the activation date and time mentioned in the new time table. If no activation details are mentioned, the schedule will automatically get activated after 24 hours of the approval.
+With the approval of DoSA, BMC has the right to book any number of seats in a bus apart from the ​selected seats​(point 3). This could be in lieu with the students going for coaching regularly, some special trip planned by college to nearby visit etc. The remaining seats will be open for all users.
+Valid booking ​: This refers to the time slot aspect. No user can book for a trip which has already started or ended for the day. For instance, one cannot book a 2:00 PM bus at 5:00 PM. Once the trip starts, no more bookings are to be accepted.
+The cost for a single way trip is fixed to Rs 25. The user can book 6 tickets maximum at a time which requires Rs 150 (Rs 25 x 6=150).
+The minimum balance in a user wallet to book a ticket is fixed at Rs 150. Below the amount, the user will be unable to book any further tickets.
+In case a student is graduating or leaving the college, he can apply for a refund equal to his/her current wallet balance in the accounts section.
+As the user logs in to make a booking, the login id is used to segregate them into various categories- selected users (faculty and staff), special category of users(reserved seats by DoSA approval) and the normal users.
+First category has access to all seats except the reserved ones by DoSA approval.
+Second category has access to all seats except the 6 selected seats.
+Third category does not have access to selected and reserved seats.
+All the buses have a unique 3 digit code for each day. First digit signifies departure place. Second digit the destination place. Third digit which number of bus it is since morning.
+Example : If LNMIIT is code 1, Raja park is code 2.
+The very first bus in the morning will have number ​121 :​ which means first bus from college to Raja Park.
+Code
+Place
+1
+The LNMIIT
+2
+Pink Square
+3
+Ajmeri Gate
+4
+RBI
+5
+Raja Park"

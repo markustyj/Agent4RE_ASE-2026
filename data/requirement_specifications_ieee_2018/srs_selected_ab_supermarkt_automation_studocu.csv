@@ -1,0 +1,151 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"This SRS describes the software functional and non-functional requirements for release 1.0 of the supermarket automation system (SAS). This software is designed to automate the billing and inventory system in a supermarket. Unless otherwise stated, all requirements specified here are high priority and committed for release 1.0."
+1. Purpose,1.3 System overview,,"The Supermarket automation software consists of the following major functions:
+Maintaining and updating the inventory of the various commodities of the supermarket.
+Creating and printing sales transaction bills.
+Displaying and printing the sales statistics of various commodities for any particular period."
+1. Purpose,1.4 References,,"SRS template by Jacksonville State University.
+en.wikipedia.org for relevant definition"
+2. Overall description,,,The product described in this document is a software for supermarket automation.
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,"For the software to function properly, the bar code reader scans the bar code from a product and sends the product ID to the software and the weighing machine sends the weight of the product.
+Any changes made to the inventory of the supermarket is automatically updated in the database which has been set up in a separate server in the supermarket itself."
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Manager interface
+The SAS screen displays interfaces to view the inventory, change the prices of the products, view and print sales statistics.
+Sales Clerk interface
+The SAS screen displays an interface to commute a transaction with a customer, and produces and prints a bill for the transaction.
+Supermarket staff interface
+The SAS screen displays an interface to update the inventory for the supermarket with each arrival of new supplies."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"For the software to function properly, the bar code reader scans the bar code from a product and sends the product ID to the software and the weighing machine sends the weight of the product."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"Inventory query
+The manager queries the product whose details he/she wishes to view.
+The SAS programmatically determines the details of the product.
+The SAS displays information about the product.
+The manager selects the option to change the price of the product which updates the corresponding price in the database.
+Add to inventory
+The supermarket staff requests for the addition of the product and subsequently enters the details of the product.
+The SAS updates the product in its database and gives a confirmation message.
+New transaction
+The sales clerk provides the details of the product ready to be purchased.
+On pressing the print button, the details of the inventory are updated and a bill is produced and printed along with a confirmation message."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,Any changes made to the inventory of the supermarket is automatically updated in the database which has been set up in a separate server in the supermarket itself.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,The weighing machine in use has a certain limitation for the maximum level of weight which can be measured by it. This may constrain the accuracy of the weight involved.
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,It is assumed that a standard bar code reader and an automatic weighing scale is provided to the sales clerk without which completing sales transaction would be very difficult. The software requires a printer.
+2. Overall description,2.3 Product functions,,"The set of functionalities that are supported by the system are documented below -
+Perform Sales Transaction
+Whenever any item is sold from the stock of the supermarket, this function prompts the clerk to pass the item over a bar code reader and an automatic weighing scale, the data regarding the item type and the quantity get automatically registered then. During the sales transaction, the name of the item, code number, quantity, unit price, and item price are entered into the bill. The bill indicates the total amount payable. The inventory is then suitably updated.
+Read Bar code
+Input: Sold items are passed over the reader.
+Processing: Bar code of the item is read and the sold item is registered automatically.
+Weigh
+Input: Sold items are weighed over the automatic weighing scale.
+Processing: Weight of the sold item is automatically registered.
+Generation of the bill
+A transaction bill containing the serial number of the sales transaction, the name of the items, quantity, unit price, item price and the total amount payable after adding the taxes is printed.
+Update inventory
+In order to support inventory management, this function updates the inventory whenever an item is sold. Again, when there is a new supply arrival, an employee updates the inventory level by this function.
+Check inventory
+The manager upon invoking this function issues query to view the inventory details.
+Update prices
+The manager changes the price of an item by exercising this option.
+Print sales statistics
+This option generates a printed out sales statistics for every item the supermarket deals with."
+2. Overall description,2.4 User characteristics,,"Sales clerk
+The supermarket employs many sales clerks who are responsible for carrying out the transaction with the customers and creating and printing bills for the transactions.
+Supermarket staff
+They are responsible for maintenance of the products in the supermarket and addition of newly arrived products to the inventory.
+Manager
+A manager oversees the supermarket's revenue and sales functions. He views the inventory, and review and print the sales statistics."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,It is assumed that a standard bar code reader and an automatic weighing scale is provided to the sales clerk without which completing sales transaction would be very difficult. The software requires a printer.
+3. Specific requirements,,,"External Interface Requirements:
+User Interfaces:
+Manager interface
+The SAS screen displays interfaces to view the inventory, change the prices of the products, view and print sales statistics.
+Sales Clerk interface
+The SAS screen displays an interface to commute a transaction with a customer, and produces and prints a bill for the transaction.
+Supermarket staff interface
+The SAS screen displays an interface to update the inventory for the supermarket with each arrival of new supplies.
+Hardware interfaces:
+For the software to function properly, the bar code reader scans the bar code from a product and sends the product ID to the software and the weighing machine sends the weight of the product.
+Software interfaces:
+Inventory query
+The manager queries the product whose details he/she wishes to view.
+The SAS programmatically determines the details of the product.
+The SAS displays information about the product.
+The manager selects the option to change the price of the product which updates the corresponding price in the database.
+Add to inventory
+The supermarket staff requests for the addition of the product and subsequently enters the details of the product.
+The SAS updates the product in its database and gives a confirmation message.
+New transaction
+The sales clerk provides the details of the product ready to be purchased.
+On pressing the print button, the details of the inventory are updated and a bill is produced and printed along with a confirmation message.
+Communication interface:
+Any changes made to the inventory of the supermarket is automatically updated in the database which has been set up in a separate server in the supermarket itself.
+Functional requirements:
+Sales transactions
+Introduction
+A sale transaction both authorizes and settles the requested amount against the payment method indicated. Through authorizing, the Transaction request confirms that the payment method exists and that funds are available at the time of Authorization to cover the transaction amount.
+Inputs
+Products' IDs from the bar code reader.
+Weight reading from the automatic weighing scale.
+Processing
+The SAS queries the database for the product information and calculates the total amount payable after inclusion of taxes.
+A bill is created in a printable format.
+Outputs
+A formatted bill is printed for the customer.
+Error handling
+The SAS may not be able to connect to the server due to error in network connection, in the case of which transaction is not possible.
+Viewing sales statistics
+Introduction
+The manager views the sales statistics and prints them in various formats such as pie charts, bar graphs, tabular format, etc.
+Input
+Item identification parameter (such as product ID or name).
+Time period or duration.
+Processing
+The SAS looks into the database, the cost and selling price of the particular product for every transaction in that period and generates the profit statistics in the requested format.
+Outputs
+The profit statistics are displayed in the requested format for the manager, which he prints for his convenience.
+Updating the prices for different commodities
+Introduction
+The manager easily updates the prices for all the items available in the supermarket according to the changing prices in the market.
+Inputs
+The product identification parameter (such as product ID or name).
+New Price for the product.
+Processing
+The SAS looks into the database and shows the product information.
+It updates the database with the new price.
+Outputs
+The product information with updated price is shown.
+Updating the inventory
+Introduction
+The supermarket staff adds new items to the inventory which have newly arrived.
+Inputs
+The product ID and quantity of the product arrived.
+Processing
+The SAS looks into the database, if the product ID already exists in the inventory database, the quantity is updated otherwise new product information has to be added to the database.
+Outputs
+A message is displayed confirming the update regarding the product ID and amount.
+Non Functional Requirements:
+Performance:
+High level of performance requires high speed network and high level of connectivity.
+Reliability:
+The available server must be reliable and the network connectivity in the supermarket should be proper for smooth flow of all operations and data.
+Security:
+Every user of the software is provided a unique login ID and a password which is stored in the database hashed by SHA2 algorithm.
+Availability:
+The software is available for use from the supermarket opening time to the closing time.
+Inverse Requirements:
+The software does not allow the inventory to be reduced from the database without the concerned item being purchased.
+The software does not allow any other person except the managers to change the price of the products.
+Design constraints:
+No particular design constraints are observed in this software.
+Logical database Requirements:
+All the data is saved in the database:
+Employee information
+Product information (inventory)
+Sales information
+The database allows concurrent access by various employees and is kept consistent at all the times requiring a good database design.
+Other requirements:
+Each user of the SAS is required to log in his/her account to perform different activities like sales transactions, update inventory, view sales statistics and update process etc.
+MySQL is required for maintaining the databases of inventory, sales, and employees."

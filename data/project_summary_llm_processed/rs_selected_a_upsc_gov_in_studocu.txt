@@ -1,0 +1,29 @@
+**Title:** UPSC.gov.in — Summary  
+
+**Overview:**  
+The UPSC.gov.in website is designed to streamline the recruitment process for prestigious government posts such as the Indian Administrative Services (IAS), Indian Police Service (IPS), and other civil services. The platform will provide candidates with an easy-to-use interface to apply for exams, access important updates, and retrieve resources like previous question papers and cut-off marks. This initiative aims to simplify the application process and improve accessibility for candidates while ensuring secure and efficient operations.  
+
+**Key Points:**  
+- **Purpose:** The website will serve as a centralized platform for candidates to apply for government exams, access exam-related information, and track updates.  
+- **User Roles:** Three primary user classes are supported:  
+  - **Administrators:** Maintain the website.  
+  - **Institutes:** Register to conduct exams.  
+  - **Candidates:** Apply for exams, upload documents, and access resources.  
+- **Core Features:**  
+  - Provide access to exam details, including eligibility criteria, previous years’ question papers, and cut-off marks.  
+  - Allow candidates to register, log in, and track their application status.  
+  - Display answer keys for recently conducted exams.  
+- **Operating Environment:** Compatible with Windows, Android, and Mac operating systems, requiring a web browser and Adobe Reader for PDF downloads.  
+- **Design Constraints:**  
+  - The website must be user-friendly for non-technical users.  
+  - SSL security is required to protect sensitive data.  
+  - The database (MS Access 2000) has limited scalability and performance tuning capabilities.  
+- **Assumptions:** Users must have internet access and basic familiarity with similar websites.  
+
+**Risks and Unknowns:**  
+- Scalability issues due to the use of MS Access 2000 as the database.  
+- Potential performance degradation as the number of records increases.  
+- Risk of content duplication by unauthorized third-party websites.  
+- No explicit mention of disaster recovery or backup mechanisms.  
+
+**Timeline:** Not specified.  

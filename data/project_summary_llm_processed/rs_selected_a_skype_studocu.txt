@@ -1,0 +1,30 @@
+**Title:** Skype — Summary  
+
+**Overview:**  
+Skype is a freemium Voice-over-IP (VoIP) service designed to facilitate online communication through video calling, instant messaging, and mobile chat. It supports both personal and professional use cases, such as business meetings, social interactions, and intercultural exchanges. The platform is accessible via desktop and mobile applications, offering free Skype-to-Skype communication and paid services for calls to landlines and mobile phones.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Enable seamless communication through video calls, voice calls, instant messaging, and file sharing.  
+  - Support both individual and group interactions, including group calls, group chats, and group screen sharing.  
+  - Provide a secure and reliable platform for users worldwide.  
+
+- **Top Features:**  
+  - **Calling:** Skype-to-Skype calls, calls to mobile/landline, group calls, and Skype numbers.  
+  - **Video:** One-to-one and group video calls.  
+  - **Messaging:** Internet messaging, emojis, emoticons, text messages, and voice messages.  
+  - **Sharing:** File sharing, screen sharing, group screen sharing, and contact sharing.  
+
+- **Non-Functional Requirements:**  
+  - Operates 24/7 with support for concurrent users.  
+  - Requires basic hardware (128 MB RAM, camera, microphone, etc.) and an active internet connection.  
+  - Secure login system with error prompts for invalid credentials.  
+
+- **Mobile Apps:** Launched in 2012 for Android, iOS, Windows, and Blackberry, with over half of traffic now coming from mobile platforms.  
+
+**Risks and Unknowns:**  
+- Assumes hardware reliability and uninterrupted internet connectivity.  
+- User documentation is not specified.  
+- Dependencies on user availability (online status) and external organizations for certain functionalities.  
+
+**Timeline:** Not specified.  

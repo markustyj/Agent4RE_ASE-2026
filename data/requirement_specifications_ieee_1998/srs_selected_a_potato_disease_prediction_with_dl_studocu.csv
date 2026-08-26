@@ -1,0 +1,291 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"System requirements speciﬁcations is a document where all system requirements of a
+system to be developed are listed. The SRS document explains precisely and
+expounds on functions responsibilities and capabilities of the software that it must
+provide to the intended users, it must also suit the constraints that it must abide to
+SRS is also used to provide the scope of the system and the tools that will
+be used in development of the system. It is also used to enhance budget estimations
+for the system being developed that is it gives the actual cost of the software
+and hardware required in the development process.
+The main objective of this document is to illustrate the requirements of the
+Machine learning system. The document gives the detailed description of both
+functional and non-functional requirements proposed by the client. This document is
+developed after a number of consultations with farmers who do large scale and small
+scale farming of potatoes and considering the complete requirement speciﬁcations of
+the given project"
+1. Introduction,1.2 Document Conventions,
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is intended for prospective users of the proposed machine learning-
+based potatoes disease detection system, speciﬁcally farmers. It is essential for
+farmers to understand the system thoroughly, as they will be the primary users and will
+regularly interact with it."
+1. Introduction,1.4 Product Scope,"This system is designed to assist farmers by automating the detection of potato
+diseases through machine learning. By simply uploading an image of a potato leaf, the
+system will analyze the image to identify potential diseases, such as early or late blight,
+enabling farmers to respond quickly and effectively. Recent studies indicate that
+machine learning models, particularly Convolutional Neural Networks (CNNs), are
+effective in agricultural disease detection, providing high accuracy and reliability when
+applied to image classiﬁcation tasks (Kang et al., 2023; Upadhyay et al., 2024).
+The system includes an intuitive interface, allowing farmers to upload images easily and
+receive immediate feedback on disease presence. A machine learning model,
+speciﬁcally trained for potato disease detection, ensures high accuracy in identifying
+diseases, leveraging CNN architecture to achieve robust detection (Arnaud et al., 2022).
+To further enhance its functionality, the system integrates OpenAI to provide farmers
+with tailored recommendations and actionable advice based on the disease diagnosis.
+Studies on AI-driven agricultural support show that AI integrations can offer valuable,
+context-speciﬁc guidance, from treatment options to preventive measures (Paul et al.,
+2019). With this integration, farmers will not only receive instant disease detection
+feedback but also expert-level recommendations from OpenAI, enabling them to make
+informed decisions on disease management. This combination of detection and advice
+aims to empower farmers and contribute to more sustainable and productive potato
+farming.
+The Potato Disease Prediction System overall interface requires the user (IT literate) to u
+pload an image of their potato crops. Utilizing machine learning algorithms, the system
+analyzes the image and, with the help of OpenAI, predicts potential potato diseases. Inf
+ormative results are produced to the user upon which a decision can be made, enabling
+proactive measures to reduce crop loss and improve yield quality."
+1. Introduction,1.5 References,"Arnaud, S. E., Ndeda, R., Aoki, S., & Kananu, M. L. (2022). Comparison of Deep Learning
+Architectures for Late Blight and Early Blight Disease Detection on Potatoes. Open Journal
+of Applied Sciences, 12(05), 723–743.
+Kang, F., Li, J., Wang, C., & Wang, F. (2023). A Lightweight Neural Network-Based Method
+for Identifying Early-Blight and Late-Blight Leaves of Potato. Applied Sciences, 13(3), 1487.
+Mair, C., Kadoda, G., Lefley, M., Phalp, K., Schofield, C., Shepperd, M., & Webster, S.
+(2000). An Investigation of Machine Learning Based Prediction Systems. Journal of Systems
+and Software, 53(1), 23–29.
+Paul, R. K., Vennila, S., Bhat, M. N., Yadav, S. K., Sharma, V. K., Nisar, S., & Panwar, S.
+(2019). Prediction of Early Blight Severity in Tomato by Machine Learning Technique. The
+Indian Journal of Agricultural Sciences, 89(11).
+Upadhyay, S. K., Jain, J., & Prasad, R. (2024). Early Blight and Late Blight Disease
+Detection in Potato Using EfficientNetB0. International Journal of Experimental Research
+and Review, 38, 15–25."
+2. Overall Description,2.1 Product Perspective,"The system primarily relies on datasets to train the machine learning models. Here’s a c
+omparison with other systems:
+Feature
+Potato Disease Prediction System
+Other Systems
+Data Source
+Dataset for Training
+Varies
+Data Input
+Image Upload
+Varies
+System Type
+Automatic
+Manual/Automatic
+Data Relevance
+High
+Variable/Irrelevant
+User Interface
+User-Friendly
+Complex
+Adaptability
+Dynamic
+Phased Out Over Time"
+2. Overall Description,2.2 Product Functions,"Allow farmers to upload images
+ii) After uploading the image the system predicts the disease affecting the potato plant and
+gives the feedback eg early blight or late blight or healthy plant.
+iii)After predicting the disease with the help of open ai the farmer gets feedback on how to
+handle the disease and the pesticides to use."
+2. Overall Description,2.3 User Classes and Characteristics,"Primary User: Farmers
+Tasks:
+Take and Upload Photos: Farmers will take and
+upload images of their potato crops to the system.
+Needs:
+Ease of Use:
+User-
+Friendly Interface: The system must be intuitive and easy to navigate, providin
+g clear instructions at every step to ensure that users of all IT literacy levels ca
+n operate it without difficulty.
+Accessibility: Support for multiple languages and offline functionality should
+be provided to accommodate farmers in various regions with different levels o
+f connectivity and language preferences.
+Quick and Accurate Feedback:
+Real-
+Time Predictions: The system process and analyze uploaded images promptly,
+delivering accurate disease predictions within a short timeframe to enable farm
+ers to take immediate action.
+Detailed Feedback: Alongside the predictions, the system provide detailed info
+rmation and recommendations on how to manage or treat the identified disease
+s, helping farmers make informed decisions to protect their crops."
+2. Overall Description,2.4 Operating Environment,"Operating System: Windows 10/11
+Processor (CPU): Intel Core i5 or AMD Ryzen 5
+Memory (RAM): 8 GB DDR4
+Storage: 256 GB SSD
+Graphics Card (GPU): Integrated graphics (e.g., Intel UHD Graphics) for smaller mod
+els, or NVIDIA GeForce GTX 1050 Ti for larger models
+Operating System: Windows 10/11
+Programming Languages: Python (3.6+)
+IDEs: Jupyter Notebook, PyCharm, VS Code
+Libraries and Frameworks: TensorFlow, PyTorch, scikit-
+learn, pandas, NumPy, Matplotlib, Seaborn
+Database: MySQL/PostgreSQL, MongoDB
+Tools: Anaconda, Git
+Additional Tools: Docker, Kubernetes, Apache Kafka, Hadoop/Spark, ELK Stack (Ela
+sticsearch, Logstash, Kibana)
+Cloud Platforms: AWS (Amazon SageMaker), Azure (Azure Machine Learning), Goo
+gle Cloud (Google AI Platform)
+Collaboration Tools: Slack/Teams, JIRA/Trello
+Monitoring Tools: Prometheus/Grafana"
+2. Overall Description,2.5 Design and Implementation Constraints,"Audit of the Entire System:
+Regularly conduct audits to evaluate system performance and detect vulnerabil
+ities.
+Maintain detailed logs of system activities for transparency and traceability.
+Signal Timing Requirements:
+Optimize system response times to ensure real-time or near-real-
+time feedback to users.
+Implement efficient data processing algorithms to minimize latency.
+Parallelism and Concurrency of Different Operations:
+Design the system to support concurrent processing of multiple tasks for enha
+nced performance.
+Utilize multi-
+threading and parallel computing techniques to handle large datasets and comp
+lex computations.
+Reliability Requirements:
+Design the system to be robust and fault-
+tolerant to ensure continuous operation.
+Implement redundant systems and regular backups to prevent data loss and ens
+ure reliability."
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,"The Potato Disease Prediction System assumes that farmers have access to a smartphone or a
+computer with an internet connection to upload images of potato crops. It relies on the availa
+bility of quality images captured by farmers for accurate disease prediction the machine learn
+ing models will be trained on a comprehensive and representative dataset to ensure high predi
+tion accuracy. Farmers are expected to follow the system's guidelines for capturing images, e
+nsuring clarity and relevance, and to receive adequate training to use the platform effectively.
+The performance of the system depends on the availability of appropriate hardware and stable
+internet connectivity for image uploads, as well as the quality and diversity of the training da
+taset used for machine learning. Additionally, the system may rely on third-
+party services such as cloud storage and processing platforms for data handling and model tra
+ining, and on specific machine learning libraries and image processing tools. Finally, adheren
+ce to data privacy laws and agricultural regulations is crucial, which may affect system deplo
+yment and operation."
+3. External Interface Requirements,3.1 User Interfaces,"Allow farmers to upload images
+ii) After uploading the image the system predicts the disease affecting the potato plant and
+gives the feedback eg early blight or late blight or healthy plant.
+iii)After predicting the disease with the help of open ai the farmer gets feedback on how to
+handle the disease and the pesticides to use."
+3. External Interface Requirements,3.2 Hardware Interfaces,"Operating System: Windows 10/11
+Processor (CPU): Intel Core i5 or AMD Ryzen 5
+Memory (RAM): 8 GB DDR4
+Storage: 256 GB SSD
+Graphics Card (GPU): Integrated graphics (e.g., Intel UHD Graphics) for smaller mod
+els, or NVIDIA GeForce GTX 1050 Ti for larger models"
+3. External Interface Requirements,3.3 Software Interfaces,"Operating System: Windows 10/11
+Programming Languages: Python (3.6+)
+IDEs: Jupyter Notebook, PyCharm, VS Code
+Libraries and Frameworks: TensorFlow, PyTorch, scikit-
+learn, pandas, NumPy, Matplotlib, Seaborn
+Database: MySQL/PostgreSQL, MongoDB
+Tools: Anaconda, Git
+Additional Tools: Docker, Kubernetes, Apache Kafka, Hadoop/Spark, ELK Stack (Ela
+sticsearch, Logstash, Kibana)
+Cloud Platforms: AWS (Amazon SageMaker), Azure (Azure Machine Learning), Goo
+gle Cloud (Google AI Platform)
+Collaboration Tools: Slack/Teams, JIRA/Trello
+Monitoring Tools: Prometheus/Grafana"
+3. External Interface Requirements,3.4 Communications Interfaces,"Internet Access:
+Provide offline options if needed but one will not be able to get the feedback from open ai"
+4. System Features,4.1 System Feature 1,"The system shall allow users (farmers) to upload images of potato leaves through an intuitive
+interface.
+Uploaded images should be stored securely in the system’s database for further analysis and
+future reference.
+The system shall preprocess the uploaded images to enhance quality and prepare them for
+disease detection. This includes resizing, normalization, and noise reduction.
+The system shall analyze uploaded images using a trained machine learning model (e.g.,
+CNN) to detect and classify potato diseases, such as early blight and late blight.
+The system should provide a confidence score or probability for each diagnosis to help
+farmers understand the likelihood of each detected disease.
+The system shall provide real-time feedback to the user with the disease identification results
+once the analysis is complete.
+Results should display a clear, understandable message about the detected disease or indicate
+if no disease is found.
+The system shall integrate OpenAI to generate tailored treatment recommendations based on
+the detected disease.
+Upon detection, OpenAI should provide actionable advice on treatment options, preventive
+measures, and best practices for disease management."
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The system shall process uploaded images and return disease detection results within 2
+seconds, providing real-time feedback to users. For treatment recommendations generated
+through OpenAI, the response time shall not exceed 3 seconds, ensuring an efficient user
+experience. To maintain accuracy and reliability, the disease detection model is expected to
+achieve a minimum accuracy rate of 90% in classifying diseases like early and late blight,
+and each classification shall include a confidence score to aid users in understanding the
+reliability of the results.
+The system must support scalability, capable of handling up to 100 simultaneous user
+requests without performance degradation, and be designed for easy scaling to accommodate
+future growth. Additionally, it shall meet a minimum uptime of 99.5%, allowing reliable
+access with minimal downtime for maintenance. The system is also required to process a
+minimum of 100 images per minute to handle peak usage periods effectively.
+Maximum Response Time
+The system shall complete disease detection and classification within 3 seconds of image
+upload.
+OpenAI Recommendation Response Time
+The system shall generate treatment recommendations through OpenAI within 5 seconds
+after disease detection.
+Detection Model Accuracy
+The machine learning model shall achieve a minimum accuracy of 90% in detecting and
+classifying diseases like early and late blight.
+Simultaneous User Support
+The system shall support up to 100 concurrent users without any noticeable performance
+impact.
+Image Processing Throughput
+The system shall be capable of processing at least 100 images per minute during peak usage
+periods.
+System Uptime
+The system shall maintain a minimum uptime of 99.5%, allowing for continuous access and
+minimal interruptions.
+Confidence Score Display
+The system shall display a confidence score with each disease detection result, with values
+ranging from 0 to 1, where 1 represents the highest confidence.
+Response Time Under Load
+The system’s response time shall dynamically adjust to handle increased user load, ensuring
+that disease detection results are delivered within 5 to 8 seconds even with up to 100
+concurrent users.
+Scalability of Image Processing
+The system shall scale its image processing capabilities in real time to handle up to 200
+images per minute during peak usage, with a target of maintaining a 5-second response
+time for detection results under normal conditions.
+Adaptive Accuracy Adjustment
+The system shall monitor detection accuracy dynamically, adjusting model thresholds to
+maintain 90% accuracy as new data is added and the model is retrained periodically for
+improved performance.
+Real-Time Confidence Scoring
+Confidence scores shall be updated dynamically with each detection, showing real-time
+adjustments based on new or recalibrated data, with scores displayed within 1 second of
+detection."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements,
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"In addition to core functional requirements, there are several software attributes that, while
+not direct requirements, significantly impact system performance and user experience.
+Measures have been put in place to address these attributes, ensuring they are effectively
+managed. By proactively considering and handling these attributes, the overall performance,
+reliability, and usability of the system are greatly enhanced.
+Usability
+The system shall provide a user-friendly interface that is simple for farmers to navigate, even
+with minimal technical expertise.
+It shall use clear language and intuitive controls for uploading images and viewing results,
+ensuring accessibility for all users.
+Reliability
+The system shall operate consistently with a target uptime of 99.5%, minimizing downtime
+and ensuring availability when users need it.
+It should be resilient to failures, with built-in fault tolerance to recover quickly from errors
+and maintain seamless operation.
+Scalability
+The system shall be scalable, capable of expanding its processing power and storage as the
+number of users and data volume increase.
+The architecture should allow for the addition of resources or distribution of load across
+multiple servers without affecting performance.
+Performance
+The system shall perform efficiently, providing disease detection results within a target of 5
+seconds under normal load and up to 8 seconds under peak load.
+The OpenAI integration shall provide treatment recommendations within 10 seconds after
+disease detection to maintain a smooth user experience.
+Compatibility
+The system shall be compatible with multiple devices and browsers, allowing farmers to use
+it on desktops, laptops, and mobile devices with standard browsers like Chrome, Safari, and
+Firefox.
+Maintainability
+The system codebase shall be modular and well-documented, allowing developers to update,
+debug, or extend the system with minimal disruption.
+Regular maintenance schedules should be established to keep the system updated with the
+latest improvements and security patches."
+5. Other Nonfunctional Requirements,5.5 Business Rules,

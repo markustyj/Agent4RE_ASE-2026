@@ -1,0 +1,24 @@
+**Title:** Quikr.com — Summary  
+
+**Overview:**  
+The Software Requirements Specification (SRS) outlines the development of Quikr.com, a computerized shopping network designed to facilitate buying and selling of products. The system aims to provide a seamless and secure platform for customers, sellers, and network personnel to perform transactions efficiently. The software integrates with partner systems and ensures robust record-keeping and security measures.  
+
+**Key Points:**  
+- **Purpose:** Quikr.com supports automated purchasing and selling services, enabling customers to complete transactions securely and efficiently.  
+- **Scope:** The software operates as part of a network involving multiple partners and sellers, requiring integration with their systems.  
+- **User Interfaces:**  
+  - **Customer Interface:** Designed for ease of use, ensuring 99.9% of new users can complete tasks without assistance.  
+  - **Network Personnel Interface:** Includes simple tools for ATM initialization and restocking.  
+  - **Maintainer Interface:** Allows network administrators to add new ATMs within 1 hour.  
+- **Product Functions:** The system supports 24/7 ATM operations, handling transactions like deposits, withdrawals, transfers, and bill payments. It ensures secure authentication via cash cards and PINs.  
+- **Operating Environment:** Requires hardware capable of reading ATM cards, counting currency, touchscreens, keypads, continuous power supply, and connectivity to bank networks.  
+- **Security Features:** Includes validation for card expiration, stolen/lost cards, disabled cards, locked accounts, and incorrect PINs. Accounts are locked after three consecutive failed login attempts.  
+- **Constraints:** Assumes hardware reliability, impenetrable ATM casing, and sufficient resources for daily transactions.  
+
+**Risks and Unknowns:**  
+- Assumes hardware never fails, which may not be realistic.  
+- Dependencies on partner systems could introduce integration challenges.  
+- Limited documentation on user manuals and training materials.  
+- No details provided on scalability or handling high transaction volumes.  
+
+**Timeline:** Not specified.  

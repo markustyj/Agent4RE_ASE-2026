@@ -1,0 +1,136 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This is our project about HOTEL MANAGEMENT SYSTEM to manage bookings, employees,
+rooms and hotels efficiently in order to provide the best service. The design of our project is
+based on SAAS applications where we provide Software as Service. Firstly, we are the super
+admins of this application and the hotel owners can get our application on a subscription based
+model. We will be registering the hotels in a database and authenticating them to use this
+application."
+1. Introduction,1.2 Document Conventions,"We have used a Roboto font style with the size of 11 pts for the text and the size of 12 pts and
+bold for headings."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This software is intended to be used by the owner and the staff of the hotel. Staff includes
+general staff (receptionist, porter etc.) and manager. Each type of user has different privileges
+and rights.
+This document is meant for the developers, testers, project managers and the client. This
+document is designed to give the overall description of the requirements for the project. It
+further elaborates on what the interfaces are used with emphasis on the user and system
+interface including GUIs and other hardware components. It is recommended to read the
+document in a linear order and go over each section thoroughly to understand the flow of how
+the requirements are broken down and addressed."
+1. Introduction,1.4 Product Scope,"The motivation behind the idea is that nowadays the world is getting digitized so in order
+to remove all manual and paper work we have created system which would help us to manage
+data more accurately and efficiently. Moreover, this would give an ability to keep records of
+guests and employees which could be further used for analytics.
+We have provided full rights to the user where he can add, update, search and delete information
+when required. Best database design is used in order to increase efficiency of managing data
+from various hotels.
+This application is very useful for a long run. This can help hotels manage their staffs and guest
+with ease just by a single click as this provides functionality of generating reports. Moreover,
+data is managed efficiently and accurately which would help users to fetch everything easily."
+1. Introduction,1.5 References,"1.
+Database System Concepts - Abraham Silberschatz, Henry F. Korth, S. Sudarshan
+2.
+Database Systems - Ramez Elmasri , Shamkant B. Navathe
+3.
+https://www.javatpoint.com/software-requirement-specifications
+4.
+https://www.geeksforgeeks.org/software-requirement-specification-srs-format/"
+2. Overall Description,2.1 Product Perspective,
+2. Overall Description,2.2 Product Functions,"Adding, updating, deleting and searching Hotels.
+Generate hotel reports based on bookings.
+Adding services.
+Adding employees. (CRUD)
+Adding guests (CRUD)
+Maintaining payments of guests.
+Maintaining revenue of hotels."
+2. Overall Description,2.3 User Classes and Characteristics,"Owner
+Owners will Manage the hotel settings and be able to generate reports. The owner is not
+involved in the day to day usage of the software and will only use it to look at how the
+business is performing and top level changes.
+Manager
+Manager will use the system to add employees mostly or update employee information.
+They will be able to add or remove new services and rooms in case the facility expands
+or changes.
+Employee
+Employees will use the system most of the time. They will be processing bookings for
+the guests, assigning rooms and updating room status for guests.These guys will be
+depending on the system for most of their tasks and will need to be properly trained on
+how to use the system efficiently.
+Guest
+Guests will not directly interact with the system however their check-in/check-out
+information as well as their cost will be processed and displayed by the system ."
+2. Overall Description,2.4 Operating Environment,"The database will be running on a windows server in the hotel premises and the software
+application will run on multiple devices on the windows operating system. For example the
+application will be running on the receptionist’s computer as well in the manager's office."
+2. Overall Description,2.5 Design and Implementation Constraints,"We have implemented this project using the concepts of database designing along with
+frontend using C# and MS Sql Server as per the client’s request and to make our program more
+efficient. We have provided few features such as CRUD operations for all aspects where
+required. We have also tried to manage project security and integrity using various constraints
+and abstracting data. We have also kept in mind to have enough flexibility in our data structure
+so that we can generate insightful reports and statistics about the hotel."
+2. Overall Description,2.6 User Documentation,"The goal of this project is to deliver the required features and along with comprehensive
+documentation reflecting the process of identifying these requirements and the process of
+coming up with solutions. This documentation will also serve as a reference for future
+requirements, design and development as well as usage. This document includes SRS, SDS and
+STD deliverables as printed word document files as well as a soft pdf copy."
+2. Overall Description,2.7 Assumptions and Dependencies,"We have assumed that the user will be computer literate and will receive some form of training
+to be able to use the software proficiently.
+Also this project is way beyond the scope of the limited features that we have defined here. On
+that account we assume that all the other necessary features are already existing for the scope
+of designing this SRS.
+We have used concepts from our previous project to produce this document in which the
+language that is used is C# and for IDE Visual Studio is primarily used. Basic concepts of
+OOP along with the best database design approach is used with MS SQL Server. We have also
+made use of the UI library GUNA."
+3. External Interface Requirements,3.1 User Interfaces,"We are using MS Windows GUI standard. Here every screen will have buttons, input text areas
+and some form of information display section like a data table. There will also be pop ups
+messages for confirmation or invalid input or response."
+3. External Interface Requirements,3.2 Hardware Interfaces,"The system is to be used on a personal computer with the same input output devices such as
+mouse, keyboard and monitor (ATM card reader if needed). There is also the touch screen
+feature available that could be used on desktop systems as well as portable windows devices."
+3. External Interface Requirements,3.3 Software Interfaces,"MS SQL
+As a database storage for convenient data updates and fetching.
+GUNA
+A UI Library used to make the UI.
+C# Libraries (WinForms)
+We have used many utility functions and classes provided by the built in C# classes and
+libraries."
+3. External Interface Requirements,3.4 Communications Interfaces,"The only communication interfaces and standards involved in the product are related to the MS
+SQL connection. The data transfer rates, and synchronization mechanisms used are all provided
+by SQL queries."
+4. System Features,4.1 System Feature 1,"The Actors who have access to the system will authenticate into the system using the Login
+Page."
+4. System Features,4.2 System Feature 2 (and so on),"Actor Action
+System Response
+1.
+Enters Credentials (username and
+password)
+2.
+Press submit button
+3.
+Validate Credentials
+4.
+Upon successful validation goto Main
+page for relevant user"
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The system should be efficient enough to handle several requests at the same time. The
+software will be used by a hotel which would have multiple bookings, therefore it must be
+structured to encounter those requests simultaneously. The speed of response time must be
+high in order to provide hassle free experience for hotel owners. Storage capacity and storage
+time must be managed systematically."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"The customer data should be backed up so that the valuable data stored in the database can be
+recovered in case of an accident. UPS systems should be installed to stabilize electrical
+disruptions that may cause harm to the data. Network security protocols should be followed
+under the ISO/IEC 27033-6:2016 to prevent unauthorized access ."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"The system will have sensitive information such as customer personal information and credit
+information. To ensure that none of the data is misused, data should be encrypted and strong
+password authentication for every user should be used. Also sensitive data handling privileges
+should reside with the manager and owner only. Credit information should not be accessible to
+anyone other than for verification purposes."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"This system needs to be reliable and fast as it will be used at the reception and if the system is
+slow or if the system is unavailable it will affect customer satisfaction.
+The system will also hold data that will be viable for the day to day and long term operation to
+ensure that the data does not get corrupted.
+The system also needs to be portable as it would be used on many different devices in many
+places in the hotel (e.g. reception, managers office, different places for the employees on each
+floor)."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"Customers cannot directly access the system. Bookings would only be made by the system
+operation that is receptionist. Customers cannot get access to the room without payment."

@@ -1,0 +1,268 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This document outlines the functional and non-functional requirements for the development of an Online Examination System (OES) designed for secure and efficient standardized test management within a government organization. The OES comprises three main components: Admin Panel, Candidate Portal, and Proctoring Module. This document serves as a guide for all stakeholders, including developers, project managers, marketing staff, users, testers, and documentation writers, involved in the system's development and operation."
+1. Introduction,1.2 Document Conventions,"This document follows standard software documentation conventions
+Text Styles:
+o
+Bold Text: Represents section headings and key terms.
+o
+Italicized Text: Used for emphasis and examples.
+Requirement Notation:
+o
+Functional requirements are labeled as FR-n
+o
+Non-functional requirements are labeled as NFR-n.
+Manual labeling format for adding new requirements:
+Use a structured numbering system, e.g., FeatureName-n where ""n"" is an incrementing integer."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is intended for developers, project managers, marketing staff, users, testers, and documentation writers involved in the development and operation of the Online Examination System (OES)."
+1. Introduction,1.4 Product Scope,"The Online Examination System (OES) modernizes standardized testing for a government organization. It replaces paper-based exams with a secure, scalable digital platform, enhancing efficiency, reducing costs, and ensuring exam integrity. Key functionalities include:
+Admin Panel: Exam creation, scheduling, result management, question bank uploads.
+Candidate Portal: Registration, exam scheduling, online test-taking.
+Proctoring Module: AI-powered features like facial recognition and cheating detection.
+The OES offers:
+Real-time monitoring and grading for objective questions.
+Secure handling of subjective question evaluation.
+Scalability to support up to 100,000 concurrent candidates.
+Product Perspective:
+The Online Examination System (OES) is a new digital platform replacing traditional paper-based testing. It serves the needs of government organizations conducting large-scale standardized exams, offering efficiency, security, and scalability. Though standalone, OES may interface with:
+Machine learning APIs for proctoring.
+Database systems for secure data storage.
+Email/SMS services for candidate notifications."
+1. Introduction,1.5 References,"This document references the IEEE Standard 830-1998: Software Requirements Specifications guidelines.
+o
+Source: IEEE Standards Association
+o
+URL: IEEE 830-1998"
+2. Overall Description,2.1 Product Perspective,"Online Examination System (OES) is a new digital platform replacing traditional paper-based testing. It serves the needs of government organizations conducting large-scale standardized exams, offering efficiency, security, and scalability. Though standalone, OES may interface with:
+Machine learning APIs for proctoring.
+Database systems for secure data storage.
+Email/SMS services for candidate notifications."
+2. Overall Description,2.2 Product Functions,"Main product functions include:
+Admin Panel: Exam creation, scheduling, result management, question bank uploads.
+Candidate Portal: Registration, exam scheduling, online test-taking.
+Proctoring Module: AI-powered features like facial recognition and cheating detection.
+Exam Grading System: Auto-grading of objective questions and manual evaluation of subjective answers."
+2. Overall Description,2.3 User Classes and Characteristics,"The Online Examination System (OES) serves several user classes:
+Administrators: Proficient with the admin portal, require secure access, knowledgeable about system usage.
+Candidates: Varying technical proficiency, need user-friendly interfaces, use various devices (desktop, mobile, tablet).
+Proctors: Limited admin panel interaction, familiar with AI proctoring tools, monitor flagged activities.
+System Administrators: High technical expertise, access all system modules and logs for troubleshooting.
+Favored User Classes: Administrators and Candidates."
+2. Overall Description,2.4 Operating Environment,"Hardware Platforms: Desktops, laptops, tablets, smartphones (with webcams and mics).
+Operating Systems: Windows, macOS, Linux, Android, iOS.
+Browsers: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.
+Geographical Locations: Pakistan, mostly Urban Areas.
+Software Components:
+o
+Machine learning APIs (facial recognition, cheating detection).
+o
+DBMS (MySQL, PostgreSQL) for secure user/exam data storage.
+o
+Email/SMS services for candidate notifications."
+2. Overall Description,2.5 Design and Implementation Constraints,"Support peak loads of up to 100,000 simultaneous users.
+Use pre-trained ML models integrated via external APIs.
+Python for backend, ReactJS for frontend to ensure maintainability and compatibility.
+Adhere to data protection and user privacy regulations like GDPR.
+Ensure all libraries and frameworks used are open source or properly licensed."
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,"2.5.1 Assumptions:
+Government Regulations: Compliance with data protection laws (e.g., GDPR) is assumed.
+Security Protocols: Encryption mechanisms (SSL/TLS) are adequate to protect data.
+User Device Availability: Candidates have internet-enabled devices with webcams and microphones.
+Stable Internet Connection: Candidates have a stable connection (min 1 Mbps).
+Data Retention Period: User data retained for five years, then securely deleted.
+AI-based Proctoring Reliability: Machine learning models for facial recognition and cheating detection are effective and accurate.
+2.5.2 Dependencies:
+Machine Learning APIs: Proctoring relies on third-party ML APIs.
+Cloud Infrastructure: Scalable cloud infrastructure for 100K concurrent users.
+Government Data Protection Laws: Compliance with current data protection laws.
+Internet Connectivity: Reliable internet access for candidates is crucial.
+Web Browser Compatibility: Support for modern web browsers.
+External Notification Services: Dependence on email and SMS services.
+Data Center Hosting: Dependence on cloud-based data centers for hosting."
+3. External Interface Requirements,3.1 User Interfaces,"5.1.1 Admin Panel Interface
+Layout: Clean, hierarchical structure with a left-side navigation menu and dropdowns for key categories like exam creation, results management, and question uploads.
+Buttons: Standard buttons (""Save,"" ""Cancel,"" ""Submit"") consistently located at the bottom or right; ""Help"" button in the top-right corner.
+Validation: Input checks for correct data (e.g., valid email, non-overlapping schedules) with immediate error messaging.
+5.1.2 Candidate Portal Interface
+Layout: Dashboard view showing upcoming exams, results, and schedules; horizontal navigation bar for ""Register,"" ""Take Exam,"" and ""View Results.""
+Buttons: Prominent ""Start Exam,"" ""View Schedule,"" and ""Log Out""; ""Help"" button for instructions and troubleshooting.
+Notifications: Alerts (e.g., exam reminders) displayed as pop-ups; system messages shown prominently.
+5.1.3 Proctoring Module Interface
+Layout: Real-time monitoring dashboard with live video feeds, flagged activities, and action logs.
+Navigation: Single-page design; key controls (""Mute Candidate,"" ""Flag for Review"") in a floating toolbar.
+Validation: Notes field restricted to text input; all flagged ctions auto-timestamped and logged.
+5.1.4 General UI Guidelines
+Fonts: Web-safe fonts (Arial, Helvetica, Verdana); 12px minimum for body text, 14px for headings.
+Colors: Blue and white scheme; green for success, red for errors, yellow for warnings; WCAG 2.1 AA compliance for contrast.
+Shortcuts: Examples: Ctrl + S (save), Esc (exit/cancel).
+Resolution: Optimized for mobile and desktop (320x480 px to 1920x1080 px)."
+3. External Interface Requirements,3.2 Hardware Interfaces,"5.3.1 Candidate Device Interface
+Device Types Supported: Laptops, Desktops, Tablets, Mobile Phones (Android/iOS).
+Communication Protocols: HTTP/HTTPS, WebSockets/REST APIs, WebRTC (for proctoring).
+Inputs: User actions, webcam/microphone (for proctoring).
+Outputs: Web page content, exam data, results, notifications.
+Timing Issues: Minimize latency for real-time feedback.
+5.3.2 Server Hardware Interface
+Device Types Supported: Dedicated Servers or Cloud Instances (AWS EC2, Google Cloud).
+Communication Protocols: HTTP/HTTPS, TCP/IP.
+Inputs: Requests from client devices.
+Outputs: HTML pages, exam data, results.
+Timing Issues: Response time under 3 seconds, handle multiple simultaneous requests.
+5.3.3 Webcam & Microphone Interface (for Proctoring)
+Device Types Supported: USB or built-in webcams and microphones.
+Communication Protocols: WebRTC, JavaScript API (getUserMedia).
+Inputs: Video (JPEG/PNG), audio (WAV/MP3).
+Outputs: Real-time data for proctoring.
+Timing Issues: Minimize latency (<2 seconds), synchronize video and audio.
+5.3.4 Printer Interface (for Certificates)
+Device Types Supported: Inkjet/laser printers.
+Communication Protocols: IPP (network), USB (local).
+Inputs: Print commands.
+Outputs: Printed document.
+Timing Issues: Printer ready within 30 seconds."
+3. External Interface Requirements,3.3 Software Interfaces,"5.2.1 Database Management System (DBMS)
+o
+Software: MySQL 8.0 / PostgreSQL 13.x
+o
+Purpose: Store and manage data for users, exams, results, and logs.
+o
+Data Exchange:
+Input: SQL queries for data management.
+Output: Query results in JSON/XML format.
+o
+Non-functional Requirements:
+Response time: Queries within 2 seconds.
+Security: AES-256 encryption for sensitive data.
+5.2.2 Machine Learning API for Proctoring
+o
+Software: Custom API (e.g., Amazon Rekognition, Microsoft Azure Face API)
+o
+Purpose: Facial recognition and cheating detection.
+o
+Data Exchange:
+Input: Webcam feed (JPEG/PNG).
+Output: JSON with recognition data and flags.
+o
+Non-functional Requirements:
+Confidence: 95% accuracy for identification.
+Response: Results within 2 seconds.
+Security: HTTPS encryption for data exchange.
+5.2.3 Email/SMS Service
+o
+Software: SendGrid (Email) / Twilio (SMS)
+o
+Purpose: Notifications for exam schedules, reminders, and results.
+o
+Data Exchange:
+Input: JSON with recipient details and message content.
+Output: Delivery status (success/failure).
+o
+Non-functional Requirements:
+Delivery: Notifications sent within 30 seconds.
+Security: TLS encryption for communication.
+5.2.4 Security and Encryption Libraries
+o
+Software: OpenSSL 1.1.1 or equivalent
+o
+Purpose: Encrypt sensitive data (e.g., passwords, tokens).
+o
+Data Exchange:
+Input: Data for encryption.
+Output: Encrypted data (AES-256/RSA).
+o
+Non-functional Requirements:
+Performance: Operations within 1 second.
+Compliance: FIPS 140-2 standards for cryptography."
+3. External Interface Requirements,3.4 Communications Interfaces,"5.4.1 Email Communication Interface
+Purpose: Used for notifying candidates about exams, results, and updates.
+Format: HTML (rich text) and plain-text email formats.
+Security: TLS encryption for secure transmission, PGP/S/MIME for sensitive data.
+Attachments: Max 5 MB; allowed formats: PDF, JPG, PNG, TXT.
+Timing: Emails sent within 2-3 seconds, delivery within 1 minute.
+Constraints: Validate email addresses; no raw passwords, secure links for password resets.
+5.4.2 Web Browser Communication Interface
+Purpose: Used by candidates and administrators to access the system.
+Format: Data in JSON/XML; responses in HTML.
+Security: HTTPS for secure communication, session cookies for authentication.
+Timing: Server response within 3 seconds; page load within 5 seconds.
+Constraints: Ensure responsiveness across devices and handle browser incompatibilities.
+5.4.3 Network Protocols
+Purpose: Standard protocols (HTTP/HTTPS) for communication between client and server.
+Format: JSON for API interactions.
+Security: SSL/TLS encryption, OAuth 2.0 or JWT for API authentication.
+Timing: Data requests processed within 500 ms; latency under 2 seconds during peak traffic.
+Synchronization: TCP/IP for reliable communication; client-server handshaking on session start.
+5.4.4 Communication Security and Encryption
+Encryption: AES-256 for data at rest, TLS 1.2+ for data in transit.
+Security: Secure all communication channels against MITM and SQL Injection; use CAPTCHA/MFA for login."
+4. System Features,4.1 System Feature 1,"3.1.1 Description
+Provides tools for administrators to manage exams, question banks, schedules, candidates, and results. High priority for critical admin tasks.
+3.1.2
+Functional Requirements
+FR-1: Exam Creation: Create various question formats and schedule exams.
+FR-2: Question Bank Management: Upload, edit, delete, and categorize questions.
+FR-3: Exam Result Management: View/download results with interfaces for auto-graded and manual evaluations.
+FR-4: User Management: Manage user accounts and roles.
+FR-5: Error Handling: Display error messages for invalid inputs and warnings for incomplete setups."
+4. System Features,4.2 System Feature 2 (and so on),"3.2.1 Description
+Main interface for candidates to register, schedule, and take exams. High priority.
+3.2.2 Functional Requirements
+FR-6: Registration and Profile Management: Register and update personal details.
+FR-7: Exam Scheduling: View available slots and receive notifications.
+FR-8: Participation: Access exams within scheduled times with automatic start/end.
+FR-9: Error Handling: Display error messages for failed registrations and prevent early/late exam access.
+3.3.1 Description
+Uses AI for facial recognition and cheating detection to ensure exam integrity. High priority.
+3.3.2 Functional Requirements
+FR-10: Facial Recognition: Authenticate candidates before exams.
+FR-11: Cheating Detection: Monitor suspicious activities and alert proctors.
+FR-12: Real-Time Monitoring: Stream and record video/audio for exam review.
+FR-13: Error Handling: Flag and notify on facial recognition issues and device malfunctions.
+3.4.1 Description
+Manages grading of objective (auto-graded) and subjective (manual evaluation) questions. High priority.
+3.4.2 Functional Requirements
+FR-14: Objective Grading: Automatically grade MCQs and display scores.
+FR-15: Subjective Grading: Allow manual grading with feedback.
+FR-16: Result Finalization: Combine objective and subjective scores with manual adjustments.
+FR-17: Error Handling: Notify on grading issues and warn on auto-grading failures."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"NFR-1 Performance
+Response time for database queries: within 2 seconds.
+Server response time: under 3 seconds.
+Data requests processed within 500 ms; latency under 2 seconds during peak traffic."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"NFR-3 Security
+Data encryption: AES-256 for sensitive data at rest and TLS for data in transit.
+Compliance with data protection regulations (e.g., GDPR).
+Use of secure communication protocols (SSL/TLS)."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"NFR-1 Performance
+Response time for database queries: within 2 seconds.
+Server response time: under 3 seconds.
+Data requests processed within 500 ms; latency under 2 seconds during peak traffic.
+NFR-2 Scalability
+Support peak loads of up to 100,000 simultaneous users.
+NFR-3 Security
+Data encryption: AES-256 for sensitive data at rest and TLS for data in transit.
+Compliance with data protection regulations (e.g., GDPR).
+Use of secure communication protocols (SSL/TLS).
+NFR-4 Reliability
+Daily/weekly backups with mirrored copies for data integrity.
+Immutable audit logs for all transactions.
+NFR-5 Usability
+User-friendly interfaces for candidates and administrators.
+Accessibility compliance (WCAG 2.1 AA).
+NFR-6 Compatibility
+Support for modern web browsers (Chrome, Firefox, Edge, Safari).
+Compatibility with various operating systems (Windows, macOS, Linux, Android, iOS).
+NFR-7 Maintainability
+Use of open-source or properly licensed libraries and frameworks.
+Python for backend and ReactJS for frontend to ensure maintainability.
+NFR-8 Data Retention
+User data retained for five years, then securely deleted.
+Proctoring logs retained for 30 days."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"Business rules include:
+User data must be retained for five years and then securely deleted.
+Proctoring logs must be deleted after 30 days for privacy.
+Candidates must have a stable internet connection (minimum 1 Mbps) to participate in exams.
+All communications involving sensitive data must be encrypted using TLS or equivalent.
+Exams must be accessible only during scheduled times.
+Results for objective questions are auto-graded; subjective questions require manual evaluation."

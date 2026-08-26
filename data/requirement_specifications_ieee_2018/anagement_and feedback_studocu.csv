@@ -1,0 +1,169 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"In order to serve as a software validation document for potential clients as well as a reference for developers, this paper aims to explain the features of Open Source Software. The goal of the fashion store web application's Online Shopping System (OSS) is to offer clients comprehensive solutions through a single internet access point. Customers will be able to peruse the inventory and make purchases without physically visiting the store thanks to it. A system administrator will be able to monitor and authorize requests using the administration module."
+1. Purpose,1.3 System overview,,"Customers can add or delete things from their carts online by using this technology, which allows them to keep their carts. They are able to purchase any kind of stylish product from any manufacturer."
+1. Purpose,1.4 References,,
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Login
+Registration Form
+There will be a screen displaying information about the product.
+If the customers select the buy button then the another screen of shopping cart will be opened.
+After all transaction the system makes the selling report as portable document file (.pdf) and sent to the customer E-mail address."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The system must run over the internet, and all hardware required to connect to the internet will serve as the system's hardware interface. For example, modem, WAN - LAN, and Ethernet Cross-Cable."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"Because the system is hosted on a server, it requires a scripting language such as PHP or Java Script. The system also requires a database to store any system transactions, such as MYSQL. DNS (domain name space) is also required for internet naming. Finally, the user requires a web browser to interact with the system."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"The system must be built with a standard web page development tool that adheres to Microsoft's GUI standards such as HTML, XML, and so on."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"The program ought to offer a good network. An efficient interface between the user and the server is provided by the website and application. Users can browse any stylish item they need with ease thanks to it. They can arrange the items in accordance with their requirements, evaluate them against alternative products, and select the best option. It takes EMI payments, cash on delivery, and credit or debit cards. If a product is not available at that moment, you will be informed as soon as it is."
+2. Overall description,2.4 User characteristics,,"Demographics: age, gender, income level, location, education level, occupation, etc.
+Psychographics: lifestyle, values, attitudes, interests, personality traits, etc.
+Shopping behaviour: frequency of shopping, average spending, preferred product categories, preferred brands, etc.
+Technical proficiency: level of comfort with technology, devices used to access the website, internet connectivity, etc.
+Previous interaction with the website: browsing history, search history, purchase history, wish list, feedback, etc."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"This system has no performance requirements because the server request and response are dependent on the end user's internet connectivity.
+The system operates on an internet server, so it may be used by any end user to make purchases."
+3. Specific requirements,,,"This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be –
+Functional Requirement 1:
+Description:
+Registration:
+If customer wants to buy the product then he/she must be registered, unregistered user can’t go to the shopping cart.
+Input:
+The customer should enter his/her details I.e., contact number, email address and name.
+Processing:
+A new account is created for the user and a unique id is given to the user to login
+Output:
+User gets id and password to login and start shopping.
+Functional Requirement 2:
+Description:
+Login:
+Customer logins to the system by entering valid user id and password for the shopping.
+Input:
+Customers enters id and password.
+Processing:
+The authorization module is called to check if the id and the password is valid or not.
+Output:
+Logged in if the authorization module gives a positive reply.
+Functional Requirement 3:
+Description:
+Authorization:
+The entered id and password are checked in the database and if it is valid then the user is allowed to login.
+Input:
+The id and password which are the inputs of the login module are passed to this module as its arguments.
+Processing:
+The id and password are matched on the database, if they are valid then access is given otherwise access is denied.
+Output:
+It gives positive reply to the login module if it is a valid one.
+Functional Requirement 4:
+Description:
+Changes to Cart:
+Changes to cart means the customer after login or registration can make order or cancel order of the product from the shopping cart.
+Input:
+Item to be added are selected by the user and the add to cart module is called and if the user wants to remove an item from the cart them remove from cart module is called.
+Processing:
+If the user wants to add the item to cart then add to cart module is called and if it wants to remove the item from cart then remove from cart module is called.
+Output:
+The item is either added or removed as per specified by the user.
+Functional Requirement 5:
+Description:
+Buy:
+The customer clicks the buy now button and gets to the payment modes.
+Input:
+Number of items the user wants to buy.
+Processing:
+The total amount/value of the items is set as the grand total to be paid by the user.
+Output:
+The order of the user is placed and a copy of that is send to the email address given by the user at the time of login (after the payment is done).
+Functional Requirement 6:
+Description:
+Payment:
+For customer there are many type of secure billing will be prepaid as debit or credit card, redeem points, EMI option is also available. The security will provide by the third party like Pay-Pal etc.
+Input:
+The method through which the user wants to make the payment.
+Processing:
+The transaction through online banking is done if the user has chosen the card payment option and if the user has used the cash on delivery option then the payment is collected at the time of delivery.
+Output:
+The order is finally placed after the payment is done.
+Functional Requirement 7:
+Description:
+Logout:
+After the payment or surf the product the customer will logged out.
+Input:
+The user presses the log out option.
+Processing:
+The cache memory of the user’s device is erased and the session of the user ends.
+Output:
+The user again comes back to login page.
+Functional Requirement 8:
+Description:
+Report Generation:
+After all transaction the system can generate the portable document file (.pdf) and then sent one copy to the customer’s Email-address and another one for the system data base to calculate the monthly transaction.
+Input:
+The bill generated after the payment is done.
+Processing:
+This invoice is sent to the customer’s email address with the order number.
+Output:
+The customer gets the invoice of his/her order.
+Functional Requirement 9:
+Description:
+Order number generation:
+An order number is a unique identification number given to every order.
+Input:
+The order of the customer.
+Processing:
+A unique order number is generated for every order.
+Output:
+The customer gets a unique order number for its order which it can trace.
+Functional Requirement 10:
+Description:
+Order tracing
+Input:
+The order id of the order to be traced.
+Processing:
+The current status of the order is fetched from the database.
+Output:
+The current status of the order is given to the customer.
+Functional Requirement 11:
+Description:
+Filters:
+It filters all the items according to the customer’s needs.
+Input:
+The criteria on which you want to filter the items.
+Processing:
+The items are filtered according to the criteria given by the customer.
+Output:
+The customer gets a filtered list of items so that it is easy for him/her to search the item required.
+Functional Requirement 12:
+Description:
+Search:
+Search the type of item which the customer wants.
+Input:
+The type of item which the customer wants.
+Processing:
+The type of items is searched in the database.
+Output:
+The items matched with the given type by the customer are shown to the customer.
+External interface requirements:
+Login
+Registration Form
+There will be a screen displaying information about the product.
+If the customers select the buy button then the another screen of shopping cart will be opened.
+After all transaction the system makes the selling report as portable document file (.pdf) and sent to the customer E-mail address.
+Hardware Interface:
+The system must run over the internet, and all hardware required to connect to the internet will serve as the system's hardware interface. For example, modem, WAN - LAN, and Ethernet Cross-Cable.
+Software Interface:
+Because the system is hosted on a server, it requires a scripting language such as PHP or Java Script. The system also requires a database to store any system transactions, such as MYSQL. DNS (domain name space) is also required for internet naming. Finally, the user requires a web browser to interact with the system.
+Performance requirements:
+This system has no performance requirements because the server request and response are dependent on the end user's internet connectivity.
+Non-functional requirements:
+Security: In all transactions involving confidential customer information, the system employs SSL (secured socket layer).
+After a period of inactivity, the system must automatically log out all customers.
+The system should not leave any cookies containing the user's password on the customer's computer.
+Sensitive data will be encrypted before being transmitted over insecure networks such as the internet.
+Reliability: The system stores all databases on redundant computers with automatic failover.
+The overall program's dependability is determined by the dependability of its individual components. The backup of the database, which is constantly maintained and updated to reflect the most recent changes, is the system's main pillar of reliability.
+As a result, the overall system stability is dependent on the stability of the container and its underlying operating system.
+Availability: The system should be available at all times, which means that the user can access it via a web browser, with the only limitation being the downtime of the server on which the system runs. A replacement page will be displayed in the event of a hardware failure or database corruption. In addition, backups of the database should be retrieved from the server and saved by the administrator in the event of a hardware failure or database corruption.
+The service will then be restarted. It means ""24/7"".
+Maintainability: The database is maintained using a commercial database, and the site is managed by the application server. In the event of a failure, the programme will be re-initialized. Additionally, the software is being designed with modularity in mind so that maintainability can be accomplished efficiently.
+Portability: The application is HTML and scripting language based. As a result, the end-user component is fully portable, and any system using any web browser should be able to use the system's features, including any hardware platform that is currently available or will be available in the future. End users can use this system on any operating system, including Windows, Linux, and iOS. The system must be compatible with PCs, laptops, mobile phones, and tablets, among other devices."

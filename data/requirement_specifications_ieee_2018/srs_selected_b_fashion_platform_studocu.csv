@@ -1,0 +1,142 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"OFS: Online Fashion Store
+JAVA EE: Java Enterprise Edition 5
+HTTP: Hypertext Transfer Protocol
+HTTPS: Secure Hypertext Transfer Protocol
+TCP/IP: Transmission Control Protocol/Internet Protocol"
+1. Purpose,1.2 Background,,"The Online Fashion Store (OFS) web application is intended to provide complete solutions for vendors as well as customers through a single gateway using the internet as the sole medium. It will enable vendors to setup online fashion shops (garments, accessories etc.), customer to browse through the shop and purchase them online without having to visit the shop physically. The administration module will enable a system administrator to approve and reject requests for new shops and maintain various lists of shop category.
+This document is meant to discuss the features of OFS, so as to serve as a guide to the developers on one hand and a software validation document for the prospective client on the other."
+1. Purpose,1.3 System overview,,"Initial functional requirements will be: -
+Secure registration and profile management facilities for Customers
+Browsing through the e-store to see the items that are there in each category of products like garments (ethnic , western etc) and accessories.
+Adequate searching mechanisms for easy and quick access to particular products and services.
+Creating a Shopping cart so that customers can shop ‘n’ no. of items and checkout finally with the entire shopping carts. Customers can add or delete items in the cart.
+Regular updates to registered customers of the OFS about new arrivals.
+Uploading ‘Most Purchased’ Items in each category of products in the Shop.
+Strategic data and graphs for Administrators and Shop owners about the items that are popular in each category and age group.
+Maintaining database of regular customers of different needs.
+Shop employees are responsible for internal affairs like processing orders, assure home delivery, getting customer's delivery-time feedback, updating order's status and answering client's queries online.
+Feedback mechanism, so that customers can give feedback for the product or service which they have purchased. Also facility rating of individual products by relevant customers.
+Adequate payment mechanism and gateway for all popular credit cards, cheques and other relevant payment options, as available from time to time.
+Initial non functional requirements will be: -
+Secure access of confidential data (user’s details).
+24 X 7 availability
+Better component design to get better performance at peak time
+Advertisement space where it will effectively catch the customer’s attention and as a source of revenue.
+In addition to the above mentioned points, the following are planned to be delivered if deemed necessary:
+Warehousing within the very ambits of the project
+More payment gateways.
+Dynamic price model by which prices can be changed based on demand and supply
+Each customer can build a “scrapbook”, where they can have a collection of garments and accessories to create a specific look basing on inbuilt templates. The scrapbook created will be visible to other users who can like and/or comment on the style.
+This list is by no means, a final one. The final list will be dictated by implementation constraints, market forces and most importantly, by end user demands."
+1. Purpose,1.4 References,,"IEEE 830-1998 standard for writing SRS document.
+Fundamentals of Software Engineering, 2nd ed. by Rajib Mall."
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"The OFS is a website that shall operate in all famous browsers, for a model we are taking Microsoft Internet Explorer versions 7.0, 8.0 and 9.0."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"Programming languages:
+JAVA EE:
+Java Enterprise Edition is a programming platform— part of the Java Platform-for developing and running distributed multi-tier architecture Java applications, based largely on modular software components running on an application server.
+HTML, XML:
+Hyper Text Markup Language and Extensible markup Language are the predominant markup languages for web pages. It provides a means to describe the structure of text-based information in a document and to supplement that text with interactive forms, embedded images, and other objects.
+JavaScript:
+A client side scripting language used to create dynamic web content and user interface.
+Tools & Development Environment
+Apache Tomcat 6.0.18 Server:
+Apache Tomcat is a Servlet container developed by the Apache Software Foundation (ASF). Tomcat implements the Java Servlet and the JavaServer Pages (JSP) specifications from Sun Microsystems, and provides a ""pure Java"" HTTP web server environment for Java code to run.
+ECLIPSE J2EE:
+Eclipse is a toolkit which is designed for the creation of complex projects, providing fully dynamic web application utilizing EJB’s. This consist of EJB tools , CMP ,data mapping tools & a universal test client that is designed to aid testing of EJB’s."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,Limited to HTTP/HTTPS.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"There is no maintainability of back up so availability will get affected.
+Real-life credit card validation and Banking system is not implemented.
+No multilingual support"
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"User: Administrator
+Functions: The Administrator is the super user and has complete control over all the activities that can be performed. The application notifies the administrator of all shop creation requests, and the administrator can then approve or reject them. The administrator also manages the list of available product categories. The administrator can also view and delete entries in the guestbook.
+User: Shop Owner
+Functions: Any user can submit a shop creation request through the application. When the request is approved by the Administrator, the requester is notified, and from there on is given the role of Shop Owner. The Shop Owner is responsible for setting up the shop and maintaining it. The job involves managing the sub-categories of the items in the shop. Also, the shop owner can add or remove items from his shop. The Shop Owner can view different reports that give details of the sales and orders specific to his shop. The Shop Owner can also decide to close shop and remove it from the website.
+User: Customer/Guests
+Functions: A Customer can browse through the shops and choose products to place in a virtual shopping cart. The shopping cart details can be viewed and items can be removed from the cart. To proceed with the purchase, the customer is prompted to login. Also, the customer can modify personal profile information (such as phone number and shipping address) stored by the application. The customer can also view the status of any previous orders, and cancel any order that has not been shipped yet.
+User: Employees
+Functions: Purchase department under a Purchase manager to overlook purchasing activities if warehousing needs arise.
+Functions: Sales department under a Sales manager who will look after the sale of products and services, the most important activity.
+Functions: Accounts department under an Accounts manager to look after the accounting activities of the enterprise"
+2. Overall description,2.4 User characteristics,,"The user should be familiar with the Shopping Mall related terminology like Shopping cart/Checking out/Transaction etc.
+The user should be familiar with the Internet."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,
+3. Specific requirements,,,"External interface requirements:
+Customer’s Interface:
+Login: Two compulsory fields – User Name and Password. Options for New User Registration and Forgot Password.
+Registration Interface: Fields include Name, UserName, Password, Date Of Birth, Address, Registration Type. Validation checks for format and duplicate username/email.
+Personal Data Editing: Users can edit their profile via clicking on name at top right.
+Search: Supports basic and advanced search with filters (size, color, material, brand) and sorting (relevance, price, popularity).
+Add as favorites: Users can shortlist favorite items.
+Cart: Stores selected items; allows adding/removing before checkout.
+Payment: Options include credit/debit cards, net/mobile banking, cash on delivery. Involves verification and authentication.
+Support: Contact via phone call or messages; for assistance or feedback.
+Interfaces for Shop Owner: Allows requesting admin permission, setting up catalog, uploading it, adding/removing items, creating ads, generating sales report, discontinuing shop.
+Interfaces for Sales Manager: Manage product database, track order shipping status, update delivery dates, handle cancellations, promote sales with offers/discounts.
+Interfaces for Accounts Manager: Track payment transactions, contact bank for account validation, communicate with admin.
+Interfaces for Purchase Manager: Notified when stock goes below critical level; contacts admin for purchase permission and vendors for procurement.
+Interfaces for Customer care: Read customer feedback, inform admin, provide solutions to queries.
+Interface for Administrator: Access customer, vendor, employee databases; approve/reject shop requests; manage catalogs; grant/reject purchase permits; manage salaries; contact employees.
+Performance requirements:
+ The system shall accommodate high number of items and users without any fault.
+ Responses to view information shall take no longer than 5 seconds to appear on the screen.
+Safety Requirements:
+ System use shall not cause any harm to human users.
+Security Requirements:
+ System will use secured database
+ Normal users can just read information but they cannot edit or modify anything except their personal and some other information.
+ System will have different types of users and every user has access constraints.
+Error handling:
+OFS shall handle expected and non expected errors in ways that prevent loss in information and long downtime period.
+Functional Requirements:
+Administrator:
+Database Management: Control the database and keep track of all records of customers and employee details.
+Contact and Giving Permission to Vendors: Contact with the vendors and give permission to sell their product under the site after testing the product’s quality.
+View all details: View the details of all employees and control the whole site.
+Advertising the Site: Responsible for making advertisements for the site.
+Customers:
+Login: Must have valid login id.
+Registration: New users can sign up.
+View and edit Own Details: Can view/edit personal, payment, and service details.
+Choosing and comparing products: Can view, compare, and select products.
+Purchasing: Can purchase via valid credit card.
+Giving Feedback to Customer Care: Can give feedback to 24X7 Customer Care.
+Logout: Must logout after purchase.
+Visitors:
+Visiting the Site: Can browse without registration.
+Register: Option to register.
+Shop Owner:
+Taking Permission from Administrator: Must get approval from Admin.
+Consulting with Administrator: Discuss product quality and ads.
+Advertising Vendor’s Own Products: Make own product ads (site not liable).
+Sales Manager:
+View customer details.
+Manage sales and delivery.
+Track product stocks.
+Notify admin when stock low.
+Purchase Manager:
+Get permission from admin for purchases.
+Manage product stocks.
+Accounts Manager:
+Track payments and update info.
+Contact banks for account validation.
+Consult with admin on payment details.
+Customer Care:
+Receive complaints, queries, feedback.
+Provide feasible solutions.
+Logical database requirement: Maintaining database of regular customers of different needs.
+Software system attributes:
+Reliability: System must handle errors without data loss or long downtime.
+Availability: 24x7 availability required.
+Security: Secured access to confidential data; role-based access control.
+Maintainability: No backup maintenance noted as constraint.
+Portability: Should run on both UNIX and Windows platforms.
+Environment characteristics:
+Hardware: Not specified beyond browser compatibility.
+Peripherals: Not specified.
+Users: Customers, Shop Owners, Employees, Administrators.
+Other: Dynamic price model, scrapbook feature, additional payment gateways, warehousing are potential future enhancements."

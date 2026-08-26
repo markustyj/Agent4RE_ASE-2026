@@ -1,0 +1,147 @@
+﻿section,subsection,subsubsection,content
+4. References,,,"Real estate website:
+https://www.propertyguruforbusiness.com/datasense?gad_source=1&gclid=Cj0KCQjwpZWzBh C0ARIsACvjWRNJWquEpCzkDc96h6132T4OAnBnPmqc_XHBydBL3kHhY0Gtzb3aLTIaAj4e EALw_wcB
+Real estate website:
+https://www.industrialmalaysia.com.my/?gad_source=1&gclid=Cj0KCQjwpZWzBhC0ARIsACvjWRMl XOkGDRW2YsiV7Iu7jkfeA19JQT1N5WfE3UDrA6rCLiLagxRCkyMaAv5QEALw_wcB
+Coding tutorial :
+https://www.w3schools.com
+What is System Context Diagram? (n.d.). Retrieved from Online Visual Paradigm:
+What is System Context Diagram? (visual-paradigm.com)
+Hannah, J. (2020, April 8). What Is User Interface (UI) Design? A Comprehensive Guide. Retrieved from Career Foundry:
+What Is User Interface (UI) Design? A Comprehensive Guide (careerfoundry.com)"
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"We provide software with an easy and understandable user interface for our users. We will be using only one language which is English. The purpose of it is that users at range between 15 or above can use our software easily. The interface will be:
+Main Page
+About Us
+User Authentication (Sign Up/Login)
+Forgot Password
+Menu (Listing Form)
+Seller Form
+Reservation
+Payment
+Receipt
+Main Page
+The main page of a website, also called the homepage, is like a shop window for the entire site. It’s designed to be visually appealing and informative, giving visitors a quick snapshot of what the website is about and what they can find there. It typically features key information, calls to action like buttons to learn more or sign up, and navigation menus to help visitors explore different sections of the website.
+The main page of the Tech Estate Machang’s website is designed to showcase real estate properties in Machang, Kelantan. With a user-friendly interface that includes a search bar and navigation links to various sections like Home, Properties, Services, About Us, and Contact. It prominently features a call-to-action button labeled “Explore Properties,” inviting users to browse listings.
+The “Featured Properties” section highlights a “Beautiful Villa” and a “Luxury Apartment,” providing brief descriptions, pricing details, discounts, and locations for each. The villa is priced at RM 600,000 with a 45% discount and is located in Pasir Mas, while the apartment is RM 300,000 with a 50% discount in Machang. Contact details, including an email address, phone number, and physical address, are clearly listed at the bottom of the page for easy access.
+This page will be shown if the users click the “About Us” button. It will display the information about Tech Estate Machang company background and the users can read the mission of the company itself.
+User Authentication
+User authentication is the process of verifying someone’s identity before granting them access to a system or information. It’s like checking your ID before entering a highly security building - it ensures only authorized users can get in, protecting sensitive data and keeping bad actors out.
+This is Tech Estate Machang user authentication form, where users must sign up to create their own account and they must choose whether they want to proceed as seller or buyer.
+Next process in this user authentication is the login process. If users already have their own account, they can proceed to fill up the login form using the correct info that has been stored in Tech Machang Estate then choose whether they want to login as seller or buyer.
+The last process in user authentication form is forgot password. If users already have an account but they forget their password, they must click the “Forgot Password” button under login form. Then it will send the users to the new page where users must contact our customer service to recover their account password.
+Listing Form (Buyer)
+A buyer has two main meanings. In general, a buyer is anyone who acquires something through purchase, like buying a new shirt or a house. They are the customer in a transaction, exchanging money for goods or services. But buyer can also refer to someone who specifically procures goods for a business, like a clothing store buyer who decides what style and size to stock.
+The webpage is from “Property List” and appears to be a real estate service specializing in the Machang area. The prominent headline” TECH ESTATE MACHANG” indicates the focus on real estate services in that location. The page welcomes visitors and highlights services related to renting and selling houses in Machang.
+The menu at the top includes navigation links to home, about, menu, gallery, news, and contact pages, along with icons for a shopping cart, phone, and favorites. There is also a “LOCATE US” button, likely leading to a map or contact information for finding their physical office.
+This webpage from “Property List” features a showcase of available real estate properties. At the top, there are three highlighted images of different types of houses, suggesting the variety of properties offered. Below, a section titled “our properties” displays a grid of property listings, each with a corresponding image, name, and price in Malaysian Ringgit (RM).
+The properties include a mix of house styles such as bungalows, modern houses, traditional homes with prices ranging from RM 280,000.00 to RM 839,000.00.
+The layout and images suggest a visually appealing presentation aimed at attracting potential buyers.
+Seller Form
+A seller is the party in a transaction who offers and transfers ownership of goods, services, or property to a buyer in exchange for something of value, typically money. They are responsible for presenting the offering, negotiating the terms of the sale, and completing the transaction by delivering the item and receiving payment. This applies to both physical goods and intangible products.
+This seller webpage form, titled “Seller House Details,” is designed for homeowners looking to sell their properties. The form requires the seller to provide the house name, price, and a description of the property. Additionally, there is an option to upload a file, presumably for images or documents related to the house.
+The form is set against a stylish background featuring an orange wall, potted plant, and modern furniture, giving it a contemporary and inviting look.
+A “prominent “Submit” button at the bottom allows users to send their information to the website administrators or real estate agents.
+After the user finishes the adding properties process, it will display “Property Added Successfully!” message to the users to let them know they have completed the adding properties process. Then users can proceed by clicking the “Go to Dashboard” button to continue to the next process.
+Alternatively, if users change their mind by trying to add more properties, they can click the button “Add Another Property” to go back on the seller form to do the adding properties process.
+Reservation Form
+A reservation acts like holding your spot for something. It’s a temporary claim on a resource, like a restaurant table, rental car, or hotel room. By making a reservation, you inform the provider you intend to use their service and they set it aside for you, usually for a specific time or date. This guarantees you access while preventing others from taking it.
+The reservation form manages property reservations, with a process akin to adding items to a cart. It lists properties with columns for name, price, and action, displaying three entries which is “Indiana Top Luxury” priced at 839,000.00, “Urban Mansion” at 456,000.00 and “Impian House” at 527,000.00, each with a “Delete” button to remove them from the list.
+The next thing users also can search properties by name using the search bar and add more properties to their cart with the “Add More” button at the top right.
+Once the user's desired properties are added to the cart, users can proceed to the next process which is payment by clicking the green “PAYMENT” button to finalize their reservations and send them to the payment form.
+Payment Form
+A payment is the transfer of something valuable, usually money, in exchange for goods, services, or debts. It’s the act of settling an obligation, like buying a product at a store or compensating someone for their work. Payments can be made in cash, with a credit card, or even through electronic transfers, ensuring a fair exchange between buyer and seller.
+This form features an elegant “Property Payment Form” for online property transactions, divided into “Billing Address” and “Payment” sections. Users are prompted to enter their full name, email, address, city, state, and zip code, along with their credit card details, including the name on the card, card number, and expiration month, with accepted payment methods such as Visa, MasterCard, American Express, Google Pay, and Apple Pay clearly indicated.
+The form also includes a “Proceed to Checkout” button to finalize the transaction, with the total price specified in Malaysian Ringgit (RM).
+The background of this form showcasing a luxurious city skyline at night, enhances the form’s premium and professional appearance, reflecting the high-value nature of property dealings.
+Receipt Form
+A receipt is written confirmation that you’ve exchanged money for goods or services. It typically lists the item or services purchased, their price, the total amount paid, and the date and time of the transaction. It serves as proof of purchase and can be helpful for returns, warranty claims, or expense tracking.
+The receipt is for a property payment and includes comprehensive details formatted for clarity. It starts with a header labeled “PROPERTY PAYMENT RECEIPT,” followed by the property name and price, and the current date.
+It also lists the payer’s billing information, including full name, email, address, city, state, zip code, cardholder name, credit card number, and expiration month.
+The receipt concludes with a thank-you message, providing a complete summary of the transaction for the payer’s records."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"Interface
+Logical Characteristics
+Physical Characteristics
+User Input Devices
+Event-driven input handling (e.g., handling keyboard strokes), Device drivers (e.g., HID drivers for keyboards), Event queue processing
+USB (keyboard, mouse), Bluetooth (wireless mouse), Signal processing (interpreting input signals), Ports (USB, Bluetooth receiver)
+Storage Devices
+File system APIs (e.g., NTFS for Windows, ext4 for Linux), Data caching (e.g., read/write caches), Database access (e.g., SQL queries)
+SATA (HDDs, SSDs), NVMe (highspeed SSDs), USB (external drives), Storage controllers (AHCI, NVMe), Physical media (magnetic disks, NAND flash)
+Peripheral Devices
+Device-specific drivers (e.g., printer drivers), Control commands (e.g., print job commands), Data format conversion (e.g., converting documents to PDF for printing)
+USB (printers, scanners), Ethernet (network printers), Wi-Fi (wireless printers), Peripheral controllers (builtin hardware managing devices)"
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The software product for Tech Estate Machang integrates with several key software. The product works together with application “Notepad ++” to write the HTML code to create interface followed by CSS to design the interface and make it fascinating. Then it also includes “MySQL Workbench 8.0” to run the databases for Tech Estate Machang product. By that, the computer operating system must be at least Window Vista. The platform of Windows can be in 32-bits or 64-bits."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,"The communication requirements for TechEstate Marketplace entail a multifaceted approach catering to administrators, sellers, and buyers. Firstly, robust email functionality is essential for user registration, notifications, and query handling, necessitating support for secure email protocols and automated responses. A reliable web browser ensures seamless access to the platform's features and listings, emphasizing compatibility with modern standards and secure browsing. Network server communication protocols are crucial for secure data exchange, user authentication, and transaction monitoring, ensuring smooth processing and dispute resolution. Electronic forms facilitate property listing management and transaction documentation, requiring intuitive design and integration with backend systems. Additionally, messaging systems enable direct communication between buyers and sellers, facilitating inquiries, negotiations, and property viewings, while user reviews and feedback mechanisms foster transparency and trust within the community. Overall, the platform's communication functions must prioritize security, efficiency, and user engagement to deliver a seamless and integrated experience for all stakeholders."
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"Older hardware may struggle with running the platform smoothly, affecting user experience.
+The system can only be accessed by a verified user.
+Administrator has the full control of the system.
+Seller and Buyer are required to log in when use the system.
+Users in areas with poor internet connectivity may face limitations in accessing the platform or experience slower performance."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"Following is features in TeachEstate Markaetplace :
+This project is mainly intended for two types of audiences. One is the customer and seller, and the other is the administrator of the website. Some of the major functions of the product can be categorized under three different categories that are for the administrator, seller and buyer.
+Administrator Activities :
+1.User Management
+Register and manage accounts sellers, buyers.
+Assign roles and permissions.
+Monitor user activity and handle user queries or issues.
+Property Management
+Oversee all property listings, ensuring accuracy and compliance.
+Approve or reject property listings based on platform standards.
+Update or remove inappropriate or outdated listings.
+Transaction Monitoring
+Track all transactions to ensure they are processed smoothly.
+Resolve disputes between buyers and sellers.
+Generate financial reports and analytics.
+Platform Maintenance
+Regularly update and maintain the platform’s features and functionalities.
+Ensure security measures are up-to-date to protect user data.
+Perform regular backups and system checks.
+Seller Activities:
+Property Listing
+Create, edit, and manage property listings with detailed descriptions, images, and pricing.
+Use tags and categories to improve searchability of listings.
+Set availability and rental/sale conditions.
+Communication Tools
+Receive and respond to buyer inquiries through the integrated messaging system.
+Set automated responses or notifications for received messages.
+Transaction Management
+Monitor the status of transactions and receive notifications of payments.
+Access payment history and transaction records.
+Handle documentation and paperwork for transactions.
+Analytics and Reporting
+View analytics related to property views, inquiries, and performance.
+Access reports on sales/rental activity and revenue generated.
+Buyer Activities:
+Property Search
+Use advanced search and filter options to find properties based on location, price range, and amenities.
+Save favorite listings and set alerts for new properties matching criteria.
+Communication Tools
+Contact sellers directly through the integrated messaging system.
+Ask questions, negotiate terms, and schedule property viewings.
+Transaction Process
+Initiate purchase or rental agreements through the platform.
+Make secure payments through the integrated payment gateway.
+Access transaction history and documentation.
+User Reviews and Feedback
+Leave reviews and ratings for properties and sellers.
+Read reviews and feedback from other buyers to make informed decisions.
+Data Flow Diagram :"
+2. Overall description,2.4 User characteristics,,"Administrators:
+Administrators have high-level access and oversee the TechEstate MarketPlace platform. They manage user accounts, property listings, and overall platform operations. Admins need to be detail-oriented, quick problem-solvers, and comfortable with technology to ensure everything runs smoothly.
+Sellers:
+Sellers list properties for sale or rent on the platform. Seller require medium-level access. Seller needs sales and organizational skills to manage listings effectively. Basic computer skills are necessary for communication and transaction handling.
+Buyers:
+Buyers search for properties to buy or rent. Buyers have lower to medium access levels. Buyers also need to be detail-oriented, good researchers, and effective communicators to find and secure the right property. Financial awareness is crucial for completing transactions securely."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"Hardware Platform: The TechEstate MarketPlace software runs on standard hardware commonly used for web browsing, including desktop computers, laptops, tablets, and smartphones. There are no specific hardware requirements beyond those needed for typical web browsing.
+Operating System: The platform is compatible with major operating systems, including Windows 10 or later, macOS 10.12 (Sierra) or later, most modern Linux distributions, iOS 11 or later for Apple devices, and Android 7.0 (Nougat) or later for Android devices.
+Web Browsers: It's optimized for the latest versions of popular web browsers such as Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
+Software Components:
+Server-Side: Utilizes server-side technologies like PHP.
+Database: Interacts with database management systems like MySQL.
+Messaging: Integration with messaging services for real-time communication.
+Payment Gateway: Integration with secure payment gateways such as online banking.
+Connection:
+Internet Connection: The platform requires a stable internet connection for users to access and interact with it seamlessly."

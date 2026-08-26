@@ -1,0 +1,141 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,The purpose of this document is to present a detailed description of Skype.
+1. Introduction,1.2 Document Conventions,Document Conventions: font: TNR 12
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"The document is intended for all the stakeholders customer and the developer (designers, testers, maintainers). The reader is assumed to have basic knowledge of video calling and chatting services. Knowledge and understanding of UML diagrams is also required."
+1. Introduction,1.4 Product Scope,"Skype is essentially a freemium voice-over-IP service, that allows registered users to communicate online via online video calling, instant messaging, and mobile chat. Though relatively young in the grand scheme of things, the software application is arguably the best method for users to communicate long distance, whether they are looking to conduct multi-party business meetings or merely send short, video messages between friends and family. The software requires no more than an internal or external camera and microphone, often built-in your computer or smartphone, and an active Internet connection. Calls and messages within Skype are free, but those to landline and mobile phones will cost varying amounts depending on the region and accompanying subscription plan. Although some cost more than others, paying for the premium services is typically far cheaper than purchasing a dedicated phone or texting plan on your own.
+Mobile Apps
+In 2012, the website launched Mobile App for Smartphone users. The skype app was designed for Blackberry, Android ,windows and iPhone devices.
+With the launch of mobile Apps and HTML site, more than half of traffic inflow happened through Apps and Mobile sites."
+1. Introduction,1.5 References,
+2. Overall Description,2.1 Product Perspective,"Skype is essentially a freemium voice-over-IP service, that allows registered users to communicate online via online video calling, instant messaging, and mobile chat. Though relatively young in the grand scheme of things, the software application is arguably the best method for users to communicate long distance, whether they are looking to conduct multi-party business meetings or merely send short, video messages between friends and family. The software requires no more than an internal or external camera and microphone, often built-in your computer or smartphone, and an active Internet connection. Calls and messages within Skype are free, but those to landline and mobile phones will cost varying amounts depending on the region and accompanying subscription plan. Although some cost more than others, paying for the premium services is typically far cheaper than purchasing a dedicated phone or texting plan on your own.
+Mobile Apps
+In 2012, the website launched Mobile App for Smartphone users. The skype app was designed for Blackberry, Android ,windows and iPhone devices.
+With the launch of mobile Apps and HTML site, more than half of traffic inflow happened through Apps and Mobile sites."
+2. Overall Description,2.2 Product Functions,"The Skype application should work 24 hours. The application identifies a customer by a user Id and a password. It collects information about the user. It then communicates the information provided by the user to the concerned organizations .Now they user can start using the functions of skype by selecting the function such as video call,chatting,messaging etc. the system must handle concurrent applications running with multiple users.The system should be secure from external people.
+Calling
+Skype to skype call
+Calls to mobile and landline
+Group calls
+Skype numbers
+Video
+One to one
+Group chat
+Message
+Emojis and emoticons
+Internet messaging
+Send texts
+Voice message
+Sharing
+Send files
+Screen share
+Group screen
+Send contacts"
+2. Overall Description,2.3 User Classes and Characteristics,"Characteristics : There are several users of the Skype:
+User are simply members which use application of different purpose.
+Maintainers must be experienced network administrators."
+2. Overall Description,2.4 Operating Environment,"The hardware should have following specifications:
+128 MB of RAM required
+Processor
+Internet
+Mouse
+Keyboard
+Camera
+Microphone"
+2. Overall Description,2.5 Design and Implementation Constraints,"Login
+Validate user
+Validate user.
+Valid username and password
+Validate for Wrong user name and password:
+Validate for wrong password.
+If username not correct, prompt error message, ""wrong username""
+If password is wrong , prompt error message, ""wrong password""
+Users
+Business conferences
+Meeting
+Intercultural exchange
+Marketing
+To connect people socially
+Social media"
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,"Hardware never fails
+Bad internet connection
+User unavailable(offline)"
+3. External Interface Requirements,3.1 User Interfaces,"A first-time user of the website should see the log-in page when he/she opens the website. If the user is not registered, then he/she should be able to do that on the log-in page. So there should be an option for Sign-Up as well. If the user is not a first-time user, he/she should be able to see the search page directly when the website is opened. Every user should have a profile page where they can edit their e-mail address, phone number and password."
+3. External Interface Requirements,3.2 Hardware Interfaces,"The hardware should have following specifications:
+128 MB of RAM required
+Processor
+Internet
+Mouse
+Keyboard
+Camera
+Microphone"
+3. External Interface Requirements,3.3 Software Interfaces,The software interfaces are specific to the target users.
+3. External Interface Requirements,3.4 Communications Interfaces,
+4. System Features,4.1 System Feature 1,"Functional requirement 1:
+Download application of Skype : A user should be able to download the application of skype through either an application store or similar service on the mobile phone. The application should be free to download.
+Functional requirement 2:
+Profile page - A user should have a profile page. On the profile page a user can edit his/her information, which includes the password, e-mail address and phone number.
+Functional requirement 3:
+User registration – The user should be able to do the registrations easily. The requirements for registration should be mentioned in an understandable way. Given that a user has downloaded the mobile application, then the user should be able to register through the mobile application. The user must provide user-name, password and e-mail address. The user can choose to provide a regularly used phone number. In order for a user to register on the mobile application of the same.
+Functional requirement 4:
+User log-in - Given that a user has registered from the mobile app, then the user should be able to log in to the mobile application. The log-in information will be stored on the phone and in the future the user should be logged in automatically.
+Functional requirement 5:
+Retrieve password - Given that a user has registered, then the user should be able to retrieve his/her password by email.
+Functional requirement 6:
+Given that a user is logged in to the Skype, then the first page that is shown should be the search page. The user should be able to search for the other users according to his/her requirements.
+Functional requirement 7:
+After the selection of user to whom you want to do skype with you need to select the type of conversation to want get into that can be video chat,messaging ,file transfer etc.
+Functional requirement 8:
+Calling
+Skype to skype call
+Calls to mobile and landline
+Group calls
+Skype numbers
+Functional requirement 9:
+Video
+One to one
+Group chat
+Functional requirement 10:
+Message
+Emojis and emoticons
+Internet messaging
+Send texts
+Voice message
+Functional requirement 11:
+Sharing
+Send files
+Screen share
+Group screen
+Send contacts
+Functional requirement 12:
+If no Internet is available then skype can not work."
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"Prominent Search Feature
+Prominent search feature.
+The search feature should be prominent and easy to find for the user.
+In order to for a user to find the search feature easily.
+Should give good quality image
+Should provide clear quality video calling
+Response time
+Quick calling feature.
+The response time should be less..
+System dependability
+The fault tolerance of the system.
+If the system loses the connection to the Internet or to the GPS device or the system gets some strange input, the user should be informed.
+Error handling"
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Communication Security
+Security of the communication between the system and server.
+The messages should be encrypted for log-in communications, so others cannot get user-name and password from those messages.
+Attempts to get user-name and password through obtained messages on 1000 log-in session during testing.
+100% of the Communication Messages in the communication of a log-in session should be encrypted.
+Admin Login Account Security
+Security of accounts.
+If an admin tries to log in to the web portal with a non-existing account then the admin should not be logged in.
+The admin should be notified about log-in failure."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Security.
+Performance.
+5.4.1 Availability: The network has to be available 24 hours a day.
+5.4.2 Security: The skype should provide maximal security .In order to make that much more transparent there are the following requirements:
+It must be impossible to plug into the network."
+5. Other Nonfunctional Requirements,5.5 Business Rules,

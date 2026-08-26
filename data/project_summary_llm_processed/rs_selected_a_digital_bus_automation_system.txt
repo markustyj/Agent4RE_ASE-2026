@@ -1,0 +1,36 @@
+**Title:** Digital Bus Automation System — Summary  
+
+**Overview:**  
+The Digital Bus Automation System is a web-based application designed for The LNM Institute of Information Technology (LNMIIT) to streamline and digitize the bus reservation and cancellation process. The system aims to reduce paperwork, automate bus management, and provide a secure, user-friendly platform for students, staff, and Bus Management Committee (BMC) members. It also integrates a payment gateway for seamless transactions and generates monthly service reports.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Automate bus reservations, cancellations, and payments.  
+  - Provide personalized accounts for authenticated users.  
+  - Generate monthly service reports and store them in a relational database.  
+
+- **Key Features:**  
+  - **For BMC Members:**  
+    - Manage bus schedules, routes, and driver details.  
+    - Approve changes with BMC president authorization.  
+    - View booking and transaction details.  
+  - **For Students and Staff (SS):**  
+    - View bus schedules, book/cancel seats, and make payments via an e-wallet.  
+    - Access personal notifications and FAQs.  
+    - Generate booking IDs for authentication during boarding.  
+
+- **Technology Stack:**  
+  - Backend: Node.js (v8.11.4 LTS), MySQL (v8.0.12).  
+  - Frontend: HTML5, CSS3, Java.  
+
+- **Non-Functional Requirements:**  
+  - Support for over 1,000 concurrent users daily.  
+  - Online help, FAQs, and helpline for user support.  
+
+**Risks and Unknowns:**  
+- No assumptions or dependencies explicitly stated.  
+- Specific deadlines for implementation are not provided.  
+- Potential challenges in scaling the system for concurrent users.  
+
+**Timeline:**  
+- Not specified.  

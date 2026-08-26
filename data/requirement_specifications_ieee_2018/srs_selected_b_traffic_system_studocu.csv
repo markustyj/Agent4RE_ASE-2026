@@ -1,0 +1,317 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,This document describes the software requirements for an online traffic news website (www.theaa.com)
+1. Purpose,1.3 System overview,,The function of this website is to provide online news of traffic and traffic alert to all the drivers using theaa to save there time by avoiding traffic that to without installing those applications on their computers or cellphone
+1. Purpose,1.4 References,,
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,"Online traffic news does not work alone there are lots of factors affecting it like internet connectivity without it- no news , traffic alerts , the gps (to know the location of the member) of the user will be fetched from servers or database to generate the traffic news . Different interfaces for different work are being clearly specified."
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"The user interface must fulfil ergonomic requirements of online traffic news. User can interact via keyboard or mouse and pressing of any wrong key will prompt an error message that wrong key pressed. Also the user interface must be interactive withtraffic news booking hotels and booking cabs. The website must also provide some videos on home screen how to get started.
+Fig 2. User Interface (Representation)
+Fig 2. User Interface (Representation)"
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The software must have to provide interfaces to following hardware:
+Speakers and microphones
+Webcam
+Pointing devices and keyboard
+Connectivity through various interface cards for network connectivity"
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The online traffic news have to provide software interfaces to following:
+Running on every version of windows Operating System.
+Also able to run on mac operating system"
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,The main working of online traffic news is only possible if a device is connected to the internet.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"The software should contain a capability to connect to database using internet and the devices on which it is being installed must also contain internet connectivity. The software must be connected to the servers and the database always. There must not be any single version of software for different devices different versions must be available.
+Fig. 1 Simple Structure for Online fetching the location"
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"The software should contain a capability to connect to database using internet and the devices on which it is being installed must also contain internet connectivity. The software must be connected to the servers and the database always. There must not be any single version of software for different devices different versions must be available.
+Fig. 1 Simple Structure for Online fetching the location"
+2. Overall description,2.4 User characteristics,,"There are several users of online traffic news:
+Members: The person who has joined the website or is a verified member of our software.
+DBA: A dba is a user who has access to all the software and provides access to other users
+Maintainer: Maintainer is a user of software who maintains the websites, report bugs and also upload new design or any new feature whenever needed. Also report errors to maintenance team."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,DBA: Data base Administrator.
+3. Specific requirements,,,"Specific requirements are organized in to two parts: First is requirements for online traffic news website and second is requirements of the user.
+The requirements for the online gaming websites are organized as: General, Requirements for database, requirement for network.
+General
+
+Description
+Initialize the name, email, password and pin for sign up
+
+Input
+Name in characters, email and password in alpha numeric value
+
+Processing
+Storing the values entered in the database
+
+Output
+Confirmation message registered successfully.
+
+Description
+Initialize the username and password for login
+
+Input
+Username and password in alphanumeric value
+
+Processing
+Storing the values and checking whether true or not
+
+Output
+Confirmation message login successful else login failed.
+
+Description
+Form validation
+
+Input
+Name in characters, email and password in alpha numeric value
+
+Processing
+Storing the values entered and checking whether they are valid or invalid
+
+Output
+Confirmation message valid.
+
+Description
+Profile update
+
+Input
+Name in characters, email and password in alpha numeric value, mobile number profile picture, date of birth
+
+Processing
+Storing the values entered, in the database
+
+Output
+Confirmation message profile updated successfully.
+
+Description
+Places to be entered by the user as source and destination(menu driven)
+
+Input
+Different types of places
+
+Processing
+Checking whether the selected values are available
+
+Output
+Confirmation message added to your profile
+
+Description
+Filters
+
+Input
+By mouse click in the check box or pressing enter the selection of filters like:construction work,blocked road,conjestion etc.
+
+Processing
+Storing the values clicked by user in the database
+
+Output
+Confirmation message added to your profile successfully.
+
+Description
+Incidents
+
+Input
+user have to enter a valid date to know any sort of incident reported on that particular day entered by the user.
+
+Processing
+Storing the values entered in the database to the profile of user
+
+Output
+Shows the news of incident that user wants in user profile
+
+Description
+Nearby taxis
+
+Input
+Location of user
+
+Processing
+Nearby taxis will be sorted according to the convince of the user.
+
+Output
+List of users present online nearby of current users.
+
+Description
+Route planner
+
+Input
+Here input will be the name of the place from where to where user wants to route planned.
+
+Processing
+According to places entered by the user and using all the data about the routes seeing the traffic news find the routes or the alternative routes.
+
+Output
+Different routes will be shown in the map according
+
+Description
+Maps
+
+Input
+Input will be the location for which user wants the map.
+
+Processing
+Server will find a map for this location which user have entered.
+
+Output
+Confirmation message map found and display the map.
+
+Description
+Searching for Hotels
+
+Input
+User have to enter the name of the location for which he wants hotel
+
+Processing
+Analyzing the loacation and filters used by the user server will find the best hotel for the user.
+
+Output
+Hotels according to the needs of the user will be provided to him and payment gateway will be displayed
+
+Description
+Premium user
+
+Input
+Username and password to access the premium account which will have some additional discounts for the cabs and for all these advantages user have to pay for premium membership.
+
+Processing
+The processing of the payment user for the premium membership.
+
+Output
+Transaction completed successfully and member is added and shown as premium member in his or her profile else transaction failed.
+
+Description
+Payment methods
+
+Input
+Member have to choose the payment method either through net banking or using debit/credit card or by using theaa wallet.
+
+Processing
+Storing the number of the card and making the payment through the payment mode chosen by the user
+
+Output
+Display will show the status of the payment as success if successful and failed if payment is failed.
+
+Description
+Theaa wallet
+
+Input
+User have to add money in his or her wallet if he wants to ease the payment on online traffic news.
+
+Processing
+Adding money in the wallet through the gateway.
+
+Output
+Display will show the status of the payment as success if successful and failed if payment is failed.
+
+Description
+Satellite and map view
+
+Input
+User can select between the satellite view and map view.
+
+Processing
+View according to the user
+
+Output
+Map View:
+Satellite View:
+
+Description
+Forgot password if a user forgot password then there must be reset password option
+
+Input
+Recovery Email or mobile number and new password
+
+Processing
+Checking whether email or mobile number is valid and sending an otp to mobile number and email id after that if otp is valid than asking for new password and updating it in database
+
+Output
+Confirmation message password changed successfully
+
+Description
+Reset password option in profile
+
+Input
+Previous and new password in alphanumeric value
+
+Processing
+Checking whether previous password is correct and changing new password with previous one in database
+
+Output
+Password reset successfully
+
+Description
+Logout
+
+Input
+Pressing of log out button on screen
+
+Processing
+Save the user progress in database and log out from his profile
+
+Output
+Confirmation message logged out successfully
+These requirements are main requirements for users to play games online
+
+Description
+Adobe flash player must be installed
+
+Input
+Download link for adobe flash player
+
+Processing
+Download and install adobe flash player
+
+Output
+Confirmation message adobe flash player is installed
+
+Description
+Internet connectivity
+
+Input
+Sending data to internet to check whether internet connection is there
+
+Processing
+Establishing connection with database through servers
+
+Output
+Confirmation message successfully connected to internet and database else no internet connection
+
+Description
+Password change user must change password every one month
+
+Input
+Previous password and new password
+
+Processing
+Storing the new password in database for particular user
+
+Output
+Password changes successfully
+The user interface must fulfil ergonomic requirements of online traffic news. User can interact via keyboard or mouse and pressing of any wrong key will prompt an error message that wrong key pressed. Also the user interface must be interactive withtraffic news booking hotels and booking cabs. The website must also provide some videos on home screen how to get started.
+Fig 2. User Interface (Representation)
+Fig 2. User Interface (Representation)
+The software must have to provide interfaces to following hardware:
+Speakers and microphones
+Webcam
+Pointing devices and keyboard
+Connectivity through various interface cards for network connectivity
+The online traffic news have to provide software interfaces to following:
+Running on every version of windows Operating System.
+Also able to run on mac operating system
+The main working of online traffic news is only possible if a device is connected to the internet.
+
+Description
+Error message should be displayed at least 30 sec.
+
+Description
+If there is no response of user for half an hour then it must be logged out automatically
+
+Description
+If internet connection is not there then it must provide a way to improve that by provide contact with our helpline team or online help form.
+
+Description
+If user enter wrong password for more than three times than there must be a prompt of forgot password.
+The online traffic news website must be available on the internet very easily there must not be any crashing of the website.
+The website must be secured from fishing attacks and other sql injection techniques
+The maintenance of the website is done by a maintenance team that must provide maintenance to our website and also report errors and bugs present or injected by any other means and they must update website every week with new games and tasks.
+Hosting opted by the website must be of a good company and it must not crash always because of more number of users.
+The code of the software must be easily modified no complex algorithm must be used in developing the software. It can be transferable from one platform to other easily.
+Database connectivity is very necessary for this project all the information of the user and his searches is stored in the database in a hierarchy. Database is backbone of this project.
+Speed of internet must be constant when searching the online traffic news and using other functions of the website."

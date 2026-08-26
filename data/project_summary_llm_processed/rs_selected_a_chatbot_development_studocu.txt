@@ -1,0 +1,28 @@
+**Title:** Chatbot for Programming Questions — Summary  
+
+**Overview:**  
+This project aims to develop a chatbot capable of answering programming-related questions in natural language. Using the OpenAI ChatGPT API, the chatbot will provide accurate, human-like responses to queries, offering a quick and easy way for users to access programming knowledge. The solution is designed to benefit students, programmers, and developers, while also serving as a tool for integration into other projects.  
+
+**Key Points:**  
+- **Goals:** Provide programming-related answers in natural language, enhance user experience, and demonstrate API integration through web, mobile, and text messaging interfaces.  
+- **Scope:** The chatbot will convert user questions into machine-friendly queries, extract relevant information, and return answers in natural language.  
+- **Features:**  
+  - **Must:** Natural Language Processing (NLP) for understanding English questions.  
+  - **Must:** Natural Language Responses for clear and understandable answers.  
+  - **Should:** Information extraction to provide helpful resources or links.  
+- **User Classes:**  
+  - Novice Programmers: Basic programming guidance.  
+  - Intermediate Programmers: Advanced programming concepts.  
+  - Expert Programmers: Highly technical information.  
+  - Technical Support Staff: Advanced troubleshooting tools.  
+- **Constraints:** The chatbot relies on the OpenAI ChatGPT API, which has limitations on data processing capacity.  
+- **Dependencies:** Requires reliable access to the OpenAI ChatGPT API.  
+
+**Risks and Unknowns:**  
+- Operating environment details are not specified.  
+- User documentation is not provided.  
+- Assumes users have basic programming knowledge, which may limit accessibility for complete beginners.  
+- API limitations could impact performance during high data loads.  
+
+**Timeline:**  
+Not specified.  

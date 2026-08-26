@@ -1,0 +1,118 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"The purpose of the document is to collect and analyze all assorted ideas that have come up to define the system, its requirements with respect to consumers. Also, we shall predict and sort out how we hope this product will be used in order to gain a better understanding of the project, outline concepts that may be developed later, and document ideas that are being considered, but may be discarded as the product develops.
+In short, the purpose of this SRS document is to provide a detailed overview of the website, its parameters and goals. This document describes the project's target audience and its user interface, hardware and software requirements. It defines how the clients, team and audience see the product and its functionality. Nonetheless, it helps any designer and developer to assist in Software Development Life Cycle (SDLC) processes."
+1. Introduction,1.2 Document Conventions,
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"We are making this document by keeping in mind different types of readers. This document will be useful for different audience in various ways.
+Audience 	Use
+Developers 	They will use this document for guidance for design and implementation phase.
+Managers 	They will see the constraints all cover properly. Time and cost is within limits or not.
+Marketing Staff 	They can use this document to make advertisements for this web store because by reading this document they will know what the system will do? How this system is different from others.
+User 	They can ensure their self by reading the SRS that their needs being met in the web store or not.
+Testers 	They will test the implementation of the project according to the SRS base.
+Documentation Writer 	They will use this document during the documentation of the project. It will be really helpful for them."
+1. Introduction,1.4 Product Scope,"Primarily, the scope pertains to the E-Store product features for making Alibaba Shopping Website project live. It focuses on the company, the stakeholders and applications, which allow for online sales, distribution and marketing of goods.
+This SRS is also aimed at specifying requirements of software to be developed but it can also be applied to assist in the selection of in-house and commercial software products. The standard can be used to create software requirements specifications directly or can be used as a model for defining a organization or project specific standard. It does not identify any specific method, nomenclature or tool for preparing an SRS.
+Alibaba Group Holding Limited is a Chinese e-commerce company that provides consumer to consumer, business-to-consumer and business-to-business sales services via web portals. It also provides electronic payment services, a shopping search engine and data-centric cloud computing services. The group began in 1999 when Jack Ma founded the website Alibaba.com, a business-to-business portal to connect Chinese manufacturers with overseas buyers. It was the first online marketplace to be launched. Alibaba.com, the primary company of Alibaba, is the world's largest online business to-business trading platform for small businesses. Founded in Hangzhou in eastern China, Alibaba.com has three main services. The company's English language portal Alibaba.com handles sales between importers and exporters from more than 240 countries and regions. In addition, Alibaba.com offers a transaction-based retail website, AliExpress.com, which allows smaller buyers to buy small quantities of goods at wholesale prices."
+1. Introduction,1.5 References,"The references are:
+E-Store Structural Model
+E-Store Behavioral Model
+E-Store NFR Model"
+2. Overall Description,2.1 Product Perspective,"Alibaba Group Holding Limited is a Chinese e-commerce company that provides consumer to consumer, business-to-consumer and business-to-business sales services via web portals. It also provides electronic payment services, a shopping search engine and data-centric cloud computing services. The group began in 1999 when Jack Ma founded the website Alibaba.com, a business-to-business portal to connect Chinese manufacturers with overseas buyers. It was the first online marketplace to be launched. Alibaba.com, the primary company of Alibaba, is the world's largest online business to-business trading platform for small businesses. Founded in Hangzhou in eastern China, Alibaba.com has three main services. The company's English language portal Alibaba.com handles sales between importers and exporters from more than 240 countries and regions. In addition, Alibaba.com offers a transaction-based retail website, AliExpress.com, which allows smaller buyers to buy small quantities of goods at wholesale prices."
+2. Overall Description,2.2 Product Functions,"This subsection contains the requirements for the e-store. These requirements are organized by the features discussed in the vision document. Features from vision documents are then refined into use case diagrams and to sequence diagram to best capture the functional requirements of the system.
+All these functional requirements can be traced using tractability matrix.
+Sell Configured to Ordered Products.
+The system shall display all the products that can be configured.
+The system shall allow user to select the product to configure.
+The system shall display all the available components of the product to configure
+The system shall enable user to add one or more component to the configuration.
+The system shall notify the user about any conflict in the current configuration.
+The system shall allow user to update the configuration to resolve conflict in the current configuration.
+The system shall allow user to confirm the completion of current configuration
+Provide comprehensive product details.
+The system shall display detailed information of the selected products.
+The system shall provide browsing options to see product details.
+Detailed product Categorizations
+The system shall display detailed product categorization to the user.
+Email confirmation.
+The system shall maintain customer email information as a required part of customer profile.
+The system shall send an order confirmation to the user through email.
+Detailed invoice for customer.
+The system shall display detailed invoice for current order once it is confirmed.
+The system shall optionally allow user to print the invoice.
+Provide shopping cart facility.
+The system shall provide shopping cart during online purchase.
+The system shall allow user to add/remove products in the shopping cart.
+Provide multiple shipping methods.
+The system shall display different shipping options provided by shipping department.
+The system shall enable user to select the shipping method during payment process.
+The system shall display the shipping charges.
+The system shall display tentative duration for shipping.
+Online tracking of shipments
+The system shall allow user to enter the order information for tracking.
+The system shall display the current tracking information about the order.
+Provide online Tax Calculations
+The system shall calculate tax for the order.
+The system shall display tax information for the order.
+Allow multiple payment methods.
+The system shall display available payment methods for payment.
+The system shall allow user to select the payment method for order."
+2. Overall Description,2.3 User Classes and Characteristics,"USER TYPE
+BUYER CHARACTERISTICS:
+The frequency of the site used by the buyer totally depends on his needs and how much things he wants to buy. The buyer can have his account made free of cost which will the data of his shopping his wish list and other details like return or replace issues, address details, etc.
+SUPPLIER CHARACTERISTICS:
+The frequency of the site used by supplier also from supplier to supplier how much he is active and how much products he has listed to be sell out. Supplier also has his/her account which keeps track of orders that came from the buyers and rest order related details."
+2. Overall Description,2.4 Operating Environment,"The website does not require any particular special hardware or software requirements. It just requires a basic computer hardware requirement as:
+1.512Mb RAM
+250Gb hard disk
+a stable network connection
+Whereas in software requirement any operating system with a web browser"
+2. Overall Description,2.5 Design and Implementation Constraints,"The website maintains data security and privacy for the users, has a third party security for online transactions to provide users a secure environment at the time of payment"
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,
+3. External Interface Requirements,3.1 User Interfaces,"Similar kind of images will be used on the website to give a sample view of the product the customers are going to order. The screen layout comprises upon the one key factor precise content with fascinating designs and a bright contrast background for the title of the website. The home page will have a numerous options in order to make the website user friendly. The options will be as follows:-
+1.clothing
+>men
+>women
+2.accessories ->men
+>women
+3.help
+>account
+>customer care
+>product
+>size chart
+4.profile ->name
+>username
+>email id
+>contact number
+>password
+>change password"
+3. External Interface Requirements,3.2 Hardware Interfaces,"Since the application must run over the internet, all the hardware shall require to connect internet will be hardware interface for the system. As for e.g. Modem, WAN – LAN, Ethernet Cross-Cable."
+3. External Interface Requirements,3.3 Software Interfaces,"The ALIBABA system shall communicate with the Configurator to identify all the available components to configure the product.
+The ALIBABA shall communicate with the content manager to get the product specifications, offerings and promotions.
+The ALIBABA system shall communicate with billPay system to identify available payment methods, validate the payments and process payment.
+The ALIBABA system shall communicate to credit management system for handling financing options.
+The ALIBABA system shall communicate with CRM system to provide support.
+The ALIBABA system shall communicate with Sales system for order management.
+The ALIBABA system shall communicate with shipping system for tracking orders and updating of shipping methods.
+The ALIBABA system shall communicate with external Tax system to calculate tax.
+The ALIBABA system shall communicate with export regulation system to validate export regulations.
+The system shall be Verisign like software which shall allow the users to complete secured transaction. This usually shall be the third party software system which is widely used for internet transaction."
+3. External Interface Requirements,3.4 Communications Interfaces,The ALIBABA system shall use the HTTP protocol for communication over the internet and for the intranet communication will be through TCP/IP protocol suite.
+4. System Features,4.1 System Feature 1,This subsection contains the requirements for the e-store. These requirements are organized by the features discussed in the document. Features from documents are then refined into use case diagrams and to sequence diagram to best capture the functional requirements of the system. All these functional requirements can be traced using tractability matrix.
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"You will be sign in within some seconds.
+If anybody makes a new account, then he will receive confirmation email immediately.
+Search results shown within 15 sec.
+Credit cart validate within 5 sec.
+Web support unlimited customers logged in at the same time."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,We will try the best to make product safe.
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Web store will validate credit cards against fraud.
+Web store keep the information of the customers and merchants safe.
+Web store obeys all the security laws of Pakistan relating to cyber traffic.
+The commission decided between merchant and administrator will not be published."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"The web store is easy to use.
+It will be easy to learn how to operate it.
+The web store will show easy to locate buttons
+The web store use simple English so that user cannot confuse with terms.
+The web store should be easy to upgrade"
+5. Other Nonfunctional Requirements,5.5 Business Rules,

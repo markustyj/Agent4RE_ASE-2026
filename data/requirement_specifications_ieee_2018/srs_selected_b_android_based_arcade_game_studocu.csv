@@ -1,0 +1,158 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,The document describes the software requirement for an android based arcade game clash of clans. It is intended for designer developer and maintainer of the application.
+1. Purpose,1.2 Background,,
+1. Purpose,1.3 System overview,,"The function of this application is to provide a user with a really grate fun experience while playing this game. In this the user can connect to internet to access the full features of the game, where the user can collaborate or compete against each other through various interfaces provided with in the application."
+1. Purpose,1.4 References,,
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,The COC application does not run independently it has to collaborate with multiple servers owned by SUPERCELL through which all the functionality of the game are controlled and the user gets desires result as it requested.
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,It the client side interface for the application with which the user deals and makes its moves which passes through several serves throughout the world and give the user the desired result he requested for.
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The application must be give several permissions on the user device for the better gaming experience.
+As the game requires internet connection it should have access to allow use of data order to run the application.
+The device must full fill the minimum specifications required to run the application on the device
+0.5 GB of RAM(1 GB or more recommended).
+Screen resolution of 800x480 or better."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,The device must have a anodroid os of version 4.0.3 or higher to run the COC application on the user device.
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,The application requires internet connection to run on a device and to connect with other user over the network.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,The application has to support the device on which it is installed and has to work in sync with the hardware components working on the backend of the application over the network to give the best gaming experience to the user. It has several in a pp functions such as in app purchase for which it has to maintain sync with the software and hardware required for making the payment when user demands. The application must handle all the process very efficiently and manage all the backed process with bothering the user or affecting the functionality of the user device.
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"It is the application developed for gamming purpose where the user can do a lot of stuffs from building its own city to fighting against beasts, challenging your own friend over the network for a fight and gain points and collects rewards to reach next level and to be on top of clan’s league. The user can also purchase items for its gamming through real time payment. The platform also provides time to time leagues which open for specific time and multiple users can connect to it and play against each other or support each other. The user can even share their resources with other friends over the coc network."
+2. Overall description,2.4 User characteristics,,The customer or we can say the user interacts with the COC network via COC application. It must be very easy for the user to use the application and perform all the complex tasks without bothering the user. And it should support the system in all possible ways until unless the system meets the minimum requirements to run the application.
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,
+3. Specific requirements,,,"External interface requirements:
+The interface of the coc application must be very easy to learn and play with with compromising with the gaming experience of the user.
+Hardware interface:
+The application must be give several permissions on the user device for the better gaming experience.
+As the game requires internet connection it should have access to allow use of data order to run the application.
+The device must full fill the minimum specifications required to run the application on the device
+0.5 GB of RAM(1 GB or more recommended).
+Screen resolution of 800x480 or better.
+Software interface:
+The device must have a anodroid os of version 4.0.3 or higher to run the COC application on the user device.
+Communication interface:
+The application requires internet connection to run on a device and to connect with other user over the network.
+Performance requirements:
+Messages should be displayed for any successful or unsuccessful action.
+While performing in app purchase the payment must be secured via encryption and a good payment gateway must be used.
+After every achievement or action completed by user the stats must be updated in real time for better gaming experience.
+In Case of low network coverage message must be displayed to the user.
+The response time between the request made and it being completed must very very less.
+The application must be fast to load over the supported devices
+Functional requirements:
+Description
+User when first opens the application he need to provide an email for google games a application through which the COC application will be executed on user device.
+Input
+User needs to enter valid email
+Processing
+Check if email is valid or not
+Output
+Successful login proceed to next interface else error message invalid email
+Description
+Here the user needs to enter a valid user name in order to continue with the application
+Input
+Initialize the username
+Processing
+Checks if user name is available or not
+Output
+If user name available successful creation of account for user to continue with the COC application and proceed to next interface
+Description
+The device should be connected to any network connect to use internet.
+Output
+If not connected show message error network connection else continue with the application.
+If network connection unsuccessful
+Output
+Terminate the application
+Description
+The coc application needs some permission from user to interact with social media apps available on user device.
+Input
+Allow COC application to connect to the social media apps. Give all the necessary permissions.
+Output
+If successful show message successful
+Description
+If not able to give permissions to the coc application proceed to next interface.
+Output
+Not able to retrieve social media information
+Description
+The user can buy additional features through online payments to improve his or her gamming experience through inbuilt store in coc application
+Input
+The user need to select the item user want to purchase and click on proceed.
+Processing
+Takes the user to payment gateway through external browser.
+Output
+online payment gateway opens to make the purchase.
+Description
+Here the user needs to select the mode of payment and enter the valid details to continue the payment.
+Input
+The use need to select from one of the payment option and enter the valid bank details to proceed forward.
+Output
+Authenticate the details and proceed to the next interface.
+Description
+If the credential provided are correct the user is take to the default bank payment gateway and a onetime password is received by the user in order to complete the payment.
+Input
+Enter the one time password received
+Output
+Show message transaction successful.
+Description
+The user devices need to give feed to the application in order to perform certain task in the application.
+Input
+The user needs to give input in for of touch tap or drag over the screen to generate some actions.
+Processing
+The input given by the user is the processed by the sensors of the devices.
+Initialise the user device sensors
+Output
+The user desired outcome is then performed on the coc application interface.
+Description
+The user must be able to communicate with other users who are using coc application in order to share resource of coc application and compete against each other or collaborate with each other.
+Description
+The user should be able to see his or her progress with in the game through graphics generated by the application.
+Output
+User should be provided with stats in numbers and progress bars to show his or her achievements.
+Description
+The user when first stars the application a graphics oriented start up guide should guide the user through various functions of application. For easy understanding of the application to the user.
+Output
+The user will be able to understand the application, how it works and how he or she should approach.
+If a user deletes its account the database and sever must be notified about it and all the changes made to the database must be saved.
+Input
+Request to delete account
+Process
+Request is generated which is send to the server and then the database is updated to the changes made.
+Output
+Account deleted successfully.
+Developer side functional requirements:
+Description
+The owner or the developer side should have a really good network of servers to handle the COC application functionality worldwide easily and efficiently.
+Input
+The SUPERCELL must have a qualified team of peoples who will take care of the servers for smooth functioning of the application worldwide and make sure all the function of the application is working properly.
+Output
+Smooth flow of data through the network and excellent gaming experience.
+Description
+The developer side should also have to maintain a database for the storage of all the progress made by the user while using the application. So that when user again uses the application his or her progress remains saved without any affect.
+Output
+The user get progress remains unaffected even thought the application is close by user and used later.
+Description
+When user enter his or her username it must be saved in the database and whenever the user is using the application the it must be authenticated before launching the application
+Input
+Request the authentication
+Output
+If it succeeds take the user to application interface.
+Description
+When a user makes any purchase from the inbuilt store of application his or her account must be updated after successful completion of the task.
+Input
+Request update user details
+Output
+The user account is then updated with the required changes and a message is show to user for successful transaction.
+Description
+Whatever the changes are made to user profile that all should be saves and must be visible to user in form of info graphics such as number and progress bars.
+Output
+Visual feed to user about the updated values.
+Description
+When user try’s to connect with other users over the network a safe connection between them is needed for good gaming experience.
+Input
+Request from user to connect with other user over the network to the servers.
+Process
+Generate a route from one user to the other user over the network.
+Output
+The other user is notified with a message and asks if he wants to connect or not.
+Description
+If the user is unavailable then send a message to sender user that the user is not available at the moment.
+Output
+Generate a message unable to connect to the user."

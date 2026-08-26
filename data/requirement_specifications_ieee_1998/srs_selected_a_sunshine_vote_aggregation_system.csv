@@ -1,0 +1,45 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This document stands as a detailed description of the Sunshine Vote Aggregation System Version 1.0. The software will implement two distinct voting algorithms, Instant Runoff Voting and Party List Voting. The act of voting will be done outside this system, and the product will use a given comma delimited text file as input to apply the voting algorithms. The system will be able to detect which voting algorithm is being used. Following the conclusion of the system run, two distinct output files will be generated, a media file and an audit file. These files will both contain the results of the election, and the audit file will additionally possess data on the intermediate steps in the aggregation process. The winners and information about the election will be displayed to the screen."
+1. Introduction,1.2 Document Conventions,This document’s formatting follows that of the IEEE template for System Requirements Specifications.
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is intended for all members of the delivery team, including but not limited to developers, project managers, and testers. Audit and media files produced by the system will be available for all to view."
+1. Introduction,1.4 Product Scope,"This software will function as a means of establishing results following an election held in either IR or OPL format. The software will produce an audit file upon completion which may be viewed by voters, election officials, or government officials. This audit file may be of use to future campaigns, and data can be collected from within for political advertising. Additionally, a report of the election results will be generated. This will be shared with the media. The winners and information about the election will be displayed to the screen."
+1. Introduction,1.5 References,"Several references to other documents have been made during the synthesis process of this Software Requirements Specifications. Firstly, major guidance has been drawn from the assignment document that was posted to canvas via Dr. Watters. Second, software and hardware specifications were drawn from the University of Minnesota -- Twin Cities College of Science and Engineering Information Technology Department website that discusses the discrete specifications of all the existing CSE lab machines. An example SRS on Gephi was referenced for use with formatting. Example use cases were also referenced to create the use cases that exist within the appendix. Algorithms were constructed based on election type definitions defined at FairVote.org."
+2. Overall Description,2.1 Product Perspective,The Sunshine Vote Aggregation System is a new election software that will assist with running both Instant Runoff and Open Party List elections. The system will be able quickly and accurately run both types of elections while presenting audit and media files upon conclusion to allow for future references to previous elections. The algorithms that dictate the election process mirror those described at FairVote.org.
+2. Overall Description,2.2 Product Functions,"User will start software
+User will input the ballot data via a CSV file
+System will determine the type of election
+System will run appropriate election algorithm
+Winner(s) of the election will be displayed
+Audit and media files will be produced"
+2. Overall Description,2.3 User Classes and Characteristics,"Voting officials who will be using the system to determine the winner/winners.
+System testers who will be writing unit and integration tests to validate the system.
+Programmers who are interested in bug fixes and further development of the system."
+2. Overall Description,2.4 Operating Environment,"Windows 10 (64 bit)
+Dell Precision 3630, Intel® Core™ i7 @ 3.2GHz (x6), 32 GB RAM
+Dell Precision T3420, Intel® Core™ i5 @ 3.4GHz (x4), 32 GB RAM
+Dell OptiPlex 9020, Intel® Core™ i7 @ 4.2GHz (x4), 32 GB RAM
+Ubuntu
+Dell XPS 8910, Intel Core i7-6700 CPU 3.40GHz, 16GB RAM, Nvidia GeForce GTX 1080
+Dell Precision 3630, Intel Core i7-4790 (Quad-Core) 3.60GHz, 32 GB RAM, DVD+/-RW, Intel® UHD Graphics 630
+Dell OptiPlex 7050, Intel Core i7-7700 3.6GHz, 32 GB RAM
+Ubuntu 18.04
+Dell Optiplex 9020, Intel® Core™ i7 @ 900Hz (x3), 32 GB RAM
+Dell Precision 3630 Intel® Core™ i7 @ 3.2GHz (x6) 32 GB RAM
+Dell Precision T1700 Intel® Core™ i7 @ 3.6GHz (x4) 32 GB RAM
+Mac OS X
+iMac, Intel Core i5 3.2 GHz, 16 GB RAM, DVD-RW, 2 x NVIDIA® GeForce GT 755M 1024MB
+Project requirements state that the voting system must be able to run on a CSELab machine. This implies that the system will be compatible with the above listed Operating Systems."
+2. Overall Description,2.5 Design and Implementation Constraints,"Depending on the number of votes in a single election, the Sunshine Vote Aggregation System may take longer to complete counting. The counting system will have a run time of O(n) for OPL elections and O(n) for IR elections. The Sunshine Vote Aggregation System is able to process 100,000 votes in 8 or less minutes."
+2. Overall Description,2.6 User Documentation,We will have a README file and a Javadoc document.
+2. Overall Description,2.7 Assumptions and Dependencies,The Sunshine Vote Aggregation System is developed in Java and thus requires Java to be installed on the users system.
+3. External Interface Requirements,3.1 User Interfaces,"The Sunshine Vote Aggregation System utilizes Java Swing to make its GUI. The system displays a prompt to the user for them to input the name of the file to read. Once completed, the system prompts the user to continue, and the vote aggregation system is run."
+3. External Interface Requirements,3.2 Hardware Interfaces,The Sunshine Vote Aggregation System is only to be run on the University of Minnesota lab machines and must be compatible with them.
+3. External Interface Requirements,3.3 Software Interfaces,The Sunshine Vote Aggregation System uses the latest version of Java (version 8 update 281) and requires it to be installed on the system.
+3. External Interface Requirements,3.4 Communications Interfaces,"The Sunshine Vote Aggregation System requires a connection to the University of Minnesota’s lab machines to run. If run directly from a lab machine, no internet connection is required as long as the program is installed."
+4. System Features,4.1 System Feature 1,This section demonstrates our vote aggregation system's most notable features and elaborates on its functions and use cases.
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"An election should be able to run 100,000 ballots in under 8 minutes."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,There are no special safety requirements.
+5. Other Nonfunctional Requirements,5.3 Security Requirements,There are no special security requirements. Security such as ensuring one vote for one person is handled at the voting centers. Thus any type of user can use it without any additional privileges.
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Our voting system program is very easy to use. The user does not need to have any knowledge about the voting system itself. They just need to know the name of the file containing the ballots, introduce it into our program, and our program will generate the results."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"Programmers, testers, and election officials will run and use this program. The results of the election could be shared with media personnel."

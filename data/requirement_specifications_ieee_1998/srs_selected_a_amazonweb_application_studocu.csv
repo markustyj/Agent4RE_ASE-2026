@@ -1,0 +1,106 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"The purpose of this document is to provide a detailed description of the requirements for the development of the Amazon Shopping Application. The application aims to provide users with a convenient and user-friendly platform to browse, search, and purchase a wide range of products available on Amazon. This document serves as a guide for the development team, stakeholders, and other interested parties involved in the project
+A software requirements specification (SRS) is a comprehensive description of the intended purpose and environment for software under development. The SRS fully describes what the software will do and how it will be expected to perform."
+1. Introduction,1.2 Document Conventions,
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"The Amazon Shopping Application holds significant importance for the intended audience, which includes customers and sellers. This application provides several key benefits that enhance the shopping experience and simplify the process of buying and selling products online.
+#### For Customers:
+Convenient Shopping Experience: The Amazon Shopping Application offers customers a seamless and user-friendly platform to browse through a vast catalog of products, enabling them to find desired items quickly and easily.
+Extensive Product Selection: Customers can access an extensive range of products across various categories, allowing them to explore and purchase items that suit their preferences and needs.
+Personalized Recommendations: The application employs advanced recommendation algorithms to suggest products based on customers' browsing history, purchase history, and preferences, enhancing their discovery of relevant and interesting products.
+Secure and Hassle-Free Transactions: The application ensures secure payment processing, protecting customers' financial information and providing a seamless checkout experience. Additionally, features such as order tracking and customer support contribute to a hassle-free post-purchase experience.
+#### For Sellers:
+Wide Customer Reach: The Amazon Shopping Application provides sellers with a platform to showcase their products to a vast customer base, allowing them to reach a wider audience and increase their sales potential.
+Robust Selling Tools: The application equips sellers with tools and features to manage their inventory, track sales, and handle order fulfillment efficiently. These tools simplify the selling process, enabling sellers to focus on their core business operations.
+Customer Engagement Opportunities: Sellers can leverage the Amazon Shopping Application to engage with customers through product listings, reviews, and promotions. This interaction fosters customer loyalty and helps sellers build their brand presence.
+Reliable Order Management: The application facilitates seamless order management for sellers, including order processing, fulfillment, and shipment tracking. This streamlines their operations and enhances customer satisfaction."
+1. Introduction,1.4 Product Scope,"This SRS outlines the functionality, performance, and design constraints of the Amazon Shopping Application. It covers features such as product browsing, search, shopping cart management, secure payment processing, and order tracking. Additionally, it defines system requirements, including platform compatibility, performance expectations, and integration with existing Amazon services."
+1. Introduction,1.5 References,"Amazon: Amazon is a multinational technology company that focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is known for its online marketplace, Amazon.com, and various products and services, including Amazon Prime, Amazon Web Services (AWS), and Amazon Kindle.
+Flipkart: Flipkart is an Indian e-commerce company that operates an online marketplace, offering a wide range of products, including electronics, fashion, home appliances, and more. It provides services such as online shopping, product delivery, and customer support.
+Apple: Apple is a multinational technology company based in the United States. It designs, develops, and sells consumer electronics, computer software, and online services. Apple's product line includes iPhones, iPads, Mac computers, Apple Watches, Apple TVs, and various software applications like iOS, macOS, and iTunes.
+Meta: Meta is a term that refers to the company formerly known as Facebook, Inc. In October 2021, Facebook rebranded itself as Meta Platforms Inc., signaling its strategic shift towards the development of virtual reality (VR) and augmented reality (AR) technologies and products, such as the Meta Quest VR headsets and the Meta Horizon VR platform."
+2. Overall Description,2.1 Product Perspective,"The Amazon Shopping Application is a comprehensive and feature-rich platform that enables customers to browse, search, and purchase products from a vast selection. It provides personalized recommendations, secure payment processing, and order tracking to enhance the customer shopping experience. For sellers, the application offers tools to manage inventory, track sales, engage with customers, and streamline order management processes. By combining these features, the Amazon Shopping Application aims to revolutionize the way customers shop online and empower sellers to reach a broader market.
+This general description summarizes the main functions and features of the Amazon Shopping Application, highlighting its value for both customers and sellers."
+2. Overall Description,2.2 Product Functions,"The Amazon Shopping Application will be used by customers and sellers to perform various functions and fulfill their respective roles. Here are some use cases that illustrate how the intended audience may use the application:
+Customer Use Cases:
+Browsing and searching for products in specific categories or using keywords.
+Adding products to a shopping cart and managing the cart contents.
+Placing orders, selecting payment options, and completing secure transactions.
+Tracking order status, including shipment updates and delivery information.
+Interacting with product listings through reviews, ratings, and questions.
+Seller Use Cases:
+Creating and managing product listings, including images, descriptions, and pricing.
+Monitoring inventory levels, managing stock, and updating product availability.
+Processing and fulfilling customer orders, including order tracking and shipping updates.
+Analyzing sales data, monitoring performance metrics, and generating reports.
+Engaging with customers through seller messaging and responding to inquiries."
+2. Overall Description,2.3 User Classes and Characteristics,"The intended audience includes two primary user classes: customers and sellers.
+#### For Customers:
+Individuals seeking a convenient and user-friendly platform to browse, search, and purchase products.
+Users who benefit from personalized recommendations, secure transactions, and order tracking.
+#### For Sellers:
+Businesses and individuals looking to showcase their products to a wide audience.
+Users who require robust tools for inventory management, order fulfillment, sales analysis, and customer engagement."
+2. Overall Description,2.4 Operating Environment,"The application shall be compatible with the latest versions of major operating systems, including iOS and Android.
+The application requires an active internet connection to access and retrieve product information, process transactions, and synchronize data.
+Supported Devices: smartphones and tablets running iOS (version X or later) and Android (version X or later).
+The application interfaces with Amazon's backend systems and APIs, including the Amazon Product Advertising API and Amazon Web Services (AWS)."
+2. Overall Description,2.5 Design and Implementation Constraints,"The application shall comply with relevant industry standards and legal requirements, such as data protection regulations and consumer protection laws.
+The application shall integrate with Amazon's existing systems and services, including product catalogs, inventory management, and payment processing, to ensure accurate and up-to-date information.
+The application should comply with relevant regulations and standards, including data protection and privacy laws, to ensure the security and confidentiality of user data.
+Integration with third-party payment gateways and shipping providers should meet their respective requirements and security standards."
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,
+3. External Interface Requirements,3.1 User Interfaces,"Content Presentation: The user interface should present product information, images, ratings, and reviews in a clear and organized manner, ensuring readability and easy comprehension.
+Application Navigation: The navigation should be intuitive and user-friendly, allowing users to easily switch between screens, browse categories, and access different features of the application.
+Visual Design and Style Guide: The user interface should adhere to Amazon's branding guidelines, incorporating appropriate color schemes, typography, and visual elements to maintain consistency with the brand.
+Accessibility: The application should follow accessibility guidelines to ensure that users with disabilities can effectively use and navigate the interface. This includes providing proper text alternatives for images, using clear and concise labels, and offering support for assistive technologies.
+Design Requirements:
+The application shall have an intuitive and visually appealing user interface, following Amazon's branding guidelines.
+The application design should be responsive, adapting to different screen sizes and orientations to ensure optimal user experience across devices.
+The design should incorporate efficient navigation and search functionalities to enable users to find products easily.
+The application shall support multiple languages and provide localization options to cater to a global user base.
+Graphics Requirements:
+The application shall display product images in high resolution and with appropriate zoom and rotate functionality to allow users to examine products closely.
+Graphics, icons, and images used in the application shall be optimized for fast loading without compromising visual quality."
+3. External Interface Requirements,3.2 Hardware Interfaces,"Supported Devices: The Amazon Shopping Application is designed to run on mobile devices, including smartphones and tablets, running iOS (version X or later) and Android (version X or later) operating systems.
+Network Requirements: The application requires an active internet connection to access and retrieve product information, process transactions, and synchronize data."
+3. External Interface Requirements,3.3 Software Interfaces,"Operating Systems: The Amazon Shopping Application is developed for iOS and Android operating systems, requiring compatibility with iOS X and above and Android X and above.
+Backend Framework: The application interfaces with Amazon's backend systems and APIs, including the Amazon Product Advertising API for retrieving product data and the Amazon Web Services (AWS) for secure and scalable cloud storage.
+Libraries: The application may utilize various libraries and frameworks for functions such as image processing, user authentication, and network communication.
+External Interface Requirements:
+The application shall integrate with Amazon Web Services (AWS) for secure and scalable cloud storage, ensuring efficient handling of product data, user information, and transaction details.
+The application should leverage Amazon Product Advertising API for retrieving up-to-date product information, including prices, availability, and customer reviews."
+3. External Interface Requirements,3.4 Communications Interfaces,"Communication Standards: The Amazon Shopping Application communicates with backend systems and external services using standard communication protocols such as HTTP and HTTPS.
+Data Formats: Data exchanged between the application and external systems may be in formats such as JSON or XML for seamless integration and interoperability.
+Email: The application may utilize email for purposes such as user registration, order confirmation, and customer support. The email communication should follow established protocols and include relevant information."
+4. System Features,4.1 System Feature 1,"Display the product image, title, price, and average rating.
+Show a brief description of the product.
+Provide detailed product information, including specifications, features, and customer reviews.
+Allow users to select product variations (e.g., size, color) if applicable.
+Enable users to add the product to the shopping cart.
+Display related products or recommendations based on the current product.
+Provide social sharing options for users to share the product details on social media platforms.
+Allow users to save the product to their wishlist for future reference.
+Provide a ""Buy Now"" button to allow users to directly purchase the product without adding it to the shopping cart.
+Display related promotions or deals for the product, if applicable.
+Allow users to navigate back to the previous screen or continue browsing other products."
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"Response Time: The application should have fast response times, ensuring quick loading of product information, search results, and transaction processing.
+Throughput: The system should handle a large number of concurrent users and provide efficient performance even during peak usage periods.
+Storage Capacity: The system should provide sufficient storage capacity to handle a large number of products, user profiles, and transaction data.
+Scalability: The system should be designed to scale horizontally or vertically to accommodate increasing user demands, traffic, and data volume without significant performance degradation."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Data Protection: The application should adhere to relevant privacy and data protection regulations to ensure the security and confidentiality of user information, including personal and financial data.
+Authentication and Authorization: Robust authentication mechanisms should be implemented to ensure that only authorized users can access sensitive features and perform transactions.
+Encryption: Sensitive data, such as login credentials and payment information, should be encrypted during transmission and storage to prevent unauthorized access.
+The application shall integrate with secure payment gateways to facilitate secure and reliable payment transactions.
+The application shall support various payment methods, including credit/debit cards, mobile wallets, and Amazon Pay, to cater to diverse user preferences."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Reliability: The application should aim for high availability and minimize downtime to ensure uninterrupted access and a seamless shopping experience for users. The system should handle errors gracefully and provide appropriate error messages and notifications to users.
+Usability: The application should have an intuitive and user-friendly interface, allowing users to navigate and interact with ease. It should be designed to comply with accessibility guidelines.
+Maintainability and Flexibility: The system should be modular and well-documented to allow for future enhancements and bug fixes.
+Portability: The application should function consistently across different devices and operating system versions."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"Users must register and log in to place orders and access personalized features.
+Orders cannot be modified once submitted; cancellations are allowed within a limited time window.
+Sellers must verify their identity and business details before listing products.
+Product pricing and availability are synchronized in real-time with Amazon’s central inventory system.
+Promotions and discounts are applied based on eligibility rules defined by Amazon or individual sellers."

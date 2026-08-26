@@ -1,0 +1,41 @@
+**Title:** University Management System (UMS) — Summary  
+
+**Overview:**  
+The University Management System (UMS) is an online platform designed to replace traditional paper-based processes in university administration. It aims to streamline operations for students, faculty, and administrators by providing features such as attendance tracking, fee payments, document uploads, and resource management. The system ensures secure, role-based access and supports concurrent usage, enhancing efficiency and accessibility for all stakeholders.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Replace manual processes with a computerized university management system.  
+  - Provide role-based access for three user types: Chancellor (administrator), faculty, and students.  
+  - Enable online access to resources, attendance, assessments, and fee payments.  
+
+- **Top Features:**  
+  - **Administrator (Chancellor):**  
+    - Create, delete, and manage user accounts.  
+    - Access and modify all user data and system resources.  
+    - Restrict or hide features for specific users.  
+  - **Faculty:**  
+    - Mark attendance, upload assignments, and manage assessments.  
+    - Submit question papers and upload student marks.  
+  - **Students:**  
+    - View and download reading materials, assignments, and marks.  
+    - Pay fees online and view attendance.  
+    - Modify limited profile details.  
+
+- **Non-Functional Requirements:**  
+  - Operates on Windows with compatibility for Internet Explorer 6.0+, Mozilla Firefox, and Opera 7.0+.  
+  - Developed using Active Server Pages (ASP) with Microsoft SQL Server as the database.  
+  - Includes a user manual with technical details, backup procedures, and contact information.  
+
+- **Constraints:**  
+  - Requires an internet connection for access.  
+  - Dependent on third-party tools like Microsoft SQL Server and ASP.  
+
+**Risks and Unknowns:**  
+- Compatibility with newer browsers beyond those specified is unclear.  
+- Scalability for large user bases is not addressed.  
+- No details on security measures for protecting sensitive user data.  
+- Backup and disaster recovery processes are not elaborated.  
+
+**Timeline:**  
+Not specified.  

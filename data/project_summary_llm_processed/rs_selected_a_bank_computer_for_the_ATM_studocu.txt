@@ -1,0 +1,32 @@
+**Title:** 360 Total Security — Summary  
+
+**Overview:**  
+360 Total Security is an antivirus software designed to prevent, detect, and remove malicious software, including viruses, malware, and Trojans. It integrates with the system kernel and operating system to provide real-time protection across Windows, Android, and iOS devices. The software aims to ensure user security through robust validation mechanisms and compatibility with various hardware and software environments.  
+
+**Key Points:**  
+- **Scope:** The software provides real-time protection and works in conjunction with the system kernel and operating system.  
+- **Platform Compatibility:** Runs on Windows, Android, and iOS devices.  
+- **Core Features:**  
+  - Real-time malware detection and removal.  
+  - User identification via software version and key.  
+  - Validation mechanisms for software expiration, piracy, and stolen copies.  
+  - Account registration and transaction communication with banks.  
+- **Security Features:**  
+  - Prompts error messages for expired, stolen, or pirated software.  
+  - Limits consecutive unsuccessful login attempts to three before termination.  
+  - Maintains a login counter for security tracking.  
+- **Hardware Requirements:** Devices must support installation, input methods (touchscreen or keyboard), continuous power supply, and connectivity to the service provider.  
+- **Constraints:** Software must validate serial keys, passwords, and ensure updates are genuine.  
+- **User Classes:**  
+  - General users with no special training.  
+  - Security personnel with basic knowledge of antivirus operations.  
+  - Maintainers with network administration expertise.  
+
+**Risks and Unknowns:**  
+- Assumes hardware never fails, which may not be realistic.  
+- Limited number of scans could restrict functionality for users.  
+- Dependencies on continuous power supply and connectivity may impact usability.  
+- User documentation is not specified.  
+- No details on how updates or new features will be implemented.  
+
+**Timeline:** Not specified.  

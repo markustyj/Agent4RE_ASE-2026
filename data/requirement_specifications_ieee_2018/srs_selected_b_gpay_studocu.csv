@@ -1,0 +1,150 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"Customer:
+Mean a person who has registered with Gpay for availing the Gpay transaction and who has accepted these Terms and Conditions and, owns/operates/has access to an internet compatible device that supports the Gpay.
+Person-to-Person Transfer:
+Refers to a facility to transfer funds from one Bank to any other Bank to any savings or current bank account.
+KYC:
+Stands for “Know your Customer” and refers to the various norms, rules, laws and statutes issued by RBI from time to time under which Paytm is required to procure personal identification details from you before any services can be delivered. Know your Customer (KYC) documents may be required by Paytm from the Customer at the time of Registration and/ or on a later date, for availing and / or continuation of the Paytm Wallet.
+RBI:
+Reserve Bank of India
+Password:
+UPI Pin:
+To secure the payment and transaction on the Gpay UPI Pin is needed each time you transfer the money.
+Google Pin:
+To give more security to the application you need to enter Google Pin to operate the application.
+SRS:
+Software Requirement Specification.
+UPI:
+User Payment Interface
+All Transaction:
+To check the history of all the payments and transfer you can use it.
+Check Balance:
+To check the balance in your Bank account you can go to it.
+Add Bank:
+To operate the Gpay on your system and to transfer the money you need to add your Bank Account So, that you can directly transfer money from your Account.
+Business:
+It is a section under Gpay where you can shop, order foods, booking tickets and many.
+Data Flow Diagram (Payment request and response):
+The Gpay client will request for the payment and then request validation will be there, if the request will be invalid then client will be prompted that request failed. Usually, it is the case when you don’t have the internet connectivity, or you have not added any bank account in your Gpay account. Now you must enter the phone number or bank account number on which analysis will be done if the person will be valid then an option to choose your bank Account will be there. You must enter UPI PIN which is for security purpose. If wrong PIN will be there, then again user will be prompted about it else the transaction will be completed successfully and the report will be given to the client."
+1. Purpose,1.2 Background,,"Gpay which stands for Google pay is an online money transaction application. It’s main purpose to help people to transfer money sitting at home. All the service is free of cost, even transfer money with Zero fees straight from your account. It was launched on September 18, 2017 especially for India from Google. Google pay also offers for recharge, bill payments, shopping and many.
+After demonetization in India in November 2016 digital transaction became the main source of transfer money but before it, people were afraid of it as it’s a fraud. At the same time Jio launched internet connectivity at a very low cost so, digital transaction came in demand. As google pay transaction is straight from Bank account. Now, it is one of the largest mobile payment service platforms with the facility of one tap payment."
+1. Purpose,1.3 System overview,,"In this document, detailed design of the system with user interfaces will be described, Decomposition of the system with module decomposition, concurrent process decomposition and data decomposition, User Interface description, detailed design of the system is provided."
+1. Purpose,1.4 References,,
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Gpay is the leading Mobile Transaction service offer Mobile,data recharge and bill payments service in India owned By Google. Its interface is simple and easy to undersatnd which shows everything in one single page.
+The user Interface is User-friendly even, you can choose your language to understand the steps in your own way in your own language.
+Fast forward:- Noone can deny that the Gpay service is very fast to pay and one tap payment make it different from others and easy to use. Mobile recharge or bill paymments can be done in seconds. You can shop, book a Uber Car or hotel just in seconds."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"Each Gpay account has its own data in database to maintain its process and transaction even the users on the application. When we login to Gpay using Google PIN, it communicates with the database. Now we can pay to or request money from other Users. It Check your details with the bank and in the case of satisfaction your payment will be done. In case of order or shopping you will be redirected to the interface and again your details will be matched with the database."
+2. Overall description,2.4 User characteristics,,"There are several users of the Gpay
+ Customer
+Cutomer Interact with the Gpay via Application.It is very easy to use because it support one tap payment.
+ Maintainer
+Using Gpay is easy but to maintain, it needs effort. So, the programmers and coders work together to maintain the database and internal function to make the Gpay easy to use."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,
+3. Specific requirements,,,"Functional Requiremnt 1
+ Description:
+Login in Gpay(Check whether acoount exists or not)
+ Input:
+Enter the details like mobile number registered in your bank account to communicate with the bank.
+ Processing:
+Checking whether this account exists or not.
+ Output:
+If account exists then user interface will be opened else Account doesn’t exist, You have to sign in to create a Gpay Account
+ Sign in:
+To sign in in google pay you need your Email Id and name,your registered mobile number in bank.
+ Security:
+Choose Screen lock or Google PIN to secure the application
+ Add Bank Account:
+Choose the bank you want to use for the application.
+ Processing:
+It will send a message to the bank by your registered Mobile number that whether this number is registered in your bank or not in case of satisfaction verification will be done.
+ UPI PIN:
+Choose UPI PIN to secure the transaction which is of atmost 6 numbers. After this your bank account will be added to Gpay to use, and this UPI PIN will be asked each time when you will transfer money.
+Functional Requirement 2
+ Description
+Pay or request money
+ Input1:
+Select New section and Enter the Gpay registered mobile nnumber whom you want to pay or you can directly send to the bank by entering Account number, Account holder name and IFSC code.
+ Input2:
+Enter the Amount you want to pay
+ Processing:
+After entering UPI PIN It checks whether your Account has required amount or not.
+ Output:
+If no error will occur then payment will be successful, otherwise payment unsuccessful
+ Error:
+Server error, Amount problem, internet connectivity
+Functional Requirement 3
+ Description:
+To pay money to shopkeeper
+ Input:
+Phone number/UPI QR code of shopkeeper and amount.
+ Processing:
+Transferring money to shopkeeper’s Account.
+ Output:
+Transaction successful
+Functional Requirement 4
+ Description:
+Mobile recharge/dish recharge
+ Input:
+Phone number/Dish Id and amount to recharge
+ Processing:
+Contact the service provider and recharges the phone or dish and deducts money from your account.
+ Output:
+Recharge Successful
+Functional Requirement 5
+ Description:
+Bill payment of electricity/Gas/Water bill
+ Input:
+Select type of bill,bill number and customer number
+ Processing:
+Checks the amount to be paid and transfer the money to the specified company/agency.
+ Output:
+Payment successful
+Functional Requiremnt 6
+ Description:
+Opens the portal of online shopping
+ Input
+Select the item to be bought
+ Processing:
+Generates the bill of the item and sends the prompt to the seller and ask the customer to paymet.
+ Output:
+Transaction done.
+Functional Requirement 7
+ Description:
+Online booking of movies/Bus/trains/flights tickets
+ Input:
+Enter your date and place and then select your seat
+ Processing
+Contact the host and generates the ticket and deduct the money from the bank account.
+ Output:
+Ticket has been generated.
+Functional Requirement 8
+ Description:
+Nearby payments using QR code
+ Input:
+Scan QR code or generate QR code to do the transaction.
+ Processing:
+QR code will be scanned.
+ Output:
+Amount will be deducted from the account and transaction will be complete.
+Performance Requirement 1
+ Description:
+In case of transaction failure, if your money is deducted from account then it takes about 3 working days to return the money, which is also a problem in it.it should try to return in less than 24 hours.
+Performance Requirement 2
+ Description:
+There must be a guide on the first interface to guide the users in case of new user or unknown one to guide about the steps.
+Performance Requirement 3
+ Description:
+There must be a notification ring as in whatsApp so that whenever anyone request for the money it shows on the device and notify him by ringing.
+The application should be available for 24 hours
+The web server should support every platform and could be opened on mobile phones, tablets, and PC
+The application should be fast and respond to users within 1 second
+The application should provide user to modify and manage data
+The system should update and show transactions real-time
+Security requirements ensure that the software is protected from unauthorized access to the system and its stored data. It also includes protection against viruses and malware attacks."

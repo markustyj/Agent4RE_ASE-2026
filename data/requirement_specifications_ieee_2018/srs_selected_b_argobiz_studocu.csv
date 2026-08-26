@@ -1,0 +1,366 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"Term/Acronym Definition
+<Identify any terms and acronyms used within this document>
+Term/Acronym Definition
+AGRO BIZ Agricultural Business
+JAVA Java
+MySQL My Structured Query Language
+JS JavaScript
+RDBMS Relational Database System
+CRUD Create Read Update Delete"
+1. Purpose,1.2 Background,,"'Agro Biz' is a mobile based application which provides complete guide to both agricultural product producers (farmers) and customers (whole-sellers, retailers and consumers).This application has four types of users; admin, producer (farmer), sales person and consumers.
+Admin can update new features and add information about recent technology and methods used to produce high quality disease free product, market price and success history of farmers to motivate people in agricultural field. Agricultural product producers (farmer) can advertise their products according to admins post including product details (like product name, product rate, quantity) and available places. And the agricultural product sales-person (whole-seller and retailers), and consumers can post their needs along with product details and required place.
+Thus, this app will provide a complete platform to connect with producers and costumers, buy and sell product, provide recent information along with requirement for doing commercial agriculture and animal farming, market situation in agricultural and animal product business and success history to motivate people in this field."
+1. Purpose,1.3 System overview,,"Agro Biz is a mobile application, which will be complete guide to both agricultural product producers (farmers) and customers. Here, both agro producers and costumers can sign up through this application at first time. Producer advertise their product with detail information including product name, price rate, quantity, available place and services they provide whereas costumers (whole-seller, retailers and consumers) post their needs along with required product name, quantity and place where they want.
+Thus, this will create a complete platform to connect with producers and costumers and fulfill the need and requirement of both producers (farmer) and consumers.
+There will be other costumers that is a business- person who directly want to get the product from producer (Farmer) and want to supply the product to the different whole sellers around the city and earn profit."
+1. Purpose,1.4 References,,"Business Requirement Document, Agro Biz by Raju Shrestha, Deerwalk Institute Of Technology"
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,This will have a centralized database system to store all the necessary information. This mobile application is compatible with most of the popular operating system Android OS.
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Figure 1.Create New User Account
+Figure2. Login Page for All user
+Figure 3. Agro Biz Services Homepage
+Figure 4. Agro Market News and Updates
+Figure 5. Advertise Agro Product
+Figure 6. Sell Product
+Figure 7. Buy Product"
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,No specific hardware is required for the system. The program can be executed on any android phone which supports android OS.
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,This requires an android version of 5.0 or above.
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,Communication between the different devices takes place via the internet.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"The design constraints are:
+➢ The application layout will be produced using HTML/CSS/JS.
+➢ The application will be coded in JAVA.
+➢ The database will be MySQL database.
+➢ The source code will follow coding conventions of JAVA."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"The ‘Agro Biz’ provides a platform for agro producers (farmer), consumers and agro product suppliers (whole-sellers and retailers) to interact with each other, so they can achieve benefit from the application. The application will store the information of the agro product name, quantity, product rate, available and required place posted by farmer and customers. This will provide a proper means of communication to connect buyers and sellers.
+The application allows admin panel to update new features and agricultural information about the methods and techniques to produce high quality disease free agricultural crops and animal product. This also provides information about protection and caring techniques and climate soil and fertilizers used to product disease free agricultural and animal product.
+So, that farmer can take benefit via updated information regarding the market price and situations, recent technology and technique developed to produce best quality product."
+2. Overall description,2.4 User characteristics,,"The function of this system varies according to the users using this system. They are four users using this system. They are an Administrator, Agro producers (farmer), consumers, and, the sales person.
+The features that are available to administrator are:
+Can login/logout the system.
+Can apply CURD operations for all users of this system.
+Can search for the users.
+Can validate the post written by the producers.
+Can update new features and recent market information.
+Can configure the system.
+The features that are available to agro producers (farmer) are:
+Can login/logout the system.
+Post their queries regarding recent technology and procedure to be followed to produce high quality product to answer.
+Advertise their product if they want to sell them.
+Search for costumers to sell their product.
+The features that are available to whole-sellers, retailers and consumers are:
+Can login/logout the system.
+They can answer the queries asked by the farmers and consumers.
+The features that are available to agro product consumers are:
+Can login/logout the system.
+They can connect with farmers, whole-sellers and retailers.
+They can order the required items with details."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"The general constraints are:
+The application will be operating in android environment.
+The Agro Biz application will be compatible with most famous operating system Android OS.
+Internet connection is the only requirement to use this application.
+The assumptions are:
+All the users will have access to this system 24X7X365.
+All the users will be comfortable using the mobile applications.
+All the users will be able to use it via login."
+3. Specific requirements,,,"All requirements related content consolidated here:
+External interface requirements:
+User Interfaces:
+Figure 1.Create New User Account
+Figure2. Login Page for All user
+Figure 3. Agro Biz Services Homepage
+Figure 4. Agro Market News and Updates
+Figure 5. Advertise Agro Product
+Figure 6. Sell Product
+Figure 7. Buy Product
+Hardware Interfaces:
+No specific hardware is required for the system. The program can be executed on any android phone which supports android OS.
+Software Interfaces:
+This requires an android version of 5.0 or above.
+Communications Interface:
+Communication between the different devices takes place via the internet.
+Functional Requirements:
+3.2.1 Create user credentials
+Introduction
+Create user credential to login to the system.
+Inputs
+First Name, Last Name, Address Email and Password.
+Processing
+Create the user credentials by storing the input values in the database on clicking the ‘Create User’ button.
+Outputs
+Redirects to Dashboard and with a message ‘User created successfully.’
+Error Handling
+If any input parameters are missing, then shows error messages on the same page.
+3.2.2 Post Query, Sell/Advertise product
+Introduction
+Create user to login to the system.
+Inputs
+First Name, Last Name, Address, Phone No, Email and Password.
+Processing
+Create connection with agricultural exports, customers and farmers
+Outputs
+Get reply and sell product
+Error Handling
+If any input parameters are missing then shows error messages on the same page.
+3.2.3 Agricultural product whole-sellers and retailers
+Introduction
+Create connection with farmers and other customers
+Inputs
+First Name, Last Name, Address, Phone No, Email and Password
+Processing
+Connect with farmers and customers
+Outputs
+Redirects to Admin’s Dashboard and with a message ‘User created successfully.’
+Error Handling
+If any input parameters are missing or the admin authentication failed, then shows error messages on the login page.
+3.2.4 Ask questions to Agricultural Exports
+Introduction
+User can ask questions
+Inputs
+Question, Additional Information.
+Processing
+Create the new question by storing it in the database on clicking the “Post Question” button.
+Outputs
+Display reply of queries
+Error Handling
+If any input parameters are missing then shows error messages on the same page.
+3.2.5 Agricultural exports to reply the queries
+Introduction
+Agricultural exports can respond to queries posted by users
+Inputs
+Queries
+Processing
+Get the queries and send reply.
+Outputs
+Redirects to Dashboard and with a replied answer.
+Error Handling
+If any input parameters are missing then shows error messages on the same page.
+3.2.6 Agricultural exports post information
+Introduction
+Agricultural export can post their information for the users to view
+Inputs
+Information
+Processing
+Place the agricultural news, books and technology developed
+Outputs
+Display agricultural news
+Error Handling
+If any input parameters are missing then shows error messages on the same page.
+3.3.7 Agricultural product sellers
+Introduction
+Agricultural and animal product producers can add items with details.
+Inputs
+Product name, Quantity, Product rate, required place and contact details
+Processing
+Advertise product with details
+Outputs
+Display product with details
+Error Handling
+If any input parameters are missing then shows error messages on the same page.
+3.3.8 Customers can search for new product
+Introduction
+Sales- person and consumers can search for items in the database.
+Inputs
+Item name
+Processing
+Search for the item in the database
+Outputs
+Display product with details
+Error Handling
+If any input parameters are missing, then shows error messages on the same page.
+3.3.9 Consumers can buy agricultural product
+Introduction
+Consumer can buy product which are for sale.
+Inputs
+Agricultural product
+Processing
+Search the database for the product
+Outputs
+Redirects to the page with search results
+Error Handling
+If any input parameters are missing or no such item found, then shows error messages on the same page.
+Use Cases:
+Use Case ID: UC -1
+Use Case Name: USER CONFIGURATION
+Created By: RAJU SHRESTHA
+Last Updated By: Raju Shrestha
+Date Created: 23/06/2017
+Date Last Updated: 23/06/2017
+Actors: ADMIN
+Description: CREATE USER CREDENTAILS TO LOGIN TO THE SYSTEM
+Preconditions: AGRO BIZ app downloaded and opened on android phone.
+Post-conditions: User logins to the application and changes made are updated in the database.
+Normal Course:
+Sees a welcome message
+Add new features and post market updates
+Logout the system
+Alternative Courses: Sees an error message based on password mismatch or non- existence of the user
+Exceptions:
+Includes:
+Priority: HIGH
+Frequency of Use: HIGH
+Business Rules BR1, BR5
+Special Requirements: • 24/7 access Supported on Android mobile
+Assumptions: Supported by only on Android operating system
+Notes and Issues:
+Use Case Graphics
+Login
+Configure Users Credentials and update new features
+Actor – Admin
+Logout
+Use Case ID: UC – 2
+Use Case Name: AGRO PRODUCERS (FARMER)
+Created By: RAJU SHRESTHA
+Last Updated By: Raju Shrestha
+Date Created: 23/06/2017
+Date Last Updated: 23/06/2017
+Actors: AGRO PRODUCERS (FARMER)
+Description: POST A QUERY, ADVERTISE/SELL PRODUCT.
+Preconditions: AGRO BIZ app downloaded and opened on android phone
+Post-conditions: User logins to the mobile application and changes made are updated.
+Normal Course:
+Sees a welcome message
+Post their queries and see market updates
+Perform a search
+Advertise their product if they want to sell them
+Logout of the system
+Alternative Courses: Sees an error message based on password mismatch or non- existence of the user
+Exceptions: None
+Priority: High
+Frequency of Use: HIGH
+Business Rules BR2, BR4
+Special Requirements: • 24/7 access • Supported on android phone.
+Assumptions: Admins and agricultural experts will be able to respond to his queries and costumers can contact.
+Notes and Issues:
+Use Case Graphic
+Login
+Post a query sees market updates
+Actor – Agro Producers (Farmer)
+Advertise/Sell their product
+Search for customers
+Check if there any costumers
+Logout
+Use Case ID: UC – 3
+Use Case Name: RESPOND TO QUERIES AND ADVERTISE THEIR PRODUCT
+Created By: RAJU SHRESTHA
+Last Updated By: Raju Shrestha
+Date Created: 23/10/2017
+Date Last Updated: 23/10/2017
+Actors: WHOLE-SELLERS AND RETAILERS
+Description: THEY RESPOND TO A QUERY MADE BY A CUSTOMERS (CONSUMERS) AND ADVERTISE THEIR PRODUCT AND FACILITIES.
+Preconditions: AGRO BIZ app downloaded and opened on android phone
+Post-conditions: User logins to the Android application changes made are updated.
+Normal Course:
+Sees a welcome message.
+Respond to queries
+Advertise their products
+Logout of the system
+Alternative Courses: Sees an error message based on password mismatch or non- existence of the user
+Exceptions: None
+Priority: High
+Frequency of Use: HIGH
+Business Rules BR3, BR4
+Special Requirements: • 24/7 access • Supported by Android phone
+Assumptions: Supported on only Android operating system
+Notes and Issues:
+Use Case Graphic
+Login
+Respond to a query
+Advertise their products
+Actor – Whole-Sellers And Retailers
+Logout
+Use Case ID: UC – 4
+Use Case Name: BUY PRODUCTS
+Created By: RAJU SHRESTHA
+Last Updated By: Raju Shrestha
+Date Created: 23/10/2017
+Date Last Updated: 23/10/2017
+Actors: Consumers, Retailers and Whole-sellers of agricultural products
+Description: POST THEIR NEED WITH PRODUCT DETAILS
+Preconditions: AGRO BIZ app downloaded and opened on android phone
+Post-conditions: User logins to the Android application and changes made are updated in the database.
+Normal Course:
+Sees a welcome message
+Sets requirements
+Order product with details
+Logout of the system
+Alternative Courses: Sees an error message based on password mismatch or non- existence of the user
+Exceptions: None
+Priority: High
+Frequency of Use: HIGH
+Business Rules BR4
+Special Requirements: • 24/7 access • Supported by Android phone.
+Assumptions: Supported on only Android operating system
+Notes and Issues:
+Use Case Graphic
+Login
+Order products
+Actor–Agro product consumers
+Logout
+Use Case ID: UC – 3
+Use Case Name: POST CONVENTIONAL TECHNIQUES AND METHODS TO PRODUCE QUALITY PRODUCT
+Created By: RAJU SHRESTHA
+Last Updated By: Raju Shrestha
+Date Created: 23/10/2017
+Date Last Updated: 23/10/2017
+Actors: EXPERTS
+Description: ADD NEW INFROMATION
+Preconditions: AGRO BIZ app downloaded and opened on android phone
+Attributes User ID First_name Last_name Address Email Password
+Functions Full_name Authenticate
+Post-conditions: User logins to the android application changes made are updated.
+Normal Course:
+Sees a welcome message.
+Respond to queries
+Add new information
+Logout of the system
+Alternative Courses: Sees an error message based on password mismatch or non- existence of the user
+Exceptions: None
+Priority: High
+Frequency of Use: HIGH
+Business Rules BR3, BR4
+Special Requirements: • 24/7 access • Supported on Android phone.
+Assumptions: Supported by only on Android phone.
+Notes and Issues:
+Use Case Graphic
+Login
+Add new information
+Actor – Agricultural Experts
+Logout
+For the business rules refer to the BRD.
+Classes / Objects:
+Users:
+Attributes
+User ID
+First_name
+Last_name
+Address
+Email
+Password
+Functions
+Full_name
+Authenticate
+Agro product sellers:
+Attributes
+Product ID
+Product type
+Product name
+Functions
+Find by product ID and name
+Agro Producers (Farmer):
+Non-Functional Requirements:
+Performance:
+The system should support at concurrent users. Many users can use the app to access the information within the system at the same time. Display time changes must be done quickly and efficiently.
+Reliability:
+The reliability of this application depends on the reliability of the separate components present within this application. However, the system should never crash other than there is an operating system error. Also, the system should respond in smooth way, even if there is error in network. The system should respond well even for big set of data and large number of users.
+Availability:
+The apps will be available on Google play store and the users can download it at any time.
+Security:
+The system is secured by the means that all the password of the users will be saved encrypted in the database. It ensures the privacy of the users. The system will be protected against online hacking such as SQL injection attacks.
+Maintainability:
+The database of this system in maintained by using MySQL and sever is the Apache server. In case of failure of this system through any means, both the database and server can be re- initialized.
+Portability:
+This application is an android operating system based but it could not be compatible with other system. The technologies used to build this application are system dependent. The application can therefore do not run on any other operating system.
+Logical Database Requirements:
+All the data will be saved in the MySQL database. The information includes user details, item details and the transaction details. The database can only be accessed by the administrator using the database login credentials. RDBMS approach is used to build the database design."

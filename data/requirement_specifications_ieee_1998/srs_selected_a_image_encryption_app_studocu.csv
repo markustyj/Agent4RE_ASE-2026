@@ -1,0 +1,108 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,This SRS specifies the functional and non-functional requirements for a web application designed to encrypt and decrypt images. The application aims to provide users with a secure way to store and share sensitive images.
+1. Introduction,1.2 Document Conventions," Fonts: Standard fonts are used throughout the document.
+ Bold: May be used to emphasize key terms or requirements.
+ Italics: May be used to reference figures or tables within the document.
+ Priorities: Every requirement statement will have its own assigned priority (e.g., High, Medium, Low) for clarity."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This SRS is intended for various audiences:
+ Developers: Responsible for implementing the functionalities outlined in the document.
+ Project Managers: Overseeing the development process and ensuring adherence to requirements.
+ Testers: Designing and executing test cases to verify application functionality.
+ Users: Gaining an understanding of the application's capabilities and limitations.
+The document is structured as follows:
+ Introduction (This section)
+ Overall Description (Describes the application's general features)
+ Specific Requirements (Detailed functional and non-functional requirements)
+ System Interfaces (Defines how the application interacts with external systems)
+ Other Non-Functional Requirements (Security, performance, etc.)
+ Appendix (Includes additional information such as data models or error messages)
+We recommend readers begin with the Introduction and Overall Description, followed by sections most relevant to their role in the project."
+1. Introduction,1.4 Product Scope,"This SRS focuses on the core functionalities of the image encryption application:
+ Users can select images from their device storage.
+ The application encrypts chosen images using a user-defined password or key.
+ Encrypted images are stored within the application in a secure format.
+ Users can decrypt previously encrypted images using the same password or key.
+ Encrypted images should be unreadable by unauthorized user"
+1. Introduction,1.5 References,"This section will be filled with specific references during the SRS development process, potentially including:
+ Security standards for data encryption (e.g., AES-256)
+ User interface style guides for web applications"
+2. Overall Description,2.1 Product Perspective,"This image encryption application is a new, self-contained web application designed to be accessed through a standard web browser. Users will interact with the application entirely through the web interface."
+2. Overall Description,2.2 Product Functions," Image Selection: Users can browse and select images from their local device storage for upload and encryption.
+ Encryption: The application encrypts uploaded images using a user-defined password or key on the server-side. Encrypted data is never stored unencrypted on the user's device.
+ Secure Storage: Encrypted images are stored securely on the application's server using industry-standard encryption methods.
+ Decryption: Users can decrypt previously uploaded and encrypted images using the same password or key, retrieving them for viewing or downloading.
+ Image Management: The web application allows users to view, organize, potentially delete, and download encrypted images stored on the server."
+2. Overall Description,2.3 User Classes and Characteristics," Primary Users: Individuals who prioritize securing their sensitive images through a web interface accessible from any device with a web browser. They may have a basic understanding of encryption concepts but are not necessarily technical experts.
+ Secondary Users: Users who occasionally need to encrypt images for specific purposes using a web interface. They may require a clear and user-friendly interface with minimal technical knowledge required."
+2. Overall Description,2.4 Operating Environment," Hardware Platform: The application is web-based and accessible from any device with a standard web browser and internet connection.
+ Operating System: The application should be compatible with major operating systems (Windows, macOS, Linux) through their respective web browsers.
+ Other Software: The application should coexist peacefully with user's web browser and internet connection."
+2. Overall Description,2.5 Design and Implementation Constraints," Security: The primary constraint remains robust encryption using industry-standard algorithms (e.g., AES-256) on the server-side. User passwords should be securely stored using hashing and salting techniques. Data transmission between user and server should be encrypted using HTTPS protocol.
+ Performance: The application should be optimized for efficient image upload, encryption, decryption, and download processes, minimizing server load and user wait times.
+ Usability: The web interface should be intuitive and user-friendly, catering to users with varying technical expertise.
+ Browser Compatibility: The application should function consistently across major web browsers (e.g., Chrome, Firefox, Safari) with minimal browser-specific adjustments."
+2. Overall Description,2.6 User Documentation,"The following user documentation components will be delivered alongside the image encryption web application:
+User Manual: A comprehensive user manual in a downloadable PDF format will be provided. It will detail the application's functionalities, step-by-step instructions for image encryption, decryption, management, and troubleshooting tips.
+Online Help: Contextual help will be integrated within the web application interface. Users can access brief explanations and instructions by hovering over specific features or clicking on designated help buttons.
+Tutorials: A series of short video tutorials will be available on the application's website or a designated video platform. These tutorials will visually demonstrate key functionalities for users who prefer a video-based learning approach."
+2. Overall Description,2.7 Assumptions and Dependencies,"The following assumptions and dependencies are made for the image encryption web application:
+Users have a basic understanding of web browsing and file management on their devices.
+Users have a reliable internet connection for uploading and downloading images.
+The web application server has sufficient processing power and storage capacity to handle encryption and decryption processes.
+The web application server is configured with a secure web server certificate (HTTPS) for encrypted data transmission."
+3. External Interface Requirements,3.1 User Interfaces,"The web application will have a user-friendly and intuitive interface accessible through standard web browsers.
+A consistent visual design will be maintained throughout the application.
+The UI will follow industry best practices for web application design, ensuring clarity and ease of use.
+Standard navigation elements (menus, buttons) will be used for consistent user experience.
+Contextual help will be available through tooltips or dedicated help buttons for each functionality.
+Error messages will be clear, concise, and actionable, guiding users towards resolving issues.
+A detailed user interface design document will be created separately, outlining specific screen layouts, element functionalities, and visual style."
+3. External Interface Requirements,3.2 Hardware Interfaces,This web application is browser-based and doesn't require specific hardware interaction beyond a standard internet connection.>
+3. External Interface Requirements,3.3 Software Interfaces,"The application will interact with a secure server-side database to store encrypted images and user information.
+The database schema will be defined to ensure data integrity and security.
+The application will utilize a server-side scripting language (e.g., Python, Node.js) to handle image encryption and decryption processes.
+Secure communication protocols (HTTPS) will be used for all data transmission between user and server.
+An API (Application Programming Interface) may be developed to allow for potential future integrations with other applications (TBD).
+>"
+3. External Interface Requirements,3.4 Communications Interfaces,"The application will rely on a stable internet connection for users to upload images, interact with the web interface, and download encrypted data.
+Data transfer between user and server will be encrypted using HTTPS protocol to ensure data privacy.
+Standard web communication protocols (HTTP) will be used for communication between user browser and the server."
+4. System Features,4.1 System Feature 1,"This feature allows users to select images from their local device storage for upload and subsequent encryption. (High Priority)
+User navigates to the ""Upload Images"" section of the application.
+User clicks the ""Browse Files"" button or utilizes a drag-and-drop functionality to select images.
+The application displays a preview of the selected images.
+User confirms image selection for upload.
+REQ-1: The application shall allow users to select multiple images for upload in a single session.
+REQ-2: The application shall display clear file size limitations for supported image formats (e.g., JPEG, PNG).
+REQ-3: The application shall provide a visual preview of selected images before upload.
+REQ-4: The application shall offer basic image editing options (e.g., rotate, crop) before upload (TBD).
+REQ-5: The application shall display a progress indicator during image upload.
+REQ-6: Upon successful upload, the application shall confirm the number of uploaded images and provide options for encryption."
+4. System Features,4.2 System Feature 2 (and so on),"This feature allows users to encrypt uploaded images using a user-defined password or key. (High Priority)
+User selects an uploaded image for encryption.
+User enters a desired password or key for encryption.
+User confirms encryption request.
+REQ-7: The application shall utilize a robust and industry-standard encryption algorithm (e.g., AES-256) for image encryption.
+REQ-8: The application shall encrypt images on the server-side, never storing unencrypted images on the user's device.
+REQ-9: The application shall offer password strength indicators to guide users in creating secure passwords.
+REQ-10: The application shall allow users to re-enter passwords for confirmation to minimize typos.
+REQ-11: The application shall not store user passwords in plain text. Secure hashing and salting techniques must be used. (TBD)
+REQ-12: The application shall display a confirmation message upon successful image encryption."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"Image Upload and Download: Image upload and download times should be optimized for efficient user experience. The application should strive for a maximum wait time of 10 seconds for uploads and downloads of images under 5MB in size on a stable internet connection. (Target)
+Encryption and Decryption: Encryption and decryption processes should be completed within a reasonable timeframe based on image size. Users should not experience delays exceeding 15 seconds for encrypting or decrypting images under 5MB. (Target)
+Server Response: The application should maintain a responsive user interface with minimal lag between user actions and system responses. (Target)
+These performance targets may be adjusted based on further testing and resource allocation during development."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,This web application does not pose any physical safety hazards during its operation.
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Data Security: Encrypted images and user passwords must be stored securely on the server using industry-standard encryption methods (e.g., AES-256). (High Priority)
+Data Transmission: All communication between user and server, including image uploads, downloads, and password transmission, must be encrypted using HTTPS protocol. (High Priority)
+User Authentication: Users must be authenticated through a secure login process to access uploaded and encrypted images. Password complexity requirements should be enforced. (High Priority)
+Session Management: User sessions should have a timeout mechanism for automatic logout after a period of inactivity to prevent unauthorized access. (Medium Priority)
+Regular Security Audits: The application and server infrastructure should undergo regular security audits to identify and address potential vulnerabilities. (Medium Priority)"
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Usability: The user interface should be intuitive and user-friendly, catering to users with varying technical expertise. Clear instructions and tooltips should be provided for each functionality. (High Priority)
+Reliability: The application should function reliably with minimal downtime or errors. (High Priority)
+Maintainability: The application code should be well-structured, documented, and modular for ease of maintenance and future updates. (Medium Priority)
+Scalability: The application should be designed to accommodate a growing user base and potential future feature additions. (Medium Priority)"
+5. Other Nonfunctional Requirements,5.5 Business Rules,"User accounts are required for accessing uploaded and encrypted images.
+Users are responsible for maintaining the security of their passwords.
+The application will not be liable for any loss of data due to user negligence or forgotten passwords."
+6. Other Requirements,,Internationalization: The application interface should be designed to support potential future localization for different languages. (Low Priority)

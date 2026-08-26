@@ -1,0 +1,86 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This document is a Software Requirement Specification of upsc.gov.in. The document has been prepared on the basis of IEEE convention. This SRS will be further used for the case analysis ofupsc.gov.in.
+The aim of this document is to specify complete description of Union Public Service Commission (UPSC)a constitutional body that recruits the candidates for the various posts through a rigorous examination process which goes on for almost a year. It mainly refers to the posts of Indian Administrative Services(IAS), Indian Police Service(IPS) and Indian Revenue Services(IRS) and other government exams. To be specific, this document is going to describe functionality, performance, attributes and the design constraints of the system which is going to be developed. Therefore, upsc.gov.in will help the interested candidates to apply for this exam through this site and can get online access to all the information and important announcements for the same."
+1. Introduction,1.2 Document Conventions,"Throughout this documentation, the following conventions have been used :-
+· Font: Times New Roman
+· Size 18 For Main Headings
+· Size 14 For Sub Headings
+· Size 12 For the Rest of the Document
+· Words in Bold are important terms, and have been formatted to grab the attention of the reader."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is meant for users, developers, project managers, testers, and documentation writers. The SRS document aims to explain in an easy manner, the basic idea behind the upsc.gov.in and how the developers aim to achieve their goals. It also aims to introduce to the candidates the main features of the upsc.gov.in."
+1. Introduction,1.4 Product Scope,"UPSC conduct several reputed government exams every year. Through UPSC, one can apply for this exam and can get the prestigious posts of India like IAS, IPS, Air force, CBI, IES, Railways, IFS, CDS, CPF etc. after clearing it. UPSC gives a great financial and social status through the versatile and reputed jobs that is provided by it. This system provides an easy application to the interested candidates for this exam along with the easy access to the latest trends in the exam and the important updates as well as announcements regarding the same. It gives complete accessibility of application forms and other related forms and documents to its applicants.
+This site is developed to make the recruitment process of the government jobs easy and simple. All the details of the exams for the vacant posts will bedeployed to web site and all the users can access itby use of the website. Website is the main user interface where users can operate all the provided information for all of the posts that are vacant and also the recruitment tests related to them. However, this web site is only a part of the larger system. Website is just an interface to make it easy for the users to check which of the government posts are vacant and for which they can apply and can check the eligibility criteria, previous years’ cut-offs, previous question papers etc."
+1. Introduction,1.5 References,"http://www.upscpotal.com
+http://www.upscforums.com/
+http://www.upscguide.com/"
+2. Overall Description,2.1 Product Perspective,"This site is developed to make the recruitment process of the government jobs easy and simple. All the details of the exams for the vacant posts will bedeployed to web site and all the users can access itby use of the website. Website is the main user interface where users can operate all the provided information for all of the posts that are vacant and also the recruitment tests related to them. However, this web site is only a part of the larger system. Website is just an interface to make it easy for the users to check which of the government posts are vacant and for which they can apply and can check the eligibility criteria, previous years’ cut-offs, previous question papers etc.
+To check all the required details, users are required to register through the web interface. Whenever a newuser registered, all the required data will be created in the database and a predefined workspace willbe assigned for the user. Later, user will be able to login and logout the system anytime he wants.
+Users can check their account anytime to get the latest updates about the exams they had applied for and can also check the details of the new posts for which the recruitment test is available at that time. They can also register for any of the listed government jobs via upsc.gov.in for which they are eligible and can upload their documents that are required along with their registration forms."
+2. Overall Description,2.2 Product Functions,"The website will allow access only to authorized users with specific roles (Administrator- maintains the website, Institutes-Register to conduct the exams, Students-Fill and submit the forms for the recruitment test.)
+A summary of the major functions that the website will perform:
+Provide facility to the candidates to check all the details for the required exam post including last years’ question papers, cut-off marks etc.
+Candidates can check the number of questions, positive, negative marks, questions and answers and the list of eligible students.
+Candidates can check the answer keys also for the recently conducted exams and then can get an idea about the result and plan for the future accordingly."
+2. Overall Description,2.3 User Classes and Characteristics,"Graduates: Students who has just completed their graduation will use upsc.gov.in to apply for civil services examination and many other govt. examinations.
+IAS aspirants: Students who aspire to become an IAS Officer will use this site to see the exam patterns, every year cutoff marks etc. in order to set their target marks.
+Government: To recruit people on various reputed govt. posts like IAS, IPS, CDS etc. , govt. will use this to enroll interested candidates."
+2. Overall Description,2.4 Operating Environment,"Upsc.gov.in is able to operate on various Operating System platforms.
+Operating Systems: Windows, Android, Mac
+Software: Web Browser, Adobe Reader (just to download pdf files)"
+2. Overall Description,2.5 Design and Implementation Constraints,"Developer has to face a lot of critical situations while developing.
+The design of the website should be as understandable so that the naïve user who is not aware of what is going on the back end can easily operate.
+It should be kept in mind that the downtime should be minimized.
+Also the copyrights should be preserved so that no other site can copy the content and Serve it through their own name.
+Since the DBMS being used is MS Access 2000, which is not a very Popular DBMS, it will not be able to store a very huge number of records.
+Due to limited features of DBMS being used performance tuning features will not be applied to the queries and thus the system may become slow with the increase in number of records being stored.
+An extra security as SSL must be used to secure the marks details and other examination information."
+2. Overall Description,2.6 User Documentation,"Upsc.gov.in provides all the information regarding the civil services examination and other government examinations. It keeps all the updates in the pattern of the examination and the important announcement of dates, registration for the recruitment etc. The users can also see their results and cut off marks on this website of the concerned government examination."
+2. Overall Description,2.7 Assumptions and Dependencies,"Assumptions: We have made the following assumptions -
+We assumed the user is having an operational device such as laptop, tab, desktop or an smart phone to run the website.
+Along with it the user is having internet access so that no interrupt can occur.
+The user has some previous knowledge of using similar websites.
+Dependencies:
+This site would need Adobe Reader for downloading pdf files related to marks, forms etc.
+It will need a web browser for viewing the content of the site."
+3. External Interface Requirements,3.1 User Interfaces,"The user interface for the software shall be compatible to any browser such as Internet Explorer, Mozilla or Netscape Navigator by which user can access to the system.
+The user interface shall be implemented using any tool or software package like Java Applet, MS Front Page, EJB etc.
+This software will have graphical user interface that are very user friendly. The user will have no difficulty in working with these user interfaces."
+3. External Interface Requirements,3.2 Hardware Interfaces,"Since the application must run over the internet, all the hardware shall require to connect internet will be hardware interface for the system. As for e.g. Modem, WAN – LAN, Ethernet Cross-Cable.
+Support for printer for printing results then and there.
+Screen resolution of at least 800*600 or above will be preferable for viewing the site."
+3. External Interface Requirements,3.3 Software Interfaces,"OS: Windows, Android, Mac
+The system shall communicate with billPay system to identify available payment methods, validate the payments and process payment during the application procedure.
+The system shall be verisign like software which shall allow the users to complete secured transaction.
+This usually shall be the third party software system which is widely used for internet transaction.
+MS Access 2000 as the DBMS-for database."
+3. External Interface Requirements,3.4 Communications Interfaces,
+4. System Features,4.1 System Feature 1,"There will three form of logging provided by the system. First logging will be a New user to register, from which user will provide certain details about himself to Facilitate efficient configuration of the system. Second form of logging will be for existing user to log on to the system. Third form of logging will be for anonymous user to enter the system but with certain restricted functions.
+Normal Flow of Events-
+User opens the registration page
+User specifies his information
+System validate the specified information
+User is registered to the system
+Alternative Event Flow 1 4.
+User cannot register to the system due to inappropriate information
+Functional Requirements
+REQ 1: The system shall provide a registration page
+REQ 2: The system shall provide a login page"
+4. System Features,4.2 System Feature 2 (and so on),"The candidate will be able to see cut off marks of the exam in which he or she has appeared.
+Normal Flow of Events
+1.Candidate opens the examination tab.
+2.Candidate clicks on the cut off marks option.
+3.Candidate chooses the examination category.
+4.Candidate downloads the pdf containing cut off marks.
+Functional Requirements
+REQ 1: The system shall provide all the examination category page.
+REQ 2: The system shall provide a cut off marks pdf."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The product shall be based on web and has to be run from a web server.
+The product shall take initial load time depending on internet connection strength which also depends on the media from which the product is run.
+The performance shall depend upon hardware components of the client/customer."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"The system shall use secure sockets in all transactions that include any confidential applicant information.
+The system shall automatically log out all applicants after a period of inactivity.
+The system shall not leave any cookies on the applicant’s computer containing the user’s password.
+The system shall not leave any cookies on the applicant’s computer containing any of the user’s confidential information."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,
+5. Other Nonfunctional Requirements,5.5 Business Rules,

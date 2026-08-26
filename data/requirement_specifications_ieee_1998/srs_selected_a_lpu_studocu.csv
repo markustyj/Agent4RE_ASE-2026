@@ -1,0 +1,107 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"The main objective of this document is to illustrate the requirements of the project University Management System. This document describes the design decision, architectural design and the detailed design needed to implement the system. It provides the visibility in the design and provide the information needed for software support. The document gives the detailed description of both functional and non-functional requirements proposed by the client."
+1. Introduction,1.2 Document Conventions,"The following are the list of conventions and acronyms used in this documentation.
+ Administrator: - A login id representing a user with user administration privileges to the software.
+ User: - A general login id assigned to users.
+ Client: - Intended users for the software.
+ SQL:-Structured Query Language used to retrieve or store the information in the database.
+ ASP""- Active Server Pages: A Webpage formatted on the server and delivered to the browser.
+ User Interface Layer: - The section of the assignment referring to what the user interacts with directly.
+ Application layer: - This section referring the the Web Server where all computations are completed.
+ Data Storage Layer: - This term refer to where all the data is being stored.
+ Data flow Diagram: - It show the relationship or dataflow between the entities.
+ Boolean: - A true /false statement.
+ Interface: - Something used to communicate across different mediums.
+ Unique keys; - Used to differentiate entities in database.
+ Layers: - Represents the section of the project.
+ SQL Server:- A server used to store the data in a well-organized format"
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"The document is intended for all the stakeholders’ customer and the developer (designers, testers, maintainers). The reader is assumed to have basic knowledge of all the algorithms used to reduce the complexity and also have knowledge of all the basics which are used in the development and maintenance of the project or an online system and also some basic knowledge of Entity Relationship diagrams."
+1. Introduction,1.4 Product Scope,"The online university management system is developing for the schools of the university and used to replace the old paper work system. The software supports a computerized university management system network. The network enables Teachers, students to complete simple tasks via U.M.S that may be easily accessed to the authorized members at any time. The UMS identifies a USER by a login id which provided by the administrator and password. It collects information through the database by following the login id (e.g., profile, attendance, examination, fees payment). The software must handle concurrent accesses to the same account correctly.
+The proposed University Management System is an online University management system. This system will provide a view submit online payment uploading various documents and other resources. This view will be based on the categories like attendance view and daily activities. Further the university management staff (faculty) can add/remove/update the resource or an automatic removal of accessing features when the time limit completes. The system have also an ADMIN who have full-fledged rights with the regards to managing resources across branches. The user can view can submit, online payment, uploading various documents and information about their account etc. there are basically two types of users one is students and other are faculty members. Each user facilitates with a different account number having a profile along with a password for private use. The two type of user differ from each other due to the accessing limits to online University Management System."
+1. Introduction,1.5 References,
+2. Overall Description,2.1 Product Perspective,"The proposed University Management System is an online University management system. This system will provide a view submit online payment uploading various documents and other resources. This view will be based on the categories like attendance view and daily activities. Further the university management staff (faculty) can add/remove/update the resource or an automatic removal of accessing features when the time limit completes. The system have also an ADMIN who have full-fledged rights with the regards to managing resources across branches. The user can view can submit, online payment, uploading various documents and information about their account etc. there are basically two types of users one is students and other are faculty members. Each user facilitates with a different account number having a profile along with a password for private use. The two type of user differ from each other due to the accessing limits to online University Management System."
+2. Overall Description,2.2 Product Functions,"There are three types of different user who will be using this product So, every one ha the different interfaces to use the interface..
+University chancellor. who will be acting as the administrator
+Faculty Members who are second level users accessing UMS.
+Students of the university who will be accessing the UMS online
+The features that are available to the administrator are:
+ Can create or delete the account.
+ Can view the accounts.
+ Can change the password.
+ Can hide any kind of feature from both users.
+ Insert/delete/edit the information of available on the UMS.
+ Can access all the accounts of faculty and the students.
+The features that are available to the faculty are:
+Can mark the attendance of the students online.
+Can create the continuous assessments for the students.
+Can view the online attendance off the students.
+Can submit the questions papers online.
+Can upload marks, assignments, reading material for the students.
+The features that are available to the Students are:
+Can view the different types of the reading material and assignments are available in their account.
+Can pay their fees by online mode.
+Can view their marks as well as attendance.
+Can view and modify it profile but cam modify it to some limits range."
+2. Overall Description,2.3 User Classes and Characteristics,"There are various by various users for kind of user for the product. Usually web products are visited by various user for different reasons visited different reasons.
+The user includes:-
+ Chancellor who will be acting as the controller and he will have all the privileges of administrator.
+ Faculty members who will be using the above features by accessing the UMS online.
+ Students who will be using the above features by accessing the UMS online."
+2. Overall Description,2.4 Operating Environment,The product will be operating in windows environment. Also it will be compatible with the IE 6.0. Most of the features will be compatible with the Mozilla Firefox & Opera 7.0 or higher version. The only requirement to use this online product would be the internet connection.
+2. Overall Description,2.5 Design and Implementation Constraints,The Product is developed using ASP. The backend database for this SQL Server. The product is accomplished with login facility so that specific function is available to specific student.
+2. Overall Description,2.6 User Documentation,"The product will include user manual. The user manual will include product overview, complete configuration of the used software (such as SQL server), technical details, backup procedure and contact information which will include email address. The product will be compatible with the Internet Explorer 6.0 or higher. The databases will be created in the Microsoft SQL server 2000."
+2. Overall Description,2.7 Assumptions and Dependencies,"The product needs following third party product.
+Microsoft SQL server to store the database.
+ASP to develop the Product."
+3. External Interface Requirements,3.1 User Interfaces,"This section gives the list of Functional and nonfunctional requirements which are applicable to the University Management System
+Interface Requirements:-
+This section describes how the software interfaces with other software products or users for input or output.
+User Interfaces
+This section Describes how this product interfaces with the user
+GUI:-
+Describes the graphical user interface if present. This section should Include a set of screen dumps or mockups to illustrate user interface features.
+Description
+The user interface must be customizable by the administrator
+Criticality
+This issue is essential to the overall system. All the modules provided with the software must fit into this graphical user interface and accomplish to the standard defined.
+Technical issues
+In order to satisfy this requirement the design should be simple and all the different interfaces should follow a standard template. There will be the possibility of changing colors and images, plus switching between interfaces with the minimum impact for the users.
+Risks
+To reduce the circumstances under which this requirement might not able to be satisfied, all the designers must have been developed web sites previously and they must be aware of html restriction and cross browsers implementations before starting the designing. In order to reduce the probability of this occurrence the entire design team will be trained in basic html development and macromedia fireworks, this tool will be used instead of Photoshop.
+Dependencies with other requirements
+All user interfaces should be able to interact with the user management module and a part of the interface must be dedicated to the login/logout module"
+3. External Interface Requirements,3.2 Hardware Interfaces,"Hardware Interfaces Server Side:
+ Operating System: Windows 9x/ xp, Windows ME
+ Processor: Pentium 3.0 GHz or higher
+ RAM: 256 Mb or more
+ Hard Drive: 10 GB or more
+Hardware Interface Client side:
+ Operating System: Windows 9x or above, MAC or UNIX.
+ Processor: Pentium III or 2.0 GHz or higher.
+ RAM: 256 Mb or more"
+3. External Interface Requirements,3.3 Software Interfaces,"Database: SQL Server.
+Application: ASP (Active Server Pages)."
+3. External Interface Requirements,3.4 Communications Interfaces,
+4. System Features,4.1 System Feature 1,"Description and priority:-
+Proposed Database is intended to store, retrieve, update, and manipulate information related to university which include
+Profile of both users
+Staff information
+Student details
+My account
+Online payment
+View attendance/marks/uploading of marks and assignments.
+Stimulus / Response Sequences:-
+Responses for Administrator:
+The administrator can Login and Logout. When the Administrator Logs into the University management system. The system will check for validity of login .If the Login and password are valid, the response to this action is the administrator will be able to modify, view, add, deleting and all other functions that can be performed on the database."
+4. System Features,4.2 System Feature 2 (and so on),"User access:
+Each faculty member and student is assigned a unique identifier upon admission to the university. Both of them must know this. This identifying key maps to all his/her registration record information in the main registration system. Admitted and current students have their online registration accounts also enabled. Such account maybe disabled during his/her stay as a matriculated student and/or after graduation or separation From the University.
+Uploading of data
+Each faculty member should facilitates with uploading of data such assignments, their marks and other kind of reading material. Similarly such of option must be present their for students to upload their assignments.
+Online payment
+The students should have the facility to pay their payment online any kind of university fee charges so as there should be facility to check whether the entered code for payment is a valid code or not or in simple word a proper validation is required."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The proposed system that we are going to develop will be used as the Chief performance system within the different campuses of the university Which interact with the university staff and students. Therefore, it is expected that the database would perform functionally all the requirements that are specified by the university."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"The database may get crashed at any certain time due to virus or operating system failure. Therefore, it is required to take the database backup."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"We are going to develop a secured database for the university. There are different categories of users namely teaching Administrator, Staff members and students etc. Depending upon the category of user the access rights are decided. It means if the user is an administrator then he can be able to modify the data, delete, append etc. All other users other than University Staff only have the rights to retrieve the information about database."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"The system must be designed to allow web usability. That is, the system must be designed in such a way that will be easy to use and visible on most of the browsers.
+The application is Linux-based and should be compatible with other systems. Apache, PHP and MySQL programs are practically independent of the OS-system which they communicate with. The end-user part is fully portable and any system using any web browser should be able to use the features of the application."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"The Online fees payment software must be able to use several data formats according to the data formats that are provided by the data bases of different banks. A transaction should have all the properties of a data base transaction (Atomicity, Consistency, Isolation, and Durability)."

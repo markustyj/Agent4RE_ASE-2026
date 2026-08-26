@@ -1,0 +1,28 @@
+**Title:** mylpg.in — Summary  
+
+**Overview:**  
+The mylpg.in website aims to simplify access to LPG connection services, allowing users to book LPG cylinders online, voluntarily give up subsidies under the government’s PAHAL YOJNA, and stay updated on new government schemes. It also provides discussion forums for users to share ideas to improve governance. By offering a unified interface for three major LPG providers, the website enhances convenience and supports government initiatives to promote subsidy relinquishment.  
+
+**Key Points:**  
+- **Goals:** Provide an independent, user-friendly platform for LPG cylinder booking and subsidy management, while promoting government policies.  
+- **Scope:** Users can book LPG cylinders, register for new connections, access notifications, participate in forums, and provide feedback.  
+- **Top Features:**  
+  - Online LPG cylinder booking.  
+  - One-click option to voluntarily give up subsidies.  
+  - Notifications on government schemes and updates.  
+  - Discussion forums for governance improvement ideas.  
+  - Secure payment and account management.  
+- **Non-functional Targets:**  
+  - Recommended system RAM of 1GB for optimal CSS performance.  
+  - JavaScript must be enabled in browsers for full functionality.  
+- **Major Integrations:** Unified interface for three LPG providers.  
+- **Constraints:** Requires secure, authenticated systems; no social media or Google account login; no duplicate accounts allowed.  
+
+**Risks and Unknowns:**  
+- Assumes a hacker-free environment, but no specific security measures are detailed.  
+- Dependency on JavaScript-enabled browsers may limit accessibility for some users.  
+- No information on scalability or handling high traffic volumes.  
+- Lack of clarity on how intermediate users authenticate and provide services.  
+
+**Timeline:**  
+Not specified.  

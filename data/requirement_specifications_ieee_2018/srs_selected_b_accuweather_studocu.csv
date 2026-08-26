@@ -1,0 +1,120 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"API (Application Programming Interface) – a set of routines, protocols and tools for building software and applications.
+ASP Pages (Active Server Pages) – Microsoft’s first server-side script engine for dynamically generated web pages.
+C# - a multi-paradigm programming language encompassing string typing, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.
+Java – a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.
+HTML (HyperText Markup Language) – the standard markup language used to create web pages.
+CSS (Cascading Style Sheets) – a style sheet language used for describing the presentation of a document written in a markup language.
+Javascript – a high -level, dynamic, un-typed, and interpreted programming language.
+SQL (Structured Query Language) – a special-purpose programming language designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).
+Git – a widely-used source code management system for software development.
+GitHub – a web-based Git repository hosting service.
+Google Docs – a word processor that is a part of a free, web-based software office suite offered by Google within it Google Drive service."
+1. Purpose,1.2 Background,,The purpose of this document is to layout the requirements for the system. The document will describe how the product will collect and display local weather data and analyze the weather forecast. This product will be of use to the society.
+1. Purpose,1.3 System overview,,"The product is named Accuweather.com. It will be able to collect and display local weather data, analyze weather forecast and display a live stream of the local weather. The product will be able to predict the weather. The product will be accessible through a website where you will have the benefit of seeing what the weather looks like outside and see if the walkways have been shoveled. The main goal is to have a website that will give you information about the weather. We can use the following;
+Automated process e-alert/warning
+Creation of infrastructure facilities
+Service 4 Providing Information On Forecasted Weather & Agro-Met Advisory Services
+Provide G2G, G2C, G2B ,G2E services"
+1. Purpose,1.4 References,,"1.http://www.accuweather.com/en/in/india-weather
+2.http://weatherclimate.com/alert.html
+3.http://indianweather.com/Glossary.html
+4.Accuweather – Wikipedia, the free encyclopedia
+5.http://en.wikipedia.org/wiki/accuweather.html"
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,The user interface for the project will host a website that will have the live feed along with the information about the weather. This website will be using HTML and ASP along with CSS to add colors and order to the website.
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"This system will provide a graphical user interface. The layout of the system will be a webpage that has a header on the top displaying the name of the website, under the header there will be a navigation bar to go to related pages, under the navigation bar is the body or main focus which will have a live weather stream on one half of the page while displaying the forecast on the other half, and at the bottom of the page will be a footer that will have contact information."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,The software interfaces that will be used are Visual Studio and SQL Management Studio. Visual Studio will be used for coding the website. SQL Management Studio will be used to maintain the database to store the forecast.
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,There are two interfaces that our system will interact with. The first interface is the Weather Channel website to provide the forecast. The second interface is the camera that the live weather feed will come from.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,"The constraints for the project will rely on the amount of disk space that is use for storing the images, videos or the forecasts. There is also a network constraint for the internet speeds and how fast the website will run."
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"The website will host a live video feed of the weather and also a live status of the weather from a weather website. The video feed will be live and up-to-date.
+This service aims at providing disaggregated district/block level information in eachagroecological sub-region on forecast weather."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"Smart Dissemination System
+Feedback option for end users
+Less expensive
+Monitoring & Review
+.Providing Information On Forecasted Weather & Agro-Met Advisory Services
+.user interaction programs -Conducted at State, District levels"
+2. Overall description,2.4 User characteristics,,The intended audience for Accuweather.com will not need technical expertise or any technical experience at all. They will only need basic computing skills and basic knowledge of how to operate Internet web pages.
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"Collect & display local weather data.
+Analyze weather forecast.
+Show a live video feed of the current weather outside."
+3. Specific requirements,,,"Criticality Scale: Low (1) – Medium (2) – High (3)
+Low: Items that can be eliminated should the need arise, without adversely affecting the product. These items are not urgent and not as important to the final product.
+Medium: Items that are desired by the customer and/or users of the system, but that may be postponed until a future release. These items are not urgent but are important parts of the final product.
+High: Items that are mission critical and without which the system cannot function in a manner that is satisfactory to the customer. These items are urgently needed and important to the success of the final product.
+Camera Position
+a.
+Description: Cameras will be placed all over.
+Criticality Rating: 3
+c.
+Technical Issues: No technical issues to report at the moment.
+Risks: Public may tamper with the camera.
+e.
+Dependencies: The system is dependent on the quality of the camera.
+Live Stream
+a.
+Description: The system will display a live stream from the camera view from requirement 1 on a functional website.
+Criticality Rating: 3
+c.
+Technical Issues: We are unsure what type of camera we are using and how to connect to said camera.
+Risks: Possible loss of this feature.
+e.
+Dependencies: The system is dependent on the quality of the camera.
+Current Weather
+a.
+Description: The system will retrieve the current weather conditions and display them on the webpage.
+Criticality Rating: 3
+c.
+Technical Issues: The website that the system uses to retrieve this information may change format.
+Risks: Possible loss of this feature.
+e.
+Dependencies: The system is dependent on the website that retrieves current weather data.
+Weather Forecast
+a.
+Description: The system will get the forecasted weather conditions and display them on the webpage.
+Criticality Rating: 2
+c.
+Technical Issues: The website that the system uses to retrieve this information may change format.
+Risks: Possible loss of this feature.
+e.
+Dependencies: The system is dependent on the website that retrieves current weather data.
+Forecasting Accuracy
+a.
+Description: The system will retrieve the forecasted weather conditions and measure the accuracy of said predictions.
+Criticality Rating: 2
+c.
+Technical Issues: The website that the system uses to retrieve this information may change format. Also, the development team needs a way to store this information.
+Risks: Possible loss of this feature.
+e.
+Dependencies: The system is dependent on the website that retrieves current weather data.
+Snapshots
+a.
+Description: The system will display snapshots of the daily weather on an hourly basis.
+Criticality Rating: 1
+c.
+Technical Issues: The development team needs to design a way to store the images.
+Risks: Possible interference with the live stream.
+e.
+Dependencies: The system is dependent on the quality of the camera.
+Timestamps
+a.
+Description: The system will place timestamps on the snapshots in requirement 6. b. Criticality Rating: 1
+c.
+Technical Issues: The development team needs to figure out a way to place the timestamp on the photos.
+Risks: Possible interference with the live stream and snapshots.
+e.
+Dependencies: The system is dependent on the quality of the camera and the storage space.
+This system will provide a graphical user interface. The layout of the system will be a webpage that has a header on the top displaying the name of the website, under the header there will be a navigation bar to go to related pages, under the navigation bar is the body or main focus which will have a live weather stream on one half of the page while displaying the forecast on the other half, and at the bottom of the page will be a footer that will have contact information.
+This system will not be an API.
+There is no need for error reporting in this system once the system is complete.
+There are two interfaces that our system will interact with. The first interface is the Weather Channel website to provide the forecast. The second interface is the camera that the live weather feed will come from.
+The software interfaces that will be used are Visual Studio and SQL Management Studio. Visual Studio will be used for coding the website. SQL Management Studio will be used to maintain the database to store the forecast.
+The reliability of the system is to make sure the website does not go offline.
+The availability of the system is that the website will be active on the Internet and people will be able to browse to it.
+The attribute that will help maintain the system is clean code.
+The information that will be put into the database are the photos (if the system has progressed that far) and the database would be accessed daily if the photos are stored.
+Requirements which specify that the delivered product must be have in a particular way e.g. execution speed,reliability,etc.
+Requirements which are a consequence of organizational policies and procedures e.g. process standards used, implementation requirements, etc.
+Requirements which arise from factors which are external to the system and its development process e.g. interoperability requirements, legislative requirements, etc"

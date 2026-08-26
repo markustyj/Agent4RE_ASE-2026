@@ -1,0 +1,24 @@
+**Title:** Sunshine Vote Aggregation System — Summary  
+
+**Overview:**  
+The Sunshine Vote Aggregation System (Version 1.0) is election software designed to process and determine results for two types of voting algorithms: Instant Runoff Voting (IR) and Open Party List Voting (OPL). The system takes a comma-delimited text file as input, identifies the voting algorithm, and produces results in two output files: a media file and an audit file. The software aims to ensure accurate and efficient election result aggregation while providing transparency through detailed audit logs.  
+
+**Key Points:**  
+- **Purpose:** Automates election result aggregation for IR and OPL voting systems.  
+- **Input/Output:** Accepts a CSV file as input and generates two output files: a media file (for public results) and an audit file (with detailed aggregation steps).  
+- **Core Features:**  
+  - Detects the voting algorithm (IR or OPL) automatically.  
+  - Displays election winners and key information on-screen.  
+  - Produces audit and media files for transparency and future reference.  
+- **Performance:** Processes up to 100,000 votes in 8 minutes or less.  
+- **Operating Environment:** Compatible with Windows 10, Ubuntu 18.04, and Mac OS X, specifically on CSELab machines with specified hardware configurations.  
+- **Documentation:** Includes a README file and Javadoc documentation for users and developers.  
+- **Development Language:** Java, requiring Java to be installed on the user’s system.  
+
+**Risks and Unknowns:**  
+- Performance may vary depending on the number of votes and system hardware.  
+- No explicit mention of security measures for handling sensitive election data.  
+- Assumes compatibility with all listed operating systems and hardware without detailed testing results.  
+- Dependencies on Java installation and specific hardware configurations may limit usability.  
+
+**Timeline:** Not specified.  

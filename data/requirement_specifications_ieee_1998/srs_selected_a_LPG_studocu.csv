@@ -1,0 +1,111 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This SRS is about the website mylpg.in. This website provides an easy way to access the LPG connection facilities and other portals related to it. We can book our LPG cylinder online through this website and can become a part of government’s PAHAL YOJNA by voluntarily giving up the LPG subsidy. Notifications and new government schemes are reflected on this website. We can also be a part of discussion forum and come up with new ideas so as to improve the governance. Further discussing the scope , this website has provided an ease of access to LPG customers which otherwise was a difficult task to manually do all the formalities."
+1. Introduction,1.2 Document Conventions,
+1. Introduction,1.3 Intended Audience and Reading Suggestions,This document is intended to be read and understood by the designer group for knowing the project and getting an overview. Also professors and students cam refer to this document for learning base and getting some experience to technical world.
+1. Introduction,1.4 Product Scope,"Before the introduction of this website the booking were made telephonically. We were dependent on the user on the other side of the call. If he fails to respond , our work halts. But now this website provides an independent way to book our LPG cylinder online at any time on any day. Also its an effective way to implement new government policies. Different LPG providing companies are given one interface to link to their portal and get the work done effectively.
+The idea of this website came from the prime ministers’ plan to motivate the capable people to give up their subsidies on LPG gas cylinders. This website has a direct interface to give up your subsidy and a short video for motivation for the same. The interface design is shown below. You can just give up your subsidy in one click and help government in its plan. It is not a follow on of any existing system but just a way to implement the ideas of our leaders. The three companies have linked their portal to the website and customers of these can take full use of this facility."
+1. Introduction,1.5 References,"www.google.com
+www.youtube.com
+www.mylpg.in
+Other references include the guidelines and standards taken from the concepts of Software Engineering."
+2. Overall Description,2.1 Product Perspective,The idea of this website came from the prime ministers’ plan to motivate the capable people to give up their subsidies on LPG gas cylinders. This website has a direct interface to give up your subsidy and a short video for motivation for the same. The interface design is shown below. You can just give up your subsidy in one click and help government in its plan. It is not a follow on of any existing system but just a way to implement the ideas of our leaders. The three companies have linked their portal to the website and customers of these can take full use of this facility.
+2. Overall Description,2.2 Product Functions,"LPG cylinder booking
+Voluntarily giving up subsidy
+New government schemes
+Discussion forums
+Notifications
+Register for new LPG connection
+Feedback"
+2. Overall Description,2.3 User Classes and Characteristics,"Following are the user who may use the product:
+Normal user - No qualifications required to access it. Anyone who is able may use the website.
+Designers - Users who may take interest in the design of the website and its functionality. They may try to access the front end source for understandings.
+Developers - Users who may try to understand the functionality of the website.
+Administrator - User with highest privileges who can modify anything on the website.
+Intermediate user - These users are those who connects the normal user to the booking/other functionality. He is responsible for providing the authentication and promised services to the website."
+2. Overall Description,2.4 Operating Environment,"There is no specific hardware requirement for the website. It is only advised to operate on a system having RAM higher than 1GB for the CSS to accelerate.
+Recommended browsers are Chrome,Firefox,Safari and Internet Explorer 8 or higher."
+2. Overall Description,2.5 Design and Implementation Constraints," Recommended RAM 1GB (min): The CSS user in the website is dependent on the hardware. If low RAM then there might be performance issues.
+ JavaScript Enabled in browsers: Make sure JavaScript is enabled in the browsers as some UI may need it."
+2. Overall Description,2.6 User Documentation," Notifications
+ Queries
+ Contact Us
+ User Agreement
+ Select the operator
+ Make A Payment
+ Submit Account Details
+ Payment Security
+ Privacy Policy"
+2. Overall Description,2.7 Assumptions and Dependencies,"It is assumed that the system which is used in secure and authenticated. The system is considered as hacker free environment.
+Further every user logging in cannot login through any other social media or Google account.
+No multiple account of same user exists on the login database."
+3. External Interface Requirements,3.1 User Interfaces,": Discussions regarding the LPG services and different government schemes.
+: You can join the government initiative by joining the scheme.
+: You can give up your LPG subsidy to help the government.
+: Different notifications are reflected under this section."
+3. External Interface Requirements,3.2 Hardware Interfaces,"Minimum Requirements:
+ RAM: 1GB Minimum
+Various small and portable devices like mobile, tablets also supports the responsiveness of the website. It will automatically blend into the environment acquired."
+3. External Interface Requirements,3.3 Software Interfaces,"Required software:
+ Browser – Chrome/Firefox/Safari/IE 8 or higher.
+ JavaScript enabled.
+ Operating System – Windows XP/7/Vista/8/10
+Shared Data among components:
+LPG-ID – Through the consumer number of particular company we can generate a 17 digit ID which is used to register to the website www.mylpg.in.
+Consumer Number – At the time of registration to any LPG connection we are required to enter our complete details which gets saved at the particular company’s database and our unique ID is generated which helps in all correspondence in future.
+Bank Details – The subsidy amount will be transferred back to the saved account.
+So the bank details will be synchronised and saved at the backend database.
+Online Discussion – The data collected through the online discussion will be spread at various websites for reference purposes and peoples view points will be noted."
+3. External Interface Requirements,3.4 Communications Interfaces,"Communication functions required:
+ E-mail: Major component of all interaction is the email. User can be verified with emails only(at the respective vendor).
+ Browser: Chrome/Firefox/Safari/IE 8 or higher.
+Communication Protocols:
+ HTTP
+ SMTP
+ Minimum Internet connection of 40 kbps is required for proper functioning of the website.
+ There is no special encryption required as highly sensitive information is not the part of this website."
+4. System Features,4.1 System Feature 1,"The main function of the website is to make the process of booking gas cylinder online. It requires the user to get registered to the website and then use its resources. The request is made to the specified company to book the cylinder and this feature is at the top level priority.
+Redirect to the particular company’s portal
+Selecting the online booking option
+Entering the consumer number
+REQ-1:Redirect to the particular company’s portal – By clicking the top right cylinder icon the interface asks us to select our company. By selecting one of the three we get redirected to the respective portal.
+REQ-2: Selecting the online LPG booking option – Out of the various options select the online LPG booking option.
+REQ-3: Entering the consumer number – The unique consumer number is to be entered and then verify the booking. Your booking is done."
+4. System Features,4.2 System Feature 2 (and so on),"Under the PAHAL YOJNA of the government capable peoples are requested and motivated to give up their LPG subsidy in order to economically stabilize the government. Clicking on the link to give up the subsidy you will be redirected to your company’s portal. This comes under medium level priority.
+Redirect to the particular company’s portal
+Selecting the ‘give up LPG subsidy’ option
+Entering the consumer number
+REQ-1:Redirect to the particular company’s portal – By clicking the top right cylinder icon the interface asks us to select our company. By selecting one of the three we get redirected to the respective portal.
+REQ-2: Selecting the ‘give up LPG subsidy’ option – Out of the various options select the ‘give up LPG subsidy’ option.
+REQ-3: Entering the consumer number – The unique consumer number is to be entered and then verify. Your subsidy is abandoned.
+The users who want to get a new connection can go to this link and register themselves following the set of instructions. This is the mot important part and comes under top level priority.
+Redirect to the particular company’s portal
+Selecting the ‘new LPG connection’ option
+Filling up the registration form
+REQ-1:Redirect to the particular company’s portal – By clicking the top right cylinder icon the interface asks us to select our company. By selecting one of the three we get redirected to the respective portal.
+REQ-2: Selecting the ‘register for LPG connection’ option – Out of the various options select the ‘register for LPG connection’ option.
+REQ-3: Entering the required details – Fill out the registration form by giving the correct details."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The performance is best observed above 40 kbps. It is recommended that if the website is to be operated, then minimum of 40kbps speed in needed.
+Other requirements are just basic such as java plug ins must be available , CSS must work properly and Google chrome browser is best suited"
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"Following point should be kept in mind for the safety requirements:
+ Login and sign up must be authenticated for those who have accounts.
+ Each user may generate huge data. Data should not be lost, so proper databases should be maintained.
+ Any transactions should be done in sessions in order to avoid inconsistency.
+ Hackers or malicious groups may try to access the database since it’s a huge database. Security for database access is also mandatory."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Following are the components which need security requirements:
+ Login: Specific user with his id should reach only his account not any others.
+ Sign Up: Make sure that no email or phone number taken should be pre-existing to other accounts.
+ Transactions: Transactions should be encrypted in order to save them from external agents."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Other additional features of the website are:
+Any new notification issued by the government can be viewed here.
+Interested users can be a part of online discussions.
+Latest safety tips and tools will be showcased through the software.
+We can view the number of people who have given up the subsidy.
+New and attractive schemes are displayed."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"There are certain rules which must be taken into consideration while using the website:
+If someone has given up the subsidy he can’t claim it back.
+No LPG cylinder will be cancelled after 24 hours of its booking.
+Once registered, one cannot register again.
+People giving up their subsidies can see their name at the Scroll of Honor."
+6. Other Requirements,,"Database – A database is must to store all the details of the users and put some validations on them.
+Server – It is assumed that a server is processing all the requests from the site and giving out the desired output to the end user.
+Cookies – it is not as important but enabling cookies for the website will surely make it fast and improve its functionality."

@@ -1,0 +1,102 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"The SRS is designed in a way that it is comprehensive to whom it concerns. Here is the little detail of the few words used in the SRS
+Dapp Decentralized application
+DLT Distributed Ledger Technology
+Ledger an open, distributed file that can record transactions between two parties efficiently and in a verifiable and permanent way.
+ETH ether currency."
+1. Purpose,1.2 Background,,"Voting is the civic duty of the people in a democracy, unfortunately, the archaic methods of voting still haunt us in the 21st century. Long queues, inconvenient drives, and the perceived insignificance of a single vote deter many from participating. We need something that can provide the infrastructure for a voting system that is efficient, secure, mobile, and traceable. Thankfully, blockchain technology enables us to facilitate a voting infrastructure that can modernize voting the way we see fit."
+1. Purpose,1.3 System overview,,"Online Voting System is a system which enables all citizens to cast their vote online. The purpose is to increase the voting percentage across the country, as in the present system people have to visit the booth to cast their vote and those people who live out of their home town are not able to cast vote during the elections. So due to this the voting percentage across the country is very less. Through this software those people who live out of their home town will also be able to cast their votes as this system is online.
+And this software is on a blockchain platform so it’s secure, immutable and cannot be manipulated."
+1. Purpose,1.4 References,,"IEEE Standards Description : 830-1998
+Writing Effective Use Cases - Alistair Cockburn ( 1998 )
+Software Engineering –Robert Pressman
+Blockchain Database System Concepts by Mastering Etherium."
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,"The diagram below shows the major components of the overall system, subsystem interconnections, and external interface.
+The further details of this will be explained in the next chapters."
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Voters: The citizens of the country who are eligible for casting vote.
+Register for Online Voting System – Those who already have voter id, they will register themselves for online voting system and they will use their voter id as their user name and separate password will be used for secure authentication.
+Cast vote – The citizens will cast their votes for their favorite candidates online through a secure system.
+View own details – The voters will view their own details which they filled up at the time of their registration."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The only interfaces are through a computer system.
+The operating system can be Windows/Linux or MAC."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The poll server runs on http server that is enabled to handle server pages (eg. Truffle and Ganache. In order to run the setup software, the environment needs to have a NPM running on it). It uses a blockchain database to keep track of the polls, which it connects through standard."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,"A router connected through an internet.
+Communication interfaces include HTTP server hosted on Ganache Truffle Suite.
+Ganache is communicating with MetaMask.
+MetaMask is communicating with Etherium Blockchain."
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"The customer’s organization that is responsible to maintain the project must be familiar with how blockchain works.
+Since the app is build using Solidity programming language, to provide further updates the language is a major constraint.
+The budget could be a major constraint, for example if the customer wants more options and is low on budget then it becomes a major design constraint.
+Any changes in the design demanded by the client in latter stages of application development could bring great implementation troubles.
+GUI is in English only.
+User should have basic knowledge of computer."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"From the voters perspective, the system is used to help them cast their votes and after the elections are over, allow them to view the results, which are automatically posted on the same site after the election duration is over.
+The beneficial factor of using this application is that the voters have assurity that their votes will never get manipulated in any circumstances and they can ultimately be a part of fair elections."
+2. Overall description,2.4 User characteristics,,"The three main users of this system would be;
+ADMINSTRATOR: Creates the voting lobby, sets lobby to public or private, adds candidates to lobby, and sets the date and time the voting period will end. Administrators can vote during the voting period.
+Voter: Joins lobby of choice with associated MetaMask wallet, receives voting token upon registration, votes before time ends.
+Candidates: Added to lobby by administrator by wallet address, tokens are received by this address during voting phases, candidates can vote.
+However other stakeholders could be a maintenance person, a development team to provide updated versions to meet the changing requirements with time and also to make the application compatible with existing common machines. A technical expert would be required to troubleshoot the bugs that might occur when the system and been deployed and implemented."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"The end user knows English and have basic knowledge of computer.
+Roles and tasks are pre-defined.
+The voting results will be managed and calculated by the Blockchain.
+Administrator is created in the system already."
+3. Specific requirements,,,"External Interface Requirements:
+User Interfaces:
+Voters: The citizens of the country who are eligible for casting vote.
+Register for Online Voting System – Those who already have voter id, they will register themselves for online voting system and they will use their voter id as their user name and separate password will be used for secure authentication.
+Cast vote – The citizens will cast their votes for their favorite candidates online through a secure system.
+View own details – The voters will view their own details which they filled up at the time of their registration.
+Hardware Interfaces:
+The only interfaces are through a computer system.
+The operating system can be Windows/Linux or MAC.
+Software Interfaces:
+The poll server runs on http server that is enabled to handle server pages (eg. Truffle and Ganache. In order to run the setup software, the environment needs to have a NPM running on it). It uses a blockchain database to keep track of the polls, which it connects through standard.
+Communications Interfaces:
+A router connected through an internet.
+Communication interfaces include HTTP server hosted on Ganache Truffle Suite.
+Ganache is communicating with MetaMask.
+MetaMask is communicating with Etherium Blockchain.
+Functional Requirements:
+Authorise Actor:
+This use case is the starting point for any interaction with the information system. It is a general use case specialized for organizers, i.e. ""Authorise organiser"" and users i.e. ""Authorise user"".
+Manage Electors:
+The fundamental assumption of this system use case is that almost all citizens above a certain age should be able to participate in the election procedure. It is practically infeasible for election organisers to manually enter all electors into the system. The system should thus be able to import an electronic list of electors.
+Manage Parties:
+This system use case is purely operational and is not directly linked to any business use case of our voting model.
+Manage Candidates:
+This system will manage the candidates participating for the elections.
+Preview Ballots:
+This use case provides the ability to anyone to preview the electronic ballots for any election.
+Provide Party Info:
+This use case can be available either before the voting procedure or during the actual voting.
+Cast Vote:
+This is an important use case as it is the crux of our decentralized E-voting system as it poses the major part of the problems with regards to security.
+Tally Votes:
+This system use case deals with the final tally calculation.
+Performance Requirements:
+Response time of e-vote should be less than 5 seconds most of the time. Response time refers to the time that the user should wait for before getting a response from the system after querying it.
+E-vote shall show no visible deterioration.
+E-voting system server will be down for 2 hours after every 12 hours of continuous run-time for maintenance and shall only be up and running during voting periods.
+Votes will be updated on to the platform within 10 seconds of entering and conforming the vote and a conformation shall be provided within the next minute.
+E-vote shall support up to a million voters at a time.
+Software Quality Attributes:
+Availability: E-voting system server will be down for 2 hours after every 12 hours of continuous run-time for maintenance and shall only be up and running during voting periods.
+Correctness: E-vote will perform as per the previously mentioned functional and non-functional requirements correctly and accurately.
+Reusability: Yes, the component of our E-voting system can be used for other block-chain applications (Dapps).
+Testability: E-vote has low testability since testing requires admin to purchase Etherium gas through which a unique key is to be generated and then the admin can access E-vote and perform tests.
+Portability: E-vote is highly portable since it is an online application, therefore any device can access E-vote using a browser and an internet connection.
+Reliability: Since E-vote is based on Blockchain, it is highly reliable because full copies of the block- chain ledger are maintained by all active nodes. Thus, if one node goes offline, the ledger is still readily available to all other participants in the network and thereof lacks a single point of failure.
+Usability: Our E-vote online app is very user-friendly, with a simple and easy to use user-interface so that our voters may easily place and check the votes and have a satisfactory level experience with E-vote.
+Safety and Security Requirements:
+Safety:
+Votes must only be placed once by each voter.
+Votes may not be altered in any way, shape or form.
+Voting rules are to be immutable, even to the admin of E-vote
+Security:
+Data is decentralized
+Since our E-voting system is based on blockchain, it provides an exceptional level of security since the technology is decentralized in nature and therefore does not rely on one central point of control. It is a digital ledger of transactions with every device having a complete copy of the data. A lack of a single authority makes the E-voting system fairer and considerably more secure. Instead of depending on a central authority to securely transact with other users, our E-voting system utilizes innovative consensus protocols across a network of nodes, to validate votes and record them in a manner that is incorruptible. Since the data is saved on multiple devices, it is extremely secured even if one or two devices malfunction.
+Unfeasibly hard to hack
+Since the data is decentralized and distributed ledgers across peer-to-peer networks are continuously updated and kept in sync. Each ‘node’ is connected to all the other ‘nodes’ before and after it. While hackers can break into traditional networks and find all the data in a single repository and exfiltrate it or corrupt it, the blockchain makes this unfeasibly hard."

@@ -1,0 +1,111 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"The purpose of this document is to present the detailed description of the Online Passport Registration .It will explain the purpose and features of the system ,the interfaces of the system , And constraints that it must operate ,This system is applicable for the hoi-polloi of the nation."
+1. Purpose,1.3 System overview,,"The online passport registration have a web portal “Passportindia.gov.in” is a web based application which helps people apply their passports online through government website as passport seva. Due to lack of time and increasing penetration of Internet, a lot of people in India have started going E-way to apply passport .Earlier, the mere thought of standing in long queue at the passport office to fill the form used to gives jitters. But now the process is much simpler."
+1. Purpose,1.4 References,," http://www.slideshare.net/
+Srs-For-Passport
+ https://www.academia.edu
+ http://www.studymode.com/essays/Srs-For-Passport-
+39807538.html
+ http://vecitrockers.blogspot.in/2011/01/passport-
+automation-system.html
+ http://www.nyu.edu/classes/jcf/g22.2440-001_sp07/
+handouts/Assignment1SampleSolution.pdf"
+2. Overall description,,,This section will give overview of the whole system. This system will be explained in the context to show how to apply the passport online through a flow chart.it also describe the documents required that being submitted to government.
+2. Overall description,1. Product perspective,1. System Interfaces," Administrator- Administrator has a special right to add and approve the passport status. Administrator has a boatload under him to verify the persons.
+ Applicant-They are the people who desires to obtain the passport and submit the information to database.
+ Police-he is the person who receives details about the applicants. A personal verification of applicant and see if he is has any criminal case against him/her before or present. He as the power to decline the application by suggesting it to administrator if any case the police finds any differences the application can be cancelled. He communicates via this PAS.
+The server is directly connected to the client systems. The client systems have an access to the database in the server.
+ Front End Client-the applicant and administrator online interface is built using JSP and HTML. The Administrator’s local interface is built using java
+ Web Browser-It uses Glassfish Application Server (started by sum micro systems now sponsored by oracle corporation).
+ Back End-oracle database."
+2. Overall description,1. Product perspective,2. User interfaces," Administrator- Administrator has a special right to add and approve the passport status. Administrator has a boatload under him to verify the persons.
+ Applicant-They are the people who desires to obtain the passport and submit the information to database.
+ Police-he is the person who receives details about the applicants. A personal verification of applicant and see if he is has any criminal case against him/her before or present. He as the power to decline the application by suggesting it to administrator if any case the police finds any differences the application can be cancelled. He communicates via this PAS."
+2. Overall description,1. Product perspective,3. Hardware interfaces,The server is directly connected to the client systems. The client systems have an access to the database in the server.
+2. Overall description,1. Product perspective,4. Software interfaces," Front End Client-the applicant and administrator online interface is built using JSP and HTML. The Administrator’s local interface is built using java
+ Web Browser-It uses Glassfish Application Server (started by sum micro systems now sponsored by oracle corporation).
+ Back End-oracle database."
+2. Overall description,1. Product perspective,5. Communication Interfaces,"Online Passport registration uses internet. Hence, it uses HTTP for transmission of the data. This protocol allows easy interaction between client and server."
+2. Overall description,1. Product perspective,6. Memory constraints,
+2. Overall description,2. Design constraints,1. Operations,"User interface:
+Help Desk Support System users have a 24x7 access to telephone assistance for questions that are technical in nature, such as, slow or sluggish system response time, incompatible browser features, application errors, system downtime inquiries, account lock-out assistance, etc.
+Application service and technical support:
+Application Services and Technical support Programmers and application developers will have access to source code to address bugs or system enhancements as deemed necessary.
+Network Administrator and DBA support is also required to maintain a 24x7 system uptime."
+2. Overall description,2. Design constraints,2. Site adaptation requirements,"Administration features:
+System security and access levels are provided in the online system. There are varying levels of system access and functional authority. Each user’s access is limited to his/her own registration records. Only authorized system administrator(s) has access to all user application registration records.
+System Hardware Fail:
+Computer operations center will handle system hardware tasks such as data tape back-up, hardware maintenance, fail over, scheduled system patches and maintenance."
+2. Overall description,3. Product functions,," Secure registration of information by applicants.
+ Schedule the applicants an appointment for manual verification of the original documents.
+ Mail and SMS updates to applicants given by the administrator.
+ Passport Application Status is given by the administrator.
+ Administrator can generate the reports from the information only for the authorized personnel and the information is entered into database."
+2. Overall description,4. User characteristics,," Administrator - Administrator has a special right to add and approve the passport status. Administrator has a boatload under him to verify the persons.
+ Applicant-They are the people who desires to obtain the passport and submit the information to database.
+ Police-he is the person who receives details about the applicants. A personal verification of applicant and see if he is has any criminal case against him/her before or present. He as the power to decline the application by suggesting it to administrator if any case the police finds any differences the application can be cancelled. He communicates via this PAS."
+2. Overall description,"5. Constraints, assumptions and dependencies",,"Clients requirement’s
+Server system
+Processor
+Intel or AMD
+Intel or AMD
+Operating system
+Windows/Linux/Android/Ios
+Linux
+RAM
+200mb
+10 GB
+Hard disk
+2 GB
+2 TB
+ The applicants and administrator must have a basic knowledge of English.
+ The applicants and administrator must have a basic knowledge of usage of computer.
+ Internet connection is must
+ Maintaining a the database in consistent way is important.
+ Proper browser should be installed.
+ Each user must have a separate user id and password.
+ The required scanned documents of an applicant to be sent to the administrator if needed.
+ The user have to be careful while submitting his information.
+ Applicants require a computer to submit their information.
+Constraints
+ Security is given higher importance, there is always a chance of taking action in the web and requires the constant monitoring."
+3. Specific requirements,,,"External interface requirements:
+User interfaces:
+ Administrator- Administrator has a special right to add and approve the passport status. Administrator has a boatload under him to verify the persons.
+ Applicant-They are the people who desires to obtain the passport and submit the information to database.
+ Police-He is the person who receives details about the applicants. A personal verification of applicant and see if he is has any criminal case against him/her before or present. He as the power to decline the application by suggesting it to administrator if any case the police finds any differences the application can be cancelled. He communicates via this PAS.
+Hardware interfaces:
+The server is directly connected to the client systems. The client systems have an access to the database in the server.
+Software interfaces:
+ Front End Client-the applicant and administrator online interface is built using JSP and HTML. The Administrator’s local interface is built using java
+ Web Browser-It uses Glassfish Application Server (started by sum micro systems now sponsored by oracle corporation).
+ Back End-oracle database.
+Communication interfaces:
+Online Passport registration uses internet. Hence, it uses HTTP for transmission of the data. This protocol allows easy interaction between client and server.
+Specific requirements:
+Sequence diagrams:
+Classes for classification of specific requirements:
+Software system attributes:
+Reliability:
+ The system should not be down more than two times a year
+Availability:
+Scaling a system to large number of users.
+Security:
+ Firewall protection: The course management shall run inside the firewall.
+ Support different roles: The system shall support the different roles to the users, instructors, administrators, the user is allowed to logged with the given role with the consistent role. For example if a user is logged in it he shouldn’t have right to change is particulars.
+Maintenance Requirements:
+Maintenance Requirements
+To ensure the functionality for the maximum period of time, the database and the catalogue must be updated at least every 15 days. Also, the system should timely integrate modification suggested by stakeholders.
+Supportability Requirements
+The system should need to be entirely self-supporting since the users would be using it only to register.
+Adaptability Requirements
+The Web interface should be compatible with standards in order to be usable via all major Web browsers in a wide variety of environments.
+Security Requirements:
+Integrity Requirements:
+Data integrity should be assured by limiting access to the database and by appropriate synchronization, and back-up functionalities.
+Immunity Requirements:
+The system will develop a security system that will reduce to the minimum the possibility of corruption from systems and/or humans.
+Technical Issues:
+Were you, due to the material being defective, unable to have your passport application registered when visiting your passport administration? Did you have your details registered and were you invited by your administration to return because your details had been lost? Did this problem cause you to suffer damages?
+The existing ""passport browser"" will become obsolete as soon as the online registration system is active."

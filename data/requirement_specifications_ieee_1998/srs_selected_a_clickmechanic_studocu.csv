@@ -1,0 +1,114 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,To book a mechanic book for various kinds of problems for different types of vehicles. One can easily book and get a mechanic in a short time period and get a perfect one. This will reduce the time of the customer and they will have a worthy mechanic.
+1. Introduction,1.2 Document Conventions,The bold word in the SRS has more emphasis and sub-section heading.
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is to be read by the development team, the project managers, marketing staff, tests and documentation writers. The SRS has been organized approximately in order of increasing specificity. The developers and project managers need to become intimately familiar with the SRS."
+1. Introduction,1.4 Product Scope,"ClickMechanic is the UK’s market leading platform that connects car owners who need repairs, servicing and inspections to the UK’s best mobile mechanics. We match the thousands of customers every month with trusted professional mechanics in cities across the UK. Our instant quoting functionality, fast booking and secure payment makes us the simplest and most convenient way to book a car mechanic.
+ClickMechanic was founded in 2012 as simple solution to the age-old problem of getting an honest, trustworthy and transparent mechanic for your car. While running a previous car parts aggregator business, Andrew found there was a problem with many customers not trusting their mechanics. After further investigation and a chat with his mechanic brother he realized there was just no easy way to book a trusted mechanic. He then decided to study a research masters in Manchester where he devoted himself to understanding these problems better. After writing 85,000 word thesis on the space he moved to London to join accelerator EF where he met Felix who had identified these same problems. The pair decided to then team up and develop ClickMechanic with the goal of building the easiest and most transparent way for car owners to book trusted mechanics."
+1. Introduction,1.5 References,
+2. Overall Description,2.1 Product Perspective,"ClickMechanic was founded in 2012 as simple solution to the age-old problem of getting an honest, trustworthy and transparent mechanic for your car. While running a previous car parts aggregator business, Andrew found there was a problem with many customers not trusting their mechanics. After further investigation and a chat with his mechanic brother he realized there was just no easy way to book a trusted mechanic. He then decided to study a research masters in Manchester where he devoted himself to understanding these problems better. After writing 85,000 word thesis on the space he moved to London to join accelerator EF where he met Felix who had identified these same problems. The pair decided to then team up and develop ClickMechanic with the goal of building the easiest and most transparent way for car owners to book trusted mechanics."
+2. Overall Description,2.2 Product Functions,"Sign in
+The Basics
+The Booking Process
+Inspections
+Payments and Refunds.
+Repairs
+Servicing
+The Appointment
+Estimate Price
+Page 10 of 50
+5G+
+93%
+After the Appointment"
+2. Overall Description,2.3 User Classes and Characteristics,"Customers:
+Customers are using this site to get a mechanic to repair their vehicles according to the problem they are facing.
+Mechanics:
+Mechanics are also searching for job from here and they get paid from the customers by this site.
+Administrator:
+The one who is managing the site is going to monitored all the tasking happening in this website. And he is going to perform according to the feedback from the customer.
+Developer:
+Developer is the one who is going to re-engineer the website. Any updating required for the website is going to perform by the developer."
+2. Overall Description,2.4 Operating Environment,"The synchronization procedures will be written to interface with Windows XP, Windows Vista, and Mac OS
+Recommended browsers are Chrome, Firefox, Safari and Internet Explorer 8 or higher."
+2. Overall Description,2.5 Design and Implementation Constraints,"It should work in all the platform
+Understandable language should be used and easy to appess
+JavaScript Enable Browsers."
+2. Overall Description,2.6 User Documentation,"How it works?
+Support Centre
+Contact us"
+2. Overall Description,2.7 Assumptions and Dependencies,"It is assumed that the system is secured and free external agents.
+Users can connect with other social media like facebook.
+No multiple account of same user can exists on the login datebase."
+3. External Interface Requirements,3.1 User Interfaces,"Popular repair services are put in this section. This includes Clutch replacement, Altemator replacement, etc.
+REQ-2: Brakes
+Various types of brake problems are here such as brake pads replacement
+REQ-3: Clutch and Controls
+A lots of problem related with clutch and controls are repaired.
+REQ-4: Engine A lots of problem related with engine is repaired.
+REQ-5: General Electrics
+A lots of problem related with general electrics are repaired.
+REQ-6: Suspension
+A lots of problem related with suspensions are repaired.
+A lots of problem related with engine management-fuel is repaired.
+REQ-8: Final drive, shaft & axles
+A lots of problem related with final drive, shalt & ales are repaired.
+REQ-9: Cooling system
+A lots of problem related with cooling systems are repaired.
+REQ-10: Exhaust system
+A lots of problem related with exhaust system is repaired.
+REQ-11: Steering A lots of problem related with steering is repaired
+REQ-12: Body-Centre Section
+A lots of problem related with body centre section is repaired.
+REQ-13: Manual transmission
+A lots of problem related with manual transmissions are repaired. RIQ-14: Engine management Ignition
+A lots of problem related with engine management ignition is repaired.
+REQ-15: Air conditioning & heating
+A lots of problem related with air conditioning and heating is repaired"
+3. External Interface Requirements,3.2 Hardware Interfaces,Minimum requirement: 500 MB RAM
+3. External Interface Requirements,3.3 Software Interfaces,"Browser
+JavaScript Enable
+Operating System"
+3. External Interface Requirements,3.4 Communications Interfaces,"Contact Us: In this dialog, we can directly communicate with the people working on this website. For this we have to submit our name and e-mail. We can have direct chat and if direct chat is not available then we can leave a message for that.
+Browser: Chrome/Firefox/Safari/IE or higher.
+HTTP
+SMTP"
+4. System Features,4.1 System Feature 1,"We can book a mechanic for the repairing of our automobiles. Booking a mechanic is the key feature of this key feature of this side. And hence it has the highest priority than any other functions.
+List of stimulus/response are
+Your postcode
+Select Make
+Select Model
+Select Engine
+Select Year
+REQ-1: Your postcode- User should provide the postcode of their address so that the mechanic is easy to reach there.
+REQ-2: Select Make- User is going to select the company of the automobile or the place of the origin of the vehicle.
+REQ-3: Select Model- All the models related to the Maker are display here and the user is going select from that.
+REQ-4: Select Engine- Types of engine with the respect to the model are present here.
+REQ-5: Select Year- Selecting the year of manufacturing model."
+4. System Features,4.2 System Feature 2 (and so on),"Different types of services like full service, interim service etc. and the user can select among he options and put into the booking basket. And it has medium priority.
+List of stimulus/response are
+Full Service
+Interim Service
+MOT with collection and delivery
+Schedule Service
+REQ-1: Full Service- A full service that includes extra checks and additional replacement parts.
+REQ-2: Interim Service- A quicker, cheaper option to keep you going between full services.
+REQ-3: MOT with collection and delivery- A required annual test that checks your vehicles emissions, roadworthness and safety. An MOT test must be carried out at an approved MOT test centre. Your mechanic will collect and return your car as part of their service.
+REQ-4: Schedule Services- Servicing can be done by scheduling at a particular time, place."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The performance is best observed above 40 kbps. It is recommended that if the website is to be operated, then minimum of 40kbps speed in needed.
+Also if user is paying the amount through net banking of debit card, then for better synchronization a decent speed is needed so that transaction can happen smoothly."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"Login and sign up must be authenticated for the pre-existing users.
+Data of every user should maintain.
+Any transactions should be done in sessions in order to avoid inconsistency."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Sign In: Only registered user can access his/her account .
+Sign Up: No duplicate of the data of the user should be there.
+Transactions: Transactions should be encrypted in order to save them from external agents."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Availability: Anyone can use this site from any parts of the world using any platform.
+Videos: We can watch videos for how the mechanic is working their job.
+Achievements: Display of the information for the achievements of the site in various social media.
+Customers Reviews: Reviews from the customers about the site.
+List of Top Makers, Top Locations, Top Repairs, Top Services: Common services are present in this section."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"Making pricing super honest, transparent and quick.
+Giving instant quotes through our sites that you trust as we’ve partnered with some of the world’s largest providers of official automotive data.
+There is warranty of 12 months of the parts supplied by the mechanic."
+6. Other Requirements,,"Maintenance of the website
+Updating to the new functionality
+Proper security of the database"

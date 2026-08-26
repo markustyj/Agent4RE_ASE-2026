@@ -1,0 +1,36 @@
+**Title:** Automated Teller Machine (ATM) Network — Summary  
+
+**Overview:**  
+This Software Requirements Specification (SRS) outlines the requirements for an Automated Teller Machine (ATM) network designed to support computerized banking systems. The ATM system will provide banking services outside of traditional bank hours, offering convenience to customers. It will integrate with the existing banking system and database, serving as an extension of the bank's core services.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Provide essential banking services such as withdrawals, deposits, fund transfers, mini-statements, ATM card registration, and PIN changes.  
+  - Ensure 24/7 availability of the ATM system for customer transactions.  
+  - Maintain compatibility with the existing banking database.  
+
+- **Top Features:**  
+  - **Must-Have:**  
+    - Compact, all-in-one hardware design (CO-1).  
+    - Reliable power supply for uninterrupted operation (CO-2).  
+    - High security for banking transactions and data (CO-5).  
+  - **Should-Have:**  
+    - Maintenance keys and schema for system maintainers (CO-6).  
+    - User-friendly documentation for customers and developers (UD-1, UD-2).  
+
+- **Non-Functional Requirements:**  
+  - Operates on Windows XP (2.4).  
+  - High reliability, accuracy, and dependability of hardware components (DE-2).  
+
+- **Constraints:**  
+  - Compact hardware design with memory, concurrent processing modules, and reliable transmission (CO-3).  
+  - Strict security measures for banking operations (CO-5).  
+
+**Risks and Unknowns:**  
+- No details provided on user classes and characteristics (2.3).  
+- Assumes 24/7 power availability, which may not be feasible in all locations (CO-2).  
+- Dependency on high-quality hardware components, which may impact budget (DE-2).  
+- Maintenance and problem reporting processes are not fully detailed (DE-1).  
+
+**Timeline:**  
+- Not specified.  

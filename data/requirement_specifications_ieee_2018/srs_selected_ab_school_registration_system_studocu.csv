@@ -1,0 +1,148 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"School Registration System is for the new student of Sekolah Menengah Kebangsaan Jelapang to register themselves to the following school. The new student and teachers will be given a personal username and password to log in. After the login process, the student and teachers will be at the app homepage, which is different based on the user privilege."
+1. Purpose,1.3 System overview,,"The web application will use Visual Studio Code for HTML, PHP, CSS, and JavaScript code. The software is essential to develop the web application as the software provides the full functionality of web applications. The database will use MySQL and Xampp to connect the database and store all the teachers and student data. With this software, the web application will be errorless and bugless."
+1. Purpose,1.4 References,,"""2.0 General Description,"" SRS: 2.0 General Description. [Online]. Available: http://www.cs.qub.ac.uk/~ns.scott/csc302/srs/srs_20.htm. [Accessed: 30-Apr-2021]
+""2Communicate,"" https://lostclouds.com/2Communicate/project/SRS.pdf , 2006
+""BeFriend Project.""
+Charli Marie - Designer. Speaker. Writer. [Online]. Available: https://charlimarie.com/. [Accessed: 30-Apr-2021].
+""Connectome,"" http://www.cci.drexel.edu/seniordesign/2016_2017/Als/ConnectomeSRS.pdf.
+""Gephi."" [Online]. Available: https://gephi.org/users/gephi_srs_document.pdf. [Accessed: 01-May-2021].
+Rosencrance, ""Software Requirements Specification (SRS),"" SearchSoftwareQuality, 10-Sep-2019. [Online]. Available: https://searchsoftwarequality.techtarget.com/definition/software-requirements-specification. [Accessed: 30-Apr-2021].
+Mockplus. [Online]. Available: https://www.mockplus.com/blog/post/login-page-examples. [Accessed: 30-Apr-2021].
+""Software Requirements Specification V1.0 NoNET,"" Software Requirements Specification (IEEE Std 830-1998)[1] V1.0 NoNET, 2015. [Online]. Available: https://senior.ceng.metu.edu.tr/2016/fixit/SRS.pdf. [Accessed: 01-May-2021].
+Software Requirements Specification. [Online]. Available: http://people.cs.ksu.edu/~padmaja/Project/SRS.htm. [Accessed: 30-Apr-2021]."
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,"The web application uses electronic forms that provide a series of fields where data is collected. It will take the place of paper forms. It is to capture, validate and submit data to the administration for reporting more efficiently. Electronic forms allow data to be captured electronically, which can speed back-end processing of form-based information. Data can also be exchanged with back-end systems."
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"In this interface, user can choose which account type that user needs to use either student or teacher. The user will input username and password which allow the user to gain access to the next page. There is security measure which design to prevent unauthorized access to confidential data. By pressing the ‘LOGIN’ button, the user will be directed to the home page. When login fails (i.e., the username and password combination does not match with the user account), the user will be disallowed to assess the web application which triggered the box alert to appeared on to the screen to notify the user.
+The student homepage is generally the primary web page a user navigating to a website from a search engine will see, and it may also serve as a landing page to attract user. In this interface, user is able to register, edit, view their profiling and see their timetable schedule. The user will be navigated to register page when the user presses the ‘REGISTER NOW’ button. The user is allowed to edit their information in order to alter the information that has been incorrectly input by pressing the ‘UPDATE INFO’ button. The user is able view the student profiling form as a proof of registration by pressing ‘VIEW INFO’ button. The user is allowed to search their class timetable from the button ‘VIEW TABLE. Every page in the web application are given the choice to logout from the system by pressing the ‘LOGOUT’ button. The user then will be directed to the log in page.
+A registration form is a collection of fields where the user will enter their personal information and insert the user's formal picture by pressing the 'REGISTER' button. When the register is successfully obtaining by the server, it will pop out an alert box that will notify the user and be directed toward the homepage. With the information that was given from the user, the data will be kept in the database instantly.
+Registration update form is where the student is required to insert their identity card number to update their registration form. After filling up the form, the user is required to press the ‘UPDATE’ button to send signal to the database to update the information. The web application then pops out an alert box that signal the user that the information is successfully enter the database. If there is an error, an alert box will pop out and signal user that the information inputted does not meet the database requirements. With the updated information, the data will be kept in the database instantly.
+In this interface, the student is able to view by entering their identity card number and the system will output the personal information for the student after their registration. If the student has not done the registration, an alert box will pop out and signal that the identity card number is not in the database. The student also able to print the following page by pressing the ‘PRINT’ button.
+In this interface, the student is able to view any class timetable that they wanted to seek by pressing the dropdown menu ‘CHOOSE YOUR CLASS’. They are also able to print and download the class timetable by pressing the ‘PRINT’ and ‘DOWNLOAD’ button. The student will receive the class timetable in .pdf or .jpg format.
+In this interface, the user will be the teacher. The teacher will give the choice to view personal student information by pressing the ‘STUDENT INFO’, delete student information from the database by pressing the ‘DELETE INFO’, view the student list for each class by pressing the ‘STUDENT LIST’ and view the class timetable for each class by pressing the ‘VIEW TABLE’. Every page in the web application is given the choice to logout from the system by pressing the ‘LOGOUT’ button. The user then will be directed to the log in page.
+In this interface, teacher will be provided with a dropdown menu which is ‘CHOOSE YOUR CLASS’ that shows classes like ‘C01’. After selecting any of the classes, the system will print out all the student identity card number, name and email from chosen class. Teacher are also able to print the student list by pressing the ‘PRINT’ button. The student will appear in the student list once they register themselves at the registration form page.
+In this interface, the teacher is required to enter the student identity card number so seek the student personal information. If the input is in the database, the system will print out the profile picture of the student, identity card number, full name, email, gender, religion, race, address, phone number, date of birth and class. If not, an alert box will pop out and signal the user there is no match data in the database base in the input given. Teachers are also able to print the registration form information by pressing the ‘PRINT’ button.
+In this interface, teacher requires to enter the student identity card number to delete the student from the database by pressing ‘DELETE’ button. An alert box will signal the user either the student personal information has been removed or error as the identity card number entered by the user does not match in data in the database.
+In this interface, the teacher will be able to view any class timetable that they wanted to seek by pressing the dropdown menu ‘CHOOSE YOUR CLASS’. They are also able to print and download the class timetable by pressing the ‘PRINT’ and ‘DOWNLOAD’ button. The teacher will receive the class timetable in .pdf or .jpg format."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"This web application requires computers, laptops, or tablets that are using Windows operating system. There is no official minimum for the hardware requirement for the web application to operate. Therefore, we provide a recommendation in order for the user to use the web application smoothly. There are two different types of requirements we provided in the table below which is minimum and recommended requirements.
+Component Minimum Recommended
+Operating System 64-bit Windows 7 64-bit Windows 10
+Processor Intel Core i3 3210 or higher Intel Core i5 4690 or higher
+Memory 2-GB RAM or higher 4-GB RAM or higher"
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The School Registration System is a web application that works on Windows 7 or later operating system. Any other than that might not work perfectly or not even compatible to be working. Any web application such as Google, Microsoft Edge and Mozilla work perfectly fine."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,"The web application uses Wi-Fi technology by using local networks and internet access to devices within the Wi-Fi range of one or more routers connected to the internet to communicate with Windows operating system devices. We will use the internet to communicate between web applications and Windows operating system devices.
+School Registration System uses Xampp as localhost to open the server. The Xampp is for communicating between users and the web application by using the internet. Without Xampp, the School Registration System could not be accessed by the user as the web application is not online or up and running.
+School Registration System uses electronic forms that provide a series of fields where data is collected. It will take the place of paper forms. It is to capture, validate and submit data to the administration for reporting more efficiently. Electronic forms allow data to be captured electronically, which can speed back-end processing of form-based information. Data can also be exchanged with back-end systems."
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,At least 2GB or more RAM
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"Require updated HTML version
+Require Windows operating system to be Windows 7 and later
+Requires Xampp to be on for 24 hours.
+Hardware limitations –
+At least 2GB or more RAM
+Require stable internet connection
+Require a computer, laptop or tablet
+Cannot use on mobile phones or smart phones"
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"The purpose for creating the registration system is to create and a computerized storage system that would handle data consistency and ensure full data protection for Sekolah Menengah Kebangsaan Jelapang. The Sekolah Menengah Kebangsaan School Registration System was created with the following function:-
+Student will receive their own username and password from school.
+Student will register their own information and will save into the database.
+Student can edit their information by using their identity card number.
+Student can view and print their information by using their identity card number.
+Student can view, print and download all the class timetable from any class.
+Teacher will receive their own username and password from school.
+Teacher can view all student identity card number, name and email from each class at the student list.
+Teacher can view student information by searching student identity card number.
+Teacher can delete student information from the database using student identity card number.
+Teacher can view, print and download all the class timetable from any class."
+2. Overall description,2.4 User characteristics,,"We have two types of users using this system. The registration system has a strict function that can be fully utilize as the function is based on privileges. Those privileges and type of user are based on job levels and the following are the privilege.
+The teacher should be able to do the following:
+Log in using username and password
+View and print student list from specific class
+View and print student personal information
+Delete a student personal information from the database
+View, Print and Download the any class timetable
+The student should be able to do the following:
+Log in using username and password
+Add new student personal information
+Update the student personal information
+View and print the student personal information
+View, Print and Download the any class timetable"
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"Security considerations –
+Students unable to see teacher data due to security reasons
+Student unable to see another student personal information
+Teacher unable to change the source code of the web application
+Teacher unable to edit the student personal information
+Teacher would not be allowed to access the database
+Only authorized user has the access for the system source code and database."
+3. Specific requirements,,,"External interface requirements:
+User Interfaces:
+In this interface, user can choose which account type that user needs to use either student or teacher. The user will input username and password which allow the user to gain access to the next page. There is security measure which design to prevent unauthorized access to confidential data. By pressing the ‘LOGIN’ button, the user will be directed to the home page. When login fails (i.e., the username and password combination does not match with the user account), the user will be disallowed to assess the web application which triggered the box alert to appeared on to the screen to notify the user.
+The student homepage is generally the primary web page a user navigating to a website from a search engine will see, and it may also serve as a landing page to attract user. In this interface, user is able to register, edit, view their profiling and see their timetable schedule. The user will be navigated to register page when the user presses the ‘REGISTER NOW’ button. The user is allowed to edit their information in order to alter the information that has been incorrectly input by pressing the ‘UPDATE INFO’ button. The user is able view the student profiling form as a proof of registration by pressing ‘VIEW INFO’ button. The user is allowed to search their class timetable from the button ‘VIEW TABLE. Every page in the web application are given the choice to logout from the system by pressing the ‘LOGOUT’ button. The user then will be directed to the log in page.
+A registration form is a collection of fields where the user will enter their personal information and insert the user's formal picture by pressing the 'REGISTER' button. When the register is successfully obtaining by the server, it will pop out an alert box that will notify the user and be directed toward the homepage. With the information that was given from the user, the data will be kept in the database instantly.
+Registration update form is where the student is required to insert their identity card number to update their registration form. After filling up the form, the user is required to press the ‘UPDATE’ button to send signal to the database to update the information. The web application then pops out an alert box that signal the user that the information is successfully enter the database. If there is an error, an alert box will pop out and signal user that the information inputted does not meet the database requirements. With the updated information, the data will be kept in the database instantly.
+In this interface, the student is able to view by entering their identity card number and the system will output the personal information for the student after their registration. If the student has not done the registration, an alert box will pop out and signal that the identity card number is not in the database. The student also able to print the following page by pressing the ‘PRINT’ button.
+In this interface, the student is able to view any class timetable that they wanted to seek by pressing the dropdown menu ‘CHOOSE YOUR CLASS’. They are also able to print and download the class timetable by pressing the ‘PRINT’ and ‘DOWNLOAD’ button. The student will receive the class timetable in .pdf or .jpg format.
+In this interface, the user will be the teacher. The teacher will give the choice to view personal student information by pressing the ‘STUDENT INFO’, delete student information from the database by pressing the ‘DELETE INFO’, view the student list for each class by pressing the ‘STUDENT LIST’ and view the class timetable for each class by pressing the ‘VIEW TABLE’. Every page in the web application is given the choice to logout from the system by pressing the ‘LOGOUT’ button. The user then will be directed to the log in page.
+In this interface, teacher will be provided with a dropdown menu which is ‘CHOOSE YOUR CLASS’ that shows classes like ‘C01’. After selecting any of the classes, the system will print out all the student identity card number, name and email from chosen class. Teacher are also able to print the student list by pressing the ‘PRINT’ button. The student will appear in the student list once they register themselves at the registration form page.
+In this interface, the teacher is required to enter the student identity card number so seek the student personal information. If the input is in the database, the system will print out the profile picture of the student, identity card number, full name, email, gender, religion, race, address, phone number, date of birth and class. If not, an alert box will pop out and signal the user there is no match data in the database base in the input given. Teachers are also able to print the registration form information by pressing the ‘PRINT’ button.
+In this interface, teacher requires to enter the student identity card number to delete the student from the database by pressing ‘DELETE’ button. An alert box will signal the user either the student personal information has been removed or error as the identity card number entered by the user does not match in data in the database.
+In this interface, the teacher will be able to view any class timetable that they wanted to seek by pressing the dropdown menu ‘CHOOSE YOUR CLASS’. They are also able to print and download the class timetable by pressing the ‘PRINT’ and ‘DOWNLOAD’ button. The teacher will receive the class timetable in .pdf or .jpg format.
+Hardware Interfaces:
+This web application requires computers, laptops, or tablets that are using Windows operating system. There is no official minimum for the hardware requirement for the web application to operate. Therefore, we provide a recommendation in order for the user to use the web application smoothly. There are two different types of requirements we provided in the table below which is minimum and recommended requirements.
+Component Minimum Recommended
+Operating System 64-bit Windows 7 64-bit Windows 10
+Processor Intel Core i3 3210 or higher Intel Core i5 4690 or higher
+Memory 2-GB RAM or higher 4-GB RAM or higher
+Software Interfaces:
+The School Registration System is a web application that works on Windows 7 or later operating system. Any other than that might not work perfectly or not even compatible to be working. Any web application such as Google, Microsoft Edge and Mozilla work perfectly fine.
+Communications Interfaces:
+The web application uses Wi-Fi technology by using local networks and internet access to devices within the Wi-Fi range of one or more routers connected to the internet to communicate with Windows operating system devices. We will use the internet to communicate between web applications and Windows operating system devices.
+School Registration System uses Xampp as localhost to open the server. The Xampp is for communicating between users and the web application by using the internet. Without Xampp, the School Registration System could not be accessed by the user as the web application is not online or up and running.
+School Registration System uses electronic forms that provide a series of fields where data is collected. It will take the place of paper forms. It is to capture, validate and submit data to the administration for reporting more efficiently. Electronic forms allow data to be captured electronically, which can speed back-end processing of form-based information. Data can also be exchanged with back-end systems.
+Performance Requirements:
+The login page should be readable and easy to understand for new users.
+The login process should not take more than 5 seconds.
+The home page should be straightforward for students to register as the button is prominent.
+Saving the student profiling should be instant and no delay or less than 5 seconds.
+Editing and updating the student profiling should be instant or not more than 3 seconds.
+The time for the timetable to pop up should not be more than 4 seconds.
+Refreshing and reloading the page should be instant and not more than 3 seconds.
+Teacher viewing the student list for the list to pop up should not take more than 5 seconds.
+Teacher viewing the student profiling for the page to pop up should not take more than 5 seconds.
+Database designer to receive the information for the student should not take more than 10 seconds.
+This web application required laptop, computer, and tablet devices.
+This web application requires a Windows 7 or later operating system to operate. Other than that, might not work.
+It requires a good internet connection, with poor connection might have some delay to load the web page.
+The displayed image might use more graphical resources than expected.
+Functional Requirements:
+Table 3-1: Functional Requirements
+Users Function Description
+Student Login process Student is given username and password from school to login
+Student Homepage After login process, the student will be directed to home page where there are multiple functionalities button
+Student Registration process Student will be able to fill in the registration form
+Student Read registration form information Student are able to view and validate the information that have been successfully registered
+Student Print registration form information Student able to print the register form
+Student Edit registration form Student are able to edit and save the information that has been incorrectly input
+Student View class timetable Student are able to view, print and download their class’s timetable
+Student Print class timetable Student able to print the class timetable page
+Student Download class timetable Student able to download the class timetable in .pdf or .jpg format
+Student Logout process Student will be directed back to the login page after clicking the logout button
+Teacher Login process Teacher is given username and password from school to login
+Teacher Homepage After login process, teacher will be directed to home page where there are multiple functionalities button
+Teacher View student list Teacher able to view the student list from each class
+Teacher Print student list Teacher able to print the student list page
+Teacher View student registration form Teacher are able to view every student personal information
+Teacher Print student registration form Teacher able to print the student registration form
+Teacher Delete student information Teacher are able to delete student’s information
+Teacher View class timetable Teacher are able to view, print and download their class’s timetable
+Teacher Print class timetable Teacher able to print the class timetable page
+Teacher Download class timetable Teacher able to download the class timetable in .pdf or .jpg format
+Safety and Security Requirements:
+Each user has their unique id and password to log in.
+Each user has their privilege of accessing the web application.
+Student and teacher should not share their id and password with anyone.
+If the user forgot their id or password, they must seek help from the administrator.
+The teacher should not publicly show the student personal information. It is against The Privacy Act of 1974 (5 U.S.C. § 552a) protects personal information held by the federal government by preventing unauthorized disclosures of such information.
+If there is a data breach, all users are locked out from the web application, and only the administrator and database designer can access the web page.
+To ensure that none of the users loses any data while using our web application, the developer team updates the web application regularly.
+The web application’s data are protected by the administrator privileges and regular checkups for viruses or hackers trying to breach the data."

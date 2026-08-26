@@ -1,0 +1,85 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"ElevanceNet is a professional social networking platform designed for committed professionals who aim to stay focused during working hours. Unlike traditional social media platforms that push unproductive content, ElevanceNet ensures that the feed is strictly based on user preferences, preventing distractions and enhancing workplace productivity."
+1. Purpose,1.3 System overview,,"ElevanceNet is a social networking platform for professionals. It enables users to sign up, set preferences, and engage with content that aligns with their professional interests. The key differentiation is that no content outside of user preferences will be pushed. Users can modify their preferences at any time to adjust their content feed."
+1. Purpose,1.4 References,,"​ All dates follow the format: YYYY-MM-DD.
+​ The document follows IEEE SRS guidelines.
+​ All diagrams are included as part of system models."
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"​ Responsive web interface for desktops and mobile devices.
+​ Clean UI with minimal distractions."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"​ Standard web browser support (Chrome, Firefox, Edge, Safari)."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"​ Frontend: React.js
+​ Backend: Node.js with Express.js
+​ Database: MongoDB
+​ Authentication: JWT & Email Verification
+​ Deployment: AWS"
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,​ RESTful API architecture for backend communication.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"​ The platform must not allow content outside of user preferences.
+​ User authentication via email verification is mandatory.
+​ The system must be scalable to support high traffic."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"1.​ User Authentication (Signup, Login, Email Verification, Password Reset)
+2.​ User Profile Management (Education, Work, Location, Social Links, Profile Picture, Bio)
+3.​ Preference-Based Feed (Only content aligned with user preferences is displayed)
+4.​ Post Management (Create, Update, Delete posts)
+5.​ Interaction Features (Like/Unlike, Comment on posts)
+6.​ Report System (Users can report posts)
+7.​ Feedback System (Users can provide feedback to improve the platform)
+8.​ Account Management (Users can delete their accounts)
+9.​ Preference Modification (Users can change their preferences anytime)
+10.​Search Functionality (Users can search posts by title and body, and search for users by name)"
+2. Overall description,2.4 User characteristics,,"​ Primary Users: Professionals committed to a company.
+​ Technical Skills: Basic internet usage and social media familiarity."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,
+3. Specific requirements,,,"External interface requirements:
+​ Responsive web interface for desktops and mobile devices.
+​ Clean UI with minimal distractions.
+Hardware Interfaces:
+​ Standard web browser support (Chrome, Firefox, Edge, Safari).
+Software Interfaces:
+​ Frontend: React.js
+​ Backend: Node.js with Express.js
+​ Database: MongoDB
+​ Authentication: JWT & Email Verification
+​ Deployment: AWS
+Communication Interfaces:
+​ RESTful API architecture for backend communication.
+Performance requirements:
+​ Performance: The system should handle up to 100,000 concurrent users.
+​ Availability: The system should have 99.9% uptime.
+​ Scalability: The architecture should allow future expansions.
+Functional requirements:
+1.​ User Authentication:
+​ Users must sign up with an email and password.
+​ Users must verify their email before logging in.
+​ Users can reset their password via email.
+2.​ User Profile Management:
+​ Users can add/edit education, work, location, and social links.
+​ Users can change their profile picture and bio.
+3.​ Feed System:
+​ Feed content is strictly based on user preferences.
+​ Users can update their preferences anytime.
+4.​ Post Management:
+​ Users can create, update, and delete posts.
+5.​ Interaction System:
+​ Users can like/unlike posts.
+​ Users can comment on posts.
+6.​ Reporting System:
+​ Users can report inappropriate content.
+7.​ Feedback System:
+​ Users can submit feedback about the platform.
+8.​ Account Management:
+​ Users can delete their accounts permanently.
+9.​ Search System:
+​ Users can search for posts by title and body.
+​ Users can search for other users by name.
+Security requirements:
+​ Security: All passwords must be encrypted.
+Usability requirements:
+​ Usability: The interface should be simple and professional.
+Other requirements:
+​ The system should log user activities for security and debugging.
+​ Content moderation policies should be enforced to maintain a professional environment.
+​ Users must agree to privacy and terms before signing up."

@@ -1,0 +1,35 @@
+**Title:** Library Management System — Summary  
+
+**Overview:**  
+The Library Management System aims to modernize traditional library operations by transitioning to an internet-based application. This system will streamline book circulation, member management, and reporting processes, providing a user-friendly interface for librarians and library users. The project is designed to enhance efficiency, reduce manual work, and offer flexibility for future updates, making it suitable for educational institutions and other libraries.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Replace manual library systems with an online platform for book and member management.  
+  - Provide real-time information on book availability and user accounts.  
+  - Support librarians in managing book inventory, issuing/returning books, and generating reports.  
+  - Allow members (students and staff) to search for books, view borrowing history, and request new books.  
+
+- **Top Features:**  
+  - Librarian functionalities: issue/return books, add/edit book records, generate reports, and manage user accounts.  
+  - Member functionalities: search books by name or ISBN, view account details, and request book renewals.  
+  - Automated fine calculation and transaction updates.  
+  - Backup, recovery, and data replication for reliability.  
+
+- **Non-Functional Targets:**  
+  - Operates on Windows OS and major browsers (e.g., Chrome, Firefox, IE 6.0+).  
+  - Requires minimal hardware: 40GB hard disk, 256MB RAM, Pentium Dual-core processor.  
+  - Developed using Java (front-end) and MS SQL Server (back-end).  
+
+- **Constraints:**  
+  - Dependent on internet connectivity for access.  
+  - Requires regular server maintenance and updates.  
+
+**Risks and Unknowns:**  
+- Assumes error-free coding and user-friendly design, but no testing details are provided.  
+- Relies on accurate data entry for database integrity.  
+- No specific timeline or milestones mentioned.  
+- Dependencies on specific hardware/software configurations may limit flexibility.  
+
+**Timeline:**  
+Not specified.  

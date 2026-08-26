@@ -1,0 +1,81 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This Software Requirements Specification document has been created for the program Wynk Music version 3.54.0.1 which is an advanced music player for playing ordinary audio formats and chiptunes. Wynk Music is a free, open source program. Free software is software which may be used, studied, amended and returned without restriction."
+1. Introduction,1.2 Document Conventions,"This document has been created after the program Wynk Music and it is important to note that future changes to the program should be included in this requirements Specification document, in order to maintain its usefulness. Since the program has already implemented, some parts of this document seem sufficiently with a user guide."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document:
+may be used by ordinary users of the program. They can easily understand the features and the operations of Wynk Music they can also be informed of all the possibilities the program provides. Users can get a general image of the program and run it with a better ease and understanding. Users must give particular attention to Chapter 3 and 4, which include the characteristics of the program, to obtain the basic knowledge for its use.
+also, this document could be studied by the program developers, so they have the chance to identify and alter possible points which need improvement. Also, they can fully understand the nature of the program and implement new features. It is recommended to comprehensive study of the document for the full understanding of the program and to avoid errors.
+also, helps project testers understand how Wynk Music is supposed to work properly and identify bugs and errors easier."
+1. Introduction,1.4 Product Scope,"Wynk Music is a windows form music player application. It is build based on the audio library BASS developed by unseen developments, it supports not just modern day audio formats such as MP3 or WAV but also OGG, WMA, MPC, FLAC and can be expanded by addons. It also supports chiptunes and plays them like a normal audio file. Next Chapters include extensive reference to these capabilities of the program..
+Music Streaming: Listening to music over the internet without downloading the files.
+Offline Listening: Downloading music files for playback without an internet connection.
+Audio Quality: Refers to the level of detail and clarity in the music playback. Higher bitrates generally offer better quality.
+Music Library: A collection of music files or songs accessible through the app.
+Playlist: A curated list of songs arranged in a specific order.
+User Interface (UI): The visual elements and layout that users interact with on the app.
+Equalizer: A tool that allows adjusting the audio frequencies (bass, treble) to personalize the listening experience.
+MP3: MPEG-1 Audio Layer III, a common compressed audio file format.
+AAC: Advanced Audio Coding, a more efficient audio compression format than MP3.
+FLAC: Free Lossless Audio Codec, a format that compresses audio without sacrificing quality.
+kHz: Kilohertz, a unit of frequency measurement used to describe audio sample rates (e.g., 44.1 kHz).
+kbps: Kilobits per second, a unit of data transfer rate commonly used for bitrate.
+UI/UX: User Interface/User Experience, referring to the design and usability of the app.
+DRM: Digital Rights Management, a system for controlling access to digital content."
+1. Introduction,1.5 References,"Spotify: https://open.spotify.com/ - A popular music streaming service with a vast library of music, podcasts, and videos.
+Apple Music: https://music.apple.com/us/browse - Apple's music streaming service, tightly integrated with Apple devices and iTunes.
+Amazon Music: https://music.amazon.com/ - Part of Amazon Prime membership, with a large music library and integration with other Amazon services."
+2. Overall Description,2.1 Product Perspective,"Music enthusiasts who want a convenient and personalized way to discover and enjoy music.
+Users who value a seamless listening experience across different devices (phone, tablet, computer).
+People who appreciate high-quality audio and want options for different listening experiences.
+A comprehensive music app with a vast library of songs across various genres and artists.
+Intelligent algorithms that personalize music recommendations based on listening history and preferences.
+Seamless music streaming with high-quality audio options for different listening scenarios (casual listening, workouts, etc.).
+User-friendly interface for easy navigation, music discovery, and playlist creation.
+Integration with smart devices for hands-free music control.
+Optional features for social sharing and music discovery through friends or communities (depending on target audience)."
+2. Overall Description,2.2 Product Functions,"Music Streaming: This is the core functionality of a music app, allowing users to listen to a vast library of songs on-demand.
+Music Library Organization: Users should be able to easily browse, search, and organize their music collection. This includes features like playlists, categorization by genre, artist, album, and the ability to create custom filters.
+Personalized User Experience: Many music apps offer features like personalized recommendations, curated playlists based on user listening habits, and mood-based suggestions.
+Offline Listening: This feature allows users to download songs or playlists for listening without an internet connection. This is essential for situations where data usage is a concern or internet connectivity is unavailable.
+High-Quality Audio Streaming: Music lovers expect a high-quality listening experience. Many apps offer different audio quality options, allowing users to choose the level that best suits their needs and data limitations.
+Seamless Playback Controls: A user-friendly music player is essential, with basic controls like play, pause, skip, rewind, and volume adjustment. Some apps also offer advanced features like equalizer settings and sleep timers."
+2. Overall Description,2.3 User Classes and Characteristics,"Characteristics:
+Listen to music occasionally, for background noise or light entertainment.
+May have a general interest in music but not deeply invested in specific genres or artists.
+Value convenience and ease of use.
+Needs:
+Basic playback features like play, pause, skip, and volume control.
+Access to popular music and pre-made playlists.
+Free or ad-supported tier might be sufficient.
+Characteristics:
+Actively engaged with music, listen frequently and have a wider range of interests.
+Keen on exploring new music and following specific artists/genres.
+Value features that enhance the listening experience.
+Needs:
+Advanced search and filtering options to discover new music.
+Personalized recommendations based on listening habits.
+High-fidelity audio quality options.
+Playlist creation and management tools.
+Willing to pay for premium features (subscriptions)."
+2. Overall Description,2.4 Operating Environment,"Compatibility with major operating systems like iOS (Apple devices) and Android (various phone and tablet manufacturers) is crucial.
+Optimizing the app for different screen sizes and resolutions ensures a smooth user experience across various devices.
+Music apps can also be offered as downloadable software for computers (Windows, macOS).
+This caters to users who prefer listening to music on their computers.
+Compatibility with smart speakers (e.g., Google Home, Amazon Echo) and streaming devices (e.g., Roku, Chromecast) allows users to control music playback using voice commands or integrate the app with their home entertainment system.
+Minimum OS Version: Specifying the minimum operating system version required ensures the app functions properly on compatible devices.
+Hardware Requirements: Factors like adequate processing power, memory, and storage space should be considered to ensure smooth app performance.
+Internet Connectivity: While some features like offline listening might function without internet, a stable internet connection is essential for streaming music, downloading content, and accessing features like online recommendations.
+Audio Codecs: The app should support common audio codecs like MP3, AAC, and FLAC to ensure playback compatibility with various devices and file formats."
+2. Overall Description,2.5 Design and Implementation Constraints,
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,
+3. External Interface Requirements,3.1 User Interfaces,
+3. External Interface Requirements,3.2 Hardware Interfaces,
+3. External Interface Requirements,3.3 Software Interfaces,
+3. External Interface Requirements,3.4 Communications Interfaces,
+4. System Features,4.1 System Feature 1,
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements,
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,
+5. Other Nonfunctional Requirements,5.5 Business Rules,

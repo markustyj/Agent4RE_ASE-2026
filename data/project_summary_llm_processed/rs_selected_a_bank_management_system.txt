@@ -1,0 +1,23 @@
+**Title:** Bank Management System (BMS) — Summary  
+
+**Overview:**  
+The Bank Management System (BMS) is designed to streamline banking operations by providing an efficient, secure, and user-friendly platform for managing customer accounts, transactions, and staff activities. The system aims to enhance operational speed, accuracy, and customer satisfaction while reducing manual errors. It integrates essential banking modules such as account management, transaction processing, and loan handling.  
+
+**Key Points:**  
+- **Goals:** Improve banking efficiency, reduce manual errors, and enhance customer satisfaction.  
+- **Scope:** Includes account opening, deposit/withdrawal processing, balance inquiries, transaction recording, loan requests, and customer relationship management.  
+- **Admin Features:** Admin can log in, view account-holder details, monitor recent transactions, review loan requests, and manage credit card and cheque book details.  
+- **User Features:** Users can create accounts, log in, deposit/withdraw money, check balances, request loans, view transaction histories, and request cheque books or credit cards.  
+- **Operating Environment:** Compatible with Windows 7 or later and macOS 10 or later.  
+- **System Requirements:** Minimum 4 GB RAM, 32 GB hard drive/SSD, and antivirus software.  
+- **User Documentation:** Tutorials will be included to assist new users.  
+- **Dependencies:** Relies on Gmail, GSM cellular service providers, and other banking systems.  
+
+**Risks and Unknowns:**  
+- Limited operating system compatibility (Windows/macOS only).  
+- Dependency on external systems like Gmail and GSM services may introduce vulnerabilities.  
+- No recovery mechanism for forgotten passwords; users must contact admin.  
+- Assumes failure on non-Windows/macOS platforms without mitigation strategies.  
+
+**Timeline:**  
+Not specified.  

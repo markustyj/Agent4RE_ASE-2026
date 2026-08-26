@@ -1,0 +1,382 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This document specifies the software requirements for the Face Recognition Attendance System, Version 1.0. The system automates attendance-taking through the use of facial recognition technology, intended for use in educational institutions and professional settings. The scope of this SRS covers the entire system from user registration to the generation of attendance reports. It details both the student-facing interface for attendance registration and the administrator interface for monitoring and reporting. The document covers the core functional components, including user authentication, face recognition algorithms, attendance tracking, and reporting features. This SRS serves as the baseline for development, testing, and deployment of the system. Any future extensions or integrations with external systems will be covered in separate releases."
+1. Introduction,1.2 Document Conventions,"This SRS follows certain conventions to ensure clarity and structure:
+
+Font Styles:
+o Bold is used for important terms or section headings.
+o Italic is used for supplementary information or emphasis.
+
+Requirement Priorities:
+o Each requirement is assigned a priority:
+
+Must have: Critical to the system's functionality.
+
+Should have: Important, but not critical.
+
+Could have: Nice to include, but not necessary for core functionality.
+o If a parent requirement has a higher priority, its sub-requirements inherit that priority unless stated otherwise.
+The requirements are listed sequentially with unique IDs for easy reference, and detailed requirements will follow the same hierarchy."
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"This document is intended for the following audiences:
+
+Developers: To implement and code the system as per the requirements.
+
+Project Managers: To ensure the system is being developed according to the specified features and timelines.
+
+Testers: To validate that the system meets all specified requirements.
+
+End Users (Administrators and Students): To understand how the system will work and its functionalities.
+
+Documentation Writers: To produce user guides and technical documentation based on the system features outlined here.
+Reading Suggestions:
+
+Start with the Introduction and Product Scope for a high-level understanding of the system.
+
+Developers and testers should focus on the Functional Requirements and System Features sections.
+
+Project managers should focus on Scope, Assumptions and Dependencies, and Constraints.
+
+End users can review the User Requirements for features relevant to their interaction with the system."
+1. Introduction,1.4 Product Scope,"The Face Recognition Attendance System is designed to automate attendance tracking by identifying students or employees based on their facial features. Using a camera and facial recognition algorithms, the system will recognize registered users and mark their attendance in real time. The primary goals of the system include:
+
+Efficiency: Reducing the time required to manually take attendance.
+
+Accuracy: Minimizing errors associated with manual or card-based attendance systems.
+
+Security: Ensuring only authorized individuals can mark attendance.
+
+Real-time Reporting: Providing up-to-date attendance records for administrators.
+This system aligns with institutional goals to modernize infrastructure and improve the overall management of student and employee data. By automating attendance, institutions can reduce paperwork, improve tracking, and enhance data accuracy."
+1. Introduction,1.5 References,"The following documents and resources are referenced throughout this SRS:
+
+Facial Recognition Algorithms: ""Introduction to Face Detection and Recognition"" by John Doe, Version 2.3, 2023. Available online at [link].
+
+Attendance System Requirements: ""Standard Operating Procedures for Attendance Management"", Institution X, Version 1.0, 2021.
+
+User Interface Guidelines: ""UI/UX Best Practices for Web Applications"", published by ABC Design Group, 2020.
+
+ISO/IEC 12207: ""Systems and Software Engineering – Software Life Cycle Processes"", International Organization for Standardization, 2008."
+2. Overall Description,2.1 Product Perspective,"The Face Recognition Attendance System is a new, standalone product aimed at automating the attendance-taking process using facial recognition technology. It is not part of an existing product family but could potentially integrate with broader school management systems (SMS) or employee management systems (EMS) in future releases. This system replaces traditional methods such as manual roll calls, RFID, or biometric fingerprint attendance systems.
+The product is designed to function independently with its own database, user interfaces, and attendance tracking features. However, it has the potential for integration via APIs with other systems for data exchange, such as linking attendance records with payroll systems in a corporate environment or academic performance systems in educational institutions.
+2.1.1.1 Context Diagram (optional):
+
+Users (Students/Employees, Administrators)
+
+Facial Recognition System (Image capture, facial analysis, matching)
+
+Database (Stores user profiles and attendance records)
+
+Attendance Reporting Interface (Admin access to reports, insights)
+The system relies on a camera to capture live video streams or images, which are processed in real-time by the facial recognition algorithm. The identified user is then logged into the system, and their attendance is recorded."
+2. Overall Description,2.2 Product Functions,"The major functions of the Face Recognition Attendance System include:
+
+User Registration: Allows users (students or employees) to register by capturing and storing their facial data.
+
+Face Detection: Detects faces in real-time using camera feeds.
+
+Face Recognition: Matches detected faces against the registered database to identify users.
+
+Attendance Recording: Automatically marks the attendance of identified users.
+
+User Authentication: Secured login system for users and administrators to access the system.
+
+Attendance Reporting: Generates and exports reports detailing attendance data for administrators.
+
+Notifications: Sends alerts in case of errors, unregistered users, or failed recognition attempts.
+These functions provide an automated solution for attendance tracking while offering secure and real-time access to attendance records for both students/employees and administrators."
+2. Overall Description,2.3 User Classes and Characteristics,"The system is intended for the following user classes:
+Students/Employees:
+Frequency of Use: Daily for attendance marking.
+Technical Expertise: Low; users will interact with the system primarily by positioning themselves in front of a camera.
+Functions Used: Face registration, attendance marking, profile management.
+Administrators (Teachers, HR personnel):
+Frequency of Use: Daily to weekly for monitoring attendance.
+Technical Expertise: Moderate; responsible for managing the system, handling errors, generating reports.
+Functions Used: User management, report generation, attendance monitoring, system maintenance.
+System Administrators (IT staff):
+Frequency of Use: Occasionally for system setup and troubleshooting.
+Technical Expertise: High; handles system configurations, updates, and integrations.
+Functions Used: System configuration, database management, maintenance, backups."
+2. Overall Description,2.4 Operating Environment,"The Face Recognition Attendance System will operate in the following environment:
+
+Hardware: A computer or server with sufficient processing power to handle real-time facial recognition, cameras with HD resolution for accurate face detection.
+
+Operating System: Windows, Linux, or macOS, compatible with the software used for facial recognition.
+
+Software Components:
+o Web-based application: Accessible via modern web browsers (Chrome, Firefox, Safari, etc.).
+o Facial Recognition Libraries: OpenCV, dlib, or other machine learning frameworks for face detection and recognition.
+o Database: MySQL, PostgreSQL, or other relational databases for storing user profiles and attendance records.
+o Security Software: SSL certificates, encryption for secure data transmission.
+
+Network: Local network or internet connection for database synchronization and remote access to the attendance system."
+2. Overall Description,2.5 Design and Implementation Constraints,"The development of the Face Recognition Attendance System must adhere to the following constraints:
+
+Hardware Limitations: Cameras with high resolution are required for accurate facial recognition, and the system must handle real-time image processing with minimal latency.
+
+Security Considerations: The system must comply with data protection regulations such as GDPR. All facial data must be encrypted, and only authorized personnel can access sensitive information.
+
+Interfaces: If the system is integrated with an existing management system (SMS/EMS), developers must adhere to the provided API standards.
+
+Development Frameworks: The project will use Python for the backend (with facial recognition libraries like OpenCV) and React.js for the frontend.
+
+Performance: The system should recognize a face and mark attendance within 2-3 seconds of detection.
+
+Regulatory Policies: Compliance with local data privacy laws for the storage and handling of biometric information."
+2. Overall Description,2.6 User Documentation,"The following user documentation will be provided with the system:
+
+User Manual: Instructions on how to register, mark attendance, and troubleshoot common issues.
+
+Administrator Guide: Details on managing users, generating reports, and system maintenance.
+
+Online Help: Integrated help accessible from within the application to assist users with specific functions.
+
+Tutorials: Step-by-step video guides demonstrating how to use key features of the system."
+2. Overall Description,2.7 Assumptions and Dependencies,"The development and deployment of the Face Recognition Attendance System are based on the following assumptions and dependencies:
+
+Assumptions:
+
+o Cameras with sufficient resolution will be available in the operating environment.
+o Users will have regular access to the system during working or school hours.
+o Internet connectivity will be stable for cloud-based or remote access to the system.
+o Facial recognition algorithms used will maintain a high level of accuracy (95% or above) under varied lighting conditions.
+
+Dependencies:
+
+o The system depends on third-party libraries for facial recognition, which must be up-to-date and maintained by the community.
+o Integration with other systems (if required) will depend on the availability and compatibility of APIs.
+o The hardware and network environment must meet minimum specifications for smooth operation."
+3. External Interface Requirements,3.1 User Interfaces,"The Face Recognition Attendance System will provide intuitive and user-friendly interfaces for both end users and administrators. Below is a description of the characteristics of each interface:
+3.1.1.1 3.1.1 Login Screen
+
+Purpose: Allows users (students/employees) and administrators to authenticate themselves.
+
+Components:
+o Username/Email Input: A text box to enter the username or email.
+o Password Input: A password field for secure login.
+o Login Button: Submits login credentials.
+o Forgot Password: Link to reset password via email.
+o Face Login: Option for facial recognition-based login (for registered users).
+3.1.1.2 3.1.2 Main Dashboard (User)
+
+Purpose: Users can view their attendance status, profile, and system notifications.
+
+Components:
+o Attendance Status: Display of the user’s current attendance for the day.
+o Profile Management: Option to update profile details, including facial data.
+o Help Button: Provides access to a help guide and FAQs.
+3.1.1.3 3.1.3 Main Dashboard (Administrator)
+
+Purpose: Allows administrators to monitor attendance, manage users, and generate reports.
+
+Components:
+o Attendance Overview: Graphical and tabular representation of attendance across days/weeks/months.
+o User Management: Interface to add, update, or remove users from the system.
+o Reports: Ability to generate, export (PDF/Excel), and email attendance reports.
+o System Notifications: Displays system warnings and recognition errors.
+3.1.1.4 3.1.4 Face Recognition Screen
+
+Purpose: Automatically detects and recognizes faces when users stand in front of the camera.
+
+Components:
+o Camera Feed: Real-time video feed from the camera.
+o Notification Banner: Success or error messages appear when face recognition succeeds or fails.
+o Status Indicator: Visual confirmation (green for success, red for failure) of the recognition process.
+3.1.1.5 3.1.5 Error Messages and Alerts
+
+Standardization: Error messages will follow a consistent style, explaining the issue and providing actions to resolve it (e.g., ""Face not recognized. Please try again or contact the administrator."").
+
+Help Button: Available on all screens, linking to troubleshooting and documentation."
+3. External Interface Requirements,3.2 Hardware Interfaces,"The Face Recognition Attendance System requires interaction with specific hardware components. The system is designed to support the following hardware interfaces:
+
+Camera:
+
+o Type: High-definition (HD) cameras are recommended to ensure accurate facial recognition. The system supports both USB cameras and network-based IP cameras.
+o Resolution: Minimum resolution of 720p (1280x720 pixels) for optimal face detection.
+o Interface: The software will interact with cameras via standard video capture APIs (e.g., Video4Linux for Linux, DirectShow for Windows).
+
+Computer/Server:
+
+o Processor: Intel i5 or higher for handling real-time video processing and facial recognition.
+o Memory: Minimum 8 GB of RAM to ensure smooth operation under high user loads.
+o Storage: Minimum of 100 GB of disk space to store user profiles, attendance logs, and facial data.
+
+Optional Hardware:
+
+o Biometric Fingerprint Scanner (for backup authentication): USB or wireless devices for alternative authentication methods.
+o Printer: For generating physical copies of attendance reports."
+3. External Interface Requirements,3.3 Software Interfaces,"The system will interact with several software components:
+
+Operating Systems:
+
+o Supported OS: Windows (10 or higher), Linux (Ubuntu 18.04 or higher), macOS (10.15 or higher).
+o The system will run as a web application, accessible via web browsers, but requires installation of local services for camera access and facial recognition processing.
+
+Databases:
+
+o Database System: MySQL or PostgreSQL for storing user profiles, attendance records, and facial data.
+o Interactions: SQL queries will be used to retrieve, update, and manage data. All user data will be encrypted during storage and transmission.
+
+Facial Recognition Libraries:
+
+o OpenCV: Used for real-time face detection and recognition.
+o dlib: Machine learning library for more accurate face matching and feature extraction.
+
+Communication with External Systems:
+
+o REST APIs: For integration with other systems (e.g., Student Management System, Employee Management System).
+o JSON or XML formats will be used for data interchange between systems.
+
+Email Services:
+
+o SMTP Protocol: Used to send notifications (such as daily reports or alerts) to administrators via email."
+3. External Interface Requirements,3.4 Communications Interfaces,"The Face Recognition Attendance System requires specific communication protocols for the following tasks:
+Data Transmission:
+o HTTP/HTTPS: All web-based interactions (user login, face recognition, attendance submission) will occur over HTTP/HTTPS, with SSL encryption for secure data transmission.
+Local Network Communication:
+o Protocol: For real-time facial recognition data, the system will communicate with local cameras over the RTSP (Real-Time Streaming Protocol) for video streaming.
+o Latency Requirements: The system should be able to handle minimal latency (<2 seconds) between face detection and attendance marking.
+Web Browser Support:
+o The system will support modern browsers such as Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge, ensuring cross-platform compatibility.
+Email Communication:
+o SMTP: Attendance reports, system alerts, and user notifications will be sent via email using SMTP servers. Emails will be encrypted using TLS/SSL to protect sensitive information.
+Security:
+o Encryption Standards: All communications between the web client and server will be encrypted using SSL/TLS protocols. This includes user authentication, attendance data, and facial recognition images.
+o Authentication: OAuth 2.0 or JWT (JSON Web Tokens) will be used to secure API access and session management."
+4. System Features,4.1 System Feature 1,"Description:
+This feature enables the system to recognize users' faces via a camera and automatically mark their attendance in the system. The system should process the image in real-time, match it against stored profiles, and record attendance if a match is found.
+Priority:
+High
+
+Benefit: 9
+
+Penalty: 8
+
+Cost: 7
+
+Risk: 5
+4.1.2 4.1.2 Stimulus/Response Sequences
+Stimulus: A user (student/employee) stands in front of the camera during the designated attendance time.
+o Response: The system activates the camera, captures the user's image, and processes it for facial recognition.
+Stimulus: The system matches the face with a stored profile.
+o Response: If the face matches, the system records the user’s attendance and displays a success message. The date and time are stored in the database.
+Stimulus: The system fails to match the face.
+o Response: The system displays an error message, requests the user to reposition or try again, and logs the failed attempt for review by the administrator.
+4.1.3 4.1.3 Functional Requirements
+
+REQ-1: The system must be able to capture images via an HD camera and process them for face detection within 2 seconds.
+
+REQ-2: The system must match the captured image with a stored user profile using facial recognition algorithms (e.g., OpenCV/dlib) with a minimum accuracy of 95%.
+
+REQ-3: The system must log the attendance (date, time, user ID) if a match is found and update the user's attendance record in the database.
+
+REQ-4: If the face is not recognized, the system must prompt the user to try again and display an error message.
+
+REQ-5: The system must store failed recognition attempts with a timestamp for review by administrators.
+
+REQ-6: The system must support up to 50 simultaneous users for attendance during peak times (e.g., shift changes, class start time).
+
+REQ-7: The system should notify the administrator if recognition fails multiple times for a specific user.
+
+REQ-8: The system must support continuous operation for attendance recording with minimal downtime (<0.5% downtime)."
+4. System Features,4.2 System Feature 2 (and so on),"Description:
+This feature allows administrators to manage user profiles, including adding new users, updating their profile information, and removing users from the system.
+Priority:
+High
+
+Benefit: 8
+
+Penalty: 7
+
+Cost: 6
+
+Risk: 4
+4.2.2 4.2.2 Stimulus/Response Sequences
+Stimulus: The administrator selects the ""Add User"" option from the dashboard.
+o Response: The system prompts for the necessary user details (name, ID, facial image capture).
+Stimulus: The administrator submits the user details.
+o Response: The system stores the new user’s information, captures the facial image, and adds it to the database for future recognition.
+Stimulus: The administrator selects the ""Edit User"" option.
+o Response: The system allows modification of the user’s details or updating their facial data.
+Stimulus: The administrator selects the ""Remove User"" option.
+o Response: The system removes the user’s data from the database, including facial data and attendance records.
+4.2.3 4.2.3 Functional Requirements
+
+REQ-1: The system must allow administrators to create new user profiles with a unique user ID, name, and facial image.
+
+REQ-2: The system must support the update of user details (e.g., name change, facial image update) by an administrator.
+
+REQ-3: The system must allow administrators to delete users, including removing their facial data and attendance history from the database.
+
+REQ-4: The system must validate all user input to ensure correctness and avoid duplicates (e.g., unique user ID).
+
+REQ-5: The system must allow batch user uploads via CSV files for bulk user management.
+
+REQ-6: The system must generate a confirmation prompt before permanently deleting user profiles."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"
+PRF-1: The system must be able to process and recognize a face within 2 seconds of image capture.
+
+PRF-2: The system must support up to 50 simultaneous users attempting to mark attendance during peak hours without a significant drop in performance.
+
+PRF-3: The system’s recognition accuracy should be at least 95% under normal lighting conditions.
+
+PRF-4: The system must handle high concurrency, with a minimum of 99.5% uptime, ensuring that users can mark their attendance reliably throughout the day.
+
+PRF-5: Data retrieval for attendance reports must not exceed 5 seconds for records within a month and 10 seconds for records older than a month."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"
+SAF-1: The system must ensure that no sensitive user data (e.g., facial images) is accessed without proper authentication.
+
+SAF-2: In case of system failure, backup protocols must be in place to prevent the loss of attendance data.
+
+SAF-3: The system must comply with local and international data protection laws such as GDPR, ensuring that personal information (including facial data) is handled securely.
+
+SAF-4: The system should notify the administrator if facial recognition repeatedly fails for a specific user, allowing manual attendance tracking to prevent discrepancies.
+
+SAF-5: Any malfunctioning hardware (e.g., camera) should trigger an automatic alert to prevent incorrect or incomplete attendance tracking."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"
+SEC-1: The system must authenticate users using secure login credentials (e.g., username, password, or two-factor authentication) for administrators and high-privilege roles.
+
+SEC-2: All facial data must be encrypted in storage and in transit using a minimum of AES-256 encryption to protect against unauthorized access.
+
+SEC-3: The system must support role-based access control (RBAC), restricting sensitive functionalities like user management and reporting to administrators only.
+
+SEC-4: The system must automatically log users out after 15 minutes of inactivity to minimize unauthorized access risks.
+
+SEC-5: Audit logs must be maintained to track any system access or modifications made by users with administrative privileges.
+
+SEC-6: The system must comply with ISO/IEC 27001 for information security management to ensure a high level of data protection and security.
+
+SEC-7: Personal data collected (such as facial images) must be anonymized and deleted after a defined retention period of 1 year, or as per legal guidelines."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"
+Adaptability: The system should be designed to easily integrate with third-party hardware like biometric scanners or card readers if required in the future.
+
+Availability: The system must ensure at least 99.5% uptime, with maintenance scheduled during off-peak hours.
+
+Correctness: The system should accurately identify and mark attendance for users, with an error rate of less than 5%.
+
+Flexibility: The system should allow easy configuration of attendance rules and schedules for different departments or user groups.
+
+Interoperability: The system must be able to exchange data with external systems, such as payroll software or HR databases, using standard formats like JSON or XML.
+
+Maintainability: The system should be modular and follow clean coding standards, ensuring that it can be easily maintained and updated.
+
+Portability: The system must be deployable across various platforms such as Windows, macOS, and Linux, and be accessible via web browsers like Chrome, Firefox, and Edge.
+
+Reliability: The system must reliably track attendance, even under varying network conditions, with a minimum failure rate of 0.5%.
+
+Reusability: The facial recognition component should be designed in a way that it can be reused across different systems if needed.
+
+Robustness: The system must gracefully handle input errors, such as incorrect login credentials, without crashing or becoming unresponsive.
+
+Testability: The system must allow for automated testing of facial recognition algorithms to ensure consistent accuracy.
+
+Usability: The system interface should be intuitive and easy to use, even for users with minimal technical expertise."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"
+BUS-1: Only authorized administrators can add or remove users from the system.
+
+BUS-2: Users can only mark attendance during predefined time windows (e.g., the start and end of a workday or class).
+
+BUS-3: Administrators can generate attendance reports for specific users or groups, but only for the departments to which they are assigned.
+
+BUS-4: Users must have their facial image verified and stored in the system database before they are eligible to mark attendance.
+
+BUS-5: A user may not be able to mark attendance more than once within the same time window to prevent duplicate entries."

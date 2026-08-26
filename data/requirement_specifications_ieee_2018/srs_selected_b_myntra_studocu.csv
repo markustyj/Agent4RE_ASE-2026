@@ -1,0 +1,173 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"This document is meant to delineate the features of Online Shopping System, to serve as a guide to the developers on one hand and a software validation document for the prospective client on the other. This is online shopping website which we can buy various things like clothes, stationery, furniture etc. It will enable the customer to search the top brands in the worldwide. We can buy things through EMI also. It will enable customer to browse through the shop and purchase them online without having to visit the shop physically."
+1. Purpose,1.3 System overview,,This system allows to customer to browse the things according to the prices which customers should like to see. It allows the customers to maintain their cart for add or remove the product over the internet. Customers can browse any type of fashionable things from any brands.
+1. Purpose,1.4 References,,
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces," Ability to connect into Myntra’s networks.
+ Ability to sort the things according to our use.
+ Ability to buy different top brands.
+ Ability to take input from server."
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Welcome To Myntra
+The Fashion Store
+User Id
+Password
+Login
+Logo"
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The System must run over the internet, all the hardware shall require connecting internet will be hardware interface for the system. As for e.g.
+Modem, WAN – LAN, Ethernet Cross-Cable."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The system is on server, so it requires the any scripting language like PHP, Java Script etc. The system require Data Base also for the store the any transaction of the system like MYSQL etc. system also require DNS(domain name space) for the naming on the internet. At the last user need web browser for interact with the system."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,"This system work on internet server, so it will operate by end users for the buying purpose. We can earn the points by daily opening the application. From those points we can use for lucky draw and buying the stationary."
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"The system shall be built using a standard web page development tool that conforms to Microsoft’s GUI standards like HTML, XML etc."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,
+2. Overall description,2.3 Product functions,,"This software provides a good network. This website provides a good interface between the user and the server. This website enables the user to browse the different things according to their choice. Users can sort their things according to their list. Customers can buy the products by various ways like credit card, debit card, cash pay and so on. People can buy products through EMI. If any product is out of stock the server will notify when there will be stock."
+2. Overall description,2.4 User characteristics,,"There are mainly two uses from this software:
+Customers:
+The customer can interact with this website. There is no use of training for this software it is user friendly for the customer. They should get every item in as much as possible.
+Maintainers:
+There is daily update whenever the new stock comes in the website."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",," Reproducing issue and possible root causes.
+ Finding Spring upgrade issue."
+3. Specific requirements,,,"This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be –
+Description
+Registration:
+If customer wants to buy the product, then he/she must be registered, unregistered user can’t go to the shopping cart.
+Input:
+The customer should enter his/her details I.e. Contact number, email address and name.
+Processing:
+A new account is created for the user and a unique id is given to the user to login. Output:
+User gets id and password to login and start shopping.
+Description
+Login
+Customer logins to the system by entering valid user id and password for the shopping.
+Input: Customer enters id and password.
+Processing:
+The authorization module is called to check if the id and the password is valid or not.
+Output:
+Logged in if the authorization module gives a positive reply.
+Description
+Authorization
+The entered id and password are checked in the database and if it is valid then the user is allowed to login.
+Input:
+The id and password which are the inputs of the login module are passed to this module as its arguments.
+Processing:
+The id and password are matched on the database, if they are valid then access is given otherwise access is denied.
+Output:
+It gives positive reply to the login module if it is a valid one.
+Description
+Changes to Cart Changes to cart means the customer after login or registration can make order or cancel order of the product from the shopping cart.
+Input:
+Item to be added are selected by the user and the add to cart module is called and if the user wants to remove an item from the cart them remove from cart module is called.
+Input:
+The items to be added or removed.
+Processing:
+If the user wants to add the item to cart, then add to cart module is called and if it wants to remove the item from cart then remove from cart module is called.
+Output:
+The item is either added or removed as per specified by the user.
+Description
+Buy
+The customer clicks the buy now button and gets to the payment modes.
+Input:
+Number of items the user wants to buy.
+Processing:
+The total amount/value of the items is set as the grand total to be paid by the user.
+Output:
+The order of the user is placed and a copy of that is send to the email address given by the user at the time of login (after the payment is done).
+Description
+Payment
+For customer there are many type of secure billing will be prepaid as debit or credit card, redeem points, EMI option is also available. The security will provide by the third party like Pay-Pal etc.
+Input:
+The method through which the user wants to make the payment.
+Processing:
+The transaction through online banking is done if the user has chosen the card payment option and if the user has used the cash on delivery option, then the payment is collected at the time of delivery.
+Output:
+The order is finally placed after the payment is done.
+Description
+Logout
+After the payment or surf the product, the customer will log out.
+Input:
+The user presses the log out option.
+Processing:
+The cache memory of the user’s device is erased and the session of the user ends.
+Output:
+The user again comes back to the login page.
+Description
+Report Generation
+After all transaction the system can generate the portable document file (.pdf) and then sent one copy to the customer’s Email-address and another one for the system data base to calculate the monthly transaction.
+Input:
+The bill generated after the payment is done.
+Processing:
+This invoice is sent to the customer’s email address with the order number.
+Output:
+The customer gets the invoice of his/her order.
+Description
+Order Number Generation
+An order number is a unique identification number given to every order.
+Input:
+The order of the customer.
+Processing:
+A unique order number is generated for every order.
+Output:
+The customer gets a unique order number for its order which it can trace.
+Description
+Order tracing
+Input:
+The order id of the order to be traced.
+Processing:
+The current status of the order is fetched from the database.
+Output:
+The current status of the order is given to the customer.
+Description
+Filters
+It filters all the items according to the customer’s needs.
+Input:
+The criteria on which you want to filter the items.
+Processing:
+The items are filtered according to the criteria given by the customer.
+Output:
+The customer gets a filtered list of items so that it is easy for him/her to search the item required.
+Description
+Search
+Search the type of item which the customer wants.
+Input:
+The type of item which the customer wants.
+Processing:
+The type of items are searched in the database.
+Output:
+The items matched with the given type by the customer are shown to the customer.
+Description
+Feedback
+The experience of the customer after using Myntra is taken in terms of stars.
+Input:
+The number of stars given by customer as per his/her experience after using Myntra.
+Processing:
+The number of stars given by the user is saved in the database.
+Output:
+The average rating is shown to the user.
+This system will work on client-server architecture. It will require an internet server and which will be able to run PHP application. The system should support some commonly used browser such as Internet Explorer etc.
+Various interfaces for the product could be-
+Login Page
+Product Page
+Welcome To Myntra
+The Fashion Store
+User Id
+Password
+Login
+Logo
+The System must run over the internet, all the hardware shall require connecting internet will be hardware interface for the system. As for e.g.
+Modem, WAN – LAN, Ethernet Cross-Cable.
+The system is on server, so it requires the any scripting language like PHP, Java Script etc. The system require Data Base also for the store the any transaction of the system like MYSQL etc. system also require DNS(domain name space) for the naming on the internet. At the last user need web browser for interact with the system.
+There is no performance requirement in this system because the server request and response are depended on the end user internet connection.
+ Login -Verify if a user will be able to login with a valid username and valid password show positive.
+ Login - Verify if a user cannot login with a valid username and an invalid password show negative.
+ Login - Verify the login page for both, when the field is blank and submit, button is clicked show negative
+ Login - Verify the ‘Forgot Password’ functionality show positive.
+ Search - Check that the products displayed are related to what was searched for.
+ Search - Check that the products should display an image, name, price, and maybe customer ratings and number of reviews.
+ Search - Check the more relevant product for the search term is displayed on the top for a particular search term.
+ Search - Check the more relevant product for the search term is displayed on the top for a particular search term.
+ Search - Check that all items on the next page are different from the previous page, i.e., no duplicates.
+ Cart - Users should be able to add a product to the cart.
+ Cart - Item count should be incremented when the user adds the same product again.
+ Cart - Taxes should be applied according to the delivery location.
+ Cart - Users should be able to add items to the cart."

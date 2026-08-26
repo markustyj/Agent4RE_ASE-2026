@@ -1,0 +1,44 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,The purpose of this software requirements specification (SRS) document is to define the requirements for the development of a chatbot that can answer programming-related questions. It will serve as a reference for developers and customers during the development of the final version of the system.
+1. Introduction,1.2 Document Conventions,
+1. Introduction,1.3 Intended Audience and Reading Suggestions,
+1. Introduction,1.4 Product Scope,"chatbot that receives programming-related questions from users, tries to understand the question, and provides appropriate answers. It does this by converting an English sentence into a machine-friendly query, then going through relevant data to find the necessary information, and finally returning the answer in a natural language sentence. In other words, it answers your questions like a human does, instead of giving you the list of websites that may contain the answer.For example, when it receives the question ""What is programming language?"", it will give a response “A programming language is a system of notation for writing computer programs. They are a kind of computer language.”The main objective is creating a sample web, mobile, and text messaging interfaces that demonstrate the use of the API. The goal is to provide student,and all other people a quick and easy way to have their questions answered, as well as to offer other developers the means to incorporate Chatbot into their projects. The chatbot will be developed using the OpenAI ChatGPT API."
+1. Introduction,1.5 References,"Manning, C. D., & Schütze, H. (1999). Foundations of statistical natural language processing. MIT Press.
+Gartner. (2021). Gartner predicts 80% of customer service organizations will abandon native mobile apps in favor of messaging by 2025.
+OpenAI. (2021). GPT-3: Language models are few-shot learners. https://openai.com/blog/gpt-3-a-few-shots-to-human-level/
+https://www.gartner.com/en/newsroom/press-releases/2021-03-02-gartner-predicts-80--of-customer-service-organizations-will-abandon-native-mobile-apps-in-favor-of-messaging-by-2025"
+2. Overall Description,2.1 Product Perspective,"Generic question construction - capable of taking a natural language question and making it more generic.
+Generic answer construction - capable of taking a generic question template and providing a generic answer template.
+Generic answer population - capable of taking a generic answer template and populating it with information from the database to form an answer. The chatbot will be a standalone application that will interact with users through a chat interface. It will utilize the OpenAI ChatGPT API to provide answers to programming-related questions."
+2. Overall Description,2.2 Product Functions,"The major features for Bot Chatbot will be the following:
+Natural Language Processing: The system will take in questions written in standard English.
+Natural Language Responses : The answer to the question will be written in standard and understandable English
+Information Extraction: Provide helpful resources or links related to programming and answer programming-related questions."
+2. Overall Description,2.3 User Classes and Characteristics,"The classes of users for this system are described below:
+Novice Programmers - These are users who have little to no experience in programming and require basic information and guidance on programming concepts and syntax.
+Intermediate Programmers - These users have some experience in programming and require more advanced information on programming concepts and syntax.
+Expert Programmers - These users have extensive experience in programming and require highly technical information and guidance on programming.
+Technical Support Staff - These users are responsible for providing technical support to other users and may require access to advanced troubleshooting and debugging tools.
+By identifying and understanding the user classes and characteristics, the development team can tailor the chatbot's features, responses, and interactions to meet the specific needs of each user group, thereby enhancing the user experience and increasing the chatbot's effectiveness."
+2. Overall Description,2.4 Operating Environment,
+2. Overall Description,2.5 Design and Implementation Constraints,"The chatbot will be developed using the OpenAI ChatGPT API, which has certain limitations on the amount of data that can be processed at once. The design will need to take into account these limitations and ensure that the chatbot can still function efficiently within them."
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,The chatbot is dependent on the availability and reliability of the OpenAI ChatGPT API. It is assumed that users will have a basic understanding of programming and will be able to input questions.
+3. External Interface Requirements,3.1 User Interfaces,"The user interface for the chatbot will be a chat window that allows users to input questions or text and receive answers or translations. The interface will be simple and intuitive, with clear instructions on how to use the chatbot."
+3. External Interface Requirements,3.2 Hardware Interfaces,The chatbot will not require any specific hardware interfaces beyond a device with internet access and a modern web browser.
+3. External Interface Requirements,3.3 Software Interfaces,"The chatbot will be developed using the OpenAI ChatGPT API, which will be accessed via HTTP requests."
+3. External Interface Requirements,3.4 Communications Interfaces,The chatbot will communicate with users via a web-based interface and will require an internet connection to access the OpenAI ChatGPT API.
+4. System Features,4.1 System Feature 1,"The chatbot will be able to provide answers to programming-related questions by utilizing the OpenAI ChatGPT API. The chatbot will need to be able to understand and interpret natural language queries and provide accurate and relevant responses.
+The chatbot should be able to understand and interpret natural language input from the user.
+The chatbot should be able to recognize the context of the conversation to provide appropriate responses."
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,The chatbot system should provide fast response times to user queries. This means that the system should be able to process user input quickly and provide a response within a reasonable time frame.
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"The chatbot system should be designed with security in mind to protect user data and prevent unauthorized access. This means that the system should have robust security features, such as encryption, access controls, and authentication mechanisms."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"The chatbot system should be designed in a modular fashion to facilitate easy maintenance and modification. This means that the system should be broken down into smaller, independent modules that can be modified or replaced without affecting the overall functionality of the system.
+The chatbot system should be able to provide accurate responses to user queries. This means that the system should be able to understand the user's intent correctly and provide relevant and precise information.
+R5.1.2.2 The overall accuracy is calculated by dividing total number of correct answers by the number of questions asked.
+R5.1.2.3 The accuracy of the Generic Question Construction part will be close to 80%.
+R5.1.2.4 The accuracy of the Generic Answer Construction unit will be close to 70%.
+The chatbot system should be easy to use, even for users with limited technical knowledge. This means that the system should have a user-friendly interface, clear instructions, and easy-to-understand responses."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"The chatbot system should be accessible via a web interface or mobile application to provide users with flexibility in accessing the system. This means that the system should be designed to work on multiple platforms, such as desktops, laptops, mobile phones, and tablets."

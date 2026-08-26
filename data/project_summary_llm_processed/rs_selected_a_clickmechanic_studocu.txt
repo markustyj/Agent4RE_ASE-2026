@@ -1,0 +1,32 @@
+**Title:** ClickMechanic — Summary  
+
+**Overview:**  
+ClickMechanic is a platform designed to connect car owners with trusted, professional mechanics for repairs, servicing, and inspections. The platform aims to address the long-standing issue of finding honest and transparent mechanics by offering instant quotes, fast booking, and secure payments. Founded in 2012, ClickMechanic simplifies the process of booking a mechanic, saving customers time and ensuring quality service.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Provide a simple, transparent, and trustworthy way for car owners to book mechanics.  
+  - Serve as a platform for mechanics to find jobs and get paid securely.  
+  - Enable administrators to manage the platform and developers to update and maintain it.  
+
+- **Top Features:**  
+  - User roles: Customers, Mechanics, Administrators, and Developers.  
+  - Core functionalities: Sign-in, booking process, inspections, payments/refunds, repairs, servicing, and appointment management.  
+  - Instant price estimation and post-appointment feedback.  
+
+- **Non-Functional Requirements:**  
+  - Operates on Windows XP, Vista, Mac OS, and JavaScript-enabled browsers (Chrome, Firefox, Safari, IE8+).  
+  - Secure system with no external threats and prevention of multiple accounts for the same user.  
+  - Integration with social media platforms like Facebook.  
+
+- **User Documentation:**  
+  - Includes "How it works," Support Centre, and Contact Us sections for guidance.  
+
+**Risks and Unknowns:**  
+- Assumes the system is secure but lacks detailed security specifications.  
+- Dependencies on social media integration and browser compatibility may pose challenges.  
+- No explicit mention of scalability or performance targets.  
+- Limited details on how feedback from customers will be implemented.  
+
+**Timeline:**  
+Not specified.  

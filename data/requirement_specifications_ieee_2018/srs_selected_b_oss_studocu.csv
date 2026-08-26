@@ -1,0 +1,148 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,
+1. Purpose,1.2 Background,,"This document is meant to delineate the features of OSS, so as to serve as a guide to the developers on one hand and a software validation document for the prospective client on the other. The Online Shopping System (OSS)for fashion store web application is intended to provide complete solutions for customers through a single get way using the internet. It will enable customer to browse through the shop and purchase them online without having to visit the shop physically. The administration module will enable a system administrator to approve and reject requests and maintain various lists of clients,employees ."
+1. Purpose,1.3 System overview,,This system allows the customer’s to maintain their cart for add or remove the product over the internet.They can browse any type of fashionable things from any brands.
+1. Purpose,1.4 References,,
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,"Login Page
+Registration Form
+There will be a screen displaying information about product.
+If the customers select the buy button then another screen of shopping cart will be opened.
+After all transaction the system makes the selling report as portable document file (.pdf) and sent to the customer E-mail address."
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The System must run over the internet , all the hardware shall require to connect internet will be hardware interface for the system. As for e.g. Modem, WAN – LAN, Ethernet Cross-Cable."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The system is on server so it requires the any scripting language like PHP, Java Script etc.The system require Data Base also for the store the any transaction of the system like MYSQL etc. system also require DNS(domain name space) for the naming on the internet. At the last user need web browser for interact with the system."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,The online shopping system will use the internet as the sole method for selling goods to its consumers.
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,This system will work on client-server architecture. It will require an internet server and which will be able to run PHP application. The system should support some commonly used browser such as Internet Explorer etc.
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,"The system shall be built using a standard web page development tool that conforms to Microsoft’s GUI standards like HTML, XML etc."
+2. Overall description,2.3 Product functions,,"The software should provide a good network . The website and the application provides a good interface between the user and the server . It enables users to easily browse any fashionable thing which they require with ease . They can sort the things according to their needs and compare them with other products and select the best out of them . It provides good ways payment like credit or debit card,cash on delivery and EMI . If any product is not available at that time then you will get notified whenever that particular product is back in stock."
+2. Overall description,2.4 User characteristics,,"There are mainly two users for this software :
+Customers
+The customers interact with the website or the application. It must be very easy for them to use the website. They should get every possible fashionable item on this website which is available in stocks."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"The system work on internet server, so it will operated by any end user for the buying purpose."
+3. Specific requirements,,,"This section provides requirement overview of the system.Various functional modules that can be implemented by the system will be -
+Registration :
+If customer wants to buy the product then he/she must be registered, unregistered user can’t go to the shopping cart.
+Input:
+The customer should enter his/her details I.e.contact number,email address and name.
+Processing:
+A new account is created for the user and a unique id is given to the user to login.
+Output:
+User gets id and password to login and start shopping.
+Login
+Customer logins to the system by entering valid user id and password for the shopping.
+Input:
+Customer enters id and password.
+Processing:
+The authorization module is called to check if the id and the password is valid or not.
+Output:
+Logged in if the authorization module gives a positive reply.
+Authorization
+The entered id and password are checked in the database and if it is valid then the user is allowed to login.
+Input:
+The id and password which are the inputs of the login module are passed to this module as its arguments.
+Processing:
+The id and password are matched on the database , if they are valid then access is given otherwise access is denied.
+Output:
+It gives positive reply to the login module if it is a valid one.
+Changes to Cart
+Changes to cart means the customer after login or registration can make order or cancel order of the product from the shopping cart.
+Input:
+Item to be added are selected by the user and the add to cart module is called and if the user wants to remove an item from the cart them remove from cart module is called.
+Input:
+The items to be added or removed.
+Processing:
+If the user wants to add the item to cart then add to cart module is called and if it wants to remove the item from cart then remove from cart module is called.
+Output:
+The item is either added or removed as per specified by the user.
+Buy
+The customer clicks the buy now button and gets to the payment modes.
+Input:
+Number of items the user wants to buy.
+Processing:
+The total amount/value of the items is set as the grand total to be paid by the user.
+Output:
+The order of the user is placed and a copy of that is send to the email address given by the user at the time of login (after the payment is done).
+Payment
+For customer there are many type of secure billing will be prepaid as debit or credit card , reedem points , EMI option is also available. The security will provide by the third party like Pay-Pal etc.
+Input:
+The method through which the user wants to make the payment.
+Processing:
+The transaction through online banking is done if the user has chosen the card payment option and if the user has used the cash on delivery option then the payment is collected at the time of delivery.
+Output:
+The order is finally placed after the payment is done.
+Logout
+After the payment or surf the product the customer will logged out.
+Input:
+The user presses the log out option .
+Processing:
+The cache memory of the users device is erased and the session of the user ends.
+Output:
+The user again comes back to the login page.
+Report Generation
+After all transaction the system can generate the portable document file (.pdf) and then sent one copy to the customer’s Email-address and another one for the system data base to calculate the monthly transaction .
+Input:
+The bill generated after the payment is done.
+Processing:
+This invoice is send to the customer’s email address with the order number.
+Output:
+The customer gets the invoice of his/her order.
+Order Number Generation
+A order number is a unique identification number given to every order .
+Input:
+The order of the customer.
+Processing:
+A unique order number is generated for every order.
+Output:
+The customer gets a unique order number for its order which it can trace.
+Order tracing
+Input:
+The order id of the order to be traced.
+Processing:
+The current status of the order is fetched from the database .
+Output:
+The current status of the order is given to the customer.
+Filters
+It filters all the items according to the customers needs.
+Input:
+The criteria on which you want to filter the items.
+Processing:
+The items are filtered according to the criteria given by the customer.
+Output:
+The customer gets a filtered list of items so that it is easy for him/her to search the item required .
+Search
+Search the type of item which the customer wants.
+Input:
+The type of item which the customer wants.
+Processing:
+The type of items are searched in the database .
+Output:
+The items matched with the given type by the customer are shown to the customer.
+Feedback
+The experience of the customer after using myntra is taken in terms of stars.
+Input:
+The number of stars given by customer as per his/her experience after using myntra.
+Processing:
+The number of stars given by the user is saved in the database.
+Output:
+The average rating is shown to the user.
+Various interfaces for the product could be-
+Login Page
+Registration Form
+There will be a screen displaying information about product.
+If the customers select the buy button then another screen of shopping cart will be opened.
+After all transaction the system makes the selling report as portable document file (.pdf) and sent to the customer E-mail address.
+There is no performance requirement in this system because the server request and response is depended on the end user internet connection.
+The system use SSL (secured socket layer) in all transactions that include any confidential customer information.
+The system must automatically log out all customers after a period of inactivity.
+The system should not leave any cookies on the customer’s computer containing the user’s password.
+Sensitive data will be encrypted before being sent over insecure connections like the internet.
+The system provides storage of all databases on redundant computers with automatic switch over.
+The reliability of the overall program depends on the reliability of the separate components.
+The main pillar of reliability of the system is the backup of the database which is continuously maintained and updated to reflect the most recent changes.
+Thus the overall stability of the system depends on the stability of container and its underlying operating system.
+The system should be available at all times, meaning the user can access it using a web browser, only restricted by the down time of the server on which the system runs. In case of a of a hardware failure or database corruption, a replacement page will be shown. Also in case of a hardware failure or database corruption, backups of the database should be retrieved from the server and saved by the administrator. Then the service will be restarted. It means 24 X 7 availability.
+A commercial database is used for maintaining the database and the application server takes care of the site. In case of a failure, a re-initialization of the program will be done. Also the software design is being done with modularity in mind so that maintainability can be done efficiently.
+The application is HTML and scripting language based. So The end-user part is fully portable and any system using any web browser should be able to use the features of the system, including any hardware platform that is available or will be available in the future.
+An end-user is use this system on any OS , either it is Windows or Linux or iOS.
+The system shall run on PC, Laptops , Mobile phones and Tablets etc."

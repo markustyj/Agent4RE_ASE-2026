@@ -1,0 +1,25 @@
+**Title:** WhatsApp — Summary  
+
+**Overview:**  
+This document outlines the software requirements for WhatsApp, an online instant messaging application that enables users to exchange messages, media, and calls over the internet. The app integrates with a user’s phonebook and mobile operating system to provide seamless communication. WhatsApp aims to deliver a user-friendly, feature-rich experience while ensuring compatibility with mobile hardware and network services.  
+
+**Key Points:**  
+- **Goals and Scope:** WhatsApp allows users to send instant messages, share media (e.g., pictures, videos, documents, audio), make voice and video calls, and manage privacy settings. It also supports group chats, broadcast messaging, and status updates.  
+- **Core Features:**  
+  - User identification via mobile number and verification.  
+  - Privacy controls to hide profile picture, status, and last seen.  
+  - Blocking and spam reporting functionality.  
+  - Ability to star important messages and save chats.  
+  - Profile customization with a picture and a 150-character status.  
+- **Operating Environment:** Requires a mobile device with at least 512MB RAM, a 500 MHz processor, and access to Wi-Fi or mobile networks. The app also utilizes hardware like the camera, microphone, and gallery.  
+- **Design Constraints:**  
+  - Prompts error messages for network or hardware issues (e.g., "Connection not available" or "Can’t access camera").  
+  - Accounts may be locked if flagged as spam by 10 users.  
+- **User Documentation:** Help is available via the app’s help menu or the official website.  
+
+**Risks and Unknowns:**  
+- Dependency on stable network and power supply for functionality.  
+- Potential user dissatisfaction if hardware services (e.g., camera) are unavailable.  
+- Risk of account deactivation due to spam reports, which may require clear user education.  
+
+**Timeline:** Not specified.  

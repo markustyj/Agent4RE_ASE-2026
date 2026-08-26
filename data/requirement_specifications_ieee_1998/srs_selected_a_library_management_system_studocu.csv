@@ -1,0 +1,150 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,The main objective of this document is to illustrate the requirements of the project Library Management system. The document gives the detailed description of the both functional and non-functional requirements proposed by the client.The purpose of this project is to provide a friendly environment to maintain the details of books and library members.The main purpose of this project is to maintain easy circulation system using computers and to provide different reports. This project describes the hardware and software interface requirements using ER diagrams and UML diagrams.
+1. Introduction,1.2 Document Conventions,
+1. Introduction,1.3 Intended Audience and Reading Suggestions,
+1. Introduction,1.4 Product Scope,"Library Management System is basically updating the manual library system into an internet-based application so that the users can know the details of their accounts, availability of books and maximum limit for borrowing. The project is specifically designed for the use of librarians and library users. The product will work as a complete user interface for library management process and library usage from ordinary users. Library Management System can be used by any existing or new library to manage its books and book borrowing, insertion and monitoring. It is especially useful for any educational institute where modifications in the content can be done easily according to requirements. The project can be easily implemented under various situations. We can add new features as and when we require, making reusability possible as there is flexibility in all the modules. The language used for developing the project is Java as it is quite advantageous than other languages in terms of performance, tools available, cross platform compatibility, libraries, cost (freely available), and development process."
+1. Introduction,1.5 References," Books
+Software Requirements and Specifications: A Lexicon of Practice, Principles and Prejudices (ACM Press) by Michael Jackson
+Software Requirements (Microsoft) Second EditionBy Karl E. Wiegers
+Software Engineering: A Practitioner’s Approach Fifth Edition By Roger S. Pressman"
+2. Overall Description,2.1 Product Perspective,"Use Case Diagram of Library Management System
+searches
+1
+1
+requests
+1
+1
+1..*
+search_book
+1..*
+check_limit
+check_availability
+User 1
+issue_book
+request_renew
+<<include>>
+monitors_request
+1
+monitors_renew
+1
+performs
+give_book
+<<include>>
+0..*
+1..*
+renew_book
+verify_member
+<<include>>
+take_book
+1
+1 Librarian
+Student
+0..*
+1..*adds_new_book
+perform_transaction_updation
+Staff
+return_book
+View_logs
+<<extend>>
+add_book
+calculate_fine
+update_record
+This is a broad level diagram of the project showing a basic overview. The users can be either staff or student.. This System will provide a search functionality to facilitate the search of resources. This search will be based on various categories viz. book name or the ISBN. Further the library staff personnel can add/update the resources and the resource users from the system. The users of the system can request issue/renew/return of books for which they would have to follow certain criteria."
+2. Overall Description,2.2 Product Functions,"Entity Relationship Diagram of Library Management System
+The Online Library System provides online real time information about the books available in the Library and the user information. The main purpose of this project is to reduce the manual work. This software is capable of managing Book Issues, Returns, Calculating/Managing Fine, Generating various Reports for Record-Keeping according to end user requirements. The Librarian will act as the administrator to control members and manage books. The member’s status of issue/return is maintained in the library database. The member’s details can be fetched by the librarian from the database as and when required. The valid members are also allowed to view their account information."
+2. Overall Description,2.3 User Classes and Characteristics,"The system provides different types of services based on the type of users [Member/Librarian]. The Librarian will be acting as the controller and he will have all the privileges of an administrator. The member can be either a student or staff of the university who will be accessing the Library online.
+The features that are available to the Librarian are:-
+ A librarian can issue a book to the member.
+ Can view the different categories of books available in the Library
+ Can view the List of books available in each category
+ Can take the book returned from students
+ Add books and their information to the database
+ Edit the information of existing books
+ Can check the report of the existing books
+ Can check the report of the issued books
+ Can access all the accounts of the students
+The features that are available to the Members are:-
+ Can view the different categories of books available in the Library
+ Can view the List of books available in each category
+ Can own an account in the library.
+ Can view the books issued to him
+ Can put a request for a new book
+ Can view the history of books issued to him previously
+ Can search for a particular book"
+2. Overall Description,2.4 Operating Environment,"The product will be operating in windows environment. The Library Management System is a website and shall operate in all famous browsers, for a model we are taking Microsoft Internet Explorer,Google Chrome,and Mozilla Firefox.Also it will be compatible with the IE 6.0. Most of the features will be compatible with the Mozilla Firefox & Opera 7.0 or higher version. The only requirement to use this online product would be the internet connection.
+The hardware configuration include Hard Disk: 40 GB, Monitor: 15” Color monitor, Keyboard: 122 keys. The basic input devices required are keyboard, mouse and output devices are monitor, printer etc."
+2. Overall Description,2.5 Design and Implementation Constraints,"Software Configuration:-
+This software package is developed using java as front end which is supported by sun micro system. Microsoft SQL Server as the back end to store the database. Operating System: Windows NT, windows 98, Windows XP
+Language: Java Runtime Environment, Net beans 7.0.1 (front end)
+Database: MS SQL Server (back end)
+Hardware Configuration:-
+Processor: Pentium(R)Dual-core CPU
+Hard Disk: 40GB
+RAM: 256 MB or more"
+2. Overall Description,2.6 User Documentation,"The proper user interface, user manual, online help and the guide to install and maintain the system must be sufficient to educate the users on how to use the system without any problems.
+The admin provides certain facilities to the users in the form of:-
+ Backup and Recovery
+ Forgot Password
+ Data migration i.e. whenever user registers for the first time then the data is stored in the server
+ Data replication i.e. if the data is lost in one branch, it is still stored with the server
+ Auto Recovery i.e. frequently auto saving the information
+ Maintaining files i.e. File Organization
+ The server must be maintained regularly and it has to be updated from time to time"
+2. Overall Description,2.7 Assumptions and Dependencies,"The assumptions are:-
+ The coding should be error free
+ The system should be user-friendly so that it is easy to use for the users
+ The information of all users, books and libraries must be stored in a database that is accessible by the website
+ The system should have more storage capacity and provide fast access to the database
+ The system should provide search facility and support quick transactions
+ The Library System is running 24 hours a day
+ Users may access from any computer that has Internet browsing capabilities and an Internet connection
+ Users must have their correct usernames and passwords to enter into their online accounts and do actions
+The dependencies are:-
+ The specific hardware and software due to which the product will be run
+ On the basis of listing requirements and specification the project will be developed and run
+ The end users (admin) should have proper understanding of the product
+ The system should have the general report stored
+ The information of all the users must be stored in a database that is accessible by the Library System
+ Any update regarding the book from the library is to be recorded to the database and the data entered should be correct"
+3. External Interface Requirements,3.1 User Interfaces,"The software provides good graphical interface for the user and the administrator can operate on the system, performing the required task such as create, update, viewing the details of the book.
+ It allows user to view quick reports like Book Issued/Returned in between particular time.
+ It provides stock verification and search facility based on different criteria.
+ The user interface must be customizable by the administrator.
+ All the modules provided with the software must fit into this graphical user interface and accomplish to the standard defined.
+ The design should be simple and all the different interfaces should follow a standard Template.
+ The user interface should be able to interact with the user management module and a part of the interface must be dedicated to the login/logout module.
+Login Interface:-
+In case the user is not yet registered, he can enter the details and register to create his account. Once his account is created he can ‘Login’ which asks the user to type his username and password. If the user entered either his username or password incorrectly then an error message appears.
+Search:-
+The member or librarian can enter the type of book he is looking for and the title he is interested in,then he can search for the required book by entering the book name.
+Categories View:-
+Categories view shows the categories of books available and provides ability to the librarian to add/edit or delete category from the list.
+Librarian’s Control Panel:-
+This control panel will allow librarian to add/remove users; add, edit, or remove a resource. And manage lending options."
+3. External Interface Requirements,3.2 Hardware Interfaces,"The hardware configuration include Hard Disk: 40 GB, Monitor: 15” Color monitor, Keyboard: 122 keys. The basic input devices required are keyboard, mouse and output devices are monitor, printer etc."
+3. External Interface Requirements,3.3 Software Interfaces,"Software Configuration:-
+This software package is developed using java as front end which is supported by sun micro system. Microsoft SQL Server as the back end to store the database. Operating System: Windows NT, windows 98, Windows XP
+Language: Java Runtime Environment, Net beans 7.0.1 (front end)
+Database: MS SQL Server (back end)"
+3. External Interface Requirements,3.4 Communications Interfaces,"The product will be operating in windows environment. The Library Management System is a website and shall operate in all famous browsers, for a model we are taking Microsoft Internet Explorer,Google Chrome,and Mozilla Firefox.Also it will be compatible with the IE 6.0. Most of the features will be compatible with the Mozilla Firefox & Opera 7.0 or higher version. The only requirement to use this online product would be the internet connection."
+4. System Features,4.1 System Feature 1,"The users of the system should be provided the surety that their account is secure. This is possible by providing:-
+ User authentication and validation of members using their unique member ID
+ Proper monitoring by the administrator which includes updating account status, showing a popup if the member attempts to issue number of books that exceed the limit provided by the library policy, assigning fine to members who skip the date of return
+ Proper accountability which includes not allowing a member to see other member’s account. Only administrator will see and manage all member accounts"
+4. System Features,4.2 System Feature 2 (and so on),
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The proposed system that we are going to develop will be used as the Chief performance system within the different campuses of the university which interacts with the university staff and students. Therefore, it is expected that the database would perform functionally all the requirements that are specified by the university.
+ The performance of the system should be fast and accurate
+ Library Management System shall handle expected and non-expected errors in ways that prevent loss in information and long downtime period. Thus it should have inbuilt error testing to identify invalid username/password
+ The system should be able to handle large amount of data. Thus it should accommodate high number of books and users without any fault"
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"The database may get crashed at any certain time due to virus or operating system failure. Therefore, it is required to take the database backup so that the database is not lost. Proper UPS/inverter facility should be there in case of power supply failure."
+5. Other Nonfunctional Requirements,5.3 Security Requirements," System will use secured database
+ Normal users can just read information but they cannot edit or modify anything except their personal and some other information.
+ System will have different types of users and every user has access constraints
+ Proper user authentication should be provided
+ No one should be able to hack users’ password
+ There should be separate accounts for admin and members such that no member can access the database and only admin has the rights to update the database."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes," There may be multiple admins creating the project, all of them will have the right to create changes to the system. But the members or other users cannot do changes
+ The project should be open source
+ The Quality of the database is maintained in such a way so that it can be very user friendly to all the users of the database
+ The user be able to easily download and install the system"
+5. Other Nonfunctional Requirements,5.5 Business Rules,"A business rule is anything that captures and implements business policies and practices. A rule can enforce business policy, make a decision, or infer new data from existing data.This includes the rules and regulations that the System users should abide by. This includes the cost of the project and the discount offers provided. The users should avoid illegal rules and protocols. Neither admin nor member should cross the rules and regulations."

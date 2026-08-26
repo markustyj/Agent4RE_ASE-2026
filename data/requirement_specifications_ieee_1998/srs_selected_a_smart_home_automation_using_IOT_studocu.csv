@@ -1,0 +1,254 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,This document describes the software requirements and specification for a Smart Home Automation using IOT.
+1. Introduction,1.2 Document Conventions,This Document was created based on the IEEE template for System Requirement Specification Documents. font: TNR 12
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"The document is intended for all the stakeholders customer and the developer (designers, testers, maintainers). The reader is assumed to have basic knowledge of banking accounts and account services. Knowledge and understanding of UML diagrams is also required."
+1. Introduction,1.4 Product Scope,"The smart home automation system employs IoT to seamlessly integrate diverse devices, enabling user control through a mobile app or voice commands. Security is prioritized with authentication and encrypted communication. Automation rules enhance convenience, optimizing energy usage and facilitating remote accessibility. Integration with voice assistants improves user experience, while over-the-air updates ensure system functionality and security. Resource monitoring maintains device performance, and interoperability supports various manufacturers' devices. Robust privacy measures safeguard user data, emphasizing a comprehensive, efficient, and secure IoT-based smart home solution.
+The Smart Home Automation system operates in conjunction with interconnected devices, leveraging communication interfaces and user interfaces for seamless functionality.
+Communication Interface: The smart home devices communicate through a network interface, ensuring connectivity between devices, the central hub, and potentially external services or cloud platforms.
+Software Interface: Messages exchanged among devices and the central hub are tailored to specific smart home software systems. The system supports interoperability with various manufacturers' devices and adheres to common communication standards.
+Hardware Interface: The software is designed to run on diverse hardware, supporting flexibility in device choices and specifications within the smart home network.
+User interfaces
+User Interface for Residents: The resident's interface, often a mobile application, is designed to be user-friendly and intuitive. The goal is to enable 99.9% of users, including new ones, to effortlessly control and monitor devices, ensuring a seamless smart home experience.
+Home Security Personnel: Personnel responsible for security features, such as cameras and alarms, should have a straightforward interface to initialize or configure security settings. This could involve a simple switch or button for easy interaction.
+System Maintainer: System maintainers, responsible for adding new devices to the network and servicing existing ones, should have tools allowing them to integrate a new device efficiently, aiming for a setup time within one hour."
+1. Introduction,1.5 References,"Smart Home Automation System
+A network of interconnected devices and sensors integrated into a residential setting, designed to enhance and automate various aspects of daily life, including but not limited to security, lighting, temperature control, and entertainment.
+Device
+A physical object or appliance embedded with sensors, actuators, and communication capabilities that enable it to interact with the Smart Home Automation System.
+IOT Hub
+The central component of the Smart Home Automation System responsible for aggregating data from various devices, processing commands, and facilitating communication between devices. It serves as the brain of the system.
+User
+An individual or entity that interacts with the Smart Home Automation System through a mobile application, voice commands, or other user interfaces. Users have the authority to control and monitor devices within the system.
+Sensor
+A device component responsible for detecting and measuring physical parameters such as temperature, humidity, motion, or light. Sensors provide input to the system for decision-making.
+Actuator
+A device component capable of performing physical actions, such as turning on lights, locking doors, or adjusting thermostats. Actuators execute commands received from the system or users.
+Automation Rule
+A predefined set of conditions and actions that dictate how the Smart Home Automation System should respond to specific events or triggers. Automation rules enable the system to operate autonomously based on user preferences.
+Voice Assistant
+An intelligent software agent capable of understanding and executing spoken commands. It integrates with the Smart Home Automation System to enable voice control of devices and features.
+Security System
+A subsystem within the Smart Home Automation System focused on monitoring and controlling security-related devices, such as cameras, door/window sensors, and alarms, to ensure the safety of the home.
+Energy Management
+The functionality within the Smart Home Automation System that optimizes the use of energy resources, including controlling smart thermostats, smart lighting, and other energy-consuming devices.
+Mobile Application
+A software application installed on a user's smartphone or tablet, providing a graphical interface for monitoring and controlling devices within the Smart Home Automation System.
+Throughout this document the following abbreviations are used:
+IOT: Internet of Things
+SHAS: Smart Home Automation System
+UI: User Interface
+AI: Artificial Intelligence.
+Wi-Fi: Wireless Fidelity"
+2. Overall Description,2.1 Product Perspective,"The Smart Home Automation system operates in conjunction with interconnected devices, leveraging communication interfaces and user interfaces for seamless functionality.
+Communication Interface: The smart home devices communicate through a network interface, ensuring connectivity between devices, the central hub, and potentially external services or cloud platforms.
+Software Interface: Messages exchanged among devices and the central hub are tailored to specific smart home software systems. The system supports interoperability with various manufacturers' devices and adheres to common communication standards.
+Hardware Interface: The software is designed to run on diverse hardware, supporting flexibility in device choices and specifications within the smart home network.
+User interfaces
+User Interface for Residents: The resident's interface, often a mobile application, is designed to be user-friendly and intuitive. The goal is to enable 99.9% of users, including new ones, to effortlessly control and monitor devices, ensuring a seamless smart home experience.
+Home Security Personnel: Personnel responsible for security features, such as cameras and alarms, should have a straightforward interface to initialize or configure security settings. This could involve a simple switch or button for easy interaction.
+System Maintainer: System maintainers, responsible for adding new devices to the network and servicing existing ones, should have tools allowing them to integrate a new device efficiently, aiming for a setup time within one hour."
+2. Overall Description,2.2 Product Functions,"The Smart Home Automation system features continuous 24/7 operation, prioritizing user accessibility and convenience. Users are authenticated through secure means, ensuring personalized interactions. The system records comprehensive transaction information, including device activations and settings changes. It communicates seamlessly with external services and accommodates devices from various manufacturers, promoting interoperability. Robust security measures, such as encryption and user authentication, safeguard user data and device controls. Notably, the software adeptly manages concurrent accesses to the same smart home account, allowing multiple users to interact simultaneously. These features collectively enhance the reliability, security, and flexibility of the Smart Home Automation system."
+2. Overall Description,2.3 User Classes and Characteristics,"In the Smart Home Automation system, various user classes exhibit distinct characteristics:
+Residents: Residents comprise the general public and require no specialized training to use the smart home system. The interface is designed to be intuitive, catering to users of all backgrounds.
+Home Security Personnel: Security personnel within the home environment need not possess special education or extensive experience. The system provides a straightforward interface, ensuring ease of use for initializing or configuring security settings.
+System Maintainers: Maintainers are experienced network administrators with the expertise to connect new devices to the smart home network. Their role involves adding and servicing devices, requiring a level of proficiency in network administration.
+This user classification model ensures that the Smart Home Automation system is accessible to all residents while allowing network administrators to efficiently manage and expand the system."
+2. Overall Description,2.4 Operating Environment,"Windows 2000
+Windows XP
+Windows Vista
+Windows 7
+Windows 8
+Windows 10
+Mac OS X
+Linux"
+2. Overall Description,2.5 Design and Implementation Constraints,"User Authentication:
+Validate User Credentials: Ensure the accuracy of user-provided information for secure access.
+Account Lockout Policy: Implement measures to lock the account after a specified number of unsuccessful login attempts.
+Device Security:
+Validate Device Integrity: Ensure that only authorized and uncompromised devices can access the smart home network.
+Implement Device Authentication: Authenticate devices before granting access to the smart home system.
+Privacy Measures:
+Data Encryption: Implement encryption protocols to secure user data during communication and storage.
+User Authorization: Define and enforce user roles and permissions to restrict unauthorized access to sensitive information.
+Error Handling:
+Provide Clear Error Messages: Prompt user-friendly error messages in case of invalid inputs or unauthorized access attempts.
+User Notification: Notify users of any suspicious activities or security-related issues promptly.
+System Integrity:
+Continuous Monitoring: Implement monitoring mechanisms to detect and respond to anomalies or potential security threats.
+Regular Updates: Ensure the system's software and firmware are regularly updated to address security vulnerabilities.
+These constraints ensure the secure and reliable operation of the Smart Home Automation system, emphasizing user authentication, device security, privacy measures, error handling, and system integrity."
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies,"Device Reliability: SMART - Ensures seamless operation, assuming smart home devices operate reliably.
+Security Measures: SECURE - Assumes impenetrable device casings, crucial for system security.
+Transaction Limits: LIMITED - Assumes a controlled transaction volume, reliant on sufficient paper.
+Financial Limits: FUNDS - Assumes a daily withdrawal limit, requiring adequate financial resources.
+Continuous System Operation: STABLE - Assumes continuous system operation, dependent on reliable hardware performance."
+3. External Interface Requirements,3.1 User Interfaces,"The user interface aims for maximum usability, ensuring an intuitive experience for residents. The interface design focuses on user-friendly interactions to enable 99.9% of users, including those new to smart home automation, to effortlessly control and monitor devices without assistance."
+3. External Interface Requirements,3.2 Hardware Interfaces,"The hardware should have following specifications:
+Device Compatibility: Seamless connection with diverse IoT devices.
+Sensor Integration: Support for environmental sensors.
+Power Supply: Continuous and reliable power provision.
+Network Connectivity: Ability to connect to the home network.
+User Input: Versatile input methods (touch screen, keypad, voice).
+Security Measures: Robust user authentication capabilities.
+Interoperability: Compatibility with common communication protocols."
+3. External Interface Requirements,3.3 Software Interfaces,"For the Smart Home Automation System: Integration with existing systems, communication protocols (MQTT, CoAP), mobile app compatibility, voice assistant integration, and OTA firmware updates."
+3. External Interface Requirements,3.4 Communications Interfaces,
+4. System Features,4.1 System Feature 1,"The functional requirements are divided into two sections: the first section outlines requirements for the Smart Home Automation system, and the second section details requirements for the central system.
+The requirements for the Smart Home Automation System are organized into General requirements, Authorization requirements, and Transaction requirements.
+General Requirements:
+Functional Requirement 1:
+Description: Initialize system parameters.
+Input: System initialized with specified parameters.
+Processing: Store the initialized parameters.
+Output: Parameters are set.
+Functional Requirement 2:
+Description: Display initial interface if no user is detected.
+Input: No user detected.
+Processing: Display initial interface.
+Output: Initial display is shown.
+Functional Requirement 3:
+Description: Display error if system is low on resources.
+Input: Low system resources.
+Processing: Check if system resources are below a threshold.
+Output: Display error message and take corrective action.
+Authorization:
+Functional Requirement 4:
+Description: Validate user credentials.
+Input: User enters credentials.
+Processing: Check if credentials are valid.
+Output: Display error message and take corrective action if invalid.
+Functional Requirement 5:
+Description: Read serial number and device information.
+Input: Valid user credentials.
+Processing: Read device information.
+Output: Initiate authorization process.
+Functional Requirement 6:
+Description: Log the serial number.
+Input: Serial number from device.
+Processing: Log the serial number.
+Output: Update log file.
+Functional Requirement 7:
+Description: Initiate user password verification.
+Input: User enters password.
+Processing: Verify password with central system.
+Output: Accept or reject authorization.
+Functional Requirement 8:
+Description: Handle different negative responses from the central system.
+Input: Response from central system.
+Processing: Display relevant error messages.
+Output: Take corrective action and display error messages.
+Functional Requirement 9:
+Description: Finish the authorization process if successful.
+Input: Accept from central system.
+Processing: Complete authorization process.
+Output: Start transaction dialog.
+Functional Requirement 10:
+Description: Keep the device if multiple incorrect attempts.
+Input: Entering incorrect credentials multiple times.
+Processing: Initiate authorization process and receive message to keep the device.
+Output: Display error message and take corrective action.
+Transaction Requirements:
+Functional Requirement 11:
+Description: Offer withdrawal transactions.
+Input: Authorization successfully completed. Enter withdrawal amount.
+Processing: Check if amount is within transaction limits.
+Output: Display amount to be dispensed.
+Functional Requirement 12:
+Description: Handle initial withdrawal sequence.
+Input: Customer-entered withdrawal amount.
+Processing: Check if amount is within predefined policy.
+Output: Start transaction or re-initiate transaction dialog.
+Functional Requirement 13:
+Description: Perform the transaction.
+Input: Initial withdrawal sequence successful.
+Processing: Send request to central system.
+Output: Wait for response from the central system.
+Functional Requirement 14:
+Description: Dispense money if transaction is successful.
+Input: Successful transaction message from central system.
+Processing: Print receipt, update system parameters, and eject device.
+Output: Money is dispensed.
+Functional Requirement 15:
+Description: Collect and log dispensed amount.
+Input: Amount dispensed to the user.
+Processing: Log the amount against device information.
+Output: Response sent to central system for money dispensed.
+Functional Requirement 16:
+Description: Display error message if transaction is unsuccessful.
+Input: Unsuccessful transaction message from the central system.
+Processing: Display error message and eject device.
+Output: Eject device.
+These functional requirements define the essential operations and interactions within the Smart Home Automation System, covering initialization, user authorization, and transaction processing."
+4. System Features,4.2 System Feature 2 (and so on),"Authorization:
+Functional Requirement 1:
+Description: Verify the validity of the user account.
+Input: Request from the central system to verify user credentials (User ID and password).
+Processing: Check if the user account is valid.
+Output: Valid or invalid user account.
+Functional Requirement 2:
+Description: Handle invalid user accounts.
+Input: Invalid user account.
+Processing: Process the message.
+Output: Send the message ""invalid user account"" to the central system.
+Functional Requirement 3:
+Description: Validate user password.
+Input: Request from the central system to verify user password.
+Processing: Check the entered password.
+Output: Valid or invalid password.
+Functional Requirement 4:
+Description: Handle invalid passwords.
+Input: Invalid password.
+Processing: Process the message. Update count for invalid password attempts.
+Output: Send the message ""invalid password"" to the central system.
+Functional Requirement 5:
+Description: Check for account-related issues.
+Input: Valid user account and password.
+Processing: Process account-related issues.
+Output: Send the message ""account issues"" to the central system.
+Functional Requirement 6:
+Description: Confirm successful user authorization.
+Input: Valid user account, password, and account status.
+Processing: Process authorization message.
+Output: Send ""authorization successful"" to the central system.
+Transaction:
+Functional Requirement 7:
+Description: Process transaction request.
+Input: Request to process a transaction on a device and specified action.
+Processing: Process the transaction with relevant software.
+Output: If successful, send ""transaction succeeded"" to the central system; otherwise, send ""transaction failed.""
+Functional Requirement 8:
+Description: Update device status after action completion.
+Input: Response from device about action completion.
+Processing: Update device status in the central system.
+Output: Updated device status.
+Functional Requirement 9:
+Description: Enforce transaction limits.
+Input: Request to process a transaction.
+Processing: Check if the transaction amount adheres to predefined limits.
+Output: If the amount exceeds the limit, the transaction will fail.
+Functional Requirement 10:
+Description: Ensure security for the central system and its software.
+Input: N/A
+Processing: Implement robust security measures for the central system and associated software.
+Output: Secure central system and software.
+These functional requirements outline the essential operations and interactions within the Smart Home Automation system, covering user authorization, transaction processing, and security measures for the central system."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"Adverse Condition Performance: Ability to function in extreme temperatures, ensuring reliability in adverse environmental conditions.
+Connection Reliability: Uninterrupted and stable connections between devices for consistent performance.
+Data Transfer Rate: High data transfer rate to support real-time communication and quick response to user commands."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"Secure Placement: Ensure physically secure storage, such as placing the system in a locked cabinet.
+Theft Prevention: Implement anti-theft measures, like bolting the system to the floor to prevent unauthorized removal.
+Emergency Communication: Provide emergency communication options, including an emergency phone both inside and outside the cabin.
+Access Control: Implement access control measures, such as a secure validation method on the cabin door.
+User Authentication: Ensure user authentication, allowing access only through a valid and secure validation process."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"Secure placement to prevent unauthorized access to the system.
+Implement measures to prevent unauthorized physical or digital access.
+Ensure emergency communication options for residents, both inside and outside the home.
+Implement stringent access controls, possibly using biometric authentication or secure access codes.
+Enforce robust user authentication, allowing access only through verified and authorized methods."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Security.
+Performance.
+Ensure continuous system availability, allowing users to control and monitor devices 24/7 without interruptions.
+Maximize security measures, including the prevention of unauthorized network access to ensure the integrity and privacy of user data.
+Restrict access to maintainers only for connecting new devices to the network, ensuring controlled and authorized system expansions."
+5. Other Nonfunctional Requirements,5.5 Business Rules,

@@ -1,0 +1,35 @@
+**Title:** Potato Disease Prediction System — Summary  
+
+**Overview:**  
+The Potato Disease Prediction System is a machine learning-based solution designed to assist farmers in detecting potato diseases, such as early blight and late blight, through image analysis. By leveraging Convolutional Neural Networks (CNNs) and integrating OpenAI for tailored recommendations, the system aims to provide accurate disease detection and actionable advice, enabling farmers to take timely measures to protect their crops and improve yield quality.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Automate potato disease detection using machine learning.  
+  - Provide farmers with real-time feedback and expert-level recommendations for disease management.  
+  - Enhance agricultural productivity and sustainability.  
+
+- **Top Features:**  
+  - Farmers can upload images of potato leaves for disease analysis.  
+  - The system predicts diseases (e.g., early blight, late blight, or healthy plant) with high accuracy.  
+  - OpenAI integration offers tailored advice on disease treatment and pesticide use.  
+  - User-friendly interface with support for multiple languages and offline functionality.  
+
+- **Non-Functional Targets:**  
+  - Real-time or near-real-time feedback with optimized system response times.  
+  - High reliability through robust, fault-tolerant design and regular backups.  
+  - Compatibility with Windows 10/11 and hardware specifications such as Intel Core i5, 8GB RAM, and NVIDIA GTX 1050 Ti.  
+
+- **Major Integrations and Tools:**  
+  - Machine learning frameworks: TensorFlow, PyTorch, scikit-learn.  
+  - Cloud platforms: AWS, Azure, Google Cloud.  
+  - Collaboration tools: Slack, JIRA.  
+
+**Risks and Unknowns:**  
+- Dependence on farmers capturing high-quality, relevant images for accurate predictions.  
+- Reliance on stable internet connectivity for image uploads and system functionality.  
+- Potential challenges in adhering to data privacy laws and agricultural regulations.  
+- System performance may vary based on hardware and dataset quality.  
+
+**Timeline:**  
+Not specified.  

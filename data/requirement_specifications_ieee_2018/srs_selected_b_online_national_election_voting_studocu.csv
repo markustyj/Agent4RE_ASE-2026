@@ -1,0 +1,437 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"The following is a list of terms, acronyms and abbreviations used by the Online National Election Voting System software package and related documentation.
+ABREVETIONS	DEFINITIONS
+ONEV	Online National Election Voting
+EC	Election Candidate
+ECA	Election Commission Authority
+ESS	Election Station Supervisor
+VIN	Voter Identity Number
+DB	Database
+TCK	Tc Kimlik No
+VIC	Voter Identity Card
+YSK	Yüksek Seçim Kurulu
+For the simplicity of documentation throughout the paper we have used masculinity for all genders."
+1. Purpose,1.2 Background,,"This document describes the structural properties and software requirements of the Online National Election Voting System project.
+Manual voting system has been deployed for many years in our country. However in many parts of our country people cannot attend the voting because of several reasons. To illustrate, sometimes people may not be in their own registration region and due to this fact they cannot fulfill their voting duties. In order to solve these problems there is a need of online election voting system in addition to manual voting system. After registering to system, the voters will use their votes at any field areas by using the system if they prefer online voting [1]."
+1. Purpose,1.3 System overview,,"This SRS document applies to the initial version (release 1.0) of the “Online National Election System” software package. This document describes the modeling and the requirement analysis of the system. The main aim of the system is to provide a set of protocols that allow voters to cast ballots while a group of authorities collect votes and output final results.
+The remainder of this document identifies the actors, use-cases, use-case scenarios, activity diagrams, assumptions and dependencies needed for the analysis and design of the Online National Election Voting software package. The rest of the document contains the overall description of the system, requirements, data model and behavioral description of the system and project planning."
+1. Purpose,1.4 References,,"[1] J. Mohen, and J. Glidden, “The Case for Internet Voting,” CACM, Vol. 44, No. 1, pp. 72- 85, Jan.2001.
+[2] Chevallier, M.: Internet voting: Status; perspectives and Issues, ITU E-Government Workshop Geneva, 6 June 2003
+[3] D. P. Gilliam, T. L. Wolfe, J. S. Sherif, and M. Bishop, “Software Security Checklist for the Software Life Cycle,” in Proc. WETICE’03, 2003, pp. 243-248.
+[4] A. D. Rubin, “Security Considerations for Remote Electronic Voting,” CACM, vol. 45, pp. 39-44, Dec. 2002.
+IEEE Std 830-1998: IEEE Recommended Practice for Software Requirements Specification
+Peters, and W. Pedrycz, Software Engineering – An Engineering Approach. New York, NY: Wiley, 2000."
+2. Overall description,1. Product perspective,1. System Interfaces,"The software product is a standalone system and not a part of a larger system. The system will be made up of two parts. Before the election day the system will be used for general purposes such as viewing candidates’ profiles and past years’ election results. The voters will reach the system through web pages by using web-browsers such as Mozilla, Internet Explorer and Google Chrome.
+On the election day another independent system will be used for voting operations. This system will be adapted to the computers at the polling stations. The voters cast their votes using the interface that are provided at these machines. These votes are accepted by the system on the server. The ECA configures the whole system according to its needs on the server where the system is running.
+Figure 1: Block diagram showing interaction between users and the system"
+2. Overall description,1. Product perspective,2. User interfaces,"The system must provide a user interface for all types of users (ECA, ESS, EC, and Voter) that is available through all Web browsers. The user interface for voter must be different for Election Mode and Normal Interactive Mode."
+2. Overall description,1. Product perspective,3. Hardware interfaces,There are no hardware interfaces to this software system. The only interfaces are through a computer system.
+2. Overall description,1. Product perspective,4. Software interfaces,"The poll server runs on http server that is enabled to handle server pages. It uses a relational database to keep track of the polls, which it connects through standard database connectivity interfaces. In order to run the setup software, the environment needs to have a Java Virtual Machine running on it."
+2. Overall description,1. Product perspective,5. Communication Interfaces,"The system enables voters to poll their vote from any election centers that the system is installed in. In Turkey, the voting operation is executed nearly in 150,000 ballot boxes. This means that the system will work on these boxes at the same time.
+Security and safety are the most crucial fundamentals of the ONEV system. The system has zero-tolerance with regard compromising. The system should not allow ESS to download votes to infer how voters in their regions have voted. The system should provide means for protecting and securing recounts of ballots cast in election.
+For the proper working of the system we can list our assumptions and dependencies as follows.
+ Working internet connection
+ A web server should have Java installed on the machine, along with Java’s cryptographic packages.
+ The election server runs on a http server, that is ”jsp” enabled.
+ A web browser through which the voters access the server should have minimal support for cookies and encrypted transactions."
+2. Overall description,1. Product perspective,6. Memory constraints,
+2. Overall description,2. Design constraints,1. Operations,"The system can function in two modes, namely, Normal Interactive Mode and Election Mode. The system will be in Election Mode, for the purpose of vote polling only on the Election Day. Normal Interactive Mode is for accepting registrations, discussions between voters and candidates, campaigns and the system is available in this mode all the time except Election Days."
+2. Overall description,2. Design constraints,2. Site adaptation requirements,
+2. Overall description,3. Product functions,,"The system can function in two modes, namely, Normal Interactive Mode and Election Mode. The system will be in Election Mode, for the purpose of vote polling only on the Election Day. Normal Interactive Mode is for accepting registrations, discussions between voters and candidates, campaigns and the system is available in this mode all the time except Election Days."
+2. Overall description,4. User characteristics,,"The main users of the Online National Election System are the Voters, Election Candidates, Election Commission Authority and Election Station Supervisors. Their properties are described thorough the document."
+2. Overall description,"5. Constraints, assumptions and dependencies",,"The system enables voters to poll their vote from any election centers that the system is installed in. In Turkey, the voting operation is executed nearly in 150,000 ballot boxes. This means that the system will work on these boxes at the same time.
+Security and safety are the most crucial fundamentals of the ONEV system. The system has zero-tolerance with regard compromising. The system should not allow ESS to download votes to infer how voters in their regions have voted. The system should provide means for protecting and securing recounts of ballots cast in election.
+For the proper working of the system we can list our assumptions and dependencies as follows.
+ Working internet connection
+ A web server should have Java installed on the machine, along with Java’s cryptographic packages.
+ The election server runs on a http server, that is ”jsp” enabled.
+ A web browser through which the voters access the server should have minimal support for cookies and encrypted transactions."
+3. Specific requirements,,,"This is a normal mode –before and after Election Day - a user interacts with the system. It involves registration for voting, updating profile, viewing election candidates (EC) as well as sending them questions. It also includes functions for the Election Commission Authority (ECA) to register EC and approve registered voters. The following use-cases describe the functional requirements.
+Use case name: VoterRegistration
+ID: 1
+Priority: High
+Primary actor: Voter
+Use case type: Detail, essential
+Stakeholders and interests:
+Voter – wants to register to system.
+Brief description: In order to use the system the voters must register to system. This explains the registration process.
+Precondition: None
+Trigger: None
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+Voter enters the system homepage.
+He clicks the “register now” button.
+The system prompts the application form.
+He fills in the necessary information related with him in the application form.
+He uploads a picture for Voter Identity Card (VID).
+He sends the request for registration by using “send” button.
+If the information is correctly entered the system prints a successful message.
+Otherwise, it prints appropriate error message, redisplays the application form.
+Figure 3: Activity Diagram for Voter Registration
+Use case name: ApproveApplicant
+ID: 2
+Priority: High
+Primary actor: ECA
+Use case type: Detail, essential
+Stakeholders and Interests :
+Voters - Wants ECA to approve their application Form
+ECA - Wants to approve the Voters by checking Applicaitons Form
+Brief description: This describe how ECA will approve the application form of voter and generate the new account to that voter
+Precondition: The voter should have filled his application form
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+ECA selects the online voter application form from list
+ECA checks the information of the applicant
+If the the given information is correct
+ECA approves the form by pressing “Approve” buton
+ii. ECA generates the new online account to this new voter
+iii. ECA prepares the VIC and generates password
+iv. ECA sends VIC and password to adress of voter
+if the given information is not correct
+ECA will inform voter about misinformation via postal mail
+Figure 4: Activity Diagram for Approve Application function
+Use case name: UpdateVoters
+ID: 3
+Priority: High
+Primary actor: ECA
+Use case type: Detail, essential
+Stakeholders and Interests :
+ECA : Wants to update all voters according to their state
+Brief description: This describe how ECA updates online voters
+Precondition:
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+ECA selects on “Update Voters” from menu and displays that page
+ECA click on “Update Now” button
+The system checks online voters with respect to upcoming election’s voters list
+If the voter exists in the list, the system updates the voter with respect to official the voter information.
+If the voter does not exist in the list, the system deletes that voter from database.
+Figure 5: Activity Diagram for Update Registered Voters
+Use case name: OpenCandidateAccount
+ID: 4
+Priority: High
+Primary actor: ECA
+Use case type: Detail, essential
+Stakeholders and Interests :
+EC, ECA - ECA generates new accounts to EC’s
+Brief description: This describes how ECA will generate all election candidates’ new accounts.
+Precondition:
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+ECA selects on “Create Candidate Accounts” from menu
+System displays Create Candidate Accounts page
+ECA opens a new form for every official Candidate
+ECA fills the form according to candidate’s information
+ECA presses on “Generate password” button
+System creates an account and password for that candidate
+ECA presses on “Print” button and the system prints that document
+ECA finishes the task by pressing on “Finish” button
+ECA sends candidate’s user information via postal mail.
+Figure 6: Activity Diagram for Opening Voter Account function
+Use case name: Login/Logout
+ID: 5
+Priority: High
+Primary actor: User
+Use case type: Detail, essential
+Stakeholders and interests:
+Voter – Wants to log into the system
+ECA – Wants to log into the system
+ECC – Wants to log into the system
+Brief description: This describes how the users log into the system
+Precondition: The user opens the login page
+Trigger: The user enters his id and password
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+The user enters his login id and password
+If the login and password is valid, a session is opened
+The security is verified
+ii. The specific page of every user is loaded
+If the login or password is not valid, the login screen is redisplayed with an error message
+The user click on the logout button
+The session is terminated.
+ii. The login screen is displayed.
+Figure 7: Activity Diagram for Log in / Log out function
+Use case name: AccountUpdate
+ID: 6
+Priority: Medium
+Primary actor: User
+Use case type: Detail, essential
+Stakeholders and Interests:
+Election Candidates – Wants to change password
+Voter - Wants to change password
+Brief description: This explains how the candidate can change his password.
+Precondition: The user should be logged in into the system
+Trigger: The user clicks the “Update Account” button.
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+In the user profile there is a button labeled “Update Account” he clicks it to update his account.
+The system opens a new page to enter old password and the new one.
+The user enters his old password. He then enters his new password
+User clicks the “submit” button.
+If the old password was entered incorrectly, the system will print an error message and the form to change password will re-appear.
+If the old password was entered correctly the system changes password and prints a success message and redirects to his profile.
+Figure 8: Activity Diagram for Updating Account function
+Use case name: ViewECInformation
+ID: 7
+Priority: Medium
+Primary actor: Voter
+Use case type: Detail, essential
+Stakeholders and interests:
+Voter – wants to see the candidates’ profiles in his own election region.
+Brief description: By using this function the voters can reach information about the candidates’ CVs, promises and answers to asked questions.
+Precondition: -The voter should be already registered to the system
+The voter should have logged in to the system
+Account of the EC should be activated by himself.
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+Voter selects the candidate from candidate list by mouse clicking.
+If the candidate has not activated his profile then there will not be any link to his profile
+If the candidate’s page is activated then voter clicks on the candidate’s profile link and EC’s profile page is displayed
+By clicking the “CV” link voter can reach the general information about the EC.
+ii. By clicking the “promises” link voter can view the EC’s election campaign.
+iii. By clicking the “Questions/Answers” link voter can view questions/answers and send questions.
+Figure 9: Activity Diagram for Viewing Election Candidate Information
+Use case name: AskToCandidate
+ID: 8
+Priority: Medium
+Primary actor: Voter
+Use case type: Detail, essential
+Stakeholders and interests:
+Voter – wants to direct questions to candidates about their election campaign.
+Brief description: This explains how the voters use the system for asking questions to candidates.
+Precondition:
+Trigger:
+Relationships:
+Association:
+Include:
+Extend: ViewECInformation
+Normal flow of events:
+User clicks on the “Questions/Answers” link
+He writes his question on the text field
+By pressing “Send Question”, user sends his question
+Figure 10: Activity Diagram for Asking Question to a Candidate
+Use case name: CVEdit
+ID: 9
+Priority: Medium
+Primary actor: Candidate
+Use case type: Detail, essential
+Stakeholders and Interests:
+Election Candidates – Wants to Add or Edit his CV contents.
+Brief description: This explains how the candidate can Add contents to or edit his CV. The CV can be seen by voters.
+Precondition: The user should be logged in into the system
+Trigger: The user clicks the View And Edit CV button or link.
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+In the user profile there is a button labeled “View And Edit CV” he clicks it to edit his CV.
+The system opens a new page that contains the candidate’s CV with data in it if any in edit mode.
+The user edits his CV using the free editing template.
+The user clicks “Save And Return” button to save the changes and return to his profile.
+Figure 11: Activity Diagram for CV Editing
+Use case name: Add/Edit Promises
+ID: 10
+Priority: Medium
+Primary actor: Candidate
+Use case type:
+Stakeholders and Interests:
+Election Candidates – Wants to Add or Edit his promises, that is, what he promises to do to his people he will lead if they select him.
+Brief description: This explains how the candidate can Add or edit his promises.
+Precondition: The user should be logged in into the system
+Trigger: The user clicks the Add or edit promises button or link.
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+In the user profile there is a button labeled “Add Or Edit Promises” he clicks it to add or edit his promises.
+The system opens a new page that contains the candidate’s promises with data in it if any in edit mode.
+The user adds or edits his promises using the free editing template.
+The user clicks “Save And Return” button to save the changes and return to his profile.
+Figure 12: Activity Diagram for Adding /Editing Promises
+Use case name: Read/Answer Questions
+ID: 11
+Priority: Medium
+Primary actor: Candidate
+Use case type:
+Stakeholders and Interests:
+Election Candidates – Wants to Read and/or answer questions from the voters before the election.
+Brief description: This explains how the candidate can read and/or write answers to the questions asked by the voter-to-be.
+Precondition: The user should be logged in into the system
+Trigger: The user clicks the Read and/or Answer questions button or link.
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+In the user profile there is a button labeled “Questions” he clicks it to read and/or answer the questions.
+The system opens a new page that contains the questions from the voters
+If there are questions the candidate clicks on the question to read and answer it on the provided answer text box.
+User can choose to return to his profile.
+The user reads and/or answers questions if any.
+The user clicks ”Reply and send” to save and send anwers of the questions.
+The system takes the user to the questions page
+User clicks on “Return” button to return to his profile
+Figure 13: Activity Diagram for Reading / Answering Questions
+Use case name: ViewElectionResults
+ID: 12
+Priority: Medium
+Primary actor: Voter
+Use case type: Detail, essential
+Stakeholders and interests:
+General public (Voters, ECs, ESS, etc.) – wants to see the election results.
+Brief description: This describes the process of how the voters view the election results by using the system.
+Precondition:
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+He clicks on the election results link.
+He chooses Election/Region/Political Party and presses click on button “show results”
+The system displays the required information according to the selected choices.
+Figure 14: Activity Diagram for Viewing Election Results
+Use case name: OpenSystem
+ID: 13
+Priority: High
+Primary actor: User
+Use case type: Detail, essential
+Stakeholders and interests:
+Election Station Supervisor – Wants to initiate the system
+Brief description: This use case describes how the supervisor starts the system/systems of the station of his responsibility
+Precondition: The user turns on the system/systems
+Trigger: The user enters his/her TCK, supervisorID and password
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+The user enters his/her TCK, supervisorID and password
+If the TCK, supervisorID and password is valid, a session is opened
+The security is verified
+II. The voting page is loaded
+If the TCK, supervisorID and password is not valid, the login screen is redisplayed with an error message
+Figure 15: Activity Diagram for Opening System
+Use case name: MarkGeneratePassword
+ID: 14
+Priority: High
+Primary actor: User
+Use case type: Detail, essential
+Stakeholders and interests:
+Election Station Supervisor – Wants to generate a password for a voter and check and mark him/her as “Has Voted”
+Brief description: This describes how ESS checks voter’s voting condition and mark him/her as “Has Voted” and if voter wants to use the online system generate a password for the voter to be used in voting.
+Precondition: The ESS opened the system
+Trigger: The user enters voter’s TCK
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+A screen displays asking for the user to enter voter’s TCK
+User Enters voter’s TCK
+If the voter with specified TCK has not voted yet
+The menu is appears with “online vote” and “offline vote” buttons
+If user presses to “online vote”, the password is generated and printed
+If user presses to “offline vote”, the voter marked as “ Offline Voted” by the system
+If the voter with specified TCK has voted or wrong TCK entered
+The login screen is redisplayed with appropriate error message
+Figure 16: Activity Diagram for Mark as “Voted” and Generate Password
+Use case name: VoteOnline
+ID: 15
+Priority: High
+Primary actor: Voter
+Use case type: Detail, essential
+Stakeholders and interests:
+Voter – wants to use his vote by using system.
+Brief description: This explains voting process by using the system.
+Precondition:
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+Voter gets a hash password from the ESS.
+Voter fills the Voter Identification Number (VIN), password and hash password areas.
+Voter press “log in” button.
+If the login operation is not verified the system prompts an error message and returns to login page.
+If login operation is verified
+The system will prompt the list of parties/candidates.
+ii. Voter chooses one of the parties/candidates from list.
+iii. He presses the “vote” button for voting process.
+iv. If the operation is successful, voter marked as “ Online Voted” by the system
+System automatically returns to the log in page
+Figure 17: Activity Diagram for Voting Online function
+Use case name: EnterOfflineVotes
+ID: 16
+Priority: High
+Primary actor: Election Station Supervisor
+Use case type: Detail, essential
+Stakeholders and interests:
+Election Station Supervisor – Wants to enter offline vote results to the system
+Brief description: This describes how ESS enters offline vote results to the system immediately after the voting period.
+Precondition: The ESS opened the system
+Trigger:
+Relationships:
+Association:
+Include:
+Extend:
+Normal flow of events:
+A screen displays asking for the user to enter supervisorID and password
+Supervisor enters supervisorID and password
+If the TCK, supervisorID and password is not valid, the login screen is redisplayed with an error message
+If the TCK, supervisorID and password are valid,
+The secuity is verified
+The screen displaying every Political Party/ Candidate and their input fields is opened
+The ESS fills every PP / EC fields with the number of votes each PP / EC got and presses button “Enter Votes”
+The system compares the number of votes ESS entered with the number of votes marked as “Offline Voted” for that station.
+If equality holds the system stores given values to the system and the main page is displayed.
+ii. If equality does not match, the screen displaying every Political Party/ Candidate and their input fields is reopened with en error message.
+Figure 18: Activity Diagram for Entering Offline Votes
+The system is expected to have reasonable short time response. The voter should be able to login and should be able to get response for his requests in 2-3 seconds.
+The system’s performance is different according to its mode
+ In Election Mode: The system is expected to serve a maximum of up to 50000 voters instantly, each voter being active for at most 5 minutes requesting up to 5 pages (Depending on number of candidates he may vote according to their types: Belediye Meclis Üyesi, Milletvekili, İl Başkanı). This shows that the system should be able to handle about 2000 transactions each second. In addition, the system must be working at 100% peak efficiency during the voting process.
+ In Normal Interactive Mode: The system in this mode is expected to serve maximum of up to 50000 voters, but each voter can be active for a long time.
+ The data transaction between client and server must be encrypted using SSL technology.[3]
+ All the passwords that are generated or accepted must be stored in database in an encrypted form.
+ To prevent attacks the system should generate random word and ask the user to enter it correctly for multiple tryings.
+ In election mode, the different password should be generated for a TCK in every different election.
+ To prevent data loss in case of system failure, the result of votes that are polled till then have to be saved in database.
+ In case ECA detects any security problem in the system, he should be able to shut down the system and prevent all connection to the server immediately to preserve already polled votes.
+ The system should be able to recover itself from previous crashes and continue the voting process.[4]
+ The system should warn ECA users about the malfunction of the system.
+ In election Mode: The system should be 99% reliable.
+ In Normal Interactive Mode: Since it may need some maintenance or preparation for the Election Day, the system does not need to be reliable every time. So, 80% reliability is enough.
+ JAVA EE is used for development of the system
+ Tools that are used for development and deployment of the system:
+o ROSE / RSA / WebSphere Modeler for modeling and prototyping the system
+o IDEs – Eclipse, RAD, Lotus Forms Designer, Portlet Factory
+o Server applications: WebSphere Portal, WAS, WAS CE, WPS
+ Linux is the system’s OS."

@@ -1,0 +1,39 @@
+**Title:** Smart Home Automation System (SHAS) — Summary  
+
+**Overview:**  
+The Smart Home Automation System (SHAS) leverages the Internet of Things (IoT) to integrate and control various smart devices within a home. It provides users with seamless control via a mobile app or voice commands, prioritizing security, energy efficiency, and interoperability. The system aims to enhance convenience, optimize energy usage, and ensure robust privacy and security for users.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Enable seamless integration of smart devices from various manufacturers.  
+  - Provide user-friendly interfaces for residents, security personnel, and system maintainers.  
+  - Ensure 24/7 operation with secure user authentication and encrypted communication.  
+
+- **Top Features:**  
+  - **Must-Have:**  
+    - Mobile app and voice assistant integration for device control.  
+    - Automation rules for autonomous operation based on user preferences.  
+    - Robust security measures, including user authentication, device validation, and data encryption.  
+  - **Should-Have:**  
+    - Over-the-air updates for system functionality and security.  
+    - Concurrent access support for multiple users.  
+  - **Could-Have:**  
+    - Energy management features to optimize resource usage.  
+
+- **Non-Functional Targets:**  
+  - 99.9% user accessibility for residents, including new users.  
+  - Device setup time for maintainers limited to one hour.  
+  - Compatibility with major operating systems (Windows, Mac OS X, Linux).  
+
+- **Major Constraints:**  
+  - Account lockout policy after multiple failed login attempts.  
+  - Regular updates required to maintain system integrity.  
+
+**Risks and Unknowns:**  
+- Assumes reliable operation of smart devices and hardware.  
+- Assumes impenetrable device casings for security.  
+- User documentation is not specified.  
+- Dependencies on external services and cloud platforms are not detailed.  
+
+**Timeline:**  
+Not specified.  

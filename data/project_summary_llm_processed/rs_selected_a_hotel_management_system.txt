@@ -1,0 +1,35 @@
+**Title:** Hotel Management System — Summary  
+
+**Overview:**  
+The Hotel Management System (HMS) is a Software as a Service (SaaS) application designed to streamline hotel operations, including managing bookings, employees, rooms, and payments. The system aims to digitize manual processes, improve data accuracy, and provide insightful analytics for hotel owners and staff. The software is subscription-based, with super admins managing hotel registrations and authentication.  
+
+**Key Points:**  
+- **Goals and Scope:**  
+  - Replace manual and paper-based processes with a digital solution.  
+  - Provide CRUD (Create, Read, Update, Delete) operations for hotels, employees, guests, and services.  
+  - Generate reports on bookings, revenue, and hotel performance.  
+  - Maintain payment and revenue records for better financial management.  
+
+- **Top Features:**  
+  - Hotel owners can manage settings and generate high-level business reports.  
+  - Managers can add/update employees, services, and rooms.  
+  - Employees handle bookings, room assignments, and guest check-ins/check-outs.  
+  - Guests’ data is processed and displayed but not directly accessed by them.  
+
+- **Non-Functional Requirements:**  
+  - The system runs on Windows OS and uses MS SQL Server for database management.  
+  - Designed with security, data integrity, and flexibility for generating analytics.  
+  - Developed using C#, Visual Studio, and the GUNA UI library.  
+
+- **Constraints:**  
+  - The database operates on a Windows server within hotel premises.  
+  - Users must be computer literate and trained to use the system effectively.  
+
+**Risks and Unknowns:**  
+- Assumes users are proficient with computers and trained, which may not always be the case.  
+- Limited features are defined in the current scope, with an assumption that other necessary features already exist.  
+- Dependency on Windows OS and MS SQL Server may limit flexibility for hotels using other platforms.  
+- No explicit mention of scalability for larger hotel chains or cloud-based deployment.  
+
+**Timeline:**  
+- Not specified.  

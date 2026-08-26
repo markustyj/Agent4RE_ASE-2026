@@ -1,0 +1,93 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"This SRS describe the requirement specifications for automated teller machine network (ATM) for designers, maintainers and developers. Function of ATM is to support computerized banking system. Serve bank customers in off timings"
+1. Introduction,1.2 Document Conventions,"Font with formal range of <12-14> units in Microsoft word Document, Terms and clauses in italic style will have greater prominence in sentence. “()” parentheses will simplify the meaning having inside them for your easiness"
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"Prioritized Sections are below
+Developers: Section 3 and 4 are more emphasized over section 5.
+Project Managers: look over timing constraints on analyzing this complete SRS
+Marketing Staff: Section 5.5
+Users: should have to study carefully section 2.6(User Documentation)
+Testers: would only study section 2.4(Operating Environment)"
+1. Introduction,1.4 Product Scope,"ATM here is the availability of most banking services outside the bank as shown below,
+Banking System
+Already exists
+ATM is going to have a connection with this system, Bank database as a central nervous system
+ATM Services"
+1. Introduction,1.5 References,"Source:
+http://www.frontierntnet.net
+https://groups.google.com
+http://www.computerworld.com"
+2. Overall Description,2.1 Product Perspective,"ATM here is the availability of most banking services outside the bank as shown below,
+Banking System
+Already exists
+ATM is going to have a connection with this system, Bank database as a central nervous system
+ATM Services"
+2. Overall Description,2.2 Product Functions,"Withdraw Amount
+Deposit Amount
+Transfer Funds
+Register ATM card
+Mini Statement
+Change Pin#"
+2. Overall Description,2.3 User Classes and Characteristics,
+2. Overall Description,2.4 Operating Environment,"XP: Windows XP powered by Microsoft Cooperation is a suitable working platform for ATM software.
+H/W component is a complete system (computer system) with pertinent peripherals."
+2. Overall Description,2.5 Design and Implementation Constraints,"CO-1: System Should all in one so all of the hardware configurations will inside one compact module
+CO-2: Power Supply must b attained by ATM 24 hours for its regularity.
+CO-3: Small size compact box should have certain units available in it for proper functionality of ATM, e.g Memory, Concurrent Processing modules one or more, Transmission reliability inside and outside the system
+CO-4: Banking database must be compatible with ATM computations.
+CO-5: Security Precautions for banking system are strictly imposed.
+CO-6: Maintenance keys should must be kept in mind to provide schema to maintainers."
+2. Overall Description,2.6 User Documentation,"UD-1: Bank will provide the instruction manual with ATM card package. How to use this system. Also sophisticated users documentations will also
+UD-2: Document for developer and design repositories are properly prepared."
+2. Overall Description,2.7 Assumptions and Dependencies,"AS-1: ATM is open for transactions every company business day in which employees are expected to use this service.
+DE-1: All time maintenance capability and, deliverables of any problem occurring will be reported
+DE-2: H/W components, there should must be a guarantee in case of malfunctioning the device or subcomponent, high quality components should the purchased according to the budget. but reliability, accuracy , dependability is a great issue."
+3. External Interface Requirements,3.1 User Interfaces,"UI-1: ATM Screen will contain all possible options in respected rectangles.
+UI-2: Touch sensitive screen code compatibility.
+UI-3: Maintainers and developers will see completely different interface with more privileges as will be mentioned in product function.
+UI-4: Error text will appear preceding with cross sign ‘×’
+UI-4: Interface is needed for every type of configurations, so functionally system will faced through its interface so it would have every component of software to interact with interface module."
+3. External Interface Requirements,3.2 Hardware Interfaces,"HI-0: Power Cable plugging port.
+HI-1: Necessary buttons will be provided with appropriate interfacing of compact keyboard with system.
+HI-2: Kyocera 5.7"" Color LCD for Triton, Hyosung, Hantle, Tranax, Tidel, NCR
+HI-3: Two Serial ports,1st for running communication headache and 2nd for backup. For source code configuration
+HI-4: Two Universal Serial Bus for data sharing"
+3. External Interface Requirements,3.3 Software Interfaces,"Database
+Triggering the updates
+ATM Services
+T1
+T2
+T3
+T4
+ATM
+Table
+Transaction going on
+ATM
+Updates in ATM table inside bank database"
+3. External Interface Requirements,3.4 Communications Interfaces,"CI-1: ATM card activation will be acknowledged by email to customer.
+CI-2: GSM used for ATM messages transmission
+CI-3: Communication security recommended strongly. Confidential information is guaranteed to be secure."
+4. System Features,4.1 System Feature 1,Highest priority task of this system is to provide the functioning on numerous ATM users 24 hours. This is highest priority although may not functionally a service for user.
+4. System Features,4.2 System Feature 2 (and so on),"Stimulus: Regular power supply to system.
+Response: System will operational.
+Stimulus: Backup of power supply.
+Response: Also system is operational.
+Stimulus: User queries.
+Response: Precise results, reliability in action of user.
+Stimulus: Half alive/Half Dead
+Response: ATM is operational in administration configurations mode."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"PE-1: The system shall accommodate 1 user all time necessarily.
+PE-2: Cash counting must be accurate.
+PE-3: Responses to keyboard hits shall take no longer than 7 seconds to load onto the screen after the user hit(press) one key.
+PE-4: The system shall display confirmation messages to users his/her query within 4 seconds after the user submits any information to the system."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"SR-1: System room will be safe for user going to use ATM machine.
+Electricity damage precautions
+Fire alerts
+SR-2: System room should be air conditioned for system safety in order to suppress heat produced by system."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"SE-1: Data transactions that involve financial information or personally identifiable information shall be encrypted.
+SE-2: Users shall be required to log in (pin#) to access System for all operations except viewing a menu.
+SE-3: The system shall permit only Admin staff members who are on the list of authorized Menu Managers to create or edit menus.
+SE-6: The system shall permit users to view only their own previously placed transactions, not placed by others"
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"Availability-1: The ATM System shall be available to users on the 99.9% of the time between 12:00AM To 11:50 PM
+Robustness-1: If the connection between the user and the system is broken prior to an query being either confirmed or canceled, the ATM System shall enable the user to recover an incomplete query or cancel its effect completely."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"User can not withdraw his/her maximum limited amount from system in 24 hours timing constraint, ATM will reboot on 11:50 after restarting, Timing constraint on money withdrawal will be changed to denied to permit.
+Same constraint will be applied on transferring amount."

@@ -1,0 +1,193 @@
+﻿section,subsection,subsubsection,content
+1. Purpose,1.1 Definitions,,"spicejet
+SRS- Software Requirement Specification
+GUI- Graphical User Interface Stockholder- The person who will participate in system
+Ex. passanger, Administrator, Visitor etc."
+1. Purpose,1.2 Background,,"India is one of the fastest growing aviation markets in the world. With the liberalization of
+the Indian aviation sector, the industry has witnessed a transformation with the entry of the
+privately owned full service airlines and low cost carriers. As of March 2009, private carriers
+accounted for around 82% share of the domestic aviation market. The players in the current
+Indian domestic market include low cost carriers like SpiceJet, GoAir, Indigo along with
+Premium airlines like Jet Airways, Kingfisher and Air India (domestic). The sector has also
+seen a significant increase in number of domestic air travel passengers. Some of the factors
+that have resulted in higher demand for air transport in India include the growing middle
+class and its purchasing power, low airfares offered by low cost carriers, the growth of the
+tourism industry in India, increasing outbound travel from India and the overall economic
+growth ofIndia.In this research a comparative study has been done on six major airlines
+using perceptual mapping. Responses were recorded from frequent fliers across six
+variables which are most important for any airline customer. For the purpose of the study
+the flying experience was divided into three stages- namely, preflight, in-flight and post-
+flight experience. A questionnaire was designed in such a way that the same sets of
+variables were measured among the customers of the six airlines under study. The objective
+of this study was to understand the satisfaction levels of the airline customers. The study
+measured the expected level of service quality using a Likert type scale. The six attributes
+considered for the study are: Ease of in; Baggage handling; in flight experience; on time
+performance of the flights and Overall value for money."
+1. Purpose,1.3 System overview,,"The purpose of this document is to provide a consistentan complete description of the
+requirements for the software of an spicejet .
+The requirements will be presented using textual descriptions to explain concepts,
+different types of diagrams to illustrate complicated interactions, and tables to relate
+relevant information.
+The intended audience of this document is all of the stakeholders for a project involving the
+development of spicejet software. This includes, but is not limited to, software developers,
+project managers, quality assurance personnel, and customers.
+A questionnaire was designed with above set of variables and responses of 150 fliers of six
+domestic airlines viz., GoAir, Kingfisher, Jet Airways, Indigo, SpiceJet and Air India (Domestic)
+was recorded on a five point Likert scale. About 150 respondents were interviewed from
+different places in NCR: Delhi, Gurgaon, Noida, Greater Noida and Faridabad.
+A convenient sampling method was followed. Perceptions of only those travelers were
+captured who had actually undergone the experience of travelling by an airline. The range
+for the number of respondents was between 103 (for GoAir) and 133 (for SpiceJet)."
+1. Purpose,1.4 References,,"Jump up ^ ""Now, SpiceJet offers Rs 499 fare on domestic network"". Times of India. 1
+September 2014. Retrieved 5 September 2014.
+^ Jump up to: a b ""SpiceJet Contact Information, SpiceJet Airlines"". Spicejet. Retrieved 14
+September 2010.
+^ Jump up to: a b c ""Company History – SpiceJet"". moneycontrol.com. Retrieved 30
+December 2011.
+^ Jump up to: a b ""India's Spicejet takes 10 Boeings"". BBC news. 21 February 2006. Retrieved
+24 March 2016.
+Jump up ^ ""Spic(e)y flight: Delhi-Mumbai for Rs 1,599"". Times of India. 10 August 2005.
+Retrieved 24 March 2016.
+Jump up ^ Shukla, Tarun (25 June 2008). ""SpiceJet, Modi call truce; to sell 11.5 mn shares"".
+Live Mint. Retrieved 24 March 2016.
+Jump up ^ ""Kalanithi Maran to buy 37% stake in SpiceJet"". The Economic Times. 11 June
+Retrieved 30 August 2010.
+Jump up ^ ""Kalanidhi Maran buys 37.7 p.c. stake in SpiceJet"". The Hindu. 13 June 2010.
+Retrieved 8 August 2010.
+Jump up ^ ""SpiceJet order adds to Bombardier's India footprint"". =Reuters. Toronto, Canada.
+9 December 2010. Retrieved 24 March 2016.
+Jump up ^ Sahu, Ram Prasad (8 February 2012). ""Fund infusion critical for SpiceJet"".
+Business Standard. Mumbai, India. Retrieved 15 February 2012."
+2. Overall description,2.1 Product perspective,2.1.1 System Interfaces,"Various interfaces for the flights could be
+Login Page
+Registration Form
+There will be a screen displaying information about flights and their
+schedules.
+If the customers select any flight then it will open another tap about the
+flight information.
+After all transaction the system makes the selling report as portable
+document file (pdf) and sent to the customer E-mail address."
+2. Overall description,2.1 Product perspective,2.1.2 User interfaces,Login Page
+2. Overall description,2.1 Product perspective,2.1.3 Hardware interfaces,"The System must run over the internet, all the hardware shall require to connect
+internet will be hardware interface for the system. As for e.g. Modem, WAN —
+LAN, Ethernet Cross-Cable."
+2. Overall description,2.1 Product perspective,2.1.4 Software interfaces,"The system is on server so it requires the any scripting language like PHP, VBScript
+etc.The system require Data Base also for the store the any transaction of the system
+like MYSQL etc. system also require DNS (domain name space) for the naming on
+the internet. At the last user need web browser for interact with the system."
+2. Overall description,2.1 Product perspective,2.1.5 Communication Interfaces,"The system use SSL (secured socket layer) in all transactions that include any other
+confidential passanger information. The system must automatically log out in all
+customers after a period of inactivity.
+The system should not leave any cookies on the customer's computer containing the
+user's password The system's back-end servers shall only be accessible to
+authenticated administrators.
+Sensitive data will be encrypted before being sent over insecure connections like the
+internet."
+2. Overall description,2.1 Product perspective,2.1.6 Memory constraints,
+2. Overall description,2.2 Design constraints,2.2.1 Operations,"This system will work on client-server architecture. It will require an internet server and
+which will be able to run PHP application. The system should support some commonly
+used browser such as IE etc."
+2. Overall description,2.2 Design constraints,2.2.2 Site adaptation requirements,"The system shall be built using a standard web page development tool that conforms to
+Microsoft's GUI standards like HTML, XML etc."
+2. Overall description,2.3 Product functions,,"The spicejet provide the better options for the customer to travel in the domestic and
+international flights . This servies is easy to acces by their services .
+It is globally developed by the travelling list day by day in the world ."
+2. Overall description,2.4 User characteristics,,"Stockholder- The person who will participate in system
+Ex. passanger, Administrator, Visitor etc."
+2. Overall description,"2.5 Constraints, assumptions and dependencies",,"Sample characteristics: The six domestic airlines considered for the study are GoAir,
+Kingfisher, Jet Airways, Indigo, SpiceJet and Air India (Domestic).
+The major reason to consider these airlines is that they represent the majority of people
+travelling by air in India. These airlines consist from full fare to low priced airlines.
+The targeted sample size was around 110 per airline and the achieved was as in Table 1.
+Questionnaire it was pre-tested with 20 respondents."
+3. Specific requirements,,,"This section provides requirement overview of the system. Various functional modules that
+can be implemented by the system will be -
+spicejet  is a low-cost airline headquartered in Gurgaon, India. It is the fourth largest
+airline in the country by number of passengers carried, with a market share of 13.1%
+as of February 2016. The airline operates 306 daily flights to 41 destinations,
+including 35 Indian and 6 international destinations from its hubs
+at Delhi and Hyderabad.
+Established as air taxi provider ModiLuft in 1984, the company was acquired by
+Indian entrepreneur Ajay Singh in 2004 and re-christened as SpiceJet.
+The airline operated its first flight in May 2005. Indian media baron Kalanidhi
+Maran acquired a controlling stake in SpiceJet in June 2010 through Sun
+Group which was sold back to Ajay Singh in January 2015.
+The airline operates a fleet of Boeing 737 and Bombardier Dash aircraft.
+If passage want to book the tickets they want to register the on that sight before
+Booking the tickets.
+passenger logins to the system by entering valid user id and password for the booking
+tickets.
+When the passanger was postpone are prepone the travelling date they cancelled the
+Booked tickets.
+For passanger there are many type of secure billing will be prepaid as debit or credit
+card, check or bank draft. The security will provide by the third
+party like Pay-tm etc.
+After booking the tickets the customer will logged out.
+After all transaction the system can generate the portable document file (pdf) and then
+sent one copy to the customer's Email-address and another one for the system database
+to calculate the monthly transaction.
+Measuring service quality are Extensive research has been conducted in the field of service
+quality (Fisk et al., 1993; Cunningham et al., 2004). Review of literature suggests that initial
+publications on airline service quality appeared in 1988 (Gourdin, 1988).
+Fick and Ritchie (1991) and Gourdin and Kloppenborg (1991) were the first to apply the
+service quality gap model to the airline industry in 1991.
+Fick and Ritchie (1991) used the SERVQUAL scale to measure perceived service quality
+within several service industries including the airline industry.
+Measurement and management of service quality isthe fundamental issue for the survival
+and growth of airline companies. Cunningham et al. (2002) have measured service quality
+based on SERVPERF which is a set of multi-dimensional measures of customer evaluations of
+service quality.
+Wen Li and Chen (1998) studied the quality evaluation of domestic airline industry using
+modified Taguchi loss function with different weights and target values.
+They proposed three quality categories with ten identified variables and service quality of
+domestic airline is quantified accordingly. According to Zeithaml et al. (2008), the concept of
+satisfaction is influenced by five variables viz., service quality, product quality, price,
+situation and personality.
+Natalia and Subroto (2003) combined the variables of product quality and service quality
+and studied the customers’ perception of service quality in the domestic airline services of
+Indonesia.
+So far service quality of airlines has been studied based on industry measures, SERVQUAL,
+SERVPERF, Taguchi loss function and Zeithaml and Bitner Model. This study attempts to
+examine the satisfaction level of service quality of domestic airline travelers in India for six
+airlines viz., GoAir, Kingfisher, Jet Airways, Indigo, SpiceJet and Air India
+(Domestic) across six airline travel process variables viz., Ease of bookings through the
+website/ Call Center; Hassle free check in/Efficient ticketing staff/Regular announcements
+during flight delays at airport; On Time Performance of flights; In flight Experience; Baggage
+handling and Value for money.
+There is no performance requirement in this system because the server request and response
+is depended on the end user internet connection.
+The system shall be built using a standard web page development tool that conforms to
+Microsoft's GUI standards like HTML, XML etc.
+The system use SSL (secured socket layer) in all transactions that include any other
+confidential passanger information. The system must automatically log out in all
+customers after a period of inactivity.
+The system should not leave any cookies on the customer's computer containing the
+user's password The system's back-end servers shall only be accessible to
+authenticated administrators.
+Sensitive data will be encrypted before being sent over insecure connections like the
+internet.
+The system provides storage of all databases on redundant computers with automatic
+switchover. The reliability of the overall program depends on the reliability of the
+separate components.
+The main pillar of reliability of the system is the backup of the
+database which is continuously maintained and updated to reflect the most recent
+changes.
+Thus the overall stability of the system depends on the stability of container
+and its underlying operating system.
+The system should be available at all times, meaning the user can access it using a
+web browser, only restricted by the down time of the server on which the system runs.
+In case of a of a hardware failure or database corruption, a replacement page will be
+shown.
+Also in case of a hardware failure or database corruption, backups of the
+database should be retrieved from the server and saved by the administrator. Then the
+service will be restarted. It means 24 X 7 availability.
+A commercial database is used for maintaining the database and the application server
+takes care of the site. In case of a failure, a re -initialization of the program will be
+done. Also the software design is being done with modularity in mind so that its
+maintainability can be done efficiently.
+The application is HTML and scripting language based.
+So The enduser part is fully portable and any system using any web browser should
+be able to use the features of the system, including any hardware platform that is
+available or will be available in the future.
+An end-user is use this system on any OS; either it is Windows or Linux.
+The system shall run on PC, Laptops, and PDA etc."

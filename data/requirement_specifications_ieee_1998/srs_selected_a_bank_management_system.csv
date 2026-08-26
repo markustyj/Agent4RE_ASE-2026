@@ -1,0 +1,147 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,"The purpose of the Software Requirement Specification (SRS) for a Bank Management System is to document the functional and non-functional requirements of the software application. The SRS serves as a comprehensive guide for the development team, providing a clear and concise description of what the software should do and how it should perform. Additionally, the SRS serves as a basis for evaluating the system's compliance with the requirements and serves as a reference for maintenance and future enhancements. Overall, the SRS for a Bank Management System helps to ensure the successful development, implementation, and operation of the software application."
+1. Introduction,1.2 Document Conventions,We have used font style Times New Roman and font size 14 for heading and 12 for sub-headings.
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"Our intended audience for this SRS document is Miss. Rubab Jaffar, instructor of SE-2002 course, Spring 2023 semester."
+1. Introduction,1.4 Product Scope,"The BMS will streamline the day-to-day operations of a bank by providing an efficient and user-friendly platform for managing customer accounts, transactions, and staff. The system will integrate various modules such as account opening, deposit and withdrawal processing, and loan processing. The goal is to enhance the speed, accuracy, and security of banking operations while reducing manual errors and increasing customer satisfaction.
+Bank Management System would typically include the essential features required for managing customer accounts, transactions, and staff. The system would facilitate account opening, deposit and withdrawal processing, balance inquiries, transaction recording, and customer relationship management, among other functions. The system would be designed for ease of use, with a userfriendly interface.
+Admin can log in, check account-holder details, check recent withdrawals, check recent deposits, check loan requests, check credit card details, and can check cheque book details.
+Users can create an account, log in, deposit money, withdraw money, check available balance, make a loan request, check withdrawal history, check their deposit history, make cheque book request, make a credit card request, and can generate withdraw and deposit slip."
+1. Introduction,1.5 References,Not Applicable
+2. Overall Description,2.1 Product Perspective,"The BMS will streamline the day-to-day operations of a bank by providing an efficient and user-friendly platform for managing customer accounts, transactions, and staff. The system will integrate various modules such as account opening, deposit and withdrawal processing, and loan processing. The goal is to enhance the speed, accuracy, and security of banking operations while reducing manual errors and increasing customer satisfaction."
+2. Overall Description,2.2 Product Functions,"Bank Management System would typically include the essential features required for managing customer accounts, transactions, and staff. The system would facilitate account opening, deposit and withdrawal processing, balance inquiries, transaction recording, and customer relationship management, among other functions. The system would be designed for ease of use, with a userfriendly interface.
+Admin can log in, check account-holder details, check recent withdrawals, check recent deposits, check loan requests, check credit card details, and can check cheque book details.
+Users can create an account, log in, deposit money, withdraw money, check available balance, make a loan request, check withdrawal history, check their deposit history, make cheque book request, make a credit card request, and can generate withdraw and deposit slip."
+2. Overall Description,2.3 User Classes and Characteristics,"Customers
+Bank Staff
+Admin"
+2. Overall Description,2.4 Operating Environment,The app will run only on Windows 7 or later and macOS 10 or later.
+2. Overall Description,2.5 Design and Implementation Constraints,"The system should have 4 GB RAM.
+The system should have a 32GB hard-drive or SSD.
+The system should have a anti-virus software."
+2. Overall Description,2.6 User Documentation,Tutorials will be added in the system in order to help new users to understand the system.
+2. Overall Description,2.7 Assumptions and Dependencies,"The system is dependent on the other banking system.
+This system is dependent on Gmail.
+It is dependent on the GSM cellular service providers.
+If the user forgot his/her ID password so he/she has to contact the admin.
+The proposed system is to work only with the Windows and macOS operating system. It is assumed that if any other operating system is used the system will fail to launch."
+3. External Interface Requirements,3.1 User Interfaces,
+3. External Interface Requirements,3.2 Hardware Interfaces,"Our Bank Management System would require a computer with a fast processor, at least 4 GB of RAM, and a reliable hard drive or SSD with ample storage capacity for data and software. The system should have a high-quality display, a keyboard, and a mouse for efficient input and output of information. Additionally, the computer should be equipped with a network interface card for communication with other devices and internet access, and the operating system should be secure and up-to-date with regular updates and patches. To ensure reliability, it is also recommended to have a backup power supply and data backup system in place."
+3. External Interface Requirements,3.3 Software Interfaces,"Our Bank Management System would require a comprehensive software package that is capable of managing transactions, customer data, and account information. The software should have robust security features to prevent unauthorized access and ensure data privacy. The software should integrate with other banking systems and adhere to industry standards for data exchange and communication."
+3. External Interface Requirements,3.4 Communications Interfaces,"Our Bank Management System requires reliable communication channels to connect with customers, staff, and other banking systems. The system should have secure communication protocols, such as SSL/TLS encryption, to protect sensitive information during transmission. It should support a range of communication channels, including email, and SMS, to provide timely and convenient updates to customers. Additionally, the system should be able to communicate with other banking systems, such as payment gateways and transaction processing systems, to ensure smooth and efficient processing of transactions. To minimize communication downtime, the system should have redundancy measures in place, such as backup communication channels and failover systems."
+4. System Features,4.1 System Feature 1,"Account Management:
+The system should allow customers to create accounts, and view their account balances.
+The system should allow bank employees to view and manage customer accounts, including deposits, withdrawals, and transfers.
+The system should allow customers to request for new cheque books and credit cards, and provide an interface for bank employees to process these requests.
+Loan Management:
+The system should allow customers to apply for loans.
+The system should allow bank employees to review loan applications, approve or reject them.
+Transaction Processing:
+The system should allow customers to initiate transactions, such as deposits and withdrawals, and generate transaction slips for these transactions.
+Fraud Detection and Prevention:
+The system should include fraud detection and prevention mechanisms to identify and prevent fraudulent activities, such as identity theft, account takeover, and money laundering.
+The system should use machine learning and artificial intelligence algorithms to analyze transaction patterns, detect anomalies, and flag suspicious activities."
+4. System Features,4.2 System Feature 2 (and so on),"Use-Case Name: Creating Bank Account
+Use-Case Description: The use case describes the event of a user creating his/her bank account through the system. Once the account is created successfully and updated in the database, a confirmation is shown and an email is sent to the user.
+Primary Actor: Customer
+Other Actors: • Gmail • Database
+Stakeholders: • Customer • Bank • Gmail • Database
+Relationships:
+Preconditions: The customer should have a compatible device with internet connectivity, valid identification documents, and sufficient funds.
+Flow of Events: 1. The customer will run the system.
+The customer will go to the create account page and enters all his/her details.
+Customer will submit the details and provides the initial deposit amount.
+System will verify the customer's details and the funds are transferred from the customer's account to the new bank account.
+The system will prompt that the account has been created and provides the customer with their account information.
+Alternative and Exceptional Flow
+Alt-3: If the customer enters any wrong information, then he/she will be notified of the discrepancy and prompted to fill in all the fields or invalid information.
+Alt-4: During verification any invalid document is found. Ask customer to re-submit the document.
+Postconditions: The account details are recorded in the database if all the procedures were done successfully.
+Use-Case Name: Take Loan
+Use-Case Description: The use case describes the event of an account holder taking loan from bank through the system. Once the loan process is completed system will provide the user with the loan slip.
+Primary Actor: Account-Holder
+Other Actors: • Gmail • Database
+Stakeholders: • Bank • Accountant • Bank Manager • Account-Holder • Gmail • Database
+Relationships:
+Preconditions: The user should have an account in the bank.
+Flow of Events: 1. The user will log-in in his/her account.
+The system will validate the user account number and password and will give access to the account page.
+The user will go to the loan page and click on apply loan.
+The user will fill the loan form and submit it.
+The system will send the loan slip through email and direct the user to visit the bank with the loan slip.
+Alternative and Exceptional Flow
+Alt-2: If the user has not provided the correct ID or Password. The user is notified of the discrepancy and prompted to re-enter (ID, Password).
+Alt-4: If the user enters any wrong information, then he/she will be notified of the discrepancy and prompted to fill in all the fields or invalid information.
+Postconditions: The loan request is recorded in the database.
+Use-Case Name: Deposit Money
+Use-Case Description: The use case describes the event of an account holder depositing money in his/her bank account.
+Primary Actor: Account-Holder
+Other Actors: • Gmail • Database
+Stakeholders: • Account-Holder • Bank • Gmail • Database
+Relationships:
+Preconditions: The user should have an account in the bank.
+Flow of Events: 1. The user will log-in in his/her account.
+The system will validate the user account number and password and will give access to the account page.
+The user will go the deposit page.
+The user will enter his/her account number and the money to deposit.
+The user will click on deposit button.
+The system will verify details and update his/her balance.
+An email is sent to the user about the money deposit and current balance.
+Alternative and Exceptional Flow
+Alt-2: If the user has not provided the correct ID or Password. The user is notified of the discrepancy and prompted to re-enter (ID, Password).
+Alt-4: If the user enters any wrong information, then he/she will be notified of the discrepancy and prompted to fill in all the fields or invalid information.
+Alt-6: If the details are not verified then, ask user to re-enter the details.
+Postconditions: The account balance is updated in the database.
+Use-Case Name: Withdraw Money
+Use-Case Description: The use case describes the event of an account holder withdrawing money from his/her bank account.
+Primary Actor: Account-Holder
+Other Actors: • Gmail • Database
+Stakeholders: • Account-Holder • Bank • Gmail • Database
+Relationships:
+Preconditions: The user should have an account in the bank.
+Flow of Events: 1. The user will log-in in his/her account.
+The system will validate the user account number and password and will give access to the account page.
+The user will go the withdraw page.
+The user will enter his/her account number and the money to withdraw.
+The user will click on withdraw button.
+The system will verify details and update his/her balance.
+An email is sent to the user about the money withdraw and current balance.
+Alternative and Exceptional Flow
+Alt-2: If the user has not provided the correct ID or Password. The user is notified of the discrepancy and prompted to re-enter (ID, Password).
+Alt-4: If the user enters any wrong information, then he/she will be notified of the discrepancy and prompted to fill in all the fields or invalid information.
+Alt-5: If the user enter amount greater than his/her balance then, user is notified of the discrepancy and prompted to re-enter amount.
+Alt-6: If the details are not verified then, ask user to re-enter the details.
+Postconditions: The account balance is updated in the database.
+Use-Case Name: Check Account Details
+Use-Case Description: The use case describes the event of the admin checking account holder’s details.
+Primary Actor: Admin
+Other Actors: Database
+Stakeholders: • Bank • Database • Admin
+Relationships: Generalization
+Preconditions: The admin should have the ID and password in order to check the account holder’s details.
+Flow of Events: 1. The admin will log in to his/her account.
+The system will validate the user account number and password and will give access to the admin page.
+The admin will go to the account details page.
+The admin will enter the account holder name.
+The system will show the account holder details.
+Alternative and Exceptional Flow
+Alt-2: If the admin has not provided the correct ID or Password. The admin is notified of the discrepancy and prompted to re-enter (ID, Password).
+Postconditions: The system will show the details in the text area.
+Use-Case Name: Checking Loan Slips
+Use-Case Description: The use case describes the event of the admin checking loan slip and verifying them.
+Primary Actor: Admin
+Other Actors: Database
+Stakeholders: • Bank • Database • Admin
+Relationships:
+Preconditions: The admin should have the ID and password in order to check the loan slips.
+Flow of Events: 1. The admin will log in to his/her account.
+The system will validate the user account number and password and will give access to the admin page.
+The admin will go to the loan page.
+The system will automatically show all loan applications.
+Alternative and Exceptional Flow
+Alt-2: If the admin has not provided the correct ID or Password. The admin is notified of the discrepancy and prompted to re-enter (ID, Password).
+Postconditions: The system will show the loan applications in the text area."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements,"The system must be designed to perform well under heavy loads, handle a large volume of transactions, and respond quickly to user requests."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,"The system must be designed to provide reliable backup and recovery mechanisms to prevent data loss, security monitoring and auditing tools to detect and respond to security incidents, a comprehensive disaster recovery plan to minimize disruption in the event of a disaster, secure communication protocols to protect sensitive information during transmission, and staff training on security policies and procedures to ensure proper system use."
+5. Other Nonfunctional Requirements,5.3 Security Requirements,"The system must be designed with strict security measures to prevent unauthorized access, data breaches, and cyber-attacks. It should be able to provide encryption of sensitive data, multi-factor authentication, and role-based access controls."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,"The objective is to deliver a reliable, scalable, and secure banking software system that can be easily customized to meet the specific needs of different types of banks, thereby improving the efficiency, accuracy, and security of banking operations."
+5. Other Nonfunctional Requirements,5.5 Business Rules,"The system will not include forgotten password features, online payments, investment management, foreign exchange, or wealth management, which are typically offered by larger financial institutions."

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use Agent4RE or RE-E2E, please cite the paper."
+title: "Agent4RE: A Self-refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking"
+type: software
+authors:
+  - family-names: Tang
+    given-names: Yongjian
+    orcid: "https://orcid.org/0009-0005-9373-3071"
+  - family-names: Li
+    given-names: Linhan
+  - family-names: Runkler
+    given-names: Thomas
+year: 2026
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Agent4RE: A Self-refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking"
+  authors:
+    - family-names: Tang
+      given-names: Yongjian
+    - family-names: Li
+      given-names: Linhan
+    - family-names: Runkler
+      given-names: Thomas
+  year: 2026

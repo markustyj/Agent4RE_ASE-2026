@@ -1,0 +1,118 @@
+﻿section,subsection,content
+1. Introduction,1.1 Purpose,This document describes the software requirements and specification for PAYPAL – PAYMENT SYSTEM.
+1. Introduction,1.2 Document Conventions,Document Conventions: font: TNR 11
+1. Introduction,1.3 Intended Audience and Reading Suggestions,"The document is intended for all the stakeholder’s customer and the developer (designers, testers, maintainers). The reader is assumed to have basic knowledge of banking accounts and account services. Knowledge and understanding of UML diagrams is also required."
+1. Introduction,1.4 Product Scope,"The software supports a computerized online shopping and banking networks. The network enables customers to complete simple bank account services via PayPal payment system that may be accessed through the internet and can access through Smartphones, PC and Laptop. Operated by the
+PayPal Staffs. The PayPal identifies a customer by email Id and Password. It collects information about a simple account transaction (e.g., send money, transaction status, bill payment, request money) communicates the transaction information to the customer’s bank and can dispenses money to the Customers Bank Account and PayPal Wallet. The PayPal can provide its own app in Google play store and Mac Store. The PayPal software requires appropriate record keeping and security provisions. The software must handle concurrent accesses to the same account correctly.
+PayPal does not work independently. Its is having their own networks which are connected to one another and depends upon one another networks.
+Communication interface: The PayPal communicate with the banking systems via internet and get processed by Banks Computer then it proceeds through the PayPal Computer’s Network and reaches to the clients.
+Software interface: The messages sent via the internet network are specific to the target banking software systems. At this time both the PayPal payment system and Banking system will communicates through internet networks.
+Hardware interface: The software will run on an android, mac os and windows.
+User interfaces
+Customer: The Customer user interface should be friendly user interface where the new user of PayPal Payment System can be easily accessing the software.
+PayPal Security Personnel: PayPal Security Personnel are responsible for removing deposits and adding money in to respective customers bank account . There should be a simple interface such that customers can use it easily whenever they want.
+Maintainer: The maintainer is responsible for keeping the records of new PayPal account and giving new id numbers to the customers and maintaining the transaction status of every existing and new account of Customers. Maintainer should take every feedback and the customers related problems and solve the query of customers within that period of time by adding the features of chat with us or contact us."
+1. Introduction,1.5 References," Account Number
+An account number is the primary identifier for ownership of an account, whether a vendor account, a checking or brokerage account, or a loan account.
+ PayPal
+PayPal is a service that enables you to pay, send money, and accept payments. Register your credit card or debit card with your PayPal account. You can pay by simply choosing PayPal at checkout, logging into your PayPal account, and confirming your payment
+ Email
+E-mail (electronic mail) is the exchange of computer-stored messages by telecommunication.
+ Bank Account
+An arrangement made with a bank whereby one may deposit and withdraw money and in some cases be paid interest.
+ PayPal Wallet
+Customer can easily add money from Bank Account and can use it for the online shopping, booking of flight , train tickets and hotels and can order the food easily within a fraction of seconds.
+ Voucher
+Customer can get so many vouchers while online shopping, and can easily get cashbacks
+ Customer
+The holder of one or more accounts in a bank. A customer can consist of one or more persons or
+corporations, the correspondence is not relevant to this problem. The same person holding an
+account at a different bank is considered a different customer.
+ Transaction
+An instance of buying and selling the Products within the minimum number of transactions per day.
+ Bell icon
+For getting a new notifications and messages.
+ Security
+To create or update password and some security questions for the verifications of customers bank owner. Two step verification to add an extra layer of security to your account by using one-time security code.
+Throughout this document the following abbreviations are used:
+OTP : One Time password.
+OS : Operating System
+ATM: Automated Teller Machine."
+2. Overall Description,2.1 Product Perspective,"PayPal does not work independently. Its is having their own networks which are connected to one another and depends upon one another networks.
+Communication interface: The PayPal communicate with the banking systems via internet and get processed by Banks Computer then it proceeds through the PayPal Computer’s Network and reaches to the clients.
+Software interface: The messages sent via the internet network are specific to the target banking software systems. At this time both the PayPal payment system and Banking system will communicates through internet networks.
+Hardware interface: The software will run on an android, mac os and windows.
+User interfaces
+Customer: The Customer user interface should be friendly user interface where the new user of PayPal Payment System can be easily accessing the software.
+PayPal Security Personnel: PayPal Security Personnel are responsible for removing deposits and adding money in to respective customers bank account . There should be a simple interface such that customers can use it easily whenever they want.
+Maintainer: The maintainer is responsible for keeping the records of new PayPal account and giving new id numbers to the customers and maintaining the transaction status of every existing and new account of Customers. Maintainer should take every feedback and the customers related problems and solve the query of customers within that period of time by adding the features of chat with us or contact us."
+2. Overall Description,2.2 Product Functions,"The PayPal should work 24 hrs. The PayPal identifies a customer by his Email Id and password. It collects information about a simple account transaction (e.g., send money, request money, transfer, bill payment, transaction status ), communicates the transaction information to the customer’s bank, and dispenses money to the customer bank account. The PayPal provide their own software on play store and mac store. The software requires appropriate record keeping and security provisions. The software must handle concurrent accesses to the same account correctly."
+2. Overall Description,2.3 User Classes and Characteristics,"Characteristics: There are several users of the PayPal Software.
+Customers are simply members of the general public with no special training.
+PayPal security personnel need have to special education or experience how to give security to each user account.
+Maintainers must be experienced network administrators, to be able to connect new PayPal software to the network."
+2. Overall Description,2.4 Operating Environment,"The software and technology used should have following specifications:
+ Ability to take credit, debit card number.
+ Ability to add a Bank Account.
+ Ability to confirm your Email Account.
+ Ability to show PayPal Balance.
+ Ability to send money.
+ Ability to request money.
+ Ability to connect to bank’s network
+ Ability to take input from user
+ Ability to validate user.
+ Sign Up Page
+ Login
+ Cart
+ Ability to show different Payment Options.
+ Ability to take Customer Feedback."
+2. Overall Description,2.5 Design and Implementation Constraints," Constraints: Will Work on Chrome, Mozilla Firefox browsers, and Internet Explorer of Windows xp,7,8,9,10, Android Devices and IOS.
+Sign Up Page:
+ Create Email ID.
+ Validate the Customer is using @ character and .com at the last of your Email Id.
+ Create Password.
+ Confirmation of password.
+ If the password is not matching, then prompt the message “Password is not matching”.
+ Password Successfully Match, then prompt message “Account Created”.
+Adding of ATM Card Number:
+ Validate that the card is valid or not.
+ If card is invalid, prompt error message, ""Invalid Card Number""
+ Adding of expiry date of card and security code.
+ If card is expired, prompt error message, ""Card has been expired"".
+Validate for Disabled Card:
+ Validate that the card is not disabled.
+ If card is disabled, prompt error message, ""Card has been disabled as of <expiration date>""
+Account Verification:
+ Sending of OTP to link mobile number.
+ Validate the OTP.
+ If OTP does not match “Fail to add Bank account”.
+ If matches Successfully added bank account."
+2. Overall Description,2.6 User Documentation,
+2. Overall Description,2.7 Assumptions and Dependencies," Software never fails.
+ Internet is required to run the software.
+ Limited number of transactions per day.
+ Limited amount of money can add into PayPal Wallet."
+3. External Interface Requirements,3.1 User Interfaces,"The customer user interface should be intuitive, such that 99.9% of all new PayPal users are able to use it."
+3. External Interface Requirements,3.2 Hardware Interfaces,"Hardware interface: The software will run on an android, mac os and windows."
+3. External Interface Requirements,3.3 Software Interfaces,"The software should have following specifications:
+ Ability to take inputs from user.
+ Ability to detect card is credit or debit card.
+ Ability to convert the currency.
+ Ability to Send Money.
+ Ability to Request Money
+ Ability to connect to bank’s network software system.
+ Ability to recover password.
+ Ability to validate user."
+3. External Interface Requirements,3.4 Communications Interfaces,Communication interface: The PayPal communicate with the banking systems via internet and get processed by Banks Computer then it proceeds through the PayPal Computer’s Network and reaches to the clients.
+4. System Features,4.1 System Feature 1," Input: Individual or Business Account, Email, Create Password, Confirm your Password.
+ Output: Register Successful."
+4. System Features,4.2 System Feature 2 (and so on)," Input: Email or Mobile number are entered.
+ Output: Login Successful."
+5. Other Nonfunctional Requirements,5.1 Performance Requirements," High data transfer rate.
+ Uninterrupted interrupted connections
+ It must be able to perform in adverse condition."
+5. Other Nonfunctional Requirements,5.2 Safety Requirements,
+5. Other Nonfunctional Requirements,5.3 Security Requirements," The system must automatically log out the user after a period of time.
+ The systems back-end servers shall only be accessible to authenticated users."
+5. Other Nonfunctional Requirements,5.4 Software Quality Attributes,
+5. Other Nonfunctional Requirements,5.5 Business Rules,The PayPal network has to be available 24 hours a day.
