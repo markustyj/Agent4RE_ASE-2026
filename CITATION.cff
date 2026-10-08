@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use Agent4RE or RE-E2E, please cite the paper."
-title: "Agent4RE: A Self-refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking"
+title: "Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking"
 type: software
 authors:
   - family-names: Tang
@@ -11,10 +11,11 @@ authors:
   - family-names: Runkler
     given-names: Thomas
 year: 2026
+repository-code: "https://github.com/markustyj/Agent4RE_ASE-2026"
 license: MIT
 preferred-citation:
   type: conference-paper
-  title: "Agent4RE: A Self-refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking"
+  title: "Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking"
   authors:
     - family-names: Tang
       given-names: Yongjian
@@ -23,3 +24,22 @@ preferred-citation:
     - family-names: Runkler
       given-names: Thomas
   year: 2026
+  date-published: "2026-10-08"
+  collection-title: "Proceedings of the 1st International Workshop on PromptOps and Vibe Coding"
+  collection-type: "proceedings"
+  publisher:
+    name: "Association for Computing Machinery"
+  start: 25
+  end: 32
+  isbn: "9798400729911"
+  doi: "10.1145/3843779.3844634"
+  url: "https://doi.org/10.1145/3843779.3844634"
+references:
+  - type: data
+    title: "RE-E2E: A dataset for benchmarking end-to-end software requirements engineering tasks."
+    year: 2026
+    version: "v1"
+    publisher:
+      name: "Zenodo"
+    doi: "10.5281/zenodo.22815961"
+    url: "https://zenodo.org/records/22815961"

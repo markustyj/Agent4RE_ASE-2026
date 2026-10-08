@@ -1,6 +1,8 @@
 # Agent4RE and RE-E2E
 
-Official repository for **Agent4RE: A Self-refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking**.
+Official repository for **Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking**, published in the *ASE-POVC '26*.
+
+[Paper (ACM)](https://dl.acm.org/doi/10.1145/3843779.3844634) | [Dataset (Zenodo)](https://zenodo.org/records/22815961)
 
 - **RE-E2E benchmark**: an end-to-end requirements engineering benchmark pairing project descriptions with human-written requirement specifications.
 - **Agent4RE**: a multi-agent system that transforms a short software project description into an IEEE-style Software Requirements Specification (SRS) through iterative elicitation, generation, and refinement.
@@ -10,6 +12,8 @@ Official repository for **Agent4RE: A Self-refining Multi-agent Framework for En
 ## RE-E2E benchmark
 
 RE-E2E evaluates the complete workflow from an initial project description to a finalized requirements specification, rather than an isolated RE task such as classification or extraction.
+
+The dataset is archived on [Zenodo](https://zenodo.org/records/22815961) (version v1, DOI: [10.5281/zenodo.22815961](https://doi.org/10.5281/zenodo.22815961)). See [data/README.md](data/README.md) for dataset details.
 
 | Directory | Contents |
 | --- | --- |
@@ -94,12 +98,24 @@ requirements.txt                   Runtime dependencies
 
 ## Citation
 
-Citation metadata will be added after publication.
+If you use Agent4RE or the RE-E2E benchmark, please cite the paper:
 
 ```bibtex
-% TODO: Add the Agent4RE paper citation here.
+@inproceedings{tang2026agent4re,
+	author    = {Tang, Yongjian and Li, Linhan and Runkler, Thomas},
+	title     = {{Agent4RE}: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking},
+	booktitle = {Proceedings of the 1st International Workshop on PromptOps and Vibe Coding},
+	year      = {2026},
+	series    = {POVC '26},
+	pages     = {25--32},
+	numpages  = {8},
+	publisher = {Association for Computing Machinery},
+	address   = {New York, NY, USA},
+	location  = {Munich, Germany},
+	isbn      = {9798400729911},
+	doi       = {10.1145/3843779.3844634},
+	url       = {https://doi.org/10.1145/3843779.3844634}
+}
 ```
 
-## License
-
-Agent4RE source code is released under the [MIT License](LICENSE). Benchmark data is excluded from the software license until its source-specific redistribution terms are documented.
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff).
